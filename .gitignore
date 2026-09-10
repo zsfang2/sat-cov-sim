@@ -16,5 +16,4 @@ output/
 *.tmp
 *.log
 
-.humanize/.pending-session-id
-.humanize/rlcr/
+.humanize/
