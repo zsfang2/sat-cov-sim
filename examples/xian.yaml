@@ -1,0 +1,27 @@
+region:
+  lat: 34.2427189
+  lon: 108.9016839
+  size: 256
+  extent_m: 25600
+
+satellite:
+  timestamp: "2025-01-01T12:00:00Z"
+  tle_file: "/home/Users_Work_Space/zsfang/Satellite-Ground-Radiomap/data/starlink-2025-tle/2025-01-01.tle"
+  min_elevation_deg: 10
+
+link:
+  frequency_ghz: 14.5
+  eirp_dbm: 55.0
+  rx_gain_dbi: 0.0
+  rain_rate_mm_h: 0.0
+
+terrain:
+  dem_file: "/home/Users_Work_Space/zsfang/Satellite-Ground-Radiomap/data/l2_topo/china_dem_30.tif"
+
+# This is intentionally optional: for a 25.6 km grid, rasterizing the raw
+# provincial Shapefile is useful for a quick check but cache/tiling is faster.
+buildings:
+  file: "/home/Users_Work_Space/zsfang/Satellite-Ground-Radiomap/data/l3_urban/shanxisheng/陕西省/processed_xian20221010_all.shp"
+  height_field: "Height"
+  penetration_db: 18.0
+  reflection_credit_db: 3.0
