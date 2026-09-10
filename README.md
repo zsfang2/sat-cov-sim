@@ -2,6 +2,9 @@
 
 一个从 SG-MRM 提炼出的轻量卫星—地面覆盖仿真器。它保留地理坐标对齐、TLE 卫星选择、GeoTIFF DEM、建筑 Shapefile 与快速的传播损耗估计；不包含多尺度数据集构建、批量拼接、训练或产品导出流水线。
 
+> [!WARNING]
+> 当前实现不是 `CODE_SPEC.md` 定义的 reference dataset generator。审计确认 legacy terrain 遮挡算法存在 CF-01：使用绝对 DEM 高程时会产生大面积虚假遮挡。启用 terrain 生成的现有输出不得标记为 validated reference data。详见 [`docs/DATASET_VALIDATION.md`](docs/DATASET_VALIDATION.md)。
+
 ## 包含的能力
 
 - WGS84 / Web Mercator / 栅格 CRS 对齐，统一到本地 ENU 风格网格；
@@ -11,6 +14,13 @@
 - 输出接收功率、总损耗、遮挡与各损耗分量的 NumPy 数组及 PNG 图。
 
 “类射线追踪”是方向性栅格遮挡扫描，不是完整三维电磁路径追踪。若需要每条多径的 CIR、相位或 MIMO 信道，应把局部几何转换至 Sionna RT。
+
+## 数据验证状态
+
+- 当前 CLI 仅用于 legacy 单帧实验和兼容性检查。
+- 正式 reference generation 必须通过 terrain、geometry 和 TLE 三项验证门禁。
+- 缺失或失败的验证会以 fail-closed 方式阻止 reference release；不会自动降级为 warning。
+- 本仓库当前没有经过验证的 reference dataset，也不会在常规测试中重新生成数据。
 
 ## 安装与运行
 
@@ -25,4 +35,3 @@ sat-cover examples/xian.yaml --output output/xian
 ## 致谢
 
 坐标网格、DEM 窗口读取、方向遮挡与链路预算的设计由本工作区的 `Satellite-Ground-Radiomap`（MIT License）提炼并重新组织。
-
