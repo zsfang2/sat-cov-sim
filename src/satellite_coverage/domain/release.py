@@ -78,6 +78,14 @@ class NumericalChangeRecord:
                 f"{self.kind.value} must declare benchmark impact as no"
             )
         if (
+            self.kind is NumericalChangeKind.BENCHMARK_ONLY_CHANGE
+            and self.published_benchmark_results_change
+            not in {ImpactAnswer.POSSIBLY, ImpactAnswer.YES}
+        ):
+            raise ValueError(
+                "benchmark_only_change must declare benchmark impact as possibly or yes"
+            )
+        if (
             self.kind is NumericalChangeKind.UNKNOWN_NUMERICAL_RISK
             and self.current_generated_maps_change is not ImpactAnswer.POSSIBLY
         ):

@@ -124,6 +124,36 @@ def test_map_affecting_change_cannot_claim_no_benchmark_impact():
         )
 
 
+def test_benchmark_only_change_cannot_claim_no_benchmark_impact():
+    with pytest.raises(ValueError, match="benchmark impact as possibly or yes"):
+        NumericalChangeRecord(
+            change_id="BENCH-01",
+            kind=NumericalChangeKind.BENCHMARK_ONLY_CHANGE,
+            components_affected=("evaluation",),
+            before_behavior="Old benchmark metric implementation.",
+            after_behavior="Corrected benchmark metric implementation.",
+            validation_evidence=("independent metric fixture",),
+            current_generated_maps_change=ImpactAnswer.NO,
+            published_benchmark_results_change=ImpactAnswer.NO,
+        )
+
+
+@pytest.mark.parametrize("impact", [ImpactAnswer.POSSIBLY, ImpactAnswer.YES])
+def test_benchmark_only_change_accepts_explicit_benchmark_impact(impact):
+    record = NumericalChangeRecord(
+        change_id="BENCH-01",
+        kind=NumericalChangeKind.BENCHMARK_ONLY_CHANGE,
+        components_affected=("evaluation",),
+        before_behavior="Old benchmark metric implementation.",
+        after_behavior="Corrected benchmark metric implementation.",
+        validation_evidence=("independent metric fixture",),
+        current_generated_maps_change=ImpactAnswer.NO,
+        published_benchmark_results_change=impact,
+    )
+
+    assert record.published_benchmark_results_change is impact
+
+
 def test_complete_evidence_and_explicit_approval_allow_regeneration():
     require_regeneration_ready(_complete_evidence(), _approval())
 
