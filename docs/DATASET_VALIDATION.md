@@ -10,7 +10,7 @@
 
 - 所有启用legacy terrain path生成的既有输出应标记为`invalidated_by_CF_01`；
 - 未启用terrain但缺乏完整provenance的输出应标记为`legacy_unvalidated`；
-- 只有required checks全部通过后才可标记为`validated_reference`。
+- 只有required checks全部通过，并且具体frame具有完整metadata/provenance时，才可通过注册边界标记为`validated_reference`。
 
 ## Required Reference Checks
 
@@ -31,7 +31,36 @@ report = ReferenceValidationReport()
 report.require_reference_ready()  # raises ReferenceGenerationBlocked
 ```
 
-门禁实现位于`src/satellite_coverage/domain/validation.py`。当前CLI仍是legacy single-frame接口；未来DatasetWriter和reference CLI必须调用该门禁，不能复制或绕过判定逻辑。
+全局检查通过本身不能升级任何legacy文件。`artifact_status()`只负责legacy分类；正式状态必须由具体frame候选经过`register_reference_frame()`产生：
+
+```python
+from datetime import datetime, timezone
+
+from satellite_coverage.domain.validation import (
+    GenerationStatus,
+    ReferenceFrameCandidate,
+    register_reference_frame,
+)
+
+candidate = ReferenceFrameCandidate(
+    map_path="frames/region-a/000012/received_power_dbm.npy",
+    map_checksum="sha256:...",
+    component_paths=(),  # 空tuple表示显式声明无component输出；None表示未声明
+    region_id="region-a",
+    frame_index=12,
+    timestamp_utc=datetime(2025, 1, 1, tzinfo=timezone.utc),
+    config_checksum="sha256:...",
+    source_checksums=(("dem", "sha256:..."), ("tle", "sha256:...")),
+    code_version="git:...",
+    generation_status=GenerationStatus.COMPLETE,
+    terrain_enabled=True,
+)
+status = register_reference_frame(candidate, report)
+```
+
+缺少任一frame identity、UTC timestamp、map/config/source checksum、component输出声明、code version、完成状态或terrain声明时，注册会触发`ArtifactRegistrationBlocked`。因此，即使required checks已经通过，裸NPY也不能成为validated reference。
+
+门禁实现位于`src/satellite_coverage/domain/validation.py`。它目前是storage-neutral domain boundary，不会自行读取或写入manifest。当前CLI仍是legacy single-frame接口；未来DatasetWriter和reference CLI必须调用该门禁并持久化同等证据，不能复制或绕过判定逻辑。
 
 ## Known-Failure Evidence
 
