@@ -23,7 +23,9 @@ class ArtifactValidationStatus(str, Enum):
 
     LEGACY_UNVALIDATED = "legacy_unvalidated"
     INVALIDATED_BY_CF_01 = "invalidated_by_CF_01"
+    REFERENCE_CANDIDATE = "reference_candidate"
     VALIDATED_REFERENCE = "validated_reference"
+    SUPERSEDED_REFERENCE = "superseded_reference"
 
 
 class GenerationStatus(str, Enum):
@@ -76,6 +78,7 @@ class ReferenceFrameCandidate:
     code_version: str | None = None
     generation_status: GenerationStatus = GenerationStatus.INCOMPLETE
     terrain_enabled: bool | None = None
+    prior_status: ArtifactValidationStatus | None = None
 
     @property
     def registration_issues(self) -> tuple[str, ...]:
@@ -112,6 +115,16 @@ class ReferenceFrameCandidate:
             issues.append("generation_status")
         if not isinstance(self.terrain_enabled, bool):
             issues.append("terrain_enabled")
+        if self.prior_status is not None and not isinstance(
+            self.prior_status, ArtifactValidationStatus
+        ):
+            issues.append("prior_status")
+        elif self.prior_status in {
+            ArtifactValidationStatus.INVALIDATED_BY_CF_01,
+            ArtifactValidationStatus.VALIDATED_REFERENCE,
+            ArtifactValidationStatus.SUPERSEDED_REFERENCE,
+        }:
+            issues.append("prior_status")
         return tuple(issues)
 
 
@@ -182,13 +195,22 @@ def register_reference_frame(
     """Validate physical checks and frame provenance before registration."""
 
     report.require_reference_ready()
+    qualify_reference_candidate(candidate)
+    return ArtifactValidationStatus.VALIDATED_REFERENCE
+
+
+def qualify_reference_candidate(
+    candidate: ReferenceFrameCandidate,
+) -> ArtifactValidationStatus:
+    """Reject incomplete or terminal artifacts before physical registration."""
+
     issues = candidate.registration_issues
     if issues:
         joined = ", ".join(issues)
         raise ArtifactRegistrationBlocked(
             f"Reference frame registration blocked by evidence: {joined}"
         )
-    return ArtifactValidationStatus.VALIDATED_REFERENCE
+    return ArtifactValidationStatus.REFERENCE_CANDIDATE
 
 
 def _is_nonempty_text(value: object) -> bool:

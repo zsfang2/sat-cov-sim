@@ -15,6 +15,7 @@ from satellite_coverage.domain.validation import (
     ReferenceValidationReport,
     ValidationCheck,
     ValidationOutcome,
+    qualify_reference_candidate,
     register_reference_frame,
 )
 
@@ -53,6 +54,10 @@ def test_complete_provenance_and_required_checks_allow_registration():
     candidate = _complete_candidate()
 
     assert (
+        qualify_reference_candidate(candidate)
+        is ArtifactValidationStatus.REFERENCE_CANDIDATE
+    )
+    assert (
         register_reference_frame(candidate, report)
         is ArtifactValidationStatus.VALIDATED_REFERENCE
     )
@@ -89,6 +94,16 @@ def test_missing_physical_check_blocks_complete_candidate_first():
 
     with pytest.raises(ReferenceGenerationBlocked, match="tle"):
         register_reference_frame(_complete_candidate(), report)
+
+
+def test_cf01_invalidated_artifact_cannot_transition_to_validated_reference():
+    candidate = replace(
+        _complete_candidate(),
+        prior_status=ArtifactValidationStatus.INVALIDATED_BY_CF_01,
+    )
+
+    with pytest.raises(ArtifactRegistrationBlocked, match="prior_status"):
+        register_reference_frame(candidate, _passed_report())
 
 
 def test_missing_or_failed_checks_block_reference_generation():
