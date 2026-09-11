@@ -337,8 +337,12 @@ class FrameState:
 
         if not isinstance(self.serving_orbit, OrbitState):
             raise DomainStateError("serving_orbit is required for service state")
-        if self.serving_orbit.norad_id not in set(candidate_ids):
-            raise DomainStateError("serving_orbit must be present in candidate_orbits")
+        if not any(
+            self.serving_orbit is candidate for candidate in self.candidate_orbits
+        ):
+            raise DomainStateError(
+                "serving_orbit must be an actual state from candidate_orbits"
+            )
         if self.serving_orbit.timestamp_utc != timestamp:
             raise DomainStateError("serving_orbit timestamp must match frame timestamp")
         if not isinstance(self.geometry, PixelGeometry):

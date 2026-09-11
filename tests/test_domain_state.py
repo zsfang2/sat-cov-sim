@@ -346,6 +346,29 @@ def test_frame_state_rejects_region_map_and_candidate_mismatches():
         replace(frame, physical_state=_physical(_grid("other-region")))
 
 
+def test_frame_state_rejects_distinct_same_norad_serving_orbit():
+    grid = _grid()
+    timestamp = datetime(2025, 1, 1, tzinfo=timezone.utc)
+    candidate = _orbit(timestamp)
+    different_serving_state = replace(
+        candidate,
+        geodetic_altitude_m=candidate.geodetic_altitude_m + 1_000.0,
+    )
+
+    with pytest.raises(DomainStateError, match="serving_orbit.*candidate"):
+        FrameState(
+            region_id=grid.region_id,
+            frame_index=0,
+            timestamp_utc=timestamp,
+            grid=grid,
+            candidate_orbits=(candidate,),
+            serving_orbit=different_serving_state,
+            service_state=ServiceState.HELD,
+            geometry=_geometry(grid),
+            physical_state=_physical(grid),
+        )
+
+
 def test_no_service_frame_has_no_serving_geometry_or_physical_state():
     grid = _grid()
     frame = FrameState(
