@@ -74,6 +74,7 @@ Satellite Coverage Sim 是一个面向科研的动态卫星—地面无线电地
 - [`CODE_AUDIT_REPORT.md`](CODE_AUDIT_REPORT.md)：规范一致性、物理、数值、复现性、性能和架构审查；
 - [`PROJECT_STRUCTURE_MODIFICATION_PLAN.md`](PROJECT_STRUCTURE_MODIFICATION_PLAN.md)：分阶段结构改造计划和验收标准；
 - [`docs/CONFIGURATION.md`](docs/CONFIGURATION.md)：typed config边界与draft reference profile；
+- [`docs/DOMAIN_STATE.md`](docs/DOMAIN_STATE.md)：不可变domain state、array unit与coordinate contract；
 - [`docs/DATASET_VALIDATION.md`](docs/DATASET_VALIDATION.md)：legacy数据状态和reference generation门禁。
 
 ## 安装与当前单帧示例
