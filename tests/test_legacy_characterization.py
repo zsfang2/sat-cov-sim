@@ -1,8 +1,11 @@
 from __future__ import annotations
 
 import numpy as np
+import yaml
 
-import satellite_coverage.scenario as scenario_module
+import satellite_coverage.engine._legacy as legacy_engine_module
+import satellite_coverage.compatibility.legacy_scenario as compatibility_module
+from satellite_coverage import CoverageScenario as RootCoverageScenario
 from satellite_coverage.propagation import (
     directional_occlusion,
     knife_edge_loss_db,
@@ -32,8 +35,42 @@ class _FixedCatalog:
         )
 
 
+def test_legacy_scenario_from_yaml_preserves_dict_configuration(tmp_path):
+    config = {
+        "region": {"lat": 34.0, "lon": 108.0},
+        "satellite": {
+            "timestamp": "2025-01-01T00:00:00Z",
+            "tle_file": "catalog.tle",
+        },
+        "link": {"frequency_ghz": 14.5, "eirp_dbm": 55.0},
+    }
+    config_path = tmp_path / "legacy.yaml"
+    config_path.write_text(yaml.safe_dump(config), encoding="utf-8")
+
+    scenario = CoverageScenario.from_yaml(config_path)
+
+    assert scenario.config == config
+
+
+def test_legacy_scenario_delegates_unchanged_config_to_engine(monkeypatch):
+    config = {"sentinel": object()}
+    expected_result = object()
+    received = []
+
+    def fake_run(received_config):
+        received.append(received_config)
+        return expected_result
+
+    monkeypatch.setattr(compatibility_module, "run_legacy_scenario", fake_run)
+
+    assert CoverageScenario(config).run() is expected_result
+    assert received == [config]
+    assert received[0] is config
+    assert RootCoverageScenario is CoverageScenario
+
+
 def test_legacy_scenario_without_terrain_is_characterized(monkeypatch):
-    monkeypatch.setattr(scenario_module, "TleCatalog", _FixedCatalog)
+    monkeypatch.setattr(legacy_engine_module, "TleCatalog", _FixedCatalog)
     scenario = CoverageScenario(
         {
             "region": {"lat": 34.0, "lon": 108.0, "size": 4, "extent_m": 400.0},
@@ -90,4 +127,3 @@ def test_flat_zero_datum_remains_unblocked_in_legacy_algorithm():
 
     assert not blocked.any()
     assert not loss_db.any()
-
