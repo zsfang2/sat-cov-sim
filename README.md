@@ -76,6 +76,7 @@ Satellite Coverage Sim 是一个面向科研的动态卫星—地面无线电地
 - [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)：当前过渡调用图、public namespace与依赖方向；
 - [`docs/CONFIGURATION.md`](docs/CONFIGURATION.md)：typed config边界与draft reference profile；
 - [`docs/DOMAIN_STATE.md`](docs/DOMAIN_STATE.md)：不可变domain state、array unit与coordinate contract；
+- [`docs/SOURCE_MANIFEST.md`](docs/SOURCE_MANIFEST.md)：外部source identity、SHA-256与可移植路径解析；
 - [`docs/DATASET_VALIDATION.md`](docs/DATASET_VALIDATION.md)：legacy数据状态和reference generation门禁。
 
 ## 安装与当前单帧示例
