@@ -1,0 +1,66 @@
+# Draft reference profile. CODE_SPEC.md fixes the count and raster/timeline
+# parameters but does not identify the four geographic footprints or a root
+# seed. Region IDs and root_seed therefore remain explicit provisional inputs;
+# this profile must not be marked frozen or used to authorize regeneration.
+schema_version: 1
+profile_name: satrm-reference-v1
+profile_status: draft
+
+spatial:
+  regions:
+    - region_id: reference-region-01
+    - region_id: reference-region-02
+    - region_id: reference-region-03
+    - region_id: reference-region-04
+  map_height_px: 768
+  map_width_px: 768
+  ground_resolution_m: 100.0
+  extent_height_m: 76800.0
+  extent_width_m: 76800.0
+  geodetic_crs: EPSG:4326
+  dem_source: Copernicus DEM GLO-30
+  dem_source_resolution_m: 30.0
+  output_dem_resolution_m: 100.0
+
+temporal:
+  start_time_utc: "2025-01-01T00:00:00Z"
+  end_time_utc: "2025-01-01T11:59:40Z"
+  interval_s: 20
+  frames_per_region: 2160
+
+service:
+  minimum_elevation_deg: 25.0
+
+link:
+  frequency_hz: 14500000000.0
+  transmit_power_dbm: 40.0
+  receiver_gain_dbi: 0.0
+
+antenna:
+  array_rows: 64
+  array_columns: 64
+  element_gain_dbi: 5.0
+  array_efficiency_loss_db: 3.0
+  maximum_off_axis_attenuation_db: 35.0
+
+atmosphere:
+  gas_zenith_loss_db: 0.08
+  cloud_zenith_loss_db: 0.10
+
+terrain:
+  profile_step_m: 100.0
+  profile_start_distance_m: 150.0
+  effective_earth_radius_factor: 1.3333333333333333
+  diffraction_loss_cap_db: 40.0
+
+weather:
+  minimum_cell_count: 2
+  maximum_cell_count: 4
+  maximum_nominal_attenuation_db: 8.0
+
+clutter:
+  maximum_nominal_attenuation_db: 2.0
+  additional_bias_db: 0.4
+
+random:
+  root_seed: 20250101
