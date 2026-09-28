@@ -48,6 +48,8 @@ Satellite Coverage Sim 是一个面向科研的动态卫星—地面无线电地
 
 ## 当前实现状态
 
+新增独立的 pilot 入口，用于人工单链路计算、旧输出标签适配、真实 DEM 小窗口审计和运行追溯。使用方式见 [`docs/PILOT.md`](docs/PILOT.md)，本次交付与限制见 [`reports/week1/summary.md`](reports/week1/summary.md)。它不改变下述 legacy 单帧入口，也不代表完整 reference engine 已实现。
+
 当前版本仍是迁移前的legacy单帧仿真器，已经具备：
 
 - 读取YAML中的单区域和单时刻配置；
@@ -60,7 +62,9 @@ Satellite Coverage Sim 是一个面向科研的动态卫星—地面无线电地
 尚未完成的核心部分包括：统一WGS-84/ECEF逐像素geometry、stateful scheduler、reference beam、weather、clutter、批量时序生成、完整metadata、chronological split和独立benchmark pipeline。
 
 > [!WARNING]
-> 当前实现不是已经验证的reference dataset generator。审计确认legacy terrain遮挡算法存在CF-01：使用绝对DEM高程时会产生大面积虚假遮挡。启用terrain生成的现有输出不得标记为validated reference data。详见 [`CODE_AUDIT_REPORT.md`](CODE_AUDIT_REPORT.md) 和 [`docs/DATASET_VALIDATION.md`](docs/DATASET_VALIDATION.md)。
+> 当前实现不是已经验证的reference dataset generator。v0.1.1 已修复 CF-01 的接收点高程判据，并通过平地、高度平移和山脊回归；历史上受该缺陷影响的输出仍保持失效状态。地形剖面范围、reference profile、真实几何和 TLE 验证仍未齐备。详见 [`docs/DATASET_VALIDATION.md`](docs/DATASET_VALIDATION.md)。
+
+第一周 v0.1.1 的逐项验收、修复记录与剩余限制见 [最终关闭报告](reports/week1/closure.md)。
 
 ## 建模边界
 

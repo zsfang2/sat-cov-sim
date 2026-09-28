@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "epsg_lookup": [
+    4326,
+    3857
+  ],
+  "reprojection_valid_pixels": 63,
+  "coordinate_cross_library_difference_m": 0.0,
+  "executable": "/home/Users_Work_Space/zsfang/satellite-coverage-sim/.venv/bin/python",
+  "isolated_venv": true,
+  "rasterio": "1.4.3",
+  "gdal": "3.9.3",
+  "pyproj": "3.7.2",
+  "proj": "9.5.1",
+  "pyproj_database": "/home/Users_Work_Space/zsfang/satellite-coverage-sim/.venv/lib/python3.12/site-packages/pyproj/proj_dir/share/proj/proj.db",
+  "rasterio_database": "/home/Users_Work_Space/zsfang/satellite-coverage-sim/.venv/lib/python3.12/site-packages/rasterio/proj_data/proj.db",
+  "foreign_data_overrides": {
+    "PROJ_DATA": null,
+    "PROJ_LIB": null,
+    "GDAL_DATA": null
+  },
+  "scope": "software CRS lookup/reprojection consistency; no terrain vertical-datum validation"
+}

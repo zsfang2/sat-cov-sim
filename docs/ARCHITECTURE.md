@@ -12,10 +12,10 @@ satellite_coverage.CoverageScenario       (lazy public export)
      -> coordinates / TLE / geodata / propagation legacy modules
 ```
 
-The move behind `engine.run_legacy_scenario` is structural. The legacy equations,
-defaults, component names, output dtypes, and single-frame semantics are preserved.
-In particular, this does not correct the known CF-01 terrain issue and does not make
-legacy output eligible for reference-dataset registration.
+The original move behind `engine.run_legacy_scenario` was structural. The
+v0.1.1 propagation update separately corrects CF-01 using receiver-relative
+elevation. Component names, output dtypes and single-frame orchestration remain.
+This local correction does not qualify old or new maps as reference datasets.
 
 ## Public namespaces
 
@@ -37,6 +37,21 @@ simulation, or writing output:
 Some namespaces are intentionally interface-only at this stage. They establish the
 dependency direction for later implementations; they are not claims that orbit,
 geometry, scheduling, dataset I/O, or benchmark behavior has been implemented.
+
+The independent pilot path is now executable:
+
+```text
+experiments.pilot
+  -> config.pilot -> domain.link_record / geometry.local (validation only)
+  -> engine.analytic_link -> geometry.local / propagation.fspl_db / domain.link_record
+  -> adapters.legacy_output / data_sources.manifest / data_sources.dem_audit
+  -> io.run_record (run records, not a reference DatasetWriter)
+```
+
+`geometry.local` only handles synthetic receiver-relative ENU vectors. This does
+not implement the intended Earth-fixed per-pixel geometry or orbit pipeline.
+External-data audits and analytic links have separate input records; auditing a
+DEM does not make that DEM an input to the synthetic free-space calculation.
 
 ## Dependency rules
 

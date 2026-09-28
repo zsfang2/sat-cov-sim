@@ -1,0 +1,13 @@
+{
+  "scene": "single_ridge",
+  "coordinate_system": "receiver_local_north_up_metres",
+  "receiver_ground_elevation_m": 500.0,
+  "receiver_height_agl_m": 2.0,
+  "ridge_north_distance_m": 100.0,
+  "ridge_elevation_m": 602.0,
+  "ridge_azimuth_deg": 0.0,
+  "expected_horizon_elevation_deg": 45.0,
+  "queries_deg": [30.0, 45.0, 60.0],
+  "expected_states": ["blocked", "tangent", "clear"],
+  "derivation": "The ridge rises 100 m above the antenna at 100 m horizontal distance, hence arctan(1)=45 degrees. No diffraction loss is asserted."
+}

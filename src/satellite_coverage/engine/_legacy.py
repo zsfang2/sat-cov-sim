@@ -22,7 +22,7 @@ from .api import CoverageResult
 
 
 def run_legacy_scenario(config: dict[str, Any]) -> CoverageResult:
-    """Execute the original dict-driven calculation without numerical changes."""
+    """Execute the legacy configuration with the current propagation functions."""
     region, link = config["region"], config["link"]
     grid = LocalGrid(
         center_lat=float(region["lat"]),

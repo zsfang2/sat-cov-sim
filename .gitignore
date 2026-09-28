@@ -17,3 +17,6 @@ output/
 *.log
 
 .humanize/
+
+# Recreated by the documented pilot commands; retain concise reports in Git.
+reports/week1/runs/

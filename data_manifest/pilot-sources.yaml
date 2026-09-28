@@ -1,0 +1,74 @@
+schema_version: 1
+sources:
+  - source_id: golden-total
+    kind: legacy_output
+    version: golden_v1-observed-2026-09-28
+    relative_path: benchmarks/golden_scenes/l1l2l3_composite.npy
+    checksum: sha256:ba6912c6b9c8b1bbecfba936f0d1cac90e542794e2c762d0ae905cee2f6e12a5
+    scope: regions
+    region_ids: [golden-xian]
+    horizontal_crs: null
+    vertical_crs: null
+  - source_id: golden-l1
+    kind: legacy_output
+    version: golden_v1-observed-2026-09-28
+    relative_path: benchmarks/golden_scenes/l1l2l3_l1.npy
+    checksum: sha256:917acd1090190539931ed7bc51f73e9c6f17f6dd9cf2b7cb628760a6b0d832ff
+    scope: regions
+    region_ids: [golden-xian]
+    horizontal_crs: null
+    vertical_crs: null
+  - source_id: golden-l2
+    kind: legacy_output
+    version: golden_v1-observed-2026-09-28
+    relative_path: benchmarks/golden_scenes/l1l2l3_l2.npy
+    checksum: sha256:010fa1d696ebebcaa38ee3721888d36faab2e58d0d443a96430ee9d6f9d5ca7b
+    scope: regions
+    region_ids: [golden-xian]
+    horizontal_crs: null
+    vertical_crs: null
+  - source_id: golden-l3
+    kind: legacy_output
+    version: golden_v1-observed-2026-09-28
+    relative_path: benchmarks/golden_scenes/l1l2l3_l3.npy
+    checksum: sha256:86e43611117c7e34705807ccf6447b4096e3884ec140e3fac1bff40e1ef7a1c5
+    scope: regions
+    region_ids: [golden-xian]
+    horizontal_crs: null
+    vertical_crs: null
+  - source_id: golden-manifest
+    kind: source_metadata
+    version: golden_v1-observed-2026-09-28
+    relative_path: benchmarks/golden_scenes/manifest.json
+    checksum: sha256:46334855c2cdb6c55be2441208e73ecb1147a6f5a98d411766a6049f37b077dd
+    scope: global
+    region_ids: []
+    horizontal_crs: null
+    vertical_crs: null
+  - source_id: golden-config
+    kind: source_metadata
+    version: golden_v1-observed-2026-09-28
+    relative_path: benchmarks/golden_scenes/config_snapshot.yaml
+    checksum: sha256:fe146c72db3d51189607fb053dd6e50b2c7327eaf0d6545062238e732738d735
+    scope: global
+    region_ids: []
+    horizontal_crs: null
+    vertical_crs: null
+  - source_id: observed-capture-code
+    kind: source_metadata
+    version: observed-current-file-not-generation-commit
+    relative_path: benchmarks/capture_golden_scenes.py
+    checksum: sha256:428db5846f97500923e7e5caf83d50eae45fc4c5506ff11896237bf7161d1889
+    scope: global
+    region_ids: []
+    horizontal_crs: null
+    vertical_crs: null
+  - source_id: observed-l1-code
+    kind: source_metadata
+    version: observed-current-file-not-generation-commit
+    relative_path: src/layers/l1_macro.py
+    checksum: sha256:474a9c36ca67bc234c3f5dd4b43ee175902ddd6838a00b58bc7239aaadf6bb26
+    scope: global
+    region_ids: []
+    horizontal_crs: null
+    vertical_crs: null

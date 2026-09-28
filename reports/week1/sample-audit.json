@@ -1,0 +1,230 @@
+{
+  "composition": {
+    "components": [
+      "golden-l1",
+      "golden-l2",
+      "golden-l3"
+    ],
+    "max_absolute_error_db": 0.0,
+    "meaning": "stored arithmetic consistency only; not independent physical validation",
+    "passed": true,
+    "tolerance_db": 0.0001,
+    "total": "golden-total"
+  },
+  "dem": {
+    "available_window_buffer_m": 817.26751101842,
+    "bounds_in_source_crs": [
+      108.89277777777778,
+      34.23402777777777,
+      108.91055555555556,
+      34.25180555555555
+    ],
+    "buffer_method": "WGS84 distances to window axis intersections; diagnostic only",
+    "candidate_wgs84": [
+      108.9016839,
+      34.2427189
+    ],
+    "derivation": "native window, no resampling; raw pixels and mask stored separately",
+    "dtype": "int16",
+    "elevation_metadata_and_window_complete": false,
+    "filling": "none",
+    "first_pixel_center_in_source_crs": [
+      108.89291666666666,
+      34.251666666666665
+    ],
+    "horizon_range_sufficiency": "undetermined",
+    "horizontal_crs": "GEOGCS[\"WGS 84\",DATUM[\"World Geodetic System 1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST]]",
+    "mask_checksum": "sha256:c1cf3cde9f391134c25953ffffb43c872dd154f4e621fb5790b0d0400a3f10c1",
+    "missing_pixels": 0,
+    "nodata": 0.0,
+    "nodata_repr": "0.0",
+    "origin_note": "Existing local DEM; provider release, vertical datum and band unit unverified. Full-file hash from upstream manifest must be verified. Excluded from strict DEM source registration pending metadata.",
+    "physical_use_note": "audit alone does not validate vertical alignment, propagation radius or terrain solver",
+    "physical_use_ready": false,
+    "pixel_size": [
+      0.0002777777777777778,
+      0.0002777777777777778
+    ],
+    "pixel_size_unit": "degree",
+    "resampling": "none",
+    "source_checksum": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+    "source_path": "/home/Users_Work_Space/zsfang/Satellite-Ground-Radiomap/data/l2_topo/china_dem_30.tif",
+    "source_shape": [
+      151200,
+      237600
+    ],
+    "source_tags": {
+      "AREA_OR_POINT": "Area"
+    },
+    "source_transform": [
+      0.0002777777777777778,
+      0.0,
+      73.0,
+      0.0,
+      -0.0002777777777777778,
+      57.000138888888884
+    ],
+    "valid_fraction": 1.0,
+    "valid_max": 426.0,
+    "valid_mean": 409.462890625,
+    "valid_min": 395.0,
+    "vertical_crs": null,
+    "vertical_crs_status": "unknown",
+    "vertical_unit": null,
+    "vertical_unit_status": "unknown",
+    "window": {
+      "col_off": 129214,
+      "height": 64,
+      "row_off": 81894,
+      "width": 64
+    },
+    "window_checksum": "sha256:05a2cd04a2b06124f6304dc1e3348d6813baffabf121179f2a6d88912bdb8b39",
+    "window_edge_distance_m": {
+      "east": 817.26751101842,
+      "north": 1007.954168743699,
+      "south": 964.0774978325637,
+      "west": 820.4426215341568
+    },
+    "window_transform": [
+      0.0002777777777777778,
+      0.0,
+      108.89277777777778,
+      0.0,
+      -0.0002777777777777778,
+      34.25180555555555
+    ]
+  },
+  "is_reference_validation": false,
+  "legacy_samples": {
+    "golden-l1": {
+      "artifact_status": "legacy_unvalidated",
+      "cf01_applicability": false,
+      "checksum": "sha256:917acd1090190539931ed7bc51f73e9c6f17f6dd9cf2b7cb628760a6b0d832ff",
+      "conversion_issue": null,
+      "dtype": "float32",
+      "finite_fraction": 1.0,
+      "included_effects": [
+        "free_space",
+        "atmosphere",
+        "ionosphere",
+        "polarization",
+        "transmit_gain_subtracted"
+      ],
+      "label_evidence": "observed src/layers/l1_macro.py net_loss_db = fspl + atm_db + iono_db + pol_db - gain_db; generation commit unavailable",
+      "label_type": "net_loss",
+      "normalization": null,
+      "path": "/home/Users_Work_Space/zsfang/Satellite-Ground-Radiomap/benchmarks/golden_scenes/l1l2l3_l1.npy",
+      "physical_summary": {
+        "label_type": "net_loss",
+        "max": 176.3036651611328,
+        "mean": 141.73834476759657,
+        "min": 137.14944458007812,
+        "unit": "dB"
+      },
+      "shape": [
+        256,
+        256
+      ],
+      "unit": "dB"
+    },
+    "golden-l2": {
+      "artifact_status": "legacy_unvalidated",
+      "cf01_applicability": null,
+      "checksum": "sha256:010fa1d696ebebcaa38ee3721888d36faab2e58d0d443a96430ee9d6f9d5ca7b",
+      "conversion_issue": null,
+      "dtype": "float32",
+      "finite_fraction": 1.0,
+      "included_effects": [
+        "local_terrain"
+      ],
+      "label_evidence": "capture_golden_scenes.py terrain.loss_db and manifest; stored zero array does not prove unobstructed terrain",
+      "label_type": "path_loss",
+      "normalization": null,
+      "path": "/home/Users_Work_Space/zsfang/Satellite-Ground-Radiomap/benchmarks/golden_scenes/l1l2l3_l2.npy",
+      "physical_summary": {
+        "label_type": "path_loss",
+        "max": 0.0,
+        "mean": 0.0,
+        "min": 0.0,
+        "unit": "dB"
+      },
+      "shape": [
+        256,
+        256
+      ],
+      "unit": "dB"
+    },
+    "golden-l3": {
+      "artifact_status": "legacy_unvalidated",
+      "cf01_applicability": null,
+      "checksum": "sha256:86e43611117c7e34705807ccf6447b4096e3884ec140e3fac1bff40e1ef7a1c5",
+      "conversion_issue": null,
+      "dtype": "float32",
+      "finite_fraction": 1.0,
+      "included_effects": [
+        "urban"
+      ],
+      "label_evidence": "capture_golden_scenes.py msm_full.l3_db and manifest min_db/max_db",
+      "label_type": "path_loss",
+      "normalization": null,
+      "path": "/home/Users_Work_Space/zsfang/Satellite-Ground-Radiomap/benchmarks/golden_scenes/l1l2l3_l3.npy",
+      "physical_summary": {
+        "label_type": "path_loss",
+        "max": 30.0,
+        "mean": 3.28826904296875,
+        "min": 0.0,
+        "unit": "dB"
+      },
+      "shape": [
+        256,
+        256
+      ],
+      "unit": "dB"
+    },
+    "golden-total": {
+      "artifact_status": "legacy_unvalidated",
+      "cf01_applicability": null,
+      "checksum": "sha256:ba6912c6b9c8b1bbecfba936f0d1cac90e542794e2c762d0ae905cee2f6e12a5",
+      "conversion_issue": null,
+      "dtype": "float32",
+      "finite_fraction": 1.0,
+      "included_effects": [
+        "free_space",
+        "atmosphere",
+        "ionosphere",
+        "polarization",
+        "transmit_gain_subtracted",
+        "local_terrain",
+        "urban"
+      ],
+      "label_evidence": "golden manifest min_db/max_db and capture_golden_scenes.py composite_db; arithmetic interpretation, generation commit unknown",
+      "label_type": "net_loss",
+      "normalization": null,
+      "path": "/home/Users_Work_Space/zsfang/Satellite-Ground-Radiomap/benchmarks/golden_scenes/l1l2l3_composite.npy",
+      "physical_summary": {
+        "label_type": "net_loss",
+        "max": 203.27354431152344,
+        "mean": 145.02661381056532,
+        "min": 137.14944458007812,
+        "unit": "dB"
+      },
+      "shape": [
+        256,
+        256
+      ],
+      "unit": "dB"
+    }
+  },
+  "limitations": [
+    "upstream generation commit and full satellite identity unavailable",
+    "upstream fallbacks retained; stored components do not prove physical correctness",
+    "DEM vertical datum/unit or completeness unresolved; physical terrain use not qualified",
+    "terrain solver, vertical alignment and required horizon radius not validated by this audit"
+  ],
+  "schema_version": 1,
+  "upstream_fallbacks": [
+    "L1: IONEX load failed (Compressed file ended before the end-of-stream marker was reached); using default TEC=10.0",
+    "L1: ERA5 unavailable (/home/Users_Work_Space/zsfang/Satellite-Ground-Radiomap/data/l1_space/data/data_stream-oper_stepType-instant.nc); using simplified atmospheric model"
+  ],
+  "upstream_satellite_meta": {}
+}

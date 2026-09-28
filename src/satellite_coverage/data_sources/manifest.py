@@ -50,6 +50,8 @@ class SourceKind(str, Enum):
     DEM = "dem"
     BUILDING_VECTOR = "building_vector"
     ENVIRONMENT = "environment"
+    LEGACY_OUTPUT = "legacy_output"
+    SOURCE_METADATA = "source_metadata"
 
 
 class SourceScope(str, Enum):

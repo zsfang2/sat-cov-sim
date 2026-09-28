@@ -1,0 +1,113 @@
+[
+  {
+    "absolute_time_status": "not_applicable",
+    "applicability": "synthetic_scalar_mean_power_only; no terrain or actual service validation",
+    "code_identity": {
+      "commit": "ddc467bfc3ab0dea00a04a22b733f714981133b1",
+      "source_fingerprint": "sha256:f0b62732801ffc58bef4c3728beb65a828dcc5c3bcc647ed61e40fc25736e42f"
+    },
+    "components": [
+      {
+        "effects": [
+          "free_space"
+        ],
+        "name": "fspl",
+        "quantity": {
+          "reason": "free_space_formula",
+          "status": "known",
+          "unit": "dB",
+          "value": 170.48239703458438
+        },
+        "solver": "fspl-v1"
+      },
+      {
+        "effects": [
+          "atmosphere"
+        ],
+        "name": "atmosphere",
+        "quantity": {
+          "reason": "fixed_zero_analytic_scenario",
+          "status": "known",
+          "unit": "dB",
+          "value": 0.0
+        },
+        "solver": "declared-scalar-v1"
+      },
+      {
+        "effects": [
+          "local"
+        ],
+        "name": "local",
+        "quantity": {
+          "reason": "disabled_by_config",
+          "status": "known",
+          "unit": "dB",
+          "value": 0.0
+        },
+        "solver": "declared-scalar-v1"
+      },
+      {
+        "effects": [
+          "misc"
+        ],
+        "name": "misc",
+        "quantity": {
+          "reason": "disabled_by_config",
+          "status": "known",
+          "unit": "dB",
+          "value": 0.0
+        },
+        "solver": "declared-scalar-v1"
+      }
+    ],
+    "config_checksum": "sha256:59e85da164f57c90af65b947bce97834c7123a7d2b7619f52b78677090dc2b43",
+    "eirp_dbm": 55.0,
+    "environment_id": "synthetic-free-space-v1",
+    "frequency_hz": 14500000000.0,
+    "geometry": {
+      "azimuth_convention": "north_clockwise",
+      "azimuth_deg": 0.0,
+      "azimuth_status": "known",
+      "coordinate_system": "RECEIVER_RELATIVE_ENU",
+      "elevation_deg": 45.0,
+      "geometrically_above_local_horizontal": true,
+      "slant_range_m": 550000.0,
+      "terrain_visibility": "not_computed"
+    },
+    "height_semantics": "relative vector starts at antenna; AGL height is not added twice",
+    "input_type": "synthetic_relative_position",
+    "inputs_checksum": "sha256:15bba7d5439a790fb9b16958fb90ad691f87a305467b7670982c3b69b45948d2",
+    "margin": {
+      "reason": "threshold_or_received_power_unavailable",
+      "status": "not_computed",
+      "unit": "dB",
+      "value": null
+    },
+    "physical_input_checksum": "sha256:59e85da164f57c90af65b947bce97834c7123a7d2b7619f52b78677090dc2b43",
+    "power_input": {
+      "eirp_dbm": 55.0,
+      "mode": "eirp"
+    },
+    "received_power": {
+      "reason": "scalar_mean_power_budget",
+      "status": "known",
+      "unit": "dBm",
+      "value": -115.48239703458438
+    },
+    "receiver": {
+      "height_agl_m": 2.0,
+      "position_id": "synthetic-receiver-origin"
+    },
+    "receiver_gain_dbi": 0.0,
+    "run_record": "environment.json",
+    "sample_id": "analytic-link-001",
+    "satellite_relative_enu_m": [
+      0.0,
+      388908.7296526012,
+      388908.7296526012
+    ],
+    "service_eligibility": "unknown",
+    "solver": "analytic-scalar-v1",
+    "threshold": null
+  }
+]

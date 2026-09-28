@@ -1,0 +1,56 @@
+{
+  "artifact_lineage": [
+    {
+      "path": "benchmarks/golden_scenes/l1l2l3_composite.npy",
+      "last_artifact_commit": "1aaac9526c0c4f33b96f5c610c126ac0b0ddaa60",
+      "committed_bytes_match_current": true,
+      "sha256": "ba6912c6b9c8b1bbecfba936f0d1cac90e542794e2c762d0ae905cee2f6e12a5",
+      "generation_commit": null
+    },
+    {
+      "path": "benchmarks/golden_scenes/l1l2l3_l1.npy",
+      "last_artifact_commit": "1aaac9526c0c4f33b96f5c610c126ac0b0ddaa60",
+      "committed_bytes_match_current": true,
+      "sha256": "917acd1090190539931ed7bc51f73e9c6f17f6dd9cf2b7cb628760a6b0d832ff",
+      "generation_commit": null
+    },
+    {
+      "path": "benchmarks/golden_scenes/l1l2l3_l2.npy",
+      "last_artifact_commit": "c613a1f37a996a9710bdca27b0d67426edd1152d",
+      "committed_bytes_match_current": true,
+      "sha256": "010fa1d696ebebcaa38ee3721888d36faab2e58d0d443a96430ee9d6f9d5ca7b",
+      "generation_commit": null
+    },
+    {
+      "path": "benchmarks/golden_scenes/l1l2l3_l3.npy",
+      "last_artifact_commit": "1aaac9526c0c4f33b96f5c610c126ac0b0ddaa60",
+      "committed_bytes_match_current": true,
+      "sha256": "86e43611117c7e34705807ccf6447b4096e3884ec140e3fac1bff40e1ef7a1c5",
+      "generation_commit": null
+    },
+    {
+      "path": "benchmarks/golden_scenes/config_snapshot.yaml",
+      "last_artifact_commit": "1d48dc3c99fe720bce513548f55885995dcc0a8f",
+      "committed_bytes_match_current": true,
+      "sha256": "fe146c72db3d51189607fb053dd6e50b2c7327eaf0d6545062238e732738d735",
+      "generation_commit": null
+    },
+    {
+      "path": "benchmarks/golden_scenes/manifest.json",
+      "last_artifact_commit": "9ac4fd9cf9a59e372a432d120f2317e99b7199bf",
+      "committed_bytes_match_current": true,
+      "sha256": "46334855c2cdb6c55be2441208e73ecb1147a6f5a98d411766a6049f37b077dd",
+      "generation_commit": null
+    }
+  ],
+  "meaning": "Repository artifact commits recovered; do not identify execution-time generator commit or satellite state.",
+  "dem_investigation": {
+    "files_found": [
+      "data/l2_topo/README.md"
+    ],
+    "readme_claims": "Approximate 30 m DEM and possible alternative sources; no binding producer release, vertical CRS or band unit.",
+    "vertical_crs": null,
+    "vertical_unit": null,
+    "action": "Keep unknown explicitly and reject physical qualification; no metadata fabricated."
+  }
+}

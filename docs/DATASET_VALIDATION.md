@@ -4,11 +4,11 @@
 
 ## Current Status
 
-当前源码只能生成legacy单帧coverage result，不能生成`CODE_SPEC.md`定义的完整reference dataset。
+当前源码提供单帧 coverage 与独立 pilot 入口，不能生成 `CODE_SPEC.md` 定义的完整 reference dataset。
 
-审计发现CF-01：`directional_occlusion()`比较terrain horizon时遗漏当前receiver的绝对高程。对于正海拔的平坦DEM，该错误会产生虚假blocked mask和diffraction loss。因此：
+历史审计发现 CF-01：遮挡判据遗漏接收点绝对高程。v0.1.1 已修复该判据，增加接收高度与独立接收面声明，并通过解析回归。修复不追溯升级历史输出，也不代表完整地形参考模型已通过。因此：
 
-- 所有启用legacy terrain path生成的既有输出应标记为`invalidated_by_CF_01`；
+- 确认使用修复前受影响 terrain 路径的输出应标记为 `invalidated_by_CF_01`；
 - 未启用terrain但缺乏完整provenance的输出应标记为`legacy_unvalidated`；
 - 只有required checks全部通过，并且具体frame具有完整metadata/provenance时，才可通过注册边界标记为`validated_reference`。
 
@@ -38,7 +38,7 @@
 
 | Check | Current status | Blocking reason |
 |---|---|---|
-| `terrain` | failed | CF-01以及reference profile/cap尚未完成 |
+| `terrain` | not_run for full reference model | CF-01 局部回归通过，但完整 profile、范围、曲率和 raw/used cap 验证尚未完成 |
 | `geometry` | not_run | 尚未实现统一WGS-84/ECEF/ENU pixel geometry |
 | `tle` | not_run | 尚未实现TLE去重、epoch policy和完整provenance |
 
@@ -84,16 +84,17 @@ status = register_reference_frame(candidate, report)
 
 门禁实现位于`src/satellite_coverage/domain/validation.py`。它目前是storage-neutral domain boundary，不会自行读取或写入manifest。当前CLI仍是legacy single-frame接口；未来DatasetWriter和reference CLI必须调用该门禁并持久化同等证据，不能复制或绕过判定逻辑。
 
-## Known-Failure Evidence
+## CF-01 Regression Evidence
 
-`tests/test_known_failures.py`使用严格xfail记录CF-01：
+原 `test_known_failures.py` 的 strict xfail 已迁移为 `tests/test_terrain_regression.py` 的正常物理回归：
 
-- 输入为5×5、恒定500 m海拔的平坦DEM；
-- elevation为25°，resolution为100 m；
-- 正确行为应为无blocked pixel且terrain loss为0；
-- legacy实现会错误地产生blocked pixel和diffraction loss。
+- 0、500、−100 m 平地在四个主方位均无遮挡、无绕射损耗；
+- 同时平移地形与接收点高程，遮挡、超高和障碍距离不变；
+- 100 m 距离/100 m 相对超高的山脊边界为 45°，增加接收高度应减小遮挡；
+- 建筑高度图显式使用地面接收面，避免将接收点自动移动到屋顶；
+- nodata 和非法参数不能静默转换为无阻挡结果。
 
-该测试使用`strict=True`。当未来terrain修复使测试意外通过时，pytest会以XPASS失败，要求维护者显式移除known-failure标记并把测试迁入正常physical validation suite。
+没有把该局部测试结果直接设置为完整 reference terrain 检查通过。
 
 ## Numerical-Change Record
 

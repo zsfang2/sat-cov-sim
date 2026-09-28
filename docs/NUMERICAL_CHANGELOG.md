@@ -40,9 +40,24 @@
 | Existing dataset impact | 既有terrain-enabled legacy output仍为`invalidated_by_CF_01`；其他无provenance output为`legacy_unvalidated`。 |
 | Regeneration decision | prohibited |
 
-## Pending Numerical Changes
+### PILOT-01 — Independent analytic link and sample audit
 
-下列项尚未应用，不应被解释为当前地图已经改变。
+| Field | Value |
+|---|---|
+| Kind | `unknown_numerical_risk` for the new isolated solver; no change to existing execution paths, as checked below |
+| Components affected | pilot config, scalar budget, relative ENU geometry, legacy label adapter, run records |
+| Before behavior | No executable pilot path or structured single-link result with explicit missingness. |
+| After behavior | New experiment entry computes synthetic scalar links and audits declared old arrays/DEM windows; legacy CLI and equations unchanged. |
+| Numerical detail | Pilot FSPL uses legacy one-metre formula plus distance scaling to avoid legacy sub-metre clamping; legacy function itself is unchanged. Unknown effects do not become zero. |
+| Validation evidence | `tests/test_pilot.py`, unchanged legacy characterization and CF-01 xfail; `reports/week1/reproducibility.json` |
+| Current generated maps change | `no` — old execution path unchanged; no maps regenerated |
+| Published benchmark results change | `no` — no existing dataset or benchmark outputs changed |
+| Existing dataset impact | Existing validation states retained; external golden arrays remain `legacy_unvalidated` |
+| Regeneration decision | not performed; pilot results are not reference artifacts |
+
+## Historical Pending Entry
+
+以下保留修复前的计划记录；CF-01 的现行状态见后面的 CF-01-FIX 条目。完整地形 profile/raw-used 扩展仍未完成。
 
 ### CF-01 — Receiver-relative terrain visibility correction
 
@@ -58,3 +73,20 @@
 | Regeneration decision | prohibited |
 
 后续每个数值相关提交都应新增记录；不得通过覆盖既有条目来隐藏before/after lineage。
+
+## Applied Correction in v0.1.1
+
+### CF-01-FIX — Receiver-relative obstruction horizon
+
+| Field | Value |
+| --- | --- |
+| Kind | `physics_model_correction` |
+| Components affected | terrain horizon, diffraction input; explicit ground receiver semantics for building rasters |
+| Before behavior | Receiver absolute elevation was omitted; a 500 m flat plane could create false blockage. |
+| After behavior | Compare obstacle height against receiver elevation plus AGL height and ray slope; remove common datum offset; keep tangent rays clear within roundoff tolerance. Invalid surface values fail explicitly. |
+| Validation evidence | `tests/test_terrain_regression.py`: translated flat surfaces, relative ridge boundary, AGL response, datum invariance, building receiver semantics and invalid inputs; legacy no-terrain characterization remains passing. |
+| Current generated maps change | `yes` if terrain-enabled maps are recomputed with corrected code; existing files are not rewritten |
+| Published benchmark results change | `possibly`; affected published artifact provenance is unavailable |
+| Existing dataset impact | Previously invalidated artifacts remain invalidated; repaired code does not upgrade their status |
+| Remaining scope | Extended terrain profiles, curvature, nodata policy in the old loader, raw/used diffraction and reference cap still need validation |
+| Regeneration decision | No formal dataset regeneration performed |

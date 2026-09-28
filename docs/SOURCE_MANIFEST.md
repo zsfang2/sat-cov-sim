@@ -21,7 +21,9 @@ horizontal_crs: EPSG:4326
 vertical_crs: provider-declared-vertical-datum
 ```
 
-Supported kinds are `tle_catalog`, `dem`, `building_vector`, and `environment`.
+Supported kinds are `tle_catalog`, `dem`, `building_vector`, `environment`,
+`legacy_output`, and `source_metadata`. The last two identify old result arrays
+and their accompanying evidence; they do not certify physical validity.
 Scope is either `global` with an empty `region_ids` list or `regions` with one or
 more stable region IDs. A TLE catalog is global. DEM records must declare both
 horizontal and vertical CRS strings; the schema deliberately does not choose the

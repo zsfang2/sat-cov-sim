@@ -1,0 +1,75 @@
+{
+  "analytic": {
+    "batch_size": 100,
+    "execution_threads": 1,
+    "repetitions": 5,
+    "sample_count": 1,
+    "scope": "in-process analytic calculation; not direction-table or orbit benchmark",
+    "timings": {
+      "complete_record": {
+        "max_s_per_call": 0.00011110926046967507,
+        "median_s_per_call": 9.497213875874877e-05,
+        "min_s_per_call": 8.666013134643435e-05,
+        "samples_s_per_call": [
+          0.00010947734815999866,
+          0.00011110926046967507,
+          9.497213875874877e-05,
+          9.079845855012535e-05,
+          8.666013134643435e-05
+        ]
+      },
+      "fspl": {
+        "max_s_per_call": 5.544200539588928e-06,
+        "median_s_per_call": 5.052818451076746e-06,
+        "min_s_per_call": 4.996559582650662e-06,
+        "samples_s_per_call": [
+          5.544200539588928e-06,
+          5.052818451076746e-06,
+          4.996559582650662e-06,
+          5.089759360998869e-06,
+          5.044091958552599e-06
+        ]
+      },
+      "geometry": {
+        "max_s_per_call": 2.557849511504173e-06,
+        "median_s_per_call": 2.4407007731497287e-06,
+        "min_s_per_call": 2.387119457125664e-06,
+        "samples_s_per_call": [
+          2.5189481675624846e-06,
+          2.4254992604255677e-06,
+          2.387119457125664e-06,
+          2.4407007731497287e-06,
+          2.557849511504173e-06
+        ]
+      }
+    }
+  },
+  "analytic_resources": {
+    "json_write_time_s_before_resource_record": 0.002114559058099985,
+    "peak_rss": 204320,
+    "wall_time_s": 0.19543361198157072
+  },
+  "audit": {
+    "dem_window_read_s": 0.05001444602385163,
+    "dem_window_shape": [
+      64,
+      64
+    ],
+    "hash_seconds": {
+      "dem_full_file": 6.557134520960972,
+      "golden-config": 0.00031575514003634453,
+      "golden-l1": 0.0008105689194053411,
+      "golden-l2": 0.0006268029101192951,
+      "golden-l3": 0.0006123469211161137,
+      "golden-manifest": 0.00023459410294890404,
+      "golden-total": 0.0006096318829804659,
+      "observed-capture-code": 0.00022575398907065392,
+      "observed-l1-code": 0.00030318996869027615
+    }
+  },
+  "audit_resources": {
+    "json_write_time_s_before_resource_record": 0.0029057632200419903,
+    "peak_rss": 217636,
+    "wall_time_s": 6.774753711186349
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "status": "passed_for_week1_scope",
+  "tests": "........................................................................ [ 51%]\n....................................................................     [100%]\n140 passed in 4.23s",
+  "stages": [
+    {
+      "name": "environment",
+      "command": [
+        "/home/Users_Work_Space/zsfang/satellite-coverage-sim/.venv/bin/python",
+        "/home/Users_Work_Space/zsfang/satellite-coverage-sim/scripts/check_geo_environment.py",
+        "/home/Users_Work_Space/zsfang/satellite-coverage-sim/reports/week1/runs/release-v0.1.1/geo-environment.json"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "dependencies",
+      "command": [
+        "/home/Users_Work_Space/zsfang/satellite-coverage-sim/.venv/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "tests",
+      "command": [
+        "/home/Users_Work_Space/zsfang/satellite-coverage-sim/.venv/bin/python",
+        "-m",
+        "pytest",
+        "tests",
+        "-q"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "audit",
+      "command": [
+        "/home/Users_Work_Space/zsfang/satellite-coverage-sim/.venv/bin/python",
+        "-m",
+        "satellite_coverage.experiments.pilot",
+        "validate-data",
+        "--config",
+        "configs/pilot.yaml",
+        "--source-root",
+        "/home/Users_Work_Space/zsfang/Satellite-Ground-Radiomap",
+        "--output",
+        "/home/Users_Work_Space/zsfang/satellite-coverage-sim/reports/week1/runs/release-v0.1.1/audit"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "run-a",
+      "command": [
+        "/home/Users_Work_Space/zsfang/satellite-coverage-sim/.venv/bin/python",
+        "-m",
+        "satellite_coverage.experiments.pilot",
+        "run",
+        "--config",
+        "configs/pilot.yaml",
+        "--output",
+        "/home/Users_Work_Space/zsfang/satellite-coverage-sim/reports/week1/runs/release-v0.1.1/run-a"
+      ],
+      "returncode": 0
+    },
+    {
+      "name": "run-b",
+      "command": [
+        "/home/Users_Work_Space/zsfang/satellite-coverage-sim/.venv/bin/python",
+        "-m",
+        "satellite_coverage.experiments.pilot",
+        "run",
+        "--config",
+        "configs/pilot.yaml",
+        "--output",
+        "/home/Users_Work_Space/zsfang/satellite-coverage-sim/reports/week1/runs/release-v0.1.1/run-b"
+      ],
+      "returncode": 0
+    }
+  ],
+  "deterministic_comparisons": {
+    "config.json": true,
+    "inputs.json": true,
+    "link_records.json": true,
+    "source_snapshot.zip": true
+  },
+  "artifact_checks": {
+    "audit": true,
+    "run-a": true,
+    "run-b": true
+  },
+  "source_identity": "sha256:b7e8cba2f2b2034b8f33f5cb82d2bced92a591785b8a6f46c81a9685a7d96e5f",
+  "scope": "analytic scalar link and real sample audit; no terrain-reference certification",
+  "unresolved_data_findings": [
+    "upstream generation commit and full satellite identity unavailable",
+    "upstream fallbacks retained; stored components do not prove physical correctness",
+    "DEM vertical datum/unit or completeness unresolved; physical terrain use not qualified",
+    "terrain solver, vertical alignment and required horizon radius not validated by this audit"
+  ],
+  "reference_ready": false
+}

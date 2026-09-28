@@ -1,0 +1,47 @@
+schema_version: 1
+source_root: ../../Satellite-Ground-Radiomap
+source_manifest: pilot-sources.yaml
+legacy_evidence_source_id: golden-manifest
+legacy_config_source_id: golden-config
+legacy_samples:
+  - source_id: golden-total
+    label_type: net_loss
+    unit: dB
+    included_effects: [free_space, atmosphere, ionosphere, polarization, transmit_gain_subtracted, local_terrain, urban]
+    evidence: golden manifest min_db/max_db and capture_golden_scenes.py composite_db; arithmetic interpretation, generation commit unknown
+    normalization: null
+    affected_by_cf01: null
+  - source_id: golden-l1
+    label_type: net_loss
+    unit: dB
+    included_effects: [free_space, atmosphere, ionosphere, polarization, transmit_gain_subtracted]
+    evidence: observed src/layers/l1_macro.py net_loss_db = fspl + atm_db + iono_db + pol_db - gain_db; generation commit unavailable
+    normalization: null
+    affected_by_cf01: false
+  - source_id: golden-l2
+    label_type: path_loss
+    unit: dB
+    included_effects: [local_terrain]
+    evidence: capture_golden_scenes.py terrain.loss_db and manifest; stored zero array does not prove unobstructed terrain
+    normalization: null
+    affected_by_cf01: null
+  - source_id: golden-l3
+    label_type: path_loss
+    unit: dB
+    included_effects: [urban]
+    evidence: capture_golden_scenes.py msm_full.l3_db and manifest min_db/max_db
+    normalization: null
+    affected_by_cf01: null
+composition:
+  total: golden-total
+  components: [golden-l1, golden-l2, golden-l3]
+  tolerance_db: 0.0001
+dem:
+  relative_path: data/l2_topo/china_dem_30.tif
+  checksum: sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b
+  longitude_deg: 108.9016839
+  latitude_deg: 34.2427189
+  window_size_px: 64
+  vertical_crs: null
+  vertical_unit: null
+  origin_note: Existing local DEM; provider release, vertical datum and band unit unverified. Full-file hash from upstream manifest must be verified. Excluded from strict DEM source registration pending metadata.

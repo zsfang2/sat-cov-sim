@@ -1,0 +1,27 @@
+schema_version: 1
+sample_id: analytic-link-001
+seed: 20260928
+environment_id: synthetic-free-space-v1
+solver_version: analytic-scalar-v1
+receiver:
+  position_id: synthetic-receiver-origin
+  height_agl_m: 2.0
+# Relative to the receiver antenna, not to the ground surface.
+satellite_relative_enu_m: [0.0, 388908.7296526012, 388908.7296526012]
+frequency_hz: 14500000000.0
+power:
+  mode: eirp
+  eirp_dbm: 55.0
+receiver_gain_dbi: 0.0
+losses:
+  atmosphere: {value: 0.0, status: known, reason: fixed_zero_analytic_scenario}
+  local: {value: 0.0, status: known, reason: disabled_by_config}
+  misc: {value: 0.0, status: known, reason: disabled_by_config}
+threshold: null
+task:
+  objective: cumulative_conditional_insufficiency_s
+  candidate_cost: equal
+  minimum_useful_gain: undetermined
+  max_compute_budget: undetermined
+  allowed_event_error: undetermined
+audit_spec: ../data_manifest/pilot-audit.yaml

@@ -1,0 +1,15 @@
+{
+  "scene": "piecewise_linear_margin",
+  "time_s": [0, 2, 5, 8, 10, 12],
+  "margin_db": [-2, 2, -1, 2, null, -2],
+  "interpolation": "linear only between adjacent known samples",
+  "expected_roots_s": [1, 4, 6],
+  "expected_bad_intervals_s": [[0, 1], [4, 6]],
+  "expected_bad_duration_on_valid_segments_s": 3,
+  "expected_longest_bad_duration_on_valid_segments_s": 2,
+  "unknown_intervals_s": [[8, 12]],
+  "observation_left_censored": true,
+  "observation_right_censored": true,
+  "right_endpoint_note": "The final isolated negative sample implies no positive-duration interval across the gap; any final episode boundary is unknown.",
+  "derivation": "Independent roots from slope/intercept on each known segment; missing endpoints invalidate adjoining segments."
+}

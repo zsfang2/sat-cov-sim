@@ -1,0 +1,56 @@
+{
+  "deterministic_files_equal": {
+    "config.json": true,
+    "inputs.json": true,
+    "link_records.json": true
+  },
+  "artifact_checks": {
+    "reports/week1/runs/run-a": {
+      "config.json": true,
+      "config_source.json": true,
+      "environment.json": true,
+      "inputs.json": true,
+      "link_records.json": true,
+      "resources.json": true,
+      "run.log": true,
+      "timings.json": true,
+      "validation.json": true
+    },
+    "reports/week1/runs/run-b": {
+      "config.json": true,
+      "config_source.json": true,
+      "environment.json": true,
+      "inputs.json": true,
+      "link_records.json": true,
+      "resources.json": true,
+      "run.log": true,
+      "timings.json": true,
+      "validation.json": true
+    },
+    "reports/week1/runs/audit-final": {
+      "audit_spec.json": true,
+      "config.json": true,
+      "config_source.json": true,
+      "dem_nodata_mask.npy": true,
+      "dem_window.npy": true,
+      "environment.json": true,
+      "inputs.json": true,
+      "link_records.json": true,
+      "resources.json": true,
+      "run.log": true,
+      "sample-audit.json": true,
+      "source_manifest.json": true,
+      "timings.json": true,
+      "upstream_config_snapshot.json": true,
+      "upstream_manifest.json": true,
+      "validation.json": true
+    }
+  },
+  "volatile_fields_excluded": [
+    "run.log timestamps",
+    "timings.json",
+    "resources.json",
+    "environment.git_status"
+  ],
+  "reference_validation": false
+}

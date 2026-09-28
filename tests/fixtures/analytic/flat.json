@@ -1,0 +1,11 @@
+{
+  "scene": "flat",
+  "shape": [5, 5],
+  "resolution_m": 100.0,
+  "ground_elevations_m": [0.0, 500.0],
+  "receiver_height_agl_m": 2.0,
+  "incoming_elevation_deg": 25.0,
+  "expected_blocked_pixels": 0,
+  "expected_local_loss_db": 0.0,
+  "derivation": "A horizontal plane below the receiver cannot intersect any upward ray; translating all ground heights preserves visibility."
+}
