@@ -26,6 +26,20 @@
 
 ## Applied Changes
 
+### M1-01 — Unified scalar geometry and TLE experiments
+
+| Field | Value |
+|---|---|
+| Kind | `geometry_or_orbit_change` |
+| Components affected | New scalar ECEF/ENU geometry, TLE selection, antenna gain, shared scalar budget |
+| Before behavior | Synthetic pilot and geometric explorer had separate numerical entry points. |
+| After behavior | Fixed positions, artificial directions and TLE candidates share an explicit scalar link contract; stale/missing/failed states are retained. |
+| Validation evidence | `reports/m1/acceptance.md`, `tests/test_m1_links.py`, `tests/test_orbit_link.py`; existing legacy regression retained |
+| Current generated maps change | `no` — legacy map path unchanged; no existing maps regenerated |
+| Published benchmark results change | `no` — no dataset or benchmark outputs changed |
+| Existing dataset impact | Existing validation states retained; new scalar records are not reference maps |
+| Regeneration decision | not performed |
+
 ### GATE-01 — Reference validation and provenance gate
 
 | Field | Value |

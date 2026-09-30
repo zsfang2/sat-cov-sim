@@ -1,0 +1,27 @@
+schema_version: 1
+experiment_id: m1-starlink-past-only
+start: "2025-01-01T05:00:00Z"
+end: "2025-01-02T00:00:00Z"
+step_s: 10
+receiver:
+  lon_deg: 108.9
+  lat_deg: 34.24
+  height_basis: ellipsoid
+  antenna_ellipsoid_height_m: 400
+  basis: "Assumed antenna ellipsoid height; not derived from DEM"
+source:
+  mode: tle
+  candidate_id: norad-44714
+  norad_id: "44714"
+  tle_policy: past_only
+  max_age_days: 7
+budget:
+  frequency_hz: 14500000000
+  power: {mode: eirp, eirp_dbm: 55}
+  receiver_antenna: {model: isotropic, gain_dbi: 0, basis: "Ideal isotropic assumption"}
+  losses:
+    atmosphere: {enabled: false, reason: "Free-space baseline"}
+    local: {enabled: false, reason: "Free-space baseline; terrain unknown"}
+    misc: {enabled: false, reason: "Free-space baseline"}
+  threshold: null
+  assumption_basis: "Frequency, EIRP and antenna are assumptions, not Starlink specifications"

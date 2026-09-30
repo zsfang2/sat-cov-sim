@@ -48,8 +48,20 @@ experiments.pilot
   -> io.run_record (run records, not a reference DatasetWriter)
 ```
 
-`geometry.local` only handles synthetic receiver-relative ENU vectors. This does
-not implement the intended Earth-fixed per-pixel geometry or orbit pipeline.
+The M1 path now unifies scalar fixed ECEF, artificial directions/ENU and TLE inputs:
+
+```text
+experiments.link -> config.link.LinkConfig -> engine.links.calculate_links
+  -> orbit selection / geometry.geodetic / geometry.local
+  -> geometry.antenna -> engine.link_budget -> domain.link_record
+  -> io.run_record
+```
+
+`engine.orbit_link` is an adapter for the first-batch orbit request. The pilot
+and unified M1 engine share `engine.link_budget`; they do not maintain separate
+power formulas. The new path is a scalar candidate sequence, not a per-pixel
+reference dataset engine. See `docs/M1.md` for units, states and scope.
+
 External-data audits and analytic links have separate input records; auditing a
 DEM does not make that DEM an input to the synthetic free-space calculation.
 

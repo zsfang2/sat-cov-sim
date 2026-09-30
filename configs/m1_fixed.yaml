@@ -1,0 +1,25 @@
+schema_version: 1
+experiment_id: m1-fixed-free-space
+start: "2025-01-01T00:00:00Z"
+end: "2025-01-01T00:01:00Z"
+step_s: 30
+receiver:
+  lon_deg: 0
+  lat_deg: 0
+  height_basis: ellipsoid
+  antenna_ellipsoid_height_m: 0
+  basis: "Analytic equatorial receiver on WGS84 ellipsoid"
+source:
+  mode: fixed_ecef
+  candidate_id: fixed-550km
+  position_ecef_m: [6928137, 0, 0]
+budget:
+  frequency_hz: 14500000000
+  power: {mode: eirp, eirp_dbm: 55}
+  receiver_antenna: {model: isotropic, gain_dbi: 0, basis: "Ideal isotropic assumption"}
+  losses:
+    atmosphere: {enabled: false, reason: "Free-space baseline"}
+    local: {enabled: false, reason: "Free-space baseline; no terrain evidence"}
+    misc: {enabled: false, reason: "Free-space baseline"}
+  threshold: {received_power_dbm: -120, basis: "Illustrative scalar power threshold; not service requirement"}
+  assumption_basis: "Analytic test; not actual terminal specifications"

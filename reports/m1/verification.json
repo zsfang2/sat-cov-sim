@@ -1,0 +1,33 @@
+{
+  "config_checksum": "sha256:218f3d9e766a7ceb4eea97d4e1e9a6e9c8a3617a5cbe59031e8ce86eb5e3d2c1",
+  "known_power_samples": 473,
+  "observed_errors": {
+    "power_reassembly_max_error_db": 0.0,
+    "receiver_ecef_proj_max_error_m": 0.0,
+    "topocentric_azimuth_max_error_deg": 1.5631940186722204e-12,
+    "topocentric_elevation_max_error_deg": 2.8848035071860068e-12,
+    "topocentric_range_max_error_m": 5.4016709327697754e-08
+  },
+  "passed": true,
+  "run": "output/m1-acceptance-tle-20260929",
+  "samples": 6841,
+  "scope": "implementation consistency only; not orbit truth, terrain or service validation",
+  "selection": {
+    "catalog_sha256": "e661f17444e4fdc4eed85ccfef437d87f33796193bf8ca000bdb3058715b9b7f",
+    "epoch_utc": "2025-01-01T04:32:50.710846+00:00",
+    "fixed_over_interval": true,
+    "max_epoch_offset_days": 0.8105241800231481,
+    "norad_id": "44714",
+    "policy": "past_only",
+    "record_sha256": "d86e70429a5027bfd4abd871327005fd9baca5d1c7762be06db7359033e76098",
+    "uses_future_epoch": false
+  },
+  "source_fingerprint": "sha256:c5062399fd5070c5db8d7518ad9d50c66cb4889b195416cad470c81ffc249b22",
+  "tolerances": {
+    "power_reassembly_max_error_db": 1e-06,
+    "receiver_ecef_proj_max_error_m": 1e-08,
+    "topocentric_azimuth_max_error_deg": 1e-08,
+    "topocentric_elevation_max_error_deg": 1e-08,
+    "topocentric_range_max_error_m": 1e-05
+  }
+}

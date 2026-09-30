@@ -37,6 +37,35 @@ def number(value, name, *, positive=False, nonnegative=False):
     return float(value)
 
 
+def validate_scalar_budget(data):
+    """Validate and normalize the common scalar budget fields in a mapping."""
+    data["frequency_hz"] = number(data["frequency_hz"], "frequency_hz", positive=True)
+    data["receiver_gain_dbi"] = number(data["receiver_gain_dbi"], "receiver_gain_dbi")
+    power = data["power"]
+    if not isinstance(power, dict):
+        raise ValueError("power must be a mapping")
+    if power.get("mode") == "eirp":
+        exact_keys(power, {"mode", "eirp_dbm"}, "power")
+    elif power.get("mode") == "transmit_power_gain":
+        exact_keys(power, {"mode", "transmit_power_dbm", "transmit_gain_dbi"}, "power")
+    else:
+        raise ValueError("power.mode must be eirp or transmit_power_gain")
+    for k in power.keys() - {"mode"}:
+        power[k] = number(power[k], k)
+    exact_keys(data["losses"], {"atmosphere", "local", "misc"}, "losses")
+    for name, loss in data["losses"].items():
+        exact_keys(loss, {"value", "status", "reason"}, name)
+        text_field(loss["reason"], f"{name}.reason")
+        if loss["value"] is not None:
+            loss["value"] = number(loss["value"], name)
+        Quantity(loss["value"], "dB", QuantityStatus(loss["status"]), loss["reason"])
+    threshold = data["threshold"]
+    if threshold is not None:
+        exact_keys(threshold, {"received_power_dbm", "basis"}, "threshold")
+        threshold["received_power_dbm"] = number(threshold["received_power_dbm"], "threshold")
+        text_field(threshold["basis"], "threshold.basis")
+
+
 @dataclass(frozen=True)
 class PilotConfig:
     """Immutable canonical snapshot; callers receive independent mappings."""
@@ -73,31 +102,7 @@ class PilotConfig:
             raise ValueError("satellite_relative_enu_m must be a list of three numbers")
         data["satellite_relative_enu_m"] = [number(v, "ENU position") for v in xyz]
         relative_enu_geometry(data["satellite_relative_enu_m"])
-        data["frequency_hz"] = number(data["frequency_hz"], "frequency_hz", positive=True)
-        data["receiver_gain_dbi"] = number(data["receiver_gain_dbi"], "receiver_gain_dbi")
-        power = data["power"]
-        if not isinstance(power, dict):
-            raise ValueError("power must be a mapping")
-        if power.get("mode") == "eirp":
-            exact_keys(power, {"mode", "eirp_dbm"}, "power")
-        elif power.get("mode") == "transmit_power_gain":
-            exact_keys(power, {"mode", "transmit_power_dbm", "transmit_gain_dbi"}, "power")
-        else:
-            raise ValueError("power.mode must be eirp or transmit_power_gain")
-        for k in power.keys() - {"mode"}:
-            power[k] = number(power[k], k)
-        exact_keys(data["losses"], {"atmosphere", "local", "misc"}, "losses")
-        for name, loss in data["losses"].items():
-            exact_keys(loss, {"value", "status", "reason"}, name)
-            text_field(loss["reason"], f"{name}.reason")
-            if loss["value"] is not None:
-                loss["value"] = number(loss["value"], name)
-            Quantity(loss["value"], "dB", QuantityStatus(loss["status"]), loss["reason"])
-        threshold = data["threshold"]
-        if threshold is not None:
-            exact_keys(threshold, {"received_power_dbm", "basis"}, "threshold")
-            threshold["received_power_dbm"] = number(threshold["received_power_dbm"], "threshold")
-            text_field(threshold["basis"], "threshold.basis")
+        validate_scalar_budget(data)
         task = data["task"]
         exact_keys(task, {"objective", "candidate_cost", "minimum_useful_gain", "max_compute_budget", "allowed_event_error"}, "task")
         if task["objective"] != "cumulative_conditional_insufficiency_s" or task["candidate_cost"] != "equal":

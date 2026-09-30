@@ -48,6 +48,10 @@ Satellite Coverage Sim 是一个面向科研的动态卫星—地面无线电地
 
 ## 当前实现状态
 
+实际数据演示采用独立前端目录 `../satellite-coverage-demo`。本仓库只提供计算核心与 JSON API，运行 `bash scripts/python_geo.sh -m satellite_coverage.explorer --port 8766`；在前端目录运行 `python server.py --port 8765 --backend http://127.0.0.1:8766`，浏览器访问 `http://127.0.0.1:8765`。文件选择、时间窗口、轨迹与 DEM 展示用法见 [工作台说明](docs/EXPLORER.md)。
+
+第一周离线概念演示也已迁入前端的 `concept/`，不再随仿真包安装。当前能力与下一阶段验收顺序见 [下一步开发建议](docs/NEXT_STEPS.md)。
+
 新增独立的 pilot 入口，用于人工单链路计算、旧输出标签适配、真实 DEM 小窗口审计和运行追溯。使用方式见 [`docs/PILOT.md`](docs/PILOT.md)，本次交付与限制见 [`reports/week1/summary.md`](reports/week1/summary.md)。它不改变下述 legacy 单帧入口，也不代表完整 reference engine 已实现。
 
 当前版本仍是迁移前的legacy单帧仿真器，已经具备：
@@ -74,6 +78,8 @@ Satellite Coverage Sim 是一个面向科研的动态卫星—地面无线电地
 
 ## 项目文档
 
+- [`docs/M1.md`](docs/M1.md)：固定位置、人工方向和 TLE 的统一链路接口、方向图、分量开关及无界面重算命令。
+- [`reports/m1/acceptance.md`](reports/m1/acceptance.md)：M1 阶段验收矩阵、186 项回归和三个验收算例；下一阶段为 M3，暂停扩展 demo。
 - [`CODE_SPEC.md`](CODE_SPEC.md)：当前唯一intended technical specification；
 - [`CODE_AUDIT_REPORT.md`](CODE_AUDIT_REPORT.md)：规范一致性、物理、数值、复现性、性能和架构审查；
 - [`PROJECT_STRUCTURE_MODIFICATION_PLAN.md`](PROJECT_STRUCTURE_MODIFICATION_PLAN.md)：分阶段结构改造计划和验收标准；

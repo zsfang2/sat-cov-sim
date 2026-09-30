@@ -1,0 +1,23 @@
+schema_version: 1
+norad_id: "44714"
+start: "2025-01-01T05:00:00Z"
+end: "2025-01-02T00:00:00Z"
+step_s: 10
+tle_policy: past_only
+max_age_days: 7
+receiver:
+  lon_deg: 108.9
+  lat_deg: 34.24
+  height_basis: ellipsoid
+  antenna_ellipsoid_height_m: 400
+  basis: "Synthetic 400 m antenna ellipsoid height at Xi'an; not derived from DEM"
+budget:
+  frequency_hz: 14500000000
+  power: {mode: eirp, eirp_dbm: 55}
+  receiver_gain_dbi: 0
+  assumption_basis: "Scalar free-space experiment; frequency, EIRP and isotropic gain are assumptions, not Starlink specifications"
+  losses:
+    atmosphere: {value: 0, status: known, reason: "disabled_for_free_space_baseline"}
+    local: {value: 0, status: known, reason: "disabled_for_free_space_baseline; not evidence of clear terrain"}
+    misc: {value: 0, status: known, reason: "disabled_for_free_space_baseline"}
+  threshold: null

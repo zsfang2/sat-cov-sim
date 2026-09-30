@@ -1,0 +1,36 @@
+schema_version: 1
+experiment_id: m1-direction-sequence
+start: "2025-01-01T23:59:00Z"
+end: "2025-01-02T00:01:00Z"
+step_s: 30
+receiver:
+  lon_deg: 0
+  lat_deg: 0
+  height_basis: ellipsoid
+  antenna_ellipsoid_height_m: 0
+  basis: "Analytic equatorial receiver"
+source:
+  mode: direction_sequence
+  candidate_id: synthetic-direction-sweep
+  directions:
+    - {azimuth_deg: 0, elevation_deg: 90, slant_range_m: 550000}
+    - {azimuth_deg: 90, elevation_deg: 60, slant_range_m: 550000}
+    - {azimuth_deg: 90, elevation_deg: 30, slant_range_m: 550000}
+    - {azimuth_deg: 90, elevation_deg: 0, slant_range_m: 550000}
+    - {azimuth_deg: 0, elevation_deg: -90, slant_range_m: 550000}
+budget:
+  frequency_hz: 14500000000
+  power: {mode: transmit_power_gain, transmit_power_dbm: 45, transmit_gain_dbi: 10}
+  receiver_antenna:
+    model: cosine
+    peak_gain_dbi: 12
+    floor_gain_dbi: -20
+    exponent: 2
+    boresight_enu: [0, 0, 1]
+    basis: "Declared analytic cosine-power pattern; not a measured terminal pattern"
+  losses:
+    atmosphere: {enabled: true, value: 1, status: known, reason: "Fixed 1 dB scenario, not weather prediction"}
+    local: {enabled: false, reason: "No local effects in analytic baseline"}
+    misc: {enabled: false, reason: "No miscellaneous loss in analytic baseline"}
+  threshold: null
+  assumption_basis: "Analytic pattern and atmospheric sensitivity experiment"
