@@ -10,9 +10,10 @@ from ..engine.orbit_link import calculate_orbit_links
 from ..engine.links import calculate_links
 from ..io.run_record import RunRecord, archive_sources, environment_record
 from ..orbit.visibility import parse_catalog
+from ..config.pilot import exact_keys
 
 
-def execute(config_path, tle_path, output, project_root):
+def execute(config_path, tle_path, output, project_root, terrain_path=None):
     run = RunRecord(output)
     try:
         config_raw = Path(config_path).read_text(encoding="utf-8")
@@ -34,7 +35,33 @@ def execute(config_path, tle_path, output, project_root):
             if tle_path is not None:
                 raise ValueError("--tle only applies to TLE sources")
             run.write("inputs.json", {"source": data["source"]})
-        result = calculate_links(data, catalog) if "source" in data else calculate_orbit_links(catalog, data)
+        terrain = None
+        if terrain_path is not None:
+            import numpy as np
+            from ..data_sources.terrain_dem import load_terrain_dem
+            from ..engine.terrain_context import TerrainContext
+            if "source" not in data:
+                raise ValueError("terrain requires the unified M1 config")
+            terrain_path = Path(terrain_path).resolve()
+            terrain_text = terrain_path.read_text(encoding="utf-8")
+            options = yaml.safe_load(terrain_text)
+            required = {"dem_path", "declaration", "geoid", "radius_m", "resolution_m",
+                        "step_m", "effective_radius_m", "loss_cap_db"}
+            exact_keys(options, required | ({"horizon_tolerance_deg"} if "horizon_tolerance_deg" in options else set()), "terrain config")
+            dem_path = (terrain_path.parent / options["dem_path"]).resolve()
+            geoid = options["geoid"]
+            if geoid is not None:
+                geoid = {**geoid, "path": str((terrain_path.parent / geoid["path"]).resolve())}
+            run.write("terrain_source.json", {"path": str(terrain_path), "text": terrain_text})
+            grid, metadata = load_terrain_dem(dem_path, options["declaration"],
+                                              lon_deg=data["receiver"]["lon_deg"], lat_deg=data["receiver"]["lat_deg"],
+                                              radius_m=options["radius_m"], resolution_m=options["resolution_m"], geoid=geoid)
+            terrain = TerrainContext(grid, data["receiver"]["lon_deg"], data["receiver"]["lat_deg"],
+                                     options["radius_m"], options["step_m"], options["effective_radius_m"], options["loss_cap_db"],
+                                     options.get("horizon_tolerance_deg"))
+            run.write("terrain.json", metadata)
+            np.save(run.path / "terrain_ellipsoid_m.npy", grid.elevations_m, allow_pickle=False)
+        result = calculate_links(data, catalog, terrain=terrain) if "source" in data else calculate_orbit_links(catalog, data)
         run.write("links.json", result)
         known = [r["budget"]["received_power"]["value"] for r in result["records"]
                  if r["budget"] and r["budget"]["received_power"]["status"] == "known"]
@@ -52,10 +79,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", type=Path, required=True)
     parser.add_argument("--tle", type=Path, help="required for TLE mode only")
+    parser.add_argument("--terrain", type=Path, help="optional declared DEM, geoid and profile configuration")
     parser.add_argument("--output", type=Path, required=True, help="new exclusive directory")
     parser.add_argument("--project-root", type=Path, default=Path(__file__).resolve().parents[3])
     args = parser.parse_args()
-    result = execute(args.config, args.tle, args.output, args.project_root)
+    result = execute(args.config, args.tle, args.output, args.project_root, args.terrain)
     print(f"{args.output}: {len(result['records'])} samples; complete={result['complete']}")
     if not result["complete"]:
         raise SystemExit(2)

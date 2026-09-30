@@ -26,6 +26,48 @@
 
 ## Applied Changes
 
+### M3-SAMPLING-03 — Cell-interval horizon audit and optional power guard
+
+| Field | Value |
+|---|---|
+| Kind | `metadata_or_gate_only` for an explicit scalar output gate |
+| Components affected | M3 sampling diagnostics and optional M1 terrain-conditioned power availability |
+| Before behavior | Complete sampled profiles could produce known scalar power without a horizon sampling audit |
+| After behavior | Explicit horizon tolerance rejects known loss/power when a cell-interval raster comparison fails; diagnostic sampled loss retained; example terrain config enables this guard |
+| Validation evidence | 233-test regression; three-site sensitivity matrix and archived real TLE guard replay in `reports/m3/progress.md` |
+| Current generated maps change | `no` — legacy map path unchanged; scalar availability changes only when guard enabled |
+| Published benchmark results change | `no` — no published outputs changed |
+| Existing dataset impact | Historical scalar runs retained as unguarded diagnostics, not promoted to converged reference results |
+| Regeneration decision | No dataset regeneration; archived scalar inputs replayed for guard verification only |
+
+### M3-LINK-02 — Declared GeoTIFF/geoid inputs and optional M1 local loss
+
+| Field | Value |
+|---|---|
+| Kind | `geometry_or_orbit_change` and explicit scalar propagation extension |
+| Components affected | GeoTIFF height interpretation, EGM2008-to-ellipsoid conversion, optional M1 local loss |
+| Before behavior | M3 accepted only local in-memory grids and did not affect M1 powers |
+| After behavior | File-bound heights and hashed local geoid grid; local terrain replaces the disabled scalar local component exactly once; incomplete terrain keeps power unavailable |
+| Validation evidence | 220-test regression; `tests/test_terrain_integration.py`; real paired run in `reports/m3/progress.md` |
+| Current generated maps change | `no` — legacy map path unchanged; new opt-in scalar sequences only |
+| Published benchmark results change | `no` — no existing dataset or benchmark outputs changed |
+| Existing dataset impact | No reclassification of prior outputs; real DSM experiment remains conditional on declared source lineage and local-radius model |
+| Regeneration decision | not performed |
+
+### M3-PROFILE-01 — Explicit local sampled terrain baseline
+
+| Field | Value |
+|---|---|
+| Kind | `physics_model_correction` in a new isolated experimental solver |
+| Components affected | Local DEM profiles, sampled horizon, signed clearance and dominant knife-edge loss |
+| Before behavior | Only legacy raster directional occlusion and clipped positive-excess knife-edge losses |
+| After behavior | New explicit-radius profile path records nodata/extent gaps, optional curvature once, Fresnel clearance and raw/used loss; legacy unchanged |
+| Validation evidence | `tests/test_terrain_profiles.py`, `reports/m3/progress.md`; full 205-test regression |
+| Current generated maps change | `no` — new solver not connected to old map generation, no maps regenerated |
+| Published benchmark results change | `no` — no existing outputs changed |
+| Existing dataset impact | Prior validation states retained; controlled profile records are not reference maps |
+| Regeneration decision | not performed |
+
 ### M1-01 — Unified scalar geometry and TLE experiments
 
 | Field | Value |

@@ -1,0 +1,22 @@
+# File-bound declaration based on user-provided product lineage and official
+# specifications; local mosaic release/processing history remains unverified.
+dem_path: ../../Satellite-Ground-Radiomap/data/l2_topo/china_dem_30.tif
+declaration:
+  sha256: sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b
+  height_unit: m
+  vertical_datum: EGM2008
+  surface_type: DSM
+  evidence: "User identified Copernicus GLO30-CHINA; official COP-DEM documentation specifies metre EGM2008 DSM. Assumes local mosaic retained source vertical datum; processing history not reconstructed."
+geoid:
+  path: ../output/geoid/egm2008-complete.tif
+  sha256: sha256:4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a
+  model: EGM2008
+  evidence: "Downloaded from https://cdn.proj.org/us_nga_egm08_25.tif; NGA public-domain geoid undulations, target EPSG:3855"
+radius_m: 3000
+resolution_m: 60
+step_m: 60
+effective_radius_m: 6371000
+loss_cap_db: 60
+# Diagnostic guard motivated by the radius/step sweep; NOT a certified accuracy
+# tolerance. Failing this check keeps terrain-conditioned power unavailable.
+horizon_tolerance_deg: 0.1

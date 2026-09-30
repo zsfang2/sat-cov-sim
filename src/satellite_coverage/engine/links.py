@@ -3,6 +3,7 @@
 from skyfield.framelib import itrs
 
 from ..config.link import LinkConfig, enabled_losses, sample_times
+from ..config.pilot import identity
 from ..geometry.antenna import receive_gain
 from ..geometry.geodetic import antenna_position, ecef_and_basis, ecef_geometry
 from ..geometry.local import relative_enu_geometry, direction_to_enu
@@ -47,16 +48,23 @@ def input_geometry(source, index, time, receiver, satellite):
     return ecef_geometry(receiver, xyz)
 
 
-def calculate_links(config, catalog=None):
+def calculate_links(config, catalog=None, *, terrain=None):
     config = config if isinstance(config, LinkConfig) else LinkConfig.from_mapping(config)
     data, config_id = config.to_mapping(), config.checksum
     times = sample_times(data)
     receiver = antenna_position(data["receiver"])
     source, budget = data["source"], data["budget"]
+    terrain_descriptor = None
+    if terrain is not None:
+        if budget["losses"]["local"]["enabled"]:
+            raise ValueError("disable declared local loss before enabling terrain; duplicate local effects")
+        terrain.validate_receiver(receiver)
+        terrain_descriptor = terrain.descriptor()
     satellite, unavailable = None, None
     selection = {"policy": "not_applicable", "candidate_id": source["candidate_id"]}
     if source["mode"] == "tle":
         satellite, selection, unavailable = select_tle(catalog, source, times)
+    physical_id = identity({"config_checksum": config_id, "terrain": terrain_descriptor, "selection": selection})
     losses = enabled_losses(budget["losses"])
     records = []
     for index, time in enumerate(times):
@@ -69,24 +77,41 @@ def calculate_links(config, catalog=None):
         else:
             try:
                 geometry = input_geometry(source, index, time, receiver, satellite)
+                sample_losses = dict(losses)
+                if terrain is not None:
+                    terrain_result = terrain.evaluate({**geometry, "frequency_hz": budget["frequency_hz"]}, receiver)
+                    record["terrain"] = terrain_result
+                    record["physical_input_checksum"] = physical_id
+                    sample_losses["local"] = {"value": terrain_result["used_loss_db"],
+                                              "status": terrain_result["loss_status"],
+                                              "reason": "M3 sampled local terrain; outside radius unverified"}
+                    geometry["terrain_visibility"] = terrain_result["los_status"]
                 antenna = receive_gain(budget["receiver_antenna"], geometry["satellite_relative_enu_m"])
                 computed = compose_budget(geometry, budget["frequency_hz"], budget["power"],
-                                          antenna["gain_dbi"], losses, budget["threshold"])
+                                          antenna["gain_dbi"], sample_losses, budget["threshold"])
                 computed["receiver_antenna"] = antenna
                 for component in computed["components"]:
                     name = component["name"]
                     component["enabled"] = True if name == "fspl" else budget["losses"][name]["enabled"]
+                    if name == "local" and terrain is not None:
+                        component.update(enabled=True, solver="local-dominant-knife-edge-v1")
                     component["reference_power"] = "eirp_plus_receive_gain"
                     component["averaging"] = "scalar_mean_power; no stochastic fading or coherent phase"
                 record.update(status="computed", geometry=geometry, budget=computed)
+                if terrain is not None and geometry["geometrically_above_local_horizontal"] and not terrain_result["coverage_complete"]:
+                    record.update(status="not_computed", reason="terrain_coverage_incomplete")
                 if computed["received_power"]["status"] == "failed":
                     record.update(status="failed", reason="component_solver_failed")
             except (ValueError, RuntimeError, OverflowError) as exc:
                 record.update(status="failed", reason=str(exc))
         records.append(record)
-    return {"schema_version": 1, "request": data, "receiver": receiver, "selection": selection,
+    result = {"schema_version": 1, "request": data, "receiver": receiver, "selection": selection,
             "config_checksum": config_id, "records": records,
             "complete": all(r["status"] == "computed" for r in records),
             "scope": "sampled candidate scalar mean power; declared antenna/losses; no terrain, refraction or service verification",
             "time_grid": "includes both endpoints; final step may be shorter; not an event-window solver",
             "power_meaning": "conditional on declared assumptions; computed geometry does not imply known received power"}
+    if terrain is not None:
+        result.update(terrain=terrain_descriptor, physical_input_checksum=physical_id,
+                      scope="M1 plus sampled local terrain within declared radius; outside terrain and service unverified")
+    return result
