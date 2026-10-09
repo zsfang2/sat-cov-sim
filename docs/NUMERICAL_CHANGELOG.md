@@ -26,6 +26,20 @@
 
 ## Applied Changes
 
+### M3-CONTRACT-08 — Structured finite-range applicability
+
+| Field | Value |
+|---|---|
+| Kind | `metadata_or_gate_only` |
+| Components affected | M1 terrain record/power metadata and CLI failure/resource records |
+| Before behavior | Finite-radius limitations mainly in scope/reason text; resource/input failures shared ValueError |
+| After behavior | Mandatory terrain_contract and query binding; full path always not_verified; resource-specific ValueError subclass and structured failure archive |
+| Validation evidence | 309 tests; 3×571 real records exactly equal to archived outputs after removing added contract fields; physical checksums unchanged |
+| Current generated maps change | `no` |
+| Published benchmark results change | `no` |
+| Existing dataset impact | Historical outputs untouched and not promoted |
+| Regeneration decision | Diagnostic replay only |
+
 ### M3-READ-07 — Bounded target tiles and exact source windows
 
 | Field | Value |

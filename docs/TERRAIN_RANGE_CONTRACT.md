@@ -1,8 +1,8 @@
-# 有限范围地形结果契约（G03 冻结，G04 待实现）
+# 有限范围地形结果契约（G03 冻结，G04 已接入待审查）
 
 2026-10-09。依据 [48 km 证据](../reports/m3/radius-48km.md) 和官方分析调用
 `.humanize/skill/2026-10-09_08-49-37-2257283-e5eed4fd/output.md`。
-本文件冻结下一步接口实现，不冒称当前 API 已包含这些字段。
+G04 已将下列字段接入 Python API 和 CLI 归档，独立轮次审查另记。
 
 ## 不改变的物理语义
 
@@ -56,11 +56,15 @@ version/scope/full_path_status；消费者不必从报告文字或其他记录�
 | 天顶/近端/求解域外 | `unsupported_geometry` | not_computed | 保留原因，不冒充无遮挡 |
 | 采样审计未通过 | `sampling_not_verified` | not_computed | 保留诊断损耗，正式损耗撤回 |
 | 数值异常/意外 solver 失败 | `solver_failure` | failed 或 not_computed，依原状态 | 不吞掉失败记录 |
+| 地形损耗可算但其他预算分量未知 | `component_unavailable` | 依预算为 unknown / not_computed | 不将其他分量缺失误归因于地形或 solver 失败 |
 | 范围内输入完整、数值可算 | null | known（仅条件功率） | full_path_status 仍 not_verified |
 
 非法输入和资源拒绝发生在构建阶段，优先于任何正常结果；运行阶段首先保留上游
 不可用/几何不适用事实，再判数据缺口、域外、采样失败和正常条件值。
 `failure_kind` 不取代原来的详细 reason/incomplete_reasons。资源不足不等于数据 nodata。
+G04 对既有 M1 可含未知非地形分量的情况增加 `component_unavailable`；这是对原冻结表遗漏场景的补齐，
+不改变数值或降低范围保护。构建期资源拒绝使用 `TerrainResourceError(ValueError)`；
+CLI 的 `validation.json.failure_kind` 保留结构化类别，并保存原 reason。
 
 ## 半径审计与绑定边界
 

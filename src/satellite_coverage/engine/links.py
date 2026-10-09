@@ -9,6 +9,7 @@ from ..geometry.geodetic import antenna_position, ecef_and_basis, ecef_geometry
 from ..geometry.local import relative_enu_geometry, direction_to_enu
 from ..orbit.visibility import TS, select_record
 from .link_budget import compose_budget
+from .terrain_contract import terrain_scope, attach_terrain_contract
 
 
 def select_tle(catalog, source, times):
@@ -104,6 +105,9 @@ def calculate_links(config, catalog=None, *, terrain=None):
                     record.update(status="failed", reason="component_solver_failed")
             except (ValueError, RuntimeError, OverflowError) as exc:
                 record.update(status="failed", reason=str(exc))
+        if terrain is not None:
+            attach_terrain_contract(record, terrain_descriptor, physical_id,
+                                    budget['frequency_hz'], receiver)
         records.append(record)
     result = {"schema_version": 1, "request": data, "receiver": receiver, "selection": selection,
             "config_checksum": config_id, "records": records,
@@ -113,5 +117,6 @@ def calculate_links(config, catalog=None, *, terrain=None):
             "power_meaning": "conditional on declared assumptions; computed geometry does not imply known received power"}
     if terrain is not None:
         result.update(terrain=terrain_descriptor, physical_input_checksum=physical_id,
+                      terrain_contract=terrain_scope(terrain_descriptor),
                       scope="M1 plus sampled local terrain within declared radius; outside terrain and service unverified")
     return result

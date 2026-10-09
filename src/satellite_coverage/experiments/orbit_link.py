@@ -11,6 +11,7 @@ from ..engine.links import calculate_links
 from ..io.run_record import RunRecord, archive_sources, environment_record
 from ..orbit.visibility import parse_catalog
 from ..config.pilot import exact_keys
+from ..data_sources.terrain_tiles import TerrainReadBudget, TerrainResourceError
 
 
 def execute(config_path, tle_path, output, project_root, terrain_path=None):
@@ -47,16 +48,24 @@ def execute(config_path, tle_path, output, project_root, terrain_path=None):
             options = yaml.safe_load(terrain_text)
             required = {"dem_path", "declaration", "geoid", "radius_m", "resolution_m",
                         "step_m", "effective_radius_m", "loss_cap_db"}
-            optional = {"horizon_tolerance_deg", "sampling_method"} & options.keys()
+            if not isinstance(options, dict):
+                raise ValueError('terrain config must be a mapping')
+            optional = {"horizon_tolerance_deg", "sampling_method", "read_budget"} & options.keys()
             exact_keys(options, required | optional, "terrain config")
             dem_path = (terrain_path.parent / options["dem_path"]).resolve()
             geoid = options["geoid"]
             if geoid is not None:
                 geoid = {**geoid, "path": str((terrain_path.parent / geoid["path"]).resolve())}
             run.write("terrain_source.json", {"path": str(terrain_path), "text": terrain_text})
+            budget_options = options.get('read_budget', {})
+            if not isinstance(budget_options, dict) or set(budget_options)-set(TerrainReadBudget.__dataclass_fields__):
+                raise ValueError('invalid terrain read_budget mapping')
+            diagnostics = {}
             grid, metadata = load_terrain_dem(dem_path, options["declaration"],
                                               lon_deg=data["receiver"]["lon_deg"], lat_deg=data["receiver"]["lat_deg"],
-                                              radius_m=options["radius_m"], resolution_m=options["resolution_m"], geoid=geoid)
+                                              radius_m=options["radius_m"], resolution_m=options["resolution_m"], geoid=geoid,
+                                              read_budget=TerrainReadBudget(**budget_options), diagnostics=diagnostics)
+            run.write('terrain_read.json', diagnostics)
             terrain = TerrainContext(grid, data["receiver"]["lon_deg"], data["receiver"]["lat_deg"],
                                      options["radius_m"], options["step_m"], options["effective_radius_m"], options["loss_cap_db"],
                                      options.get("horizon_tolerance_deg"), options.get("sampling_method", "uniform"))
@@ -72,7 +81,10 @@ def execute(config_path, tle_path, output, project_root, terrain_path=None):
                    meaning="execution validation only, not physical truth certification")
         return result
     except Exception as exc:
-        run.finish("failed", reason=str(exc))
+        kind = ('resource_budget_exceeded' if isinstance(exc,TerrainResourceError) else
+                'invalid_input' if isinstance(exc,(ValueError,TypeError,KeyError,yaml.YAMLError)) else
+                'upstream_unavailable' if isinstance(exc,OSError) else 'solver_failure')
+        run.finish("failed", reason=str(exc), failure_kind=kind)
         raise
 
 

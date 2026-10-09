@@ -14,7 +14,7 @@ import rasterio
 from time import perf_counter
 from dataclasses import asdict
 
-from .terrain_tiles import TerrainReadBudget, plan_bounds, read_tiles
+from .terrain_tiles import TerrainReadBudget, TerrainResourceError, plan_bounds, read_tiles
 
 from .manifest import checksum_sha256
 from ..config.pilot import exact_keys, identity, number, text_field
@@ -85,7 +85,7 @@ def load_terrain_dem(path, declaration, *, lon_deg, lat_deg, radius_m, resolutio
         if src.units[0] not in (None, "m", "metre", "meter"):
             raise ValueError("DEM embedded height unit conflicts with declaration")
         if max(a*b for a, b in src.block_shapes) > 4_000_000:
-            raise ValueError("DEM native block too large; prepare a tiled source")
+            raise TerrainResourceError("DEM native block too large; prepare a tiled source")
         estimate = budget.check_memory(size, max(a*b for a, b in src.block_shapes),
                                        np.dtype(src.dtypes[0]).itemsize)
         forward = Transformer.from_crs(local, src.crs, always_xy=True)

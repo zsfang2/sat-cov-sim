@@ -7,6 +7,10 @@ import numpy as np
 from rasterio.windows import Window
 
 
+class TerrainResourceError(ValueError):
+    """A valid terrain request cannot fit the selected read resource budget."""
+
+
 @dataclass(frozen=True)
 class TerrainReadBudget:
     tile_size: int = 128
@@ -26,13 +30,13 @@ class TerrainReadBudget:
 
     def check_memory(self, size, block_cells=0, itemsize=0):
         if size*size > self.target_cells:
-            raise ValueError('local terrain grid exceeds target budget (maximum four million cells)')
+            raise TerrainResourceError('local terrain grid exceeds target budget (maximum four million cells)')
         # Three output copies during TerrainGrid freezing; native block reserve
         # includes source, float64 masked buffer, filled copy and mask.
         estimate = (192*1024**2 + 3*size*size*8 + self.gdal_cache_bytes
                     + block_cells*(itemsize+17) + 32*1024**2)
         if estimate > self.memory_bytes:
-            raise ValueError('terrain estimated memory exceeds read budget')
+            raise TerrainResourceError('terrain estimated memory exceeds read budget')
         return estimate
 
 
@@ -96,7 +100,7 @@ def bounded_tiles(src, forward, tile, half, resolution, budget, stats):
     if (c1-c0)*(r1-r0) > budget.source_window_cells:
         a, b, c, d = tile
         if b-a == 1 and d-c == 1:
-            raise ValueError('minimum target tile exceeds source window budget')
+            raise TerrainResourceError('minimum target tile exceeds source window budget')
         stats['subdivisions'] += 1
         # Drop parent coordinate arrays before descending.
         del cols, rows, valid

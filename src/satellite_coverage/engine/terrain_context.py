@@ -8,6 +8,7 @@ from ..geometry.terrain import TerrainGrid, terrain_profile
 from ..geometry.cell_horizon import cell_horizon
 from ..geometry.cell_profile import cell_profile
 from .terrain_link import evaluate_profile
+from .terrain_contract import terrain_scope
 
 
 @dataclass(frozen=True)
@@ -56,6 +57,12 @@ class TerrainContext:
             raise ValueError("M1 antenna is below DEM ground; check height datum")
 
     def evaluate(self, geometry, receiver):
+        result = self._evaluate(geometry, receiver)
+        result['terrain_contract'] = terrain_scope(dict(radius_m=self.radius_m,step_m=self.step_m,
+                                                       sampling_method=self.sampling_method))
+        return result
+
+    def _evaluate(self, geometry, receiver):
         ground, _ = self.grid.sample(0, 0)
         agl = 0 if ground is None else receiver["antenna_ellipsoid_height_m"]-ground
         if not geometry["geometrically_above_local_horizontal"]:
