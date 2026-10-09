@@ -1,0 +1,4557 @@
+{
+  "runs": [
+    {
+      "mode": "bounded",
+      "radius_m": 3000.0,
+      "site": [
+        108.9,
+        34.24
+      ],
+      "resolution_m": 60,
+      "declaration": {
+        "sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+        "height_unit": "m",
+        "vertical_datum": "EGM2008",
+        "surface_type": "DSM",
+        "evidence": "Product identified by user, specifications checked against official source. The local mosaic release, original tiles and processing/vertical-conversion history are not independently reconstructed."
+      },
+      "geoid": {
+        "path": "/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif",
+        "sha256": "sha256:4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a",
+        "model": "EGM2008",
+        "evidence": "https://cdn.proj.org/us_nga_egm08_25.tif"
+      },
+      "versions": {
+        "python": "3.12.2",
+        "numpy": "1.26.4",
+        "gdal": "3.9.3",
+        "proj": "9.5.1"
+      },
+      "stats": {
+        "read_windows": 1,
+        "read_cells": 47760,
+        "max_read_cells": 47760,
+        "subdivisions": 0,
+        "execution_transform_seconds": 0.00411558710038662,
+        "read_seconds": 0.005527382250875235,
+        "vertical_seconds": 0.0030844639986753464,
+        "validation_geoid_seconds": 0.06356102181598544,
+        "dem_hash_seconds": 6.321707746945322,
+        "planning_transform_seconds": 0.0046282378025352955,
+        "freeze_seconds": 5.826074630022049e-05,
+        "budget": {
+          "tile_size": 128,
+          "target_cells": 4000000,
+          "source_window_cells": 262144,
+          "memory_bytes": 536870912,
+          "gdal_cache_bytes": 33554432
+        },
+        "estimated_memory_bytes": 269935256,
+        "source_block_shapes": [
+          [
+            256,
+            256
+          ]
+        ],
+        "strategy": "two_pass_target_tiles"
+      },
+      "source_hashes": {
+        "src/satellite_coverage/__init__.py": "sha256:0cdebc751405fe8e804b3d93ab3d8e55b64bf071ec1476905743290d34ec23f4",
+        "src/satellite_coverage/adapters/__init__.py": "sha256:9c63b7fd5dc11ad327928d558e89553fc3fbf5515bf568776a40c057ecedabcf",
+        "src/satellite_coverage/adapters/legacy_output.py": "sha256:397e51fe8143bb2d806b8d5af931c24afc93cd0c22729fe047c5aee23be1b489",
+        "src/satellite_coverage/cli.py": "sha256:bb9209aa6e5ba02e6797526dec373d8ce44d1aba470b2839e03679601823d75d",
+        "src/satellite_coverage/compatibility/__init__.py": "sha256:318e2bd9579ce36d10e6d4a7f49a455d6a137bdbc36ef336601d4272f3174df3",
+        "src/satellite_coverage/compatibility/legacy_scenario.py": "sha256:c2421839f16e1057656a3ca7d26725c9ed55b8e673c770c15d12ca97f527ff62",
+        "src/satellite_coverage/config/__init__.py": "sha256:9a84ffbc2a0b863bc9395ffdd36a9598eda5b9cb8b2f507cfef383bfacd170b0",
+        "src/satellite_coverage/config/link.py": "sha256:18c7182777c8297a1d9713925401724beb0b69027b8710f6595b53faf541aa57",
+        "src/satellite_coverage/config/loader.py": "sha256:e6e21874498d46091ec67870fb0fa487dcb783e41fc9c32dff35bed1936a552a",
+        "src/satellite_coverage/config/models.py": "sha256:84034cd579cb8612d04f732ac5d0bbedcdfd8f93e77c4bea778306611bc40e46",
+        "src/satellite_coverage/config/pilot.py": "sha256:abb424341ab5f48dd6de5e3b895bf090bc4ad433604d113c0a14972e32476660",
+        "src/satellite_coverage/coordinates.py": "sha256:3c9969626629ce0e4dd3a70065c98cf244a17a1593ae139455aaffe2857ebfd2",
+        "src/satellite_coverage/data_sources/__init__.py": "sha256:93ace53b1341dd62741e62a7e8f81257b442140f773ddd561b21ebd3ce528eb4",
+        "src/satellite_coverage/data_sources/dem_audit.py": "sha256:cc0d256eb72e172bcd051a511bbbf9d5123cf1189a6287cbbd5a7568d681fc26",
+        "src/satellite_coverage/data_sources/dem_preview.py": "sha256:6f642ab9f3980673560be030900313356b8d6a5e33db398efdbc842281f53eaf",
+        "src/satellite_coverage/data_sources/manifest.py": "sha256:9d3619eda92cfa8bc7817a1d2b945533d4c7856f16c71edfe709ae338b304d44",
+        "src/satellite_coverage/data_sources/terrain_dem.py": "sha256:e56be10248c57c0b21f227700769b44d9d9f39495da8a340c82145fc4f5de64b",
+        "src/satellite_coverage/data_sources/terrain_tiles.py": "sha256:1d642d6bbeb72658305165ff14751550410639c2e345ae1b2c1c7e0b28a8a8db",
+        "src/satellite_coverage/domain/__init__.py": "sha256:c5f86bd31889595ad3485cbb06cfd4b99473b83b6966005b0cdf6d3f46f0e30d",
+        "src/satellite_coverage/domain/arrays.py": "sha256:13d1c4200aac5587a08c082e73e5bd6b2ed4c0a59c425f640bb5f715d638986e",
+        "src/satellite_coverage/domain/grid.py": "sha256:a76b21c5311a288930624e4ab1e4bf6fb4815735051bf6e61617492602b0a0c2",
+        "src/satellite_coverage/domain/link_record.py": "sha256:d112aaebfdea03a44da56ab9889ce860581c5a453b5e39cfade282bd5dfced0c",
+        "src/satellite_coverage/domain/release.py": "sha256:bee800d39b1442a043d6b82edf7581877bb5ebe478cfa683a902a263298aa621",
+        "src/satellite_coverage/domain/state.py": "sha256:16dbb904c4f328c777341b481281a93120140b8e86c9035b78e149122fd3410a",
+        "src/satellite_coverage/domain/units.py": "sha256:c65443f31b44af966157a73db9a74731d2095e28230c72c8b00e3d1fb2198340",
+        "src/satellite_coverage/domain/validation.py": "sha256:26340399e16e170e83678c855ee03bb01f786aecaba6cb8b7a75f0dc8442630d",
+        "src/satellite_coverage/engine/__init__.py": "sha256:c79409633bc242c4178d4ac6d51a7cb759ee98705851f52143c49d1b9ab5dac3",
+        "src/satellite_coverage/engine/_legacy.py": "sha256:3e9bec9abbab539e4998fe4b69dc2c1c84ee9a2352dc2af608b6c07892b13b9a",
+        "src/satellite_coverage/engine/analytic_link.py": "sha256:74bf94e4e06ba0a96f0c28ae55246fe3824cf2ac4343f252331169d6743c04b6",
+        "src/satellite_coverage/engine/api.py": "sha256:1d39c74d7eb511beac3c6b7388771c9c7c007078a47265f5ba1f0947dc7007ba",
+        "src/satellite_coverage/engine/interval_extrema.py": "sha256:547fe15a4cef04a2a3e5d66e59dbda15ade94647f5f4708f20458641ed53a154",
+        "src/satellite_coverage/engine/link_budget.py": "sha256:4279bd9832918f821e3d2e17383230361bcb5c403dcc48c11a436dc44d6f9693",
+        "src/satellite_coverage/engine/links.py": "sha256:38bc1d5e9a34df7753858287185fdd038e265ff3e2cbf693bbe13838137224c7",
+        "src/satellite_coverage/engine/orbit_link.py": "sha256:4f79b3c1d8c8c0045a91305c8030514c68f490d60b35754008ceaf1097f04f1e",
+        "src/satellite_coverage/engine/terrain_context.py": "sha256:ce1b0e9f7a60ad7d9da55c6614134d1542550ebf2c11a2ce3a02d4e3d499740f",
+        "src/satellite_coverage/engine/terrain_link.py": "sha256:b88b80283b3244b255ad3fc5cf9d071dd5d28f93940301126a152268db90a901",
+        "src/satellite_coverage/experiments/__init__.py": "sha256:fedb5bab652286af739e71bc5f9ea7c20f7490208ecb3cf7a88fcd4f42ef0bad",
+        "src/satellite_coverage/experiments/link.py": "sha256:efd5eda87473af8043b666877af7dd4c1ef497d16e3c79862f20cb87a11d4639",
+        "src/satellite_coverage/experiments/orbit_link.py": "sha256:aa564c0997111279979f7e2619886d27a50e4bccbf4e8caab9a1a771b609b1bb",
+        "src/satellite_coverage/experiments/pilot.py": "sha256:c7562659c9abc0468c59e6c4deba10a28a588d1ba53dc65ad0c9c4609268846d",
+        "src/satellite_coverage/experiments/terrain_sensitivity.py": "sha256:2d0cbb9affc78ce929301ac58e23b79b11748e6305884ba13fc5bc2fe7bb3325",
+        "src/satellite_coverage/explorer/__init__.py": "sha256:5678effb118e2e34e797872472567e43bc79ac8b143499c11db5bd7fe6f55014",
+        "src/satellite_coverage/explorer/__main__.py": "sha256:ddd60a1df996b2b744c45953165711e5afe2711f5f0249f4e98875e1342411df",
+        "src/satellite_coverage/explorer/server.py": "sha256:41678d780e0d864ea04b65edaa805aac6a7cea426a9eac354fad1f4c9737570f",
+        "src/satellite_coverage/geodata.py": "sha256:7d78f68f9a4bab25eac21519b46ae10f7fed1d57ae3904c6ea4a8e08e65555bb",
+        "src/satellite_coverage/geometry/__init__.py": "sha256:3792d4025d91309abc1bd0ef31f726f0ae8c88cbe6e12c2955575cb69ed0a1a9",
+        "src/satellite_coverage/geometry/antenna.py": "sha256:31bd9a26e425595e0f1694b1d5c08f854d98446d0e5bea627b81ee2f78f306a3",
+        "src/satellite_coverage/geometry/cell_horizon.py": "sha256:b6eb74f1b0add1ce3e56522f3fb604a8ac49136ad044550307a9892a56d73df7",
+        "src/satellite_coverage/geometry/cell_profile.py": "sha256:535474dfe1d4573531165d8c1681d28f7c730b7d4b926f03db8d65c2709ba8fb",
+        "src/satellite_coverage/geometry/geodetic.py": "sha256:b7b0db3af87b3de4ec43898565b4f6e1c455d2a34e10ee92584fba4b64f25c08",
+        "src/satellite_coverage/geometry/local.py": "sha256:3ae22387133a3a26c7b39e95f7c69d93405f15f85712752423babfdb05cf58cd",
+        "src/satellite_coverage/geometry/terrain.py": "sha256:fadcbd869f9eceb0146738f971f7d3cbd811f8eb8d144973753ca79232dca59e",
+        "src/satellite_coverage/io/__init__.py": "sha256:29b412b2f8fac2b8fc88afd6817b9bceddff1d8b7a5cc4cfbb66bcf8d21f8733",
+        "src/satellite_coverage/io/run_record.py": "sha256:f1ee820187ff785ade978df8384b0bb48ce53e23144c95d4ebc6f757d5a46c32",
+        "src/satellite_coverage/orbit/__init__.py": "sha256:151857f1a76f4d51ea4d0307f1eaffed619307a54b187b586de639db7616e695",
+        "src/satellite_coverage/orbit/visibility.py": "sha256:ebdb5e3e03470570eabf712419069b5a567985e462ad6b13db46af9e69ad054c",
+        "src/satellite_coverage/propagation.py": "sha256:40127b1fe0ffac950fe7877d88625f91c97574a25800e4954c573aefa62ba018",
+        "src/satellite_coverage/scenario.py": "sha256:5923e4bdede60d6d276ae7e58be8ea97c41786477f7aa0f6c662a05b02ae7c67",
+        "src/satellite_coverage/scheduling/__init__.py": "sha256:b7a1fb8df93e0a9ad823d79a4cf51a4fb75b89a2a88a7acd148762d0857f7d54",
+        "src/satellite_coverage/tle.py": "sha256:cd654ae53972aa5fa980116cc8cbcf3988421aaa257ae448682a45f48fb38181",
+        "src/satrm_benchmark/__init__.py": "sha256:29f909c6de430212922d1990be6acce4896715660bb6dd765f74ce343b94004d",
+        "scripts/verify_terrain_reader.py": "sha256:546dd660ee3c836d444c26838f674dbf70ad735166df78d9132d277da1a2b9cf",
+        "tests/fixtures/terrain_dem_legacy.py": "sha256:a527a8c2402dce7b237eb7d91fd204707c3a3b164615e228dbc8e83ef869ebc5"
+      },
+      "load_seconds": 6.417620729655027,
+      "metadata": {
+        "file_sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+        "declaration": {
+          "sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+          "height_unit": "m",
+          "vertical_datum": "EGM2008",
+          "surface_type": "DSM",
+          "evidence": "Product identified by user, specifications checked against official source. The local mosaic release, original tiles and processing/vertical-conversion history are not independently reconstructed."
+        },
+        "path": "/home/Users_Work_Space/zsfang/Satellite-Ground-Radiomap/data/l2_topo/china_dem_30.tif",
+        "source_crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4326\"]]",
+        "local_crs": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"World Geodetic System 1984\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1]],ID[\"EPSG\",6326]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Azimuthal Equidistant\",ID[\"EPSG\",1125]],PARAMETER[\"Latitude of natural origin\",34.24,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8801]],PARAMETER[\"Longitude of natural origin\",108.9,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8802]],PARAMETER[\"False easting\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8806]],PARAMETER[\"False northing\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8807]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+        "lon_deg": 108.9,
+        "lat_deg": 34.24,
+        "radius_m": 3000.0,
+        "resolution_m": 60,
+        "estimated_native_spacing_max_m": 30.813119771957933,
+        "native_window": [
+          129120,
+          81837,
+          240,
+          199
+        ],
+        "shape": [
+          103,
+          103
+        ],
+        "scale": 1.0,
+        "offset": 0.0,
+        "resampling": "nearest native cell; no display decimation",
+        "vertical_conversion": {
+          "method": "h=H+N; PROJ local grid, multiplier=+1, no optional grid or ballpark",
+          "grid": {
+            "path": "/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif",
+            "sha256": "sha256:4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a",
+            "model": "EGM2008",
+            "evidence": "https://cdn.proj.org/us_nga_egm08_25.tif"
+          },
+          "pipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=vgridshift +grids=\"/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif\" +multiplier=1 +step +proj=unitconvert +xy_in=rad +xy_out=deg",
+          "grid_tags": {
+            "TIFFTAG_IMAGEDESCRIPTION": "WGS 84 (EPSG:4979) to EGM2008 height (EPSG:3855). Converted from egm08_25.gtx (last modified at 2018/10/08)",
+            "TIFFTAG_DATETIME": "2019:12:27 00:00:00",
+            "TIFFTAG_COPYRIGHT": "Derived from work by NGA. Public Domain",
+            "area_of_use": "World",
+            "target_crs_epsg_code": "3855",
+            "TYPE": "VERTICAL_OFFSET_GEOGRAPHIC_TO_VERTICAL",
+            "AREA_OR_POINT": "Point"
+          }
+        },
+        "scope": "local AEQD distances; ellipsoid heights after declared conversion; DSM is not bare earth"
+      },
+      "source_id": "sha256:1a92b0e5662433d4ae2397c906ac160bd7db814b594ed261e3d53d70e7b81566",
+      "buffered_write_seconds": 0.0010656989179551601,
+      "reader_and_write_peak_rss_bytes": 158781440,
+      "rss_under_512_mib": true,
+      "output_sha256": "sha256:dec602f3c073d5497b92280f7931d08450a10633add5c247913e3cf7b457d0c9",
+      "output_hash_seconds": 0.00011534290388226509,
+      "read_windows": [
+        [
+          129120,
+          81837,
+          240,
+          199
+        ]
+      ],
+      "unique_read_cells": 47760,
+      "repeated_read_cells": 0,
+      "status": "passed",
+      "exact_legacy_match": true
+    },
+    {
+      "mode": "bounded",
+      "radius_m": 6000.0,
+      "site": [
+        108.9,
+        34.24
+      ],
+      "resolution_m": 60,
+      "declaration": {
+        "sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+        "height_unit": "m",
+        "vertical_datum": "EGM2008",
+        "surface_type": "DSM",
+        "evidence": "Product identified by user, specifications checked against official source. The local mosaic release, original tiles and processing/vertical-conversion history are not independently reconstructed."
+      },
+      "geoid": {
+        "path": "/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif",
+        "sha256": "sha256:4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a",
+        "model": "EGM2008",
+        "evidence": "https://cdn.proj.org/us_nga_egm08_25.tif"
+      },
+      "versions": {
+        "python": "3.12.2",
+        "numpy": "1.26.4",
+        "gdal": "3.9.3",
+        "proj": "9.5.1"
+      },
+      "stats": {
+        "read_windows": 4,
+        "read_cells": 186217,
+        "max_read_cells": 74451,
+        "subdivisions": 0,
+        "execution_transform_seconds": 0.015874576289206743,
+        "read_seconds": 0.007213638164103031,
+        "vertical_seconds": 0.005859602242708206,
+        "validation_geoid_seconds": 0.06367656821385026,
+        "dem_hash_seconds": 6.401539048179984,
+        "planning_transform_seconds": 0.0161253004334867,
+        "freeze_seconds": 7.638894021511078e-05,
+        "budget": {
+          "tile_size": 128,
+          "target_cells": 4000000,
+          "source_window_cells": 262144,
+          "memory_bytes": 536870912,
+          "gdal_cache_bytes": 33554432
+        },
+        "estimated_memory_bytes": 270669656,
+        "source_block_shapes": [
+          [
+            256,
+            256
+          ]
+        ],
+        "strategy": "two_pass_target_tiles"
+      },
+      "source_hashes": {
+        "src/satellite_coverage/__init__.py": "sha256:0cdebc751405fe8e804b3d93ab3d8e55b64bf071ec1476905743290d34ec23f4",
+        "src/satellite_coverage/adapters/__init__.py": "sha256:9c63b7fd5dc11ad327928d558e89553fc3fbf5515bf568776a40c057ecedabcf",
+        "src/satellite_coverage/adapters/legacy_output.py": "sha256:397e51fe8143bb2d806b8d5af931c24afc93cd0c22729fe047c5aee23be1b489",
+        "src/satellite_coverage/cli.py": "sha256:bb9209aa6e5ba02e6797526dec373d8ce44d1aba470b2839e03679601823d75d",
+        "src/satellite_coverage/compatibility/__init__.py": "sha256:318e2bd9579ce36d10e6d4a7f49a455d6a137bdbc36ef336601d4272f3174df3",
+        "src/satellite_coverage/compatibility/legacy_scenario.py": "sha256:c2421839f16e1057656a3ca7d26725c9ed55b8e673c770c15d12ca97f527ff62",
+        "src/satellite_coverage/config/__init__.py": "sha256:9a84ffbc2a0b863bc9395ffdd36a9598eda5b9cb8b2f507cfef383bfacd170b0",
+        "src/satellite_coverage/config/link.py": "sha256:18c7182777c8297a1d9713925401724beb0b69027b8710f6595b53faf541aa57",
+        "src/satellite_coverage/config/loader.py": "sha256:e6e21874498d46091ec67870fb0fa487dcb783e41fc9c32dff35bed1936a552a",
+        "src/satellite_coverage/config/models.py": "sha256:84034cd579cb8612d04f732ac5d0bbedcdfd8f93e77c4bea778306611bc40e46",
+        "src/satellite_coverage/config/pilot.py": "sha256:abb424341ab5f48dd6de5e3b895bf090bc4ad433604d113c0a14972e32476660",
+        "src/satellite_coverage/coordinates.py": "sha256:3c9969626629ce0e4dd3a70065c98cf244a17a1593ae139455aaffe2857ebfd2",
+        "src/satellite_coverage/data_sources/__init__.py": "sha256:93ace53b1341dd62741e62a7e8f81257b442140f773ddd561b21ebd3ce528eb4",
+        "src/satellite_coverage/data_sources/dem_audit.py": "sha256:cc0d256eb72e172bcd051a511bbbf9d5123cf1189a6287cbbd5a7568d681fc26",
+        "src/satellite_coverage/data_sources/dem_preview.py": "sha256:6f642ab9f3980673560be030900313356b8d6a5e33db398efdbc842281f53eaf",
+        "src/satellite_coverage/data_sources/manifest.py": "sha256:9d3619eda92cfa8bc7817a1d2b945533d4c7856f16c71edfe709ae338b304d44",
+        "src/satellite_coverage/data_sources/terrain_dem.py": "sha256:e56be10248c57c0b21f227700769b44d9d9f39495da8a340c82145fc4f5de64b",
+        "src/satellite_coverage/data_sources/terrain_tiles.py": "sha256:1d642d6bbeb72658305165ff14751550410639c2e345ae1b2c1c7e0b28a8a8db",
+        "src/satellite_coverage/domain/__init__.py": "sha256:c5f86bd31889595ad3485cbb06cfd4b99473b83b6966005b0cdf6d3f46f0e30d",
+        "src/satellite_coverage/domain/arrays.py": "sha256:13d1c4200aac5587a08c082e73e5bd6b2ed4c0a59c425f640bb5f715d638986e",
+        "src/satellite_coverage/domain/grid.py": "sha256:a76b21c5311a288930624e4ab1e4bf6fb4815735051bf6e61617492602b0a0c2",
+        "src/satellite_coverage/domain/link_record.py": "sha256:d112aaebfdea03a44da56ab9889ce860581c5a453b5e39cfade282bd5dfced0c",
+        "src/satellite_coverage/domain/release.py": "sha256:bee800d39b1442a043d6b82edf7581877bb5ebe478cfa683a902a263298aa621",
+        "src/satellite_coverage/domain/state.py": "sha256:16dbb904c4f328c777341b481281a93120140b8e86c9035b78e149122fd3410a",
+        "src/satellite_coverage/domain/units.py": "sha256:c65443f31b44af966157a73db9a74731d2095e28230c72c8b00e3d1fb2198340",
+        "src/satellite_coverage/domain/validation.py": "sha256:26340399e16e170e83678c855ee03bb01f786aecaba6cb8b7a75f0dc8442630d",
+        "src/satellite_coverage/engine/__init__.py": "sha256:c79409633bc242c4178d4ac6d51a7cb759ee98705851f52143c49d1b9ab5dac3",
+        "src/satellite_coverage/engine/_legacy.py": "sha256:3e9bec9abbab539e4998fe4b69dc2c1c84ee9a2352dc2af608b6c07892b13b9a",
+        "src/satellite_coverage/engine/analytic_link.py": "sha256:74bf94e4e06ba0a96f0c28ae55246fe3824cf2ac4343f252331169d6743c04b6",
+        "src/satellite_coverage/engine/api.py": "sha256:1d39c74d7eb511beac3c6b7388771c9c7c007078a47265f5ba1f0947dc7007ba",
+        "src/satellite_coverage/engine/interval_extrema.py": "sha256:547fe15a4cef04a2a3e5d66e59dbda15ade94647f5f4708f20458641ed53a154",
+        "src/satellite_coverage/engine/link_budget.py": "sha256:4279bd9832918f821e3d2e17383230361bcb5c403dcc48c11a436dc44d6f9693",
+        "src/satellite_coverage/engine/links.py": "sha256:38bc1d5e9a34df7753858287185fdd038e265ff3e2cbf693bbe13838137224c7",
+        "src/satellite_coverage/engine/orbit_link.py": "sha256:4f79b3c1d8c8c0045a91305c8030514c68f490d60b35754008ceaf1097f04f1e",
+        "src/satellite_coverage/engine/terrain_context.py": "sha256:ce1b0e9f7a60ad7d9da55c6614134d1542550ebf2c11a2ce3a02d4e3d499740f",
+        "src/satellite_coverage/engine/terrain_link.py": "sha256:b88b80283b3244b255ad3fc5cf9d071dd5d28f93940301126a152268db90a901",
+        "src/satellite_coverage/experiments/__init__.py": "sha256:fedb5bab652286af739e71bc5f9ea7c20f7490208ecb3cf7a88fcd4f42ef0bad",
+        "src/satellite_coverage/experiments/link.py": "sha256:efd5eda87473af8043b666877af7dd4c1ef497d16e3c79862f20cb87a11d4639",
+        "src/satellite_coverage/experiments/orbit_link.py": "sha256:aa564c0997111279979f7e2619886d27a50e4bccbf4e8caab9a1a771b609b1bb",
+        "src/satellite_coverage/experiments/pilot.py": "sha256:c7562659c9abc0468c59e6c4deba10a28a588d1ba53dc65ad0c9c4609268846d",
+        "src/satellite_coverage/experiments/terrain_sensitivity.py": "sha256:2d0cbb9affc78ce929301ac58e23b79b11748e6305884ba13fc5bc2fe7bb3325",
+        "src/satellite_coverage/explorer/__init__.py": "sha256:5678effb118e2e34e797872472567e43bc79ac8b143499c11db5bd7fe6f55014",
+        "src/satellite_coverage/explorer/__main__.py": "sha256:ddd60a1df996b2b744c45953165711e5afe2711f5f0249f4e98875e1342411df",
+        "src/satellite_coverage/explorer/server.py": "sha256:41678d780e0d864ea04b65edaa805aac6a7cea426a9eac354fad1f4c9737570f",
+        "src/satellite_coverage/geodata.py": "sha256:7d78f68f9a4bab25eac21519b46ae10f7fed1d57ae3904c6ea4a8e08e65555bb",
+        "src/satellite_coverage/geometry/__init__.py": "sha256:3792d4025d91309abc1bd0ef31f726f0ae8c88cbe6e12c2955575cb69ed0a1a9",
+        "src/satellite_coverage/geometry/antenna.py": "sha256:31bd9a26e425595e0f1694b1d5c08f854d98446d0e5bea627b81ee2f78f306a3",
+        "src/satellite_coverage/geometry/cell_horizon.py": "sha256:b6eb74f1b0add1ce3e56522f3fb604a8ac49136ad044550307a9892a56d73df7",
+        "src/satellite_coverage/geometry/cell_profile.py": "sha256:535474dfe1d4573531165d8c1681d28f7c730b7d4b926f03db8d65c2709ba8fb",
+        "src/satellite_coverage/geometry/geodetic.py": "sha256:b7b0db3af87b3de4ec43898565b4f6e1c455d2a34e10ee92584fba4b64f25c08",
+        "src/satellite_coverage/geometry/local.py": "sha256:3ae22387133a3a26c7b39e95f7c69d93405f15f85712752423babfdb05cf58cd",
+        "src/satellite_coverage/geometry/terrain.py": "sha256:fadcbd869f9eceb0146738f971f7d3cbd811f8eb8d144973753ca79232dca59e",
+        "src/satellite_coverage/io/__init__.py": "sha256:29b412b2f8fac2b8fc88afd6817b9bceddff1d8b7a5cc4cfbb66bcf8d21f8733",
+        "src/satellite_coverage/io/run_record.py": "sha256:f1ee820187ff785ade978df8384b0bb48ce53e23144c95d4ebc6f757d5a46c32",
+        "src/satellite_coverage/orbit/__init__.py": "sha256:151857f1a76f4d51ea4d0307f1eaffed619307a54b187b586de639db7616e695",
+        "src/satellite_coverage/orbit/visibility.py": "sha256:ebdb5e3e03470570eabf712419069b5a567985e462ad6b13db46af9e69ad054c",
+        "src/satellite_coverage/propagation.py": "sha256:40127b1fe0ffac950fe7877d88625f91c97574a25800e4954c573aefa62ba018",
+        "src/satellite_coverage/scenario.py": "sha256:5923e4bdede60d6d276ae7e58be8ea97c41786477f7aa0f6c662a05b02ae7c67",
+        "src/satellite_coverage/scheduling/__init__.py": "sha256:b7a1fb8df93e0a9ad823d79a4cf51a4fb75b89a2a88a7acd148762d0857f7d54",
+        "src/satellite_coverage/tle.py": "sha256:cd654ae53972aa5fa980116cc8cbcf3988421aaa257ae448682a45f48fb38181",
+        "src/satrm_benchmark/__init__.py": "sha256:29f909c6de430212922d1990be6acce4896715660bb6dd765f74ce343b94004d",
+        "scripts/verify_terrain_reader.py": "sha256:546dd660ee3c836d444c26838f674dbf70ad735166df78d9132d277da1a2b9cf",
+        "tests/fixtures/terrain_dem_legacy.py": "sha256:a527a8c2402dce7b237eb7d91fd204707c3a3b164615e228dbc8e83ef869ebc5"
+      },
+      "load_seconds": 6.525459088850766,
+      "metadata": {
+        "file_sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+        "declaration": {
+          "sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+          "height_unit": "m",
+          "vertical_datum": "EGM2008",
+          "surface_type": "DSM",
+          "evidence": "Product identified by user, specifications checked against official source. The local mosaic release, original tiles and processing/vertical-conversion history are not independently reconstructed."
+        },
+        "path": "/home/Users_Work_Space/zsfang/Satellite-Ground-Radiomap/data/l2_topo/china_dem_30.tif",
+        "source_crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4326\"]]",
+        "local_crs": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"World Geodetic System 1984\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1]],ID[\"EPSG\",6326]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Azimuthal Equidistant\",ID[\"EPSG\",1125]],PARAMETER[\"Latitude of natural origin\",34.24,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8801]],PARAMETER[\"Longitude of natural origin\",108.9,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8802]],PARAMETER[\"False easting\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8806]],PARAMETER[\"False northing\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8807]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+        "lon_deg": 108.9,
+        "lat_deg": 34.24,
+        "radius_m": 6000.0,
+        "resolution_m": 60,
+        "estimated_native_spacing_max_m": 30.813260361754274,
+        "native_window": [
+          129003,
+          81739,
+          474,
+          395
+        ],
+        "shape": [
+          203,
+          203
+        ],
+        "scale": 1.0,
+        "offset": 0.0,
+        "resampling": "nearest native cell; no display decimation",
+        "vertical_conversion": {
+          "method": "h=H+N; PROJ local grid, multiplier=+1, no optional grid or ballpark",
+          "grid": {
+            "path": "/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif",
+            "sha256": "sha256:4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a",
+            "model": "EGM2008",
+            "evidence": "https://cdn.proj.org/us_nga_egm08_25.tif"
+          },
+          "pipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=vgridshift +grids=\"/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif\" +multiplier=1 +step +proj=unitconvert +xy_in=rad +xy_out=deg",
+          "grid_tags": {
+            "TIFFTAG_IMAGEDESCRIPTION": "WGS 84 (EPSG:4979) to EGM2008 height (EPSG:3855). Converted from egm08_25.gtx (last modified at 2018/10/08)",
+            "TIFFTAG_DATETIME": "2019:12:27 00:00:00",
+            "TIFFTAG_COPYRIGHT": "Derived from work by NGA. Public Domain",
+            "area_of_use": "World",
+            "target_crs_epsg_code": "3855",
+            "TYPE": "VERTICAL_OFFSET_GEOGRAPHIC_TO_VERTICAL",
+            "AREA_OR_POINT": "Point"
+          }
+        },
+        "scope": "local AEQD distances; ellipsoid heights after declared conversion; DSM is not bare earth"
+      },
+      "source_id": "sha256:c42b47be3d6c69e9195033929080864db6193dcaf5e7b6394614436ec5abd2bc",
+      "buffered_write_seconds": 0.00088066840544343,
+      "reader_and_write_peak_rss_bytes": 158580736,
+      "rss_under_512_mib": true,
+      "output_sha256": "sha256:6107f5590ed5618b196ee6d470f8d2907ee420d65701056aea0fa8d785b88f5a",
+      "output_hash_seconds": 0.00025775330141186714,
+      "read_windows": [
+        [
+          129003,
+          81739,
+          299,
+          249
+        ],
+        [
+          129303,
+          81739,
+          174,
+          249
+        ],
+        [
+          129003,
+          81989,
+          298,
+          145
+        ],
+        [
+          129303,
+          81989,
+          174,
+          145
+        ]
+      ],
+      "unique_read_cells": 186217,
+      "repeated_read_cells": 0,
+      "status": "passed",
+      "exact_legacy_match": true
+    },
+    {
+      "mode": "bounded",
+      "radius_m": 24000.0,
+      "site": [
+        108.9,
+        34.24
+      ],
+      "resolution_m": 60,
+      "declaration": {
+        "sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+        "height_unit": "m",
+        "vertical_datum": "EGM2008",
+        "surface_type": "DSM",
+        "evidence": "Product identified by user, specifications checked against official source. The local mosaic release, original tiles and processing/vertical-conversion history are not independently reconstructed."
+      },
+      "geoid": {
+        "path": "/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif",
+        "sha256": "sha256:4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a",
+        "model": "EGM2008",
+        "evidence": "https://cdn.proj.org/us_nga_egm08_25.tif"
+      },
+      "versions": {
+        "python": "3.12.2",
+        "numpy": "1.26.4",
+        "gdal": "3.9.3",
+        "proj": "9.5.1"
+      },
+      "stats": {
+        "read_windows": 49,
+        "read_cells": 2925245,
+        "max_read_cells": 74700,
+        "subdivisions": 0,
+        "execution_transform_seconds": 0.23896988527849317,
+        "read_seconds": 0.04084186255931854,
+        "vertical_seconds": 0.058459192514419556,
+        "validation_geoid_seconds": 0.0637278389185667,
+        "dem_hash_seconds": 6.289645202923566,
+        "planning_transform_seconds": 0.23934065829962492,
+        "freeze_seconds": 0.0037895222194492817,
+        "budget": {
+          "tile_size": 128,
+          "target_cells": 4000000,
+          "source_window_cells": 262144,
+          "memory_bytes": 536870912,
+          "gdal_cache_bytes": 33554432
+        },
+        "estimated_memory_bytes": 285156056,
+        "source_block_shapes": [
+          [
+            256,
+            256
+          ]
+        ],
+        "strategy": "two_pass_target_tiles"
+      },
+      "source_hashes": {
+        "src/satellite_coverage/__init__.py": "sha256:0cdebc751405fe8e804b3d93ab3d8e55b64bf071ec1476905743290d34ec23f4",
+        "src/satellite_coverage/adapters/__init__.py": "sha256:9c63b7fd5dc11ad327928d558e89553fc3fbf5515bf568776a40c057ecedabcf",
+        "src/satellite_coverage/adapters/legacy_output.py": "sha256:397e51fe8143bb2d806b8d5af931c24afc93cd0c22729fe047c5aee23be1b489",
+        "src/satellite_coverage/cli.py": "sha256:bb9209aa6e5ba02e6797526dec373d8ce44d1aba470b2839e03679601823d75d",
+        "src/satellite_coverage/compatibility/__init__.py": "sha256:318e2bd9579ce36d10e6d4a7f49a455d6a137bdbc36ef336601d4272f3174df3",
+        "src/satellite_coverage/compatibility/legacy_scenario.py": "sha256:c2421839f16e1057656a3ca7d26725c9ed55b8e673c770c15d12ca97f527ff62",
+        "src/satellite_coverage/config/__init__.py": "sha256:9a84ffbc2a0b863bc9395ffdd36a9598eda5b9cb8b2f507cfef383bfacd170b0",
+        "src/satellite_coverage/config/link.py": "sha256:18c7182777c8297a1d9713925401724beb0b69027b8710f6595b53faf541aa57",
+        "src/satellite_coverage/config/loader.py": "sha256:e6e21874498d46091ec67870fb0fa487dcb783e41fc9c32dff35bed1936a552a",
+        "src/satellite_coverage/config/models.py": "sha256:84034cd579cb8612d04f732ac5d0bbedcdfd8f93e77c4bea778306611bc40e46",
+        "src/satellite_coverage/config/pilot.py": "sha256:abb424341ab5f48dd6de5e3b895bf090bc4ad433604d113c0a14972e32476660",
+        "src/satellite_coverage/coordinates.py": "sha256:3c9969626629ce0e4dd3a70065c98cf244a17a1593ae139455aaffe2857ebfd2",
+        "src/satellite_coverage/data_sources/__init__.py": "sha256:93ace53b1341dd62741e62a7e8f81257b442140f773ddd561b21ebd3ce528eb4",
+        "src/satellite_coverage/data_sources/dem_audit.py": "sha256:cc0d256eb72e172bcd051a511bbbf9d5123cf1189a6287cbbd5a7568d681fc26",
+        "src/satellite_coverage/data_sources/dem_preview.py": "sha256:6f642ab9f3980673560be030900313356b8d6a5e33db398efdbc842281f53eaf",
+        "src/satellite_coverage/data_sources/manifest.py": "sha256:9d3619eda92cfa8bc7817a1d2b945533d4c7856f16c71edfe709ae338b304d44",
+        "src/satellite_coverage/data_sources/terrain_dem.py": "sha256:e56be10248c57c0b21f227700769b44d9d9f39495da8a340c82145fc4f5de64b",
+        "src/satellite_coverage/data_sources/terrain_tiles.py": "sha256:1d642d6bbeb72658305165ff14751550410639c2e345ae1b2c1c7e0b28a8a8db",
+        "src/satellite_coverage/domain/__init__.py": "sha256:c5f86bd31889595ad3485cbb06cfd4b99473b83b6966005b0cdf6d3f46f0e30d",
+        "src/satellite_coverage/domain/arrays.py": "sha256:13d1c4200aac5587a08c082e73e5bd6b2ed4c0a59c425f640bb5f715d638986e",
+        "src/satellite_coverage/domain/grid.py": "sha256:a76b21c5311a288930624e4ab1e4bf6fb4815735051bf6e61617492602b0a0c2",
+        "src/satellite_coverage/domain/link_record.py": "sha256:d112aaebfdea03a44da56ab9889ce860581c5a453b5e39cfade282bd5dfced0c",
+        "src/satellite_coverage/domain/release.py": "sha256:bee800d39b1442a043d6b82edf7581877bb5ebe478cfa683a902a263298aa621",
+        "src/satellite_coverage/domain/state.py": "sha256:16dbb904c4f328c777341b481281a93120140b8e86c9035b78e149122fd3410a",
+        "src/satellite_coverage/domain/units.py": "sha256:c65443f31b44af966157a73db9a74731d2095e28230c72c8b00e3d1fb2198340",
+        "src/satellite_coverage/domain/validation.py": "sha256:26340399e16e170e83678c855ee03bb01f786aecaba6cb8b7a75f0dc8442630d",
+        "src/satellite_coverage/engine/__init__.py": "sha256:c79409633bc242c4178d4ac6d51a7cb759ee98705851f52143c49d1b9ab5dac3",
+        "src/satellite_coverage/engine/_legacy.py": "sha256:3e9bec9abbab539e4998fe4b69dc2c1c84ee9a2352dc2af608b6c07892b13b9a",
+        "src/satellite_coverage/engine/analytic_link.py": "sha256:74bf94e4e06ba0a96f0c28ae55246fe3824cf2ac4343f252331169d6743c04b6",
+        "src/satellite_coverage/engine/api.py": "sha256:1d39c74d7eb511beac3c6b7388771c9c7c007078a47265f5ba1f0947dc7007ba",
+        "src/satellite_coverage/engine/interval_extrema.py": "sha256:547fe15a4cef04a2a3e5d66e59dbda15ade94647f5f4708f20458641ed53a154",
+        "src/satellite_coverage/engine/link_budget.py": "sha256:4279bd9832918f821e3d2e17383230361bcb5c403dcc48c11a436dc44d6f9693",
+        "src/satellite_coverage/engine/links.py": "sha256:38bc1d5e9a34df7753858287185fdd038e265ff3e2cbf693bbe13838137224c7",
+        "src/satellite_coverage/engine/orbit_link.py": "sha256:4f79b3c1d8c8c0045a91305c8030514c68f490d60b35754008ceaf1097f04f1e",
+        "src/satellite_coverage/engine/terrain_context.py": "sha256:ce1b0e9f7a60ad7d9da55c6614134d1542550ebf2c11a2ce3a02d4e3d499740f",
+        "src/satellite_coverage/engine/terrain_link.py": "sha256:b88b80283b3244b255ad3fc5cf9d071dd5d28f93940301126a152268db90a901",
+        "src/satellite_coverage/experiments/__init__.py": "sha256:fedb5bab652286af739e71bc5f9ea7c20f7490208ecb3cf7a88fcd4f42ef0bad",
+        "src/satellite_coverage/experiments/link.py": "sha256:efd5eda87473af8043b666877af7dd4c1ef497d16e3c79862f20cb87a11d4639",
+        "src/satellite_coverage/experiments/orbit_link.py": "sha256:aa564c0997111279979f7e2619886d27a50e4bccbf4e8caab9a1a771b609b1bb",
+        "src/satellite_coverage/experiments/pilot.py": "sha256:c7562659c9abc0468c59e6c4deba10a28a588d1ba53dc65ad0c9c4609268846d",
+        "src/satellite_coverage/experiments/terrain_sensitivity.py": "sha256:2d0cbb9affc78ce929301ac58e23b79b11748e6305884ba13fc5bc2fe7bb3325",
+        "src/satellite_coverage/explorer/__init__.py": "sha256:5678effb118e2e34e797872472567e43bc79ac8b143499c11db5bd7fe6f55014",
+        "src/satellite_coverage/explorer/__main__.py": "sha256:ddd60a1df996b2b744c45953165711e5afe2711f5f0249f4e98875e1342411df",
+        "src/satellite_coverage/explorer/server.py": "sha256:41678d780e0d864ea04b65edaa805aac6a7cea426a9eac354fad1f4c9737570f",
+        "src/satellite_coverage/geodata.py": "sha256:7d78f68f9a4bab25eac21519b46ae10f7fed1d57ae3904c6ea4a8e08e65555bb",
+        "src/satellite_coverage/geometry/__init__.py": "sha256:3792d4025d91309abc1bd0ef31f726f0ae8c88cbe6e12c2955575cb69ed0a1a9",
+        "src/satellite_coverage/geometry/antenna.py": "sha256:31bd9a26e425595e0f1694b1d5c08f854d98446d0e5bea627b81ee2f78f306a3",
+        "src/satellite_coverage/geometry/cell_horizon.py": "sha256:b6eb74f1b0add1ce3e56522f3fb604a8ac49136ad044550307a9892a56d73df7",
+        "src/satellite_coverage/geometry/cell_profile.py": "sha256:535474dfe1d4573531165d8c1681d28f7c730b7d4b926f03db8d65c2709ba8fb",
+        "src/satellite_coverage/geometry/geodetic.py": "sha256:b7b0db3af87b3de4ec43898565b4f6e1c455d2a34e10ee92584fba4b64f25c08",
+        "src/satellite_coverage/geometry/local.py": "sha256:3ae22387133a3a26c7b39e95f7c69d93405f15f85712752423babfdb05cf58cd",
+        "src/satellite_coverage/geometry/terrain.py": "sha256:fadcbd869f9eceb0146738f971f7d3cbd811f8eb8d144973753ca79232dca59e",
+        "src/satellite_coverage/io/__init__.py": "sha256:29b412b2f8fac2b8fc88afd6817b9bceddff1d8b7a5cc4cfbb66bcf8d21f8733",
+        "src/satellite_coverage/io/run_record.py": "sha256:f1ee820187ff785ade978df8384b0bb48ce53e23144c95d4ebc6f757d5a46c32",
+        "src/satellite_coverage/orbit/__init__.py": "sha256:151857f1a76f4d51ea4d0307f1eaffed619307a54b187b586de639db7616e695",
+        "src/satellite_coverage/orbit/visibility.py": "sha256:ebdb5e3e03470570eabf712419069b5a567985e462ad6b13db46af9e69ad054c",
+        "src/satellite_coverage/propagation.py": "sha256:40127b1fe0ffac950fe7877d88625f91c97574a25800e4954c573aefa62ba018",
+        "src/satellite_coverage/scenario.py": "sha256:5923e4bdede60d6d276ae7e58be8ea97c41786477f7aa0f6c662a05b02ae7c67",
+        "src/satellite_coverage/scheduling/__init__.py": "sha256:b7a1fb8df93e0a9ad823d79a4cf51a4fb75b89a2a88a7acd148762d0857f7d54",
+        "src/satellite_coverage/tle.py": "sha256:cd654ae53972aa5fa980116cc8cbcf3988421aaa257ae448682a45f48fb38181",
+        "src/satrm_benchmark/__init__.py": "sha256:29f909c6de430212922d1990be6acce4896715660bb6dd765f74ce343b94004d",
+        "scripts/verify_terrain_reader.py": "sha256:546dd660ee3c836d444c26838f674dbf70ad735166df78d9132d277da1a2b9cf",
+        "tests/fixtures/terrain_dem_legacy.py": "sha256:a527a8c2402dce7b237eb7d91fd204707c3a3b164615e228dbc8e83ef869ebc5"
+      },
+      "load_seconds": 6.960420401301235,
+      "metadata": {
+        "file_sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+        "declaration": {
+          "sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+          "height_unit": "m",
+          "vertical_datum": "EGM2008",
+          "surface_type": "DSM",
+          "evidence": "Product identified by user, specifications checked against official source. The local mosaic release, original tiles and processing/vertical-conversion history are not independently reconstructed."
+        },
+        "path": "/home/Users_Work_Space/zsfang/Satellite-Ground-Radiomap/data/l2_topo/china_dem_30.tif",
+        "source_crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4326\"]]",
+        "local_crs": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"World Geodetic System 1984\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1]],ID[\"EPSG\",6326]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Azimuthal Equidistant\",ID[\"EPSG\",1125]],PARAMETER[\"Latitude of natural origin\",34.24,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8801]],PARAMETER[\"Longitude of natural origin\",108.9,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8802]],PARAMETER[\"False easting\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8806]],PARAMETER[\"False northing\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8807]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+        "lon_deg": 108.9,
+        "lat_deg": 34.24,
+        "radius_m": 24000.0,
+        "resolution_m": 60,
+        "estimated_native_spacing_max_m": 30.814147650031483,
+        "native_window": [
+          128297,
+          81155,
+          1886,
+          1564
+        ],
+        "shape": [
+          803,
+          803
+        ],
+        "scale": 1.0,
+        "offset": 0.0,
+        "resampling": "nearest native cell; no display decimation",
+        "vertical_conversion": {
+          "method": "h=H+N; PROJ local grid, multiplier=+1, no optional grid or ballpark",
+          "grid": {
+            "path": "/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif",
+            "sha256": "sha256:4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a",
+            "model": "EGM2008",
+            "evidence": "https://cdn.proj.org/us_nga_egm08_25.tif"
+          },
+          "pipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=vgridshift +grids=\"/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif\" +multiplier=1 +step +proj=unitconvert +xy_in=rad +xy_out=deg",
+          "grid_tags": {
+            "TIFFTAG_IMAGEDESCRIPTION": "WGS 84 (EPSG:4979) to EGM2008 height (EPSG:3855). Converted from egm08_25.gtx (last modified at 2018/10/08)",
+            "TIFFTAG_DATETIME": "2019:12:27 00:00:00",
+            "TIFFTAG_COPYRIGHT": "Derived from work by NGA. Public Domain",
+            "area_of_use": "World",
+            "target_crs_epsg_code": "3855",
+            "TYPE": "VERTICAL_OFFSET_GEOGRAPHIC_TO_VERTICAL",
+            "AREA_OR_POINT": "Point"
+          }
+        },
+        "scope": "local AEQD distances; ellipsoid heights after declared conversion; DSM is not bare earth"
+      },
+      "source_id": "sha256:3c630a2d1b26974da06417b337b1dbfbbf11ba4b9d11a5eb76ad32dd2637c602",
+      "buffered_write_seconds": 0.0037441151216626167,
+      "reader_and_write_peak_rss_bytes": 162451456,
+      "rss_under_512_mib": true,
+      "output_sha256": "sha256:76dd5c54fa5eed1ce35aa24f7970bc8ef84786643ef7fda5ab22fab2e73bf3fb",
+      "output_hash_seconds": 0.0032878429628908634,
+      "read_windows": [
+        [
+          128297,
+          81156,
+          300,
+          248
+        ],
+        [
+          128598,
+          81155,
+          300,
+          249
+        ],
+        [
+          128899,
+          81155,
+          299,
+          249
+        ],
+        [
+          129200,
+          81155,
+          299,
+          249
+        ],
+        [
+          129500,
+          81155,
+          300,
+          249
+        ],
+        [
+          129801,
+          81156,
+          300,
+          248
+        ],
+        [
+          130102,
+          81156,
+          81,
+          248
+        ],
+        [
+          128298,
+          81405,
+          299,
+          249
+        ],
+        [
+          128598,
+          81405,
+          300,
+          248
+        ],
+        [
+          128899,
+          81404,
+          299,
+          249
+        ],
+        [
+          129200,
+          81404,
+          299,
+          249
+        ],
+        [
+          129500,
+          81404,
+          300,
+          249
+        ],
+        [
+          129800,
+          81405,
+          300,
+          249
+        ],
+        [
+          130101,
+          81405,
+          81,
+          249
+        ],
+        [
+          128298,
+          81654,
+          300,
+          249
+        ],
+        [
+          128599,
+          81654,
+          299,
+          248
+        ],
+        [
+          128899,
+          81654,
+          299,
+          248
+        ],
+        [
+          129200,
+          81654,
+          299,
+          248
+        ],
+        [
+          129500,
+          81654,
+          299,
+          248
+        ],
+        [
+          129800,
+          81654,
+          299,
+          249
+        ],
+        [
+          130100,
+          81654,
+          82,
+          249
+        ],
+        [
+          128299,
+          81903,
+          300,
+          249
+        ],
+        [
+          128599,
+          81903,
+          299,
+          249
+        ],
+        [
+          128899,
+          81903,
+          299,
+          248
+        ],
+        [
+          129200,
+          81903,
+          298,
+          248
+        ],
+        [
+          129500,
+          81903,
+          299,
+          249
+        ],
+        [
+          129799,
+          81903,
+          300,
+          249
+        ],
+        [
+          130099,
+          81904,
+          82,
+          248
+        ],
+        [
+          128300,
+          82153,
+          299,
+          248
+        ],
+        [
+          128600,
+          82152,
+          299,
+          249
+        ],
+        [
+          128900,
+          82152,
+          298,
+          249
+        ],
+        [
+          129200,
+          82152,
+          298,
+          249
+        ],
+        [
+          129499,
+          82152,
+          299,
+          249
+        ],
+        [
+          129799,
+          82152,
+          299,
+          249
+        ],
+        [
+          130099,
+          82153,
+          81,
+          248
+        ],
+        [
+          128301,
+          82402,
+          299,
+          249
+        ],
+        [
+          128600,
+          82402,
+          299,
+          248
+        ],
+        [
+          128900,
+          82401,
+          298,
+          249
+        ],
+        [
+          129200,
+          82401,
+          298,
+          249
+        ],
+        [
+          129499,
+          82401,
+          299,
+          249
+        ],
+        [
+          129799,
+          82402,
+          298,
+          249
+        ],
+        [
+          130098,
+          82402,
+          81,
+          249
+        ],
+        [
+          128301,
+          82651,
+          299,
+          68
+        ],
+        [
+          128601,
+          82651,
+          298,
+          67
+        ],
+        [
+          128900,
+          82651,
+          298,
+          67
+        ],
+        [
+          129200,
+          82651,
+          298,
+          67
+        ],
+        [
+          129499,
+          82651,
+          298,
+          67
+        ],
+        [
+          129798,
+          82651,
+          299,
+          68
+        ],
+        [
+          130098,
+          82651,
+          81,
+          68
+        ]
+      ],
+      "unique_read_cells": 2925245,
+      "repeated_read_cells": 0,
+      "status": "passed",
+      "exact_legacy_match": true
+    },
+    {
+      "mode": "bounded",
+      "radius_m": 36000.0,
+      "site": [
+        108.9,
+        34.24
+      ],
+      "resolution_m": 60,
+      "declaration": {
+        "sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+        "height_unit": "m",
+        "vertical_datum": "EGM2008",
+        "surface_type": "DSM",
+        "evidence": "Product identified by user, specifications checked against official source. The local mosaic release, original tiles and processing/vertical-conversion history are not independently reconstructed."
+      },
+      "geoid": {
+        "path": "/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif",
+        "sha256": "sha256:4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a",
+        "model": "EGM2008",
+        "evidence": "https://cdn.proj.org/us_nga_egm08_25.tif"
+      },
+      "versions": {
+        "python": "3.12.2",
+        "numpy": "1.26.4",
+        "gdal": "3.9.3",
+        "proj": "9.5.1"
+      },
+      "stats": {
+        "read_windows": 100,
+        "read_cells": 6576867,
+        "max_read_cells": 75250,
+        "subdivisions": 0,
+        "execution_transform_seconds": 0.5334631525911391,
+        "read_seconds": 0.08394131390377879,
+        "vertical_seconds": 0.12936155032366514,
+        "validation_geoid_seconds": 0.06361878802999854,
+        "dem_hash_seconds": 6.299308449961245,
+        "planning_transform_seconds": 0.5336208338849247,
+        "freeze_seconds": 0.008738003671169281,
+        "budget": {
+          "tile_size": 128,
+          "target_cells": 4000000,
+          "source_window_cells": 262144,
+          "memory_bytes": 536870912,
+          "gdal_cache_bytes": 33554432
+        },
+        "estimated_memory_bytes": 304413656,
+        "source_block_shapes": [
+          [
+            256,
+            256
+          ]
+        ],
+        "strategy": "two_pass_target_tiles"
+      },
+      "source_hashes": {
+        "src/satellite_coverage/__init__.py": "sha256:0cdebc751405fe8e804b3d93ab3d8e55b64bf071ec1476905743290d34ec23f4",
+        "src/satellite_coverage/adapters/__init__.py": "sha256:9c63b7fd5dc11ad327928d558e89553fc3fbf5515bf568776a40c057ecedabcf",
+        "src/satellite_coverage/adapters/legacy_output.py": "sha256:397e51fe8143bb2d806b8d5af931c24afc93cd0c22729fe047c5aee23be1b489",
+        "src/satellite_coverage/cli.py": "sha256:bb9209aa6e5ba02e6797526dec373d8ce44d1aba470b2839e03679601823d75d",
+        "src/satellite_coverage/compatibility/__init__.py": "sha256:318e2bd9579ce36d10e6d4a7f49a455d6a137bdbc36ef336601d4272f3174df3",
+        "src/satellite_coverage/compatibility/legacy_scenario.py": "sha256:c2421839f16e1057656a3ca7d26725c9ed55b8e673c770c15d12ca97f527ff62",
+        "src/satellite_coverage/config/__init__.py": "sha256:9a84ffbc2a0b863bc9395ffdd36a9598eda5b9cb8b2f507cfef383bfacd170b0",
+        "src/satellite_coverage/config/link.py": "sha256:18c7182777c8297a1d9713925401724beb0b69027b8710f6595b53faf541aa57",
+        "src/satellite_coverage/config/loader.py": "sha256:e6e21874498d46091ec67870fb0fa487dcb783e41fc9c32dff35bed1936a552a",
+        "src/satellite_coverage/config/models.py": "sha256:84034cd579cb8612d04f732ac5d0bbedcdfd8f93e77c4bea778306611bc40e46",
+        "src/satellite_coverage/config/pilot.py": "sha256:abb424341ab5f48dd6de5e3b895bf090bc4ad433604d113c0a14972e32476660",
+        "src/satellite_coverage/coordinates.py": "sha256:3c9969626629ce0e4dd3a70065c98cf244a17a1593ae139455aaffe2857ebfd2",
+        "src/satellite_coverage/data_sources/__init__.py": "sha256:93ace53b1341dd62741e62a7e8f81257b442140f773ddd561b21ebd3ce528eb4",
+        "src/satellite_coverage/data_sources/dem_audit.py": "sha256:cc0d256eb72e172bcd051a511bbbf9d5123cf1189a6287cbbd5a7568d681fc26",
+        "src/satellite_coverage/data_sources/dem_preview.py": "sha256:6f642ab9f3980673560be030900313356b8d6a5e33db398efdbc842281f53eaf",
+        "src/satellite_coverage/data_sources/manifest.py": "sha256:9d3619eda92cfa8bc7817a1d2b945533d4c7856f16c71edfe709ae338b304d44",
+        "src/satellite_coverage/data_sources/terrain_dem.py": "sha256:e56be10248c57c0b21f227700769b44d9d9f39495da8a340c82145fc4f5de64b",
+        "src/satellite_coverage/data_sources/terrain_tiles.py": "sha256:1d642d6bbeb72658305165ff14751550410639c2e345ae1b2c1c7e0b28a8a8db",
+        "src/satellite_coverage/domain/__init__.py": "sha256:c5f86bd31889595ad3485cbb06cfd4b99473b83b6966005b0cdf6d3f46f0e30d",
+        "src/satellite_coverage/domain/arrays.py": "sha256:13d1c4200aac5587a08c082e73e5bd6b2ed4c0a59c425f640bb5f715d638986e",
+        "src/satellite_coverage/domain/grid.py": "sha256:a76b21c5311a288930624e4ab1e4bf6fb4815735051bf6e61617492602b0a0c2",
+        "src/satellite_coverage/domain/link_record.py": "sha256:d112aaebfdea03a44da56ab9889ce860581c5a453b5e39cfade282bd5dfced0c",
+        "src/satellite_coverage/domain/release.py": "sha256:bee800d39b1442a043d6b82edf7581877bb5ebe478cfa683a902a263298aa621",
+        "src/satellite_coverage/domain/state.py": "sha256:16dbb904c4f328c777341b481281a93120140b8e86c9035b78e149122fd3410a",
+        "src/satellite_coverage/domain/units.py": "sha256:c65443f31b44af966157a73db9a74731d2095e28230c72c8b00e3d1fb2198340",
+        "src/satellite_coverage/domain/validation.py": "sha256:26340399e16e170e83678c855ee03bb01f786aecaba6cb8b7a75f0dc8442630d",
+        "src/satellite_coverage/engine/__init__.py": "sha256:c79409633bc242c4178d4ac6d51a7cb759ee98705851f52143c49d1b9ab5dac3",
+        "src/satellite_coverage/engine/_legacy.py": "sha256:3e9bec9abbab539e4998fe4b69dc2c1c84ee9a2352dc2af608b6c07892b13b9a",
+        "src/satellite_coverage/engine/analytic_link.py": "sha256:74bf94e4e06ba0a96f0c28ae55246fe3824cf2ac4343f252331169d6743c04b6",
+        "src/satellite_coverage/engine/api.py": "sha256:1d39c74d7eb511beac3c6b7388771c9c7c007078a47265f5ba1f0947dc7007ba",
+        "src/satellite_coverage/engine/interval_extrema.py": "sha256:547fe15a4cef04a2a3e5d66e59dbda15ade94647f5f4708f20458641ed53a154",
+        "src/satellite_coverage/engine/link_budget.py": "sha256:4279bd9832918f821e3d2e17383230361bcb5c403dcc48c11a436dc44d6f9693",
+        "src/satellite_coverage/engine/links.py": "sha256:38bc1d5e9a34df7753858287185fdd038e265ff3e2cbf693bbe13838137224c7",
+        "src/satellite_coverage/engine/orbit_link.py": "sha256:4f79b3c1d8c8c0045a91305c8030514c68f490d60b35754008ceaf1097f04f1e",
+        "src/satellite_coverage/engine/terrain_context.py": "sha256:ce1b0e9f7a60ad7d9da55c6614134d1542550ebf2c11a2ce3a02d4e3d499740f",
+        "src/satellite_coverage/engine/terrain_link.py": "sha256:b88b80283b3244b255ad3fc5cf9d071dd5d28f93940301126a152268db90a901",
+        "src/satellite_coverage/experiments/__init__.py": "sha256:fedb5bab652286af739e71bc5f9ea7c20f7490208ecb3cf7a88fcd4f42ef0bad",
+        "src/satellite_coverage/experiments/link.py": "sha256:efd5eda87473af8043b666877af7dd4c1ef497d16e3c79862f20cb87a11d4639",
+        "src/satellite_coverage/experiments/orbit_link.py": "sha256:aa564c0997111279979f7e2619886d27a50e4bccbf4e8caab9a1a771b609b1bb",
+        "src/satellite_coverage/experiments/pilot.py": "sha256:c7562659c9abc0468c59e6c4deba10a28a588d1ba53dc65ad0c9c4609268846d",
+        "src/satellite_coverage/experiments/terrain_sensitivity.py": "sha256:2d0cbb9affc78ce929301ac58e23b79b11748e6305884ba13fc5bc2fe7bb3325",
+        "src/satellite_coverage/explorer/__init__.py": "sha256:5678effb118e2e34e797872472567e43bc79ac8b143499c11db5bd7fe6f55014",
+        "src/satellite_coverage/explorer/__main__.py": "sha256:ddd60a1df996b2b744c45953165711e5afe2711f5f0249f4e98875e1342411df",
+        "src/satellite_coverage/explorer/server.py": "sha256:41678d780e0d864ea04b65edaa805aac6a7cea426a9eac354fad1f4c9737570f",
+        "src/satellite_coverage/geodata.py": "sha256:7d78f68f9a4bab25eac21519b46ae10f7fed1d57ae3904c6ea4a8e08e65555bb",
+        "src/satellite_coverage/geometry/__init__.py": "sha256:3792d4025d91309abc1bd0ef31f726f0ae8c88cbe6e12c2955575cb69ed0a1a9",
+        "src/satellite_coverage/geometry/antenna.py": "sha256:31bd9a26e425595e0f1694b1d5c08f854d98446d0e5bea627b81ee2f78f306a3",
+        "src/satellite_coverage/geometry/cell_horizon.py": "sha256:b6eb74f1b0add1ce3e56522f3fb604a8ac49136ad044550307a9892a56d73df7",
+        "src/satellite_coverage/geometry/cell_profile.py": "sha256:535474dfe1d4573531165d8c1681d28f7c730b7d4b926f03db8d65c2709ba8fb",
+        "src/satellite_coverage/geometry/geodetic.py": "sha256:b7b0db3af87b3de4ec43898565b4f6e1c455d2a34e10ee92584fba4b64f25c08",
+        "src/satellite_coverage/geometry/local.py": "sha256:3ae22387133a3a26c7b39e95f7c69d93405f15f85712752423babfdb05cf58cd",
+        "src/satellite_coverage/geometry/terrain.py": "sha256:fadcbd869f9eceb0146738f971f7d3cbd811f8eb8d144973753ca79232dca59e",
+        "src/satellite_coverage/io/__init__.py": "sha256:29b412b2f8fac2b8fc88afd6817b9bceddff1d8b7a5cc4cfbb66bcf8d21f8733",
+        "src/satellite_coverage/io/run_record.py": "sha256:f1ee820187ff785ade978df8384b0bb48ce53e23144c95d4ebc6f757d5a46c32",
+        "src/satellite_coverage/orbit/__init__.py": "sha256:151857f1a76f4d51ea4d0307f1eaffed619307a54b187b586de639db7616e695",
+        "src/satellite_coverage/orbit/visibility.py": "sha256:ebdb5e3e03470570eabf712419069b5a567985e462ad6b13db46af9e69ad054c",
+        "src/satellite_coverage/propagation.py": "sha256:40127b1fe0ffac950fe7877d88625f91c97574a25800e4954c573aefa62ba018",
+        "src/satellite_coverage/scenario.py": "sha256:5923e4bdede60d6d276ae7e58be8ea97c41786477f7aa0f6c662a05b02ae7c67",
+        "src/satellite_coverage/scheduling/__init__.py": "sha256:b7a1fb8df93e0a9ad823d79a4cf51a4fb75b89a2a88a7acd148762d0857f7d54",
+        "src/satellite_coverage/tle.py": "sha256:cd654ae53972aa5fa980116cc8cbcf3988421aaa257ae448682a45f48fb38181",
+        "src/satrm_benchmark/__init__.py": "sha256:29f909c6de430212922d1990be6acce4896715660bb6dd765f74ce343b94004d",
+        "scripts/verify_terrain_reader.py": "sha256:546dd660ee3c836d444c26838f674dbf70ad735166df78d9132d277da1a2b9cf",
+        "tests/fixtures/terrain_dem_legacy.py": "sha256:a527a8c2402dce7b237eb7d91fd204707c3a3b164615e228dbc8e83ef869ebc5"
+      },
+      "load_seconds": 7.690797820221633,
+      "metadata": {
+        "file_sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+        "declaration": {
+          "sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+          "height_unit": "m",
+          "vertical_datum": "EGM2008",
+          "surface_type": "DSM",
+          "evidence": "Product identified by user, specifications checked against official source. The local mosaic release, original tiles and processing/vertical-conversion history are not independently reconstructed."
+        },
+        "path": "/home/Users_Work_Space/zsfang/Satellite-Ground-Radiomap/data/l2_topo/china_dem_30.tif",
+        "source_crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4326\"]]",
+        "local_crs": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"World Geodetic System 1984\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1]],ID[\"EPSG\",6326]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Azimuthal Equidistant\",ID[\"EPSG\",1125]],PARAMETER[\"Latitude of natural origin\",34.24,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8801]],PARAMETER[\"Longitude of natural origin\",108.9,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8802]],PARAMETER[\"False easting\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8806]],PARAMETER[\"False northing\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8807]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+        "lon_deg": 108.9,
+        "lat_deg": 34.24,
+        "radius_m": 36000.0,
+        "resolution_m": 60,
+        "estimated_native_spacing_max_m": 30.814785935640124,
+        "native_window": [
+          127825,
+          80766,
+          2830,
+          2344
+        ],
+        "shape": [
+          1203,
+          1203
+        ],
+        "scale": 1.0,
+        "offset": 0.0,
+        "resampling": "nearest native cell; no display decimation",
+        "vertical_conversion": {
+          "method": "h=H+N; PROJ local grid, multiplier=+1, no optional grid or ballpark",
+          "grid": {
+            "path": "/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif",
+            "sha256": "sha256:4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a",
+            "model": "EGM2008",
+            "evidence": "https://cdn.proj.org/us_nga_egm08_25.tif"
+          },
+          "pipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=vgridshift +grids=\"/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif\" +multiplier=1 +step +proj=unitconvert +xy_in=rad +xy_out=deg",
+          "grid_tags": {
+            "TIFFTAG_IMAGEDESCRIPTION": "WGS 84 (EPSG:4979) to EGM2008 height (EPSG:3855). Converted from egm08_25.gtx (last modified at 2018/10/08)",
+            "TIFFTAG_DATETIME": "2019:12:27 00:00:00",
+            "TIFFTAG_COPYRIGHT": "Derived from work by NGA. Public Domain",
+            "area_of_use": "World",
+            "target_crs_epsg_code": "3855",
+            "TYPE": "VERTICAL_OFFSET_GEOGRAPHIC_TO_VERTICAL",
+            "AREA_OR_POINT": "Point"
+          }
+        },
+        "scope": "local AEQD distances; ellipsoid heights after declared conversion; DSM is not bare earth"
+      },
+      "source_id": "sha256:a0d3437f6dadc7ee325e81fc52b1933b315d38e2b12aeea6d60e8139b39535b2",
+      "buffered_write_seconds": 0.00660300999879837,
+      "reader_and_write_peak_rss_bytes": 162201600,
+      "rss_under_512_mib": true,
+      "output_sha256": "sha256:f231c5d51e14e27384cf7cd9be781ecc59e9a3af802e8a764acaaafcecf757b4",
+      "output_hash_seconds": 0.008409298025071621,
+      "read_windows": [
+        [
+          127825,
+          80767,
+          301,
+          249
+        ],
+        [
+          128126,
+          80766,
+          301,
+          249
+        ],
+        [
+          128427,
+          80766,
+          301,
+          249
+        ],
+        [
+          128729,
+          80766,
+          300,
+          248
+        ],
+        [
+          129030,
+          80766,
+          300,
+          248
+        ],
+        [
+          129331,
+          80766,
+          300,
+          248
+        ],
+        [
+          129632,
+          80766,
+          300,
+          249
+        ],
+        [
+          129933,
+          80766,
+          301,
+          249
+        ],
+        [
+          130234,
+          80767,
+          301,
+          249
+        ],
+        [
+          130535,
+          80768,
+          120,
+          248
+        ],
+        [
+          127826,
+          81016,
+          301,
+          250
+        ],
+        [
+          128127,
+          81016,
+          300,
+          249
+        ],
+        [
+          128428,
+          81015,
+          300,
+          249
+        ],
+        [
+          128729,
+          81015,
+          300,
+          249
+        ],
+        [
+          129030,
+          81015,
+          300,
+          248
+        ],
+        [
+          129331,
+          81015,
+          300,
+          248
+        ],
+        [
+          129632,
+          81015,
+          300,
+          249
+        ],
+        [
+          129933,
+          81016,
+          300,
+          248
+        ],
+        [
+          130233,
+          81016,
+          301,
+          249
+        ],
+        [
+          130534,
+          81017,
+          120,
+          249
+        ],
+        [
+          127827,
+          81266,
+          301,
+          249
+        ],
+        [
+          128128,
+          81265,
+          300,
+          249
+        ],
+        [
+          128429,
+          81265,
+          300,
+          248
+        ],
+        [
+          128730,
+          81264,
+          299,
+          249
+        ],
+        [
+          129030,
+          81264,
+          300,
+          249
+        ],
+        [
+          129331,
+          81264,
+          300,
+          249
+        ],
+        [
+          129632,
+          81264,
+          299,
+          249
+        ],
+        [
+          129932,
+          81265,
+          300,
+          249
+        ],
+        [
+          130233,
+          81265,
+          300,
+          249
+        ],
+        [
+          130533,
+          81266,
+          120,
+          249
+        ],
+        [
+          127828,
+          81515,
+          300,
+          249
+        ],
+        [
+          128129,
+          81514,
+          300,
+          249
+        ],
+        [
+          128429,
+          81514,
+          300,
+          248
+        ],
+        [
+          128730,
+          81514,
+          299,
+          248
+        ],
+        [
+          129031,
+          81513,
+          299,
+          249
+        ],
+        [
+          129331,
+          81513,
+          299,
+          249
+        ],
+        [
+          129631,
+          81514,
+          300,
+          248
+        ],
+        [
+          129932,
+          81514,
+          299,
+          249
+        ],
+        [
+          130232,
+          81515,
+          300,
+          249
+        ],
+        [
+          130532,
+          81515,
+          120,
+          249
+        ],
+        [
+          127830,
+          81764,
+          299,
+          249
+        ],
+        [
+          128130,
+          81763,
+          299,
+          249
+        ],
+        [
+          128430,
+          81763,
+          299,
+          249
+        ],
+        [
+          128730,
+          81763,
+          300,
+          248
+        ],
+        [
+          129031,
+          81763,
+          299,
+          248
+        ],
+        [
+          129331,
+          81763,
+          299,
+          248
+        ],
+        [
+          129631,
+          81763,
+          299,
+          249
+        ],
+        [
+          129931,
+          81763,
+          300,
+          249
+        ],
+        [
+          130231,
+          81764,
+          300,
+          249
+        ],
+        [
+          130531,
+          81765,
+          119,
+          248
+        ],
+        [
+          127831,
+          82013,
+          299,
+          249
+        ],
+        [
+          128131,
+          82013,
+          299,
+          249
+        ],
+        [
+          128431,
+          82012,
+          299,
+          249
+        ],
+        [
+          128731,
+          82012,
+          299,
+          249
+        ],
+        [
+          129031,
+          82012,
+          299,
+          248
+        ],
+        [
+          129331,
+          82012,
+          299,
+          248
+        ],
+        [
+          129631,
+          82012,
+          299,
+          249
+        ],
+        [
+          129930,
+          82012,
+          300,
+          249
+        ],
+        [
+          130230,
+          82013,
+          300,
+          249
+        ],
+        [
+          130530,
+          82014,
+          119,
+          248
+        ],
+        [
+          127832,
+          82263,
+          299,
+          249
+        ],
+        [
+          128132,
+          82262,
+          299,
+          249
+        ],
+        [
+          128431,
+          82261,
+          299,
+          249
+        ],
+        [
+          128731,
+          82261,
+          299,
+          249
+        ],
+        [
+          129031,
+          82261,
+          299,
+          249
+        ],
+        [
+          129331,
+          82261,
+          298,
+          249
+        ],
+        [
+          129630,
+          82261,
+          299,
+          249
+        ],
+        [
+          129930,
+          82262,
+          299,
+          249
+        ],
+        [
+          130229,
+          82262,
+          300,
+          249
+        ],
+        [
+          130529,
+          82263,
+          119,
+          249
+        ],
+        [
+          127833,
+          82512,
+          299,
+          249
+        ],
+        [
+          128133,
+          82511,
+          298,
+          249
+        ],
+        [
+          128432,
+          82511,
+          299,
+          248
+        ],
+        [
+          128732,
+          82510,
+          298,
+          249
+        ],
+        [
+          129031,
+          82510,
+          298,
+          249
+        ],
+        [
+          129331,
+          82510,
+          298,
+          249
+        ],
+        [
+          129630,
+          82511,
+          299,
+          248
+        ],
+        [
+          129929,
+          82511,
+          299,
+          249
+        ],
+        [
+          130229,
+          82512,
+          299,
+          249
+        ],
+        [
+          130528,
+          82512,
+          119,
+          249
+        ],
+        [
+          127834,
+          82761,
+          299,
+          249
+        ],
+        [
+          128133,
+          82760,
+          299,
+          249
+        ],
+        [
+          128433,
+          82760,
+          298,
+          249
+        ],
+        [
+          128732,
+          82760,
+          298,
+          248
+        ],
+        [
+          129031,
+          82760,
+          298,
+          248
+        ],
+        [
+          129331,
+          82760,
+          298,
+          248
+        ],
+        [
+          129630,
+          82760,
+          298,
+          249
+        ],
+        [
+          129929,
+          82760,
+          298,
+          249
+        ],
+        [
+          130228,
+          82761,
+          299,
+          249
+        ],
+        [
+          130527,
+          82762,
+          119,
+          248
+        ],
+        [
+          127835,
+          83010,
+          298,
+          100
+        ],
+        [
+          128134,
+          83010,
+          298,
+          99
+        ],
+        [
+          128433,
+          83009,
+          298,
+          99
+        ],
+        [
+          128732,
+          83009,
+          298,
+          99
+        ],
+        [
+          129032,
+          83009,
+          297,
+          98
+        ],
+        [
+          129331,
+          83009,
+          297,
+          98
+        ],
+        [
+          129630,
+          83009,
+          297,
+          99
+        ],
+        [
+          129929,
+          83009,
+          297,
+          99
+        ],
+        [
+          130228,
+          83010,
+          298,
+          99
+        ],
+        [
+          130526,
+          83011,
+          119,
+          99
+        ]
+      ],
+      "unique_read_cells": 6576867,
+      "repeated_read_cells": 0,
+      "status": "passed"
+    },
+    {
+      "mode": "bounded",
+      "radius_m": 48000.0,
+      "site": [
+        108.9,
+        34.24
+      ],
+      "resolution_m": 60,
+      "declaration": {
+        "sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+        "height_unit": "m",
+        "vertical_datum": "EGM2008",
+        "surface_type": "DSM",
+        "evidence": "Product identified by user, specifications checked against official source. The local mosaic release, original tiles and processing/vertical-conversion history are not independently reconstructed."
+      },
+      "geoid": {
+        "path": "/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif",
+        "sha256": "sha256:4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a",
+        "model": "EGM2008",
+        "evidence": "https://cdn.proj.org/us_nga_egm08_25.tif"
+      },
+      "versions": {
+        "python": "3.12.2",
+        "numpy": "1.26.4",
+        "gdal": "3.9.3",
+        "proj": "9.5.1"
+      },
+      "stats": {
+        "read_windows": 169,
+        "read_cells": 11691812,
+        "max_read_cells": 75500,
+        "subdivisions": 0,
+        "execution_transform_seconds": 0.9482568008825183,
+        "read_seconds": 0.15753752971068025,
+        "vertical_seconds": 0.22654642909765244,
+        "validation_geoid_seconds": 0.06355293793603778,
+        "dem_hash_seconds": 6.4220409519039094,
+        "planning_transform_seconds": 0.9481896967627108,
+        "freeze_seconds": 0.016140367835760117,
+        "budget": {
+          "tile_size": 128,
+          "target_cells": 4000000,
+          "source_window_cells": 262144,
+          "memory_bytes": 536870912,
+          "gdal_cache_bytes": 33554432
+        },
+        "estimated_memory_bytes": 331351256,
+        "source_block_shapes": [
+          [
+            256,
+            256
+          ]
+        ],
+        "strategy": "two_pass_target_tiles"
+      },
+      "source_hashes": {
+        "src/satellite_coverage/__init__.py": "sha256:0cdebc751405fe8e804b3d93ab3d8e55b64bf071ec1476905743290d34ec23f4",
+        "src/satellite_coverage/adapters/__init__.py": "sha256:9c63b7fd5dc11ad327928d558e89553fc3fbf5515bf568776a40c057ecedabcf",
+        "src/satellite_coverage/adapters/legacy_output.py": "sha256:397e51fe8143bb2d806b8d5af931c24afc93cd0c22729fe047c5aee23be1b489",
+        "src/satellite_coverage/cli.py": "sha256:bb9209aa6e5ba02e6797526dec373d8ce44d1aba470b2839e03679601823d75d",
+        "src/satellite_coverage/compatibility/__init__.py": "sha256:318e2bd9579ce36d10e6d4a7f49a455d6a137bdbc36ef336601d4272f3174df3",
+        "src/satellite_coverage/compatibility/legacy_scenario.py": "sha256:c2421839f16e1057656a3ca7d26725c9ed55b8e673c770c15d12ca97f527ff62",
+        "src/satellite_coverage/config/__init__.py": "sha256:9a84ffbc2a0b863bc9395ffdd36a9598eda5b9cb8b2f507cfef383bfacd170b0",
+        "src/satellite_coverage/config/link.py": "sha256:18c7182777c8297a1d9713925401724beb0b69027b8710f6595b53faf541aa57",
+        "src/satellite_coverage/config/loader.py": "sha256:e6e21874498d46091ec67870fb0fa487dcb783e41fc9c32dff35bed1936a552a",
+        "src/satellite_coverage/config/models.py": "sha256:84034cd579cb8612d04f732ac5d0bbedcdfd8f93e77c4bea778306611bc40e46",
+        "src/satellite_coverage/config/pilot.py": "sha256:abb424341ab5f48dd6de5e3b895bf090bc4ad433604d113c0a14972e32476660",
+        "src/satellite_coverage/coordinates.py": "sha256:3c9969626629ce0e4dd3a70065c98cf244a17a1593ae139455aaffe2857ebfd2",
+        "src/satellite_coverage/data_sources/__init__.py": "sha256:93ace53b1341dd62741e62a7e8f81257b442140f773ddd561b21ebd3ce528eb4",
+        "src/satellite_coverage/data_sources/dem_audit.py": "sha256:cc0d256eb72e172bcd051a511bbbf9d5123cf1189a6287cbbd5a7568d681fc26",
+        "src/satellite_coverage/data_sources/dem_preview.py": "sha256:6f642ab9f3980673560be030900313356b8d6a5e33db398efdbc842281f53eaf",
+        "src/satellite_coverage/data_sources/manifest.py": "sha256:9d3619eda92cfa8bc7817a1d2b945533d4c7856f16c71edfe709ae338b304d44",
+        "src/satellite_coverage/data_sources/terrain_dem.py": "sha256:e56be10248c57c0b21f227700769b44d9d9f39495da8a340c82145fc4f5de64b",
+        "src/satellite_coverage/data_sources/terrain_tiles.py": "sha256:1d642d6bbeb72658305165ff14751550410639c2e345ae1b2c1c7e0b28a8a8db",
+        "src/satellite_coverage/domain/__init__.py": "sha256:c5f86bd31889595ad3485cbb06cfd4b99473b83b6966005b0cdf6d3f46f0e30d",
+        "src/satellite_coverage/domain/arrays.py": "sha256:13d1c4200aac5587a08c082e73e5bd6b2ed4c0a59c425f640bb5f715d638986e",
+        "src/satellite_coverage/domain/grid.py": "sha256:a76b21c5311a288930624e4ab1e4bf6fb4815735051bf6e61617492602b0a0c2",
+        "src/satellite_coverage/domain/link_record.py": "sha256:d112aaebfdea03a44da56ab9889ce860581c5a453b5e39cfade282bd5dfced0c",
+        "src/satellite_coverage/domain/release.py": "sha256:bee800d39b1442a043d6b82edf7581877bb5ebe478cfa683a902a263298aa621",
+        "src/satellite_coverage/domain/state.py": "sha256:16dbb904c4f328c777341b481281a93120140b8e86c9035b78e149122fd3410a",
+        "src/satellite_coverage/domain/units.py": "sha256:c65443f31b44af966157a73db9a74731d2095e28230c72c8b00e3d1fb2198340",
+        "src/satellite_coverage/domain/validation.py": "sha256:26340399e16e170e83678c855ee03bb01f786aecaba6cb8b7a75f0dc8442630d",
+        "src/satellite_coverage/engine/__init__.py": "sha256:c79409633bc242c4178d4ac6d51a7cb759ee98705851f52143c49d1b9ab5dac3",
+        "src/satellite_coverage/engine/_legacy.py": "sha256:3e9bec9abbab539e4998fe4b69dc2c1c84ee9a2352dc2af608b6c07892b13b9a",
+        "src/satellite_coverage/engine/analytic_link.py": "sha256:74bf94e4e06ba0a96f0c28ae55246fe3824cf2ac4343f252331169d6743c04b6",
+        "src/satellite_coverage/engine/api.py": "sha256:1d39c74d7eb511beac3c6b7388771c9c7c007078a47265f5ba1f0947dc7007ba",
+        "src/satellite_coverage/engine/interval_extrema.py": "sha256:547fe15a4cef04a2a3e5d66e59dbda15ade94647f5f4708f20458641ed53a154",
+        "src/satellite_coverage/engine/link_budget.py": "sha256:4279bd9832918f821e3d2e17383230361bcb5c403dcc48c11a436dc44d6f9693",
+        "src/satellite_coverage/engine/links.py": "sha256:38bc1d5e9a34df7753858287185fdd038e265ff3e2cbf693bbe13838137224c7",
+        "src/satellite_coverage/engine/orbit_link.py": "sha256:4f79b3c1d8c8c0045a91305c8030514c68f490d60b35754008ceaf1097f04f1e",
+        "src/satellite_coverage/engine/terrain_context.py": "sha256:ce1b0e9f7a60ad7d9da55c6614134d1542550ebf2c11a2ce3a02d4e3d499740f",
+        "src/satellite_coverage/engine/terrain_link.py": "sha256:b88b80283b3244b255ad3fc5cf9d071dd5d28f93940301126a152268db90a901",
+        "src/satellite_coverage/experiments/__init__.py": "sha256:fedb5bab652286af739e71bc5f9ea7c20f7490208ecb3cf7a88fcd4f42ef0bad",
+        "src/satellite_coverage/experiments/link.py": "sha256:efd5eda87473af8043b666877af7dd4c1ef497d16e3c79862f20cb87a11d4639",
+        "src/satellite_coverage/experiments/orbit_link.py": "sha256:aa564c0997111279979f7e2619886d27a50e4bccbf4e8caab9a1a771b609b1bb",
+        "src/satellite_coverage/experiments/pilot.py": "sha256:c7562659c9abc0468c59e6c4deba10a28a588d1ba53dc65ad0c9c4609268846d",
+        "src/satellite_coverage/experiments/terrain_sensitivity.py": "sha256:2d0cbb9affc78ce929301ac58e23b79b11748e6305884ba13fc5bc2fe7bb3325",
+        "src/satellite_coverage/explorer/__init__.py": "sha256:5678effb118e2e34e797872472567e43bc79ac8b143499c11db5bd7fe6f55014",
+        "src/satellite_coverage/explorer/__main__.py": "sha256:ddd60a1df996b2b744c45953165711e5afe2711f5f0249f4e98875e1342411df",
+        "src/satellite_coverage/explorer/server.py": "sha256:41678d780e0d864ea04b65edaa805aac6a7cea426a9eac354fad1f4c9737570f",
+        "src/satellite_coverage/geodata.py": "sha256:7d78f68f9a4bab25eac21519b46ae10f7fed1d57ae3904c6ea4a8e08e65555bb",
+        "src/satellite_coverage/geometry/__init__.py": "sha256:3792d4025d91309abc1bd0ef31f726f0ae8c88cbe6e12c2955575cb69ed0a1a9",
+        "src/satellite_coverage/geometry/antenna.py": "sha256:31bd9a26e425595e0f1694b1d5c08f854d98446d0e5bea627b81ee2f78f306a3",
+        "src/satellite_coverage/geometry/cell_horizon.py": "sha256:b6eb74f1b0add1ce3e56522f3fb604a8ac49136ad044550307a9892a56d73df7",
+        "src/satellite_coverage/geometry/cell_profile.py": "sha256:535474dfe1d4573531165d8c1681d28f7c730b7d4b926f03db8d65c2709ba8fb",
+        "src/satellite_coverage/geometry/geodetic.py": "sha256:b7b0db3af87b3de4ec43898565b4f6e1c455d2a34e10ee92584fba4b64f25c08",
+        "src/satellite_coverage/geometry/local.py": "sha256:3ae22387133a3a26c7b39e95f7c69d93405f15f85712752423babfdb05cf58cd",
+        "src/satellite_coverage/geometry/terrain.py": "sha256:fadcbd869f9eceb0146738f971f7d3cbd811f8eb8d144973753ca79232dca59e",
+        "src/satellite_coverage/io/__init__.py": "sha256:29b412b2f8fac2b8fc88afd6817b9bceddff1d8b7a5cc4cfbb66bcf8d21f8733",
+        "src/satellite_coverage/io/run_record.py": "sha256:f1ee820187ff785ade978df8384b0bb48ce53e23144c95d4ebc6f757d5a46c32",
+        "src/satellite_coverage/orbit/__init__.py": "sha256:151857f1a76f4d51ea4d0307f1eaffed619307a54b187b586de639db7616e695",
+        "src/satellite_coverage/orbit/visibility.py": "sha256:ebdb5e3e03470570eabf712419069b5a567985e462ad6b13db46af9e69ad054c",
+        "src/satellite_coverage/propagation.py": "sha256:40127b1fe0ffac950fe7877d88625f91c97574a25800e4954c573aefa62ba018",
+        "src/satellite_coverage/scenario.py": "sha256:5923e4bdede60d6d276ae7e58be8ea97c41786477f7aa0f6c662a05b02ae7c67",
+        "src/satellite_coverage/scheduling/__init__.py": "sha256:b7a1fb8df93e0a9ad823d79a4cf51a4fb75b89a2a88a7acd148762d0857f7d54",
+        "src/satellite_coverage/tle.py": "sha256:cd654ae53972aa5fa980116cc8cbcf3988421aaa257ae448682a45f48fb38181",
+        "src/satrm_benchmark/__init__.py": "sha256:29f909c6de430212922d1990be6acce4896715660bb6dd765f74ce343b94004d",
+        "scripts/verify_terrain_reader.py": "sha256:546dd660ee3c836d444c26838f674dbf70ad735166df78d9132d277da1a2b9cf",
+        "tests/fixtures/terrain_dem_legacy.py": "sha256:a527a8c2402dce7b237eb7d91fd204707c3a3b164615e228dbc8e83ef869ebc5"
+      },
+      "load_seconds": 8.840232730843127,
+      "metadata": {
+        "file_sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+        "declaration": {
+          "sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+          "height_unit": "m",
+          "vertical_datum": "EGM2008",
+          "surface_type": "DSM",
+          "evidence": "Product identified by user, specifications checked against official source. The local mosaic release, original tiles and processing/vertical-conversion history are not independently reconstructed."
+        },
+        "path": "/home/Users_Work_Space/zsfang/Satellite-Ground-Radiomap/data/l2_topo/china_dem_30.tif",
+        "source_crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4326\"]]",
+        "local_crs": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"World Geodetic System 1984\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1]],ID[\"EPSG\",6326]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Azimuthal Equidistant\",ID[\"EPSG\",1125]],PARAMETER[\"Latitude of natural origin\",34.24,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8801]],PARAMETER[\"Longitude of natural origin\",108.9,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8802]],PARAMETER[\"False easting\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8806]],PARAMETER[\"False northing\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8807]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+        "lon_deg": 108.9,
+        "lat_deg": 34.24,
+        "radius_m": 48000.0,
+        "resolution_m": 60,
+        "estimated_native_spacing_max_m": 30.81546367086525,
+        "native_window": [
+          127352,
+          80376,
+          3776,
+          3125
+        ],
+        "shape": [
+          1603,
+          1603
+        ],
+        "scale": 1.0,
+        "offset": 0.0,
+        "resampling": "nearest native cell; no display decimation",
+        "vertical_conversion": {
+          "method": "h=H+N; PROJ local grid, multiplier=+1, no optional grid or ballpark",
+          "grid": {
+            "path": "/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif",
+            "sha256": "sha256:4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a",
+            "model": "EGM2008",
+            "evidence": "https://cdn.proj.org/us_nga_egm08_25.tif"
+          },
+          "pipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=vgridshift +grids=\"/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif\" +multiplier=1 +step +proj=unitconvert +xy_in=rad +xy_out=deg",
+          "grid_tags": {
+            "TIFFTAG_IMAGEDESCRIPTION": "WGS 84 (EPSG:4979) to EGM2008 height (EPSG:3855). Converted from egm08_25.gtx (last modified at 2018/10/08)",
+            "TIFFTAG_DATETIME": "2019:12:27 00:00:00",
+            "TIFFTAG_COPYRIGHT": "Derived from work by NGA. Public Domain",
+            "area_of_use": "World",
+            "target_crs_epsg_code": "3855",
+            "TYPE": "VERTICAL_OFFSET_GEOGRAPHIC_TO_VERTICAL",
+            "AREA_OR_POINT": "Point"
+          }
+        },
+        "scope": "local AEQD distances; ellipsoid heights after declared conversion; DSM is not bare earth"
+      },
+      "source_id": "sha256:6b91f089e5df4840821b013d73ffab4338be49a43212f9df16afc14698804143",
+      "buffered_write_seconds": 0.01017595874145627,
+      "reader_and_write_peak_rss_bytes": 192208896,
+      "rss_under_512_mib": true,
+      "output_sha256": "sha256:73c1f1cac0827b76b4801be0b7556b009d4a4ba2399f54efd0ac4a0aac68655c",
+      "output_hash_seconds": 0.013820427004247904,
+      "read_windows": [
+        [
+          127352,
+          80379,
+          301,
+          250
+        ],
+        [
+          127653,
+          80378,
+          302,
+          249
+        ],
+        [
+          127955,
+          80377,
+          301,
+          249
+        ],
+        [
+          128257,
+          80377,
+          301,
+          249
+        ],
+        [
+          128558,
+          80376,
+          301,
+          249
+        ],
+        [
+          128860,
+          80376,
+          300,
+          249
+        ],
+        [
+          129162,
+          80376,
+          300,
+          249
+        ],
+        [
+          129463,
+          80376,
+          301,
+          249
+        ],
+        [
+          129765,
+          80377,
+          300,
+          248
+        ],
+        [
+          130066,
+          80377,
+          301,
+          249
+        ],
+        [
+          130367,
+          80378,
+          302,
+          249
+        ],
+        [
+          130669,
+          80379,
+          301,
+          249
+        ],
+        [
+          130970,
+          80380,
+          158,
+          249
+        ],
+        [
+          127353,
+          80628,
+          302,
+          250
+        ],
+        [
+          127655,
+          80627,
+          301,
+          250
+        ],
+        [
+          127956,
+          80627,
+          301,
+          249
+        ],
+        [
+          128258,
+          80626,
+          300,
+          249
+        ],
+        [
+          128559,
+          80626,
+          300,
+          248
+        ],
+        [
+          128860,
+          80626,
+          301,
+          248
+        ],
+        [
+          129162,
+          80626,
+          300,
+          248
+        ],
+        [
+          129463,
+          80626,
+          300,
+          248
+        ],
+        [
+          129764,
+          80626,
+          301,
+          249
+        ],
+        [
+          130065,
+          80626,
+          301,
+          249
+        ],
+        [
+          130367,
+          80627,
+          301,
+          249
+        ],
+        [
+          130668,
+          80628,
+          301,
+          249
+        ],
+        [
+          130969,
+          80629,
+          158,
+          249
+        ],
+        [
+          127355,
+          80878,
+          301,
+          249
+        ],
+        [
+          127656,
+          80877,
+          301,
+          249
+        ],
+        [
+          127957,
+          80876,
+          301,
+          249
+        ],
+        [
+          128258,
+          80875,
+          301,
+          249
+        ],
+        [
+          128560,
+          80875,
+          300,
+          249
+        ],
+        [
+          128861,
+          80875,
+          300,
+          248
+        ],
+        [
+          129162,
+          80875,
+          300,
+          248
+        ],
+        [
+          129463,
+          80875,
+          300,
+          248
+        ],
+        [
+          129764,
+          80875,
+          300,
+          249
+        ],
+        [
+          130065,
+          80876,
+          300,
+          249
+        ],
+        [
+          130366,
+          80876,
+          300,
+          249
+        ],
+        [
+          130667,
+          80877,
+          301,
+          249
+        ],
+        [
+          130967,
+          80878,
+          158,
+          249
+        ],
+        [
+          127356,
+          81127,
+          301,
+          249
+        ],
+        [
+          127657,
+          81126,
+          301,
+          249
+        ],
+        [
+          127958,
+          81125,
+          301,
+          249
+        ],
+        [
+          128259,
+          81125,
+          300,
+          248
+        ],
+        [
+          128560,
+          81124,
+          300,
+          249
+        ],
+        [
+          128861,
+          81124,
+          300,
+          248
+        ],
+        [
+          129162,
+          81124,
+          299,
+          248
+        ],
+        [
+          129463,
+          81124,
+          299,
+          249
+        ],
+        [
+          129763,
+          81124,
+          300,
+          249
+        ],
+        [
+          130064,
+          81125,
+          300,
+          249
+        ],
+        [
+          130365,
+          81125,
+          300,
+          250
+        ],
+        [
+          130665,
+          81126,
+          301,
+          250
+        ],
+        [
+          130966,
+          81127,
+          158,
+          249
+        ],
+        [
+          127358,
+          81376,
+          301,
+          250
+        ],
+        [
+          127659,
+          81375,
+          300,
+          249
+        ],
+        [
+          127959,
+          81374,
+          300,
+          249
+        ],
+        [
+          128260,
+          81374,
+          300,
+          249
+        ],
+        [
+          128561,
+          81373,
+          299,
+          249
+        ],
+        [
+          128861,
+          81373,
+          300,
+          249
+        ],
+        [
+          129162,
+          81373,
+          299,
+          249
+        ],
+        [
+          129462,
+          81373,
+          300,
+          249
+        ],
+        [
+          129763,
+          81374,
+          300,
+          248
+        ],
+        [
+          130063,
+          81374,
+          300,
+          249
+        ],
+        [
+          130364,
+          81375,
+          300,
+          249
+        ],
+        [
+          130664,
+          81376,
+          301,
+          249
+        ],
+        [
+          130965,
+          81377,
+          157,
+          249
+        ],
+        [
+          127360,
+          81625,
+          300,
+          250
+        ],
+        [
+          127660,
+          81624,
+          300,
+          250
+        ],
+        [
+          127960,
+          81624,
+          300,
+          249
+        ],
+        [
+          128261,
+          81623,
+          299,
+          249
+        ],
+        [
+          128561,
+          81623,
+          300,
+          248
+        ],
+        [
+          128862,
+          81623,
+          299,
+          248
+        ],
+        [
+          129162,
+          81622,
+          299,
+          249
+        ],
+        [
+          129462,
+          81623,
+          300,
+          248
+        ],
+        [
+          129762,
+          81623,
+          300,
+          249
+        ],
+        [
+          130063,
+          81623,
+          299,
+          249
+        ],
+        [
+          130363,
+          81624,
+          300,
+          249
+        ],
+        [
+          130663,
+          81625,
+          300,
+          249
+        ],
+        [
+          130963,
+          81626,
+          157,
+          249
+        ],
+        [
+          127361,
+          81875,
+          300,
+          249
+        ],
+        [
+          127661,
+          81874,
+          300,
+          249
+        ],
+        [
+          127961,
+          81873,
+          300,
+          249
+        ],
+        [
+          128262,
+          81872,
+          299,
+          249
+        ],
+        [
+          128562,
+          81872,
+          299,
+          249
+        ],
+        [
+          128862,
+          81872,
+          299,
+          248
+        ],
+        [
+          129162,
+          81872,
+          299,
+          248
+        ],
+        [
+          129462,
+          81872,
+          299,
+          248
+        ],
+        [
+          129762,
+          81872,
+          299,
+          249
+        ],
+        [
+          130062,
+          81873,
+          299,
+          248
+        ],
+        [
+          130362,
+          81873,
+          300,
+          249
+        ],
+        [
+          130662,
+          81874,
+          300,
+          249
+        ],
+        [
+          130962,
+          81875,
+          157,
+          249
+        ],
+        [
+          127363,
+          82124,
+          299,
+          249
+        ],
+        [
+          127663,
+          82123,
+          299,
+          249
+        ],
+        [
+          127962,
+          82122,
+          300,
+          249
+        ],
+        [
+          128262,
+          82122,
+          300,
+          248
+        ],
+        [
+          128562,
+          82121,
+          299,
+          249
+        ],
+        [
+          128862,
+          82121,
+          299,
+          248
+        ],
+        [
+          129162,
+          82121,
+          299,
+          248
+        ],
+        [
+          129462,
+          82121,
+          299,
+          249
+        ],
+        [
+          129762,
+          82121,
+          299,
+          249
+        ],
+        [
+          130061,
+          82122,
+          300,
+          249
+        ],
+        [
+          130361,
+          82122,
+          299,
+          250
+        ],
+        [
+          130661,
+          82123,
+          299,
+          250
+        ],
+        [
+          130960,
+          82124,
+          157,
+          249
+        ],
+        [
+          127364,
+          82373,
+          300,
+          250
+        ],
+        [
+          127664,
+          82372,
+          299,
+          249
+        ],
+        [
+          127963,
+          82371,
+          300,
+          249
+        ],
+        [
+          128263,
+          82371,
+          299,
+          249
+        ],
+        [
+          128563,
+          82370,
+          299,
+          249
+        ],
+        [
+          128863,
+          82370,
+          298,
+          249
+        ],
+        [
+          129162,
+          82370,
+          299,
+          249
+        ],
+        [
+          129462,
+          82370,
+          298,
+          249
+        ],
+        [
+          129761,
+          82371,
+          299,
+          248
+        ],
+        [
+          130061,
+          82371,
+          299,
+          249
+        ],
+        [
+          130360,
+          82372,
+          299,
+          249
+        ],
+        [
+          130660,
+          82373,
+          299,
+          249
+        ],
+        [
+          130959,
+          82374,
+          157,
+          249
+        ],
+        [
+          127366,
+          82622,
+          299,
+          250
+        ],
+        [
+          127665,
+          82621,
+          299,
+          250
+        ],
+        [
+          127965,
+          82621,
+          298,
+          249
+        ],
+        [
+          128264,
+          82620,
+          299,
+          249
+        ],
+        [
+          128563,
+          82620,
+          299,
+          248
+        ],
+        [
+          128863,
+          82619,
+          298,
+          249
+        ],
+        [
+          129162,
+          82619,
+          298,
+          249
+        ],
+        [
+          129462,
+          82620,
+          298,
+          248
+        ],
+        [
+          129761,
+          82620,
+          298,
+          249
+        ],
+        [
+          130060,
+          82620,
+          299,
+          249
+        ],
+        [
+          130359,
+          82621,
+          299,
+          249
+        ],
+        [
+          130658,
+          82622,
+          300,
+          249
+        ],
+        [
+          130958,
+          82623,
+          156,
+          249
+        ],
+        [
+          127367,
+          82872,
+          299,
+          249
+        ],
+        [
+          127666,
+          82871,
+          299,
+          249
+        ],
+        [
+          127966,
+          82870,
+          298,
+          249
+        ],
+        [
+          128265,
+          82869,
+          298,
+          249
+        ],
+        [
+          128564,
+          82869,
+          298,
+          249
+        ],
+        [
+          128863,
+          82869,
+          298,
+          248
+        ],
+        [
+          129162,
+          82869,
+          298,
+          248
+        ],
+        [
+          129461,
+          82869,
+          298,
+          248
+        ],
+        [
+          129760,
+          82869,
+          299,
+          249
+        ],
+        [
+          130059,
+          82870,
+          299,
+          248
+        ],
+        [
+          130358,
+          82870,
+          299,
+          249
+        ],
+        [
+          130657,
+          82871,
+          299,
+          249
+        ],
+        [
+          130956,
+          82872,
+          157,
+          249
+        ],
+        [
+          127369,
+          83121,
+          299,
+          249
+        ],
+        [
+          127668,
+          83120,
+          298,
+          249
+        ],
+        [
+          127967,
+          83119,
+          298,
+          249
+        ],
+        [
+          128266,
+          83119,
+          298,
+          248
+        ],
+        [
+          128565,
+          83118,
+          297,
+          249
+        ],
+        [
+          128863,
+          83118,
+          298,
+          248
+        ],
+        [
+          129162,
+          83118,
+          298,
+          248
+        ],
+        [
+          129461,
+          83118,
+          298,
+          249
+        ],
+        [
+          129760,
+          83118,
+          298,
+          249
+        ],
+        [
+          130059,
+          83119,
+          298,
+          249
+        ],
+        [
+          130357,
+          83119,
+          299,
+          250
+        ],
+        [
+          130656,
+          83120,
+          299,
+          250
+        ],
+        [
+          130955,
+          83121,
+          156,
+          249
+        ],
+        [
+          127370,
+          83370,
+          298,
+          131
+        ],
+        [
+          127669,
+          83369,
+          298,
+          131
+        ],
+        [
+          127968,
+          83368,
+          297,
+          131
+        ],
+        [
+          128266,
+          83368,
+          298,
+          130
+        ],
+        [
+          128565,
+          83367,
+          298,
+          130
+        ],
+        [
+          128864,
+          83367,
+          297,
+          130
+        ],
+        [
+          129162,
+          83367,
+          298,
+          130
+        ],
+        [
+          129461,
+          83367,
+          298,
+          130
+        ],
+        [
+          129760,
+          83368,
+          297,
+          130
+        ],
+        [
+          130058,
+          83368,
+          298,
+          130
+        ],
+        [
+          130357,
+          83369,
+          298,
+          130
+        ],
+        [
+          130655,
+          83370,
+          298,
+          130
+        ],
+        [
+          130954,
+          83371,
+          156,
+          130
+        ]
+      ],
+      "unique_read_cells": 11690667,
+      "repeated_read_cells": 1145,
+      "status": "passed"
+    }
+  ],
+  "scope": "Reading only, not expanded-radius propagation stability; sequential fresh processes, OS caches uncontrolled; RSS includes imports and source archive creation.",
+  "tile64_runs": [
+    {
+      "mode": "bounded",
+      "radius_m": 3000.0,
+      "site": [
+        108.9,
+        34.24
+      ],
+      "resolution_m": 60,
+      "declaration": {
+        "sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+        "height_unit": "m",
+        "vertical_datum": "EGM2008",
+        "surface_type": "DSM",
+        "evidence": "Product identified by user, specifications checked against official source. The local mosaic release, original tiles and processing/vertical-conversion history are not independently reconstructed."
+      },
+      "geoid": {
+        "path": "/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif",
+        "sha256": "sha256:4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a",
+        "model": "EGM2008",
+        "evidence": "https://cdn.proj.org/us_nga_egm08_25.tif"
+      },
+      "versions": {
+        "python": "3.12.2",
+        "numpy": "1.26.4",
+        "gdal": "3.9.3",
+        "proj": "9.5.1"
+      },
+      "stats": {
+        "read_windows": 4,
+        "read_cells": 47322,
+        "max_read_cells": 18327,
+        "subdivisions": 0,
+        "execution_transform_seconds": 0.004383983556181192,
+        "read_seconds": 0.006399884354323149,
+        "vertical_seconds": 0.003181150648742914,
+        "validation_geoid_seconds": 0.06174295302480459,
+        "dem_hash_seconds": 6.409712162800133,
+        "planning_transform_seconds": 0.006443499121814966,
+        "freeze_seconds": 6.908969953656197e-05,
+        "budget": {
+          "tile_size": 64,
+          "target_cells": 4000000,
+          "source_window_cells": 262144,
+          "memory_bytes": 536870912,
+          "gdal_cache_bytes": 33554432
+        },
+        "estimated_memory_bytes": 269935256,
+        "source_block_shapes": [
+          [
+            256,
+            256
+          ]
+        ],
+        "strategy": "two_pass_target_tiles"
+      },
+      "source_hashes": {
+        "src/satellite_coverage/__init__.py": "sha256:0cdebc751405fe8e804b3d93ab3d8e55b64bf071ec1476905743290d34ec23f4",
+        "src/satellite_coverage/adapters/__init__.py": "sha256:9c63b7fd5dc11ad327928d558e89553fc3fbf5515bf568776a40c057ecedabcf",
+        "src/satellite_coverage/adapters/legacy_output.py": "sha256:397e51fe8143bb2d806b8d5af931c24afc93cd0c22729fe047c5aee23be1b489",
+        "src/satellite_coverage/cli.py": "sha256:bb9209aa6e5ba02e6797526dec373d8ce44d1aba470b2839e03679601823d75d",
+        "src/satellite_coverage/compatibility/__init__.py": "sha256:318e2bd9579ce36d10e6d4a7f49a455d6a137bdbc36ef336601d4272f3174df3",
+        "src/satellite_coverage/compatibility/legacy_scenario.py": "sha256:c2421839f16e1057656a3ca7d26725c9ed55b8e673c770c15d12ca97f527ff62",
+        "src/satellite_coverage/config/__init__.py": "sha256:9a84ffbc2a0b863bc9395ffdd36a9598eda5b9cb8b2f507cfef383bfacd170b0",
+        "src/satellite_coverage/config/link.py": "sha256:18c7182777c8297a1d9713925401724beb0b69027b8710f6595b53faf541aa57",
+        "src/satellite_coverage/config/loader.py": "sha256:e6e21874498d46091ec67870fb0fa487dcb783e41fc9c32dff35bed1936a552a",
+        "src/satellite_coverage/config/models.py": "sha256:84034cd579cb8612d04f732ac5d0bbedcdfd8f93e77c4bea778306611bc40e46",
+        "src/satellite_coverage/config/pilot.py": "sha256:abb424341ab5f48dd6de5e3b895bf090bc4ad433604d113c0a14972e32476660",
+        "src/satellite_coverage/coordinates.py": "sha256:3c9969626629ce0e4dd3a70065c98cf244a17a1593ae139455aaffe2857ebfd2",
+        "src/satellite_coverage/data_sources/__init__.py": "sha256:93ace53b1341dd62741e62a7e8f81257b442140f773ddd561b21ebd3ce528eb4",
+        "src/satellite_coverage/data_sources/dem_audit.py": "sha256:cc0d256eb72e172bcd051a511bbbf9d5123cf1189a6287cbbd5a7568d681fc26",
+        "src/satellite_coverage/data_sources/dem_preview.py": "sha256:6f642ab9f3980673560be030900313356b8d6a5e33db398efdbc842281f53eaf",
+        "src/satellite_coverage/data_sources/manifest.py": "sha256:9d3619eda92cfa8bc7817a1d2b945533d4c7856f16c71edfe709ae338b304d44",
+        "src/satellite_coverage/data_sources/terrain_dem.py": "sha256:e56be10248c57c0b21f227700769b44d9d9f39495da8a340c82145fc4f5de64b",
+        "src/satellite_coverage/data_sources/terrain_tiles.py": "sha256:1d642d6bbeb72658305165ff14751550410639c2e345ae1b2c1c7e0b28a8a8db",
+        "src/satellite_coverage/domain/__init__.py": "sha256:c5f86bd31889595ad3485cbb06cfd4b99473b83b6966005b0cdf6d3f46f0e30d",
+        "src/satellite_coverage/domain/arrays.py": "sha256:13d1c4200aac5587a08c082e73e5bd6b2ed4c0a59c425f640bb5f715d638986e",
+        "src/satellite_coverage/domain/grid.py": "sha256:a76b21c5311a288930624e4ab1e4bf6fb4815735051bf6e61617492602b0a0c2",
+        "src/satellite_coverage/domain/link_record.py": "sha256:d112aaebfdea03a44da56ab9889ce860581c5a453b5e39cfade282bd5dfced0c",
+        "src/satellite_coverage/domain/release.py": "sha256:bee800d39b1442a043d6b82edf7581877bb5ebe478cfa683a902a263298aa621",
+        "src/satellite_coverage/domain/state.py": "sha256:16dbb904c4f328c777341b481281a93120140b8e86c9035b78e149122fd3410a",
+        "src/satellite_coverage/domain/units.py": "sha256:c65443f31b44af966157a73db9a74731d2095e28230c72c8b00e3d1fb2198340",
+        "src/satellite_coverage/domain/validation.py": "sha256:26340399e16e170e83678c855ee03bb01f786aecaba6cb8b7a75f0dc8442630d",
+        "src/satellite_coverage/engine/__init__.py": "sha256:c79409633bc242c4178d4ac6d51a7cb759ee98705851f52143c49d1b9ab5dac3",
+        "src/satellite_coverage/engine/_legacy.py": "sha256:3e9bec9abbab539e4998fe4b69dc2c1c84ee9a2352dc2af608b6c07892b13b9a",
+        "src/satellite_coverage/engine/analytic_link.py": "sha256:74bf94e4e06ba0a96f0c28ae55246fe3824cf2ac4343f252331169d6743c04b6",
+        "src/satellite_coverage/engine/api.py": "sha256:1d39c74d7eb511beac3c6b7388771c9c7c007078a47265f5ba1f0947dc7007ba",
+        "src/satellite_coverage/engine/interval_extrema.py": "sha256:547fe15a4cef04a2a3e5d66e59dbda15ade94647f5f4708f20458641ed53a154",
+        "src/satellite_coverage/engine/link_budget.py": "sha256:4279bd9832918f821e3d2e17383230361bcb5c403dcc48c11a436dc44d6f9693",
+        "src/satellite_coverage/engine/links.py": "sha256:38bc1d5e9a34df7753858287185fdd038e265ff3e2cbf693bbe13838137224c7",
+        "src/satellite_coverage/engine/orbit_link.py": "sha256:4f79b3c1d8c8c0045a91305c8030514c68f490d60b35754008ceaf1097f04f1e",
+        "src/satellite_coverage/engine/terrain_context.py": "sha256:ce1b0e9f7a60ad7d9da55c6614134d1542550ebf2c11a2ce3a02d4e3d499740f",
+        "src/satellite_coverage/engine/terrain_link.py": "sha256:b88b80283b3244b255ad3fc5cf9d071dd5d28f93940301126a152268db90a901",
+        "src/satellite_coverage/experiments/__init__.py": "sha256:fedb5bab652286af739e71bc5f9ea7c20f7490208ecb3cf7a88fcd4f42ef0bad",
+        "src/satellite_coverage/experiments/link.py": "sha256:efd5eda87473af8043b666877af7dd4c1ef497d16e3c79862f20cb87a11d4639",
+        "src/satellite_coverage/experiments/orbit_link.py": "sha256:aa564c0997111279979f7e2619886d27a50e4bccbf4e8caab9a1a771b609b1bb",
+        "src/satellite_coverage/experiments/pilot.py": "sha256:c7562659c9abc0468c59e6c4deba10a28a588d1ba53dc65ad0c9c4609268846d",
+        "src/satellite_coverage/experiments/terrain_sensitivity.py": "sha256:2d0cbb9affc78ce929301ac58e23b79b11748e6305884ba13fc5bc2fe7bb3325",
+        "src/satellite_coverage/explorer/__init__.py": "sha256:5678effb118e2e34e797872472567e43bc79ac8b143499c11db5bd7fe6f55014",
+        "src/satellite_coverage/explorer/__main__.py": "sha256:ddd60a1df996b2b744c45953165711e5afe2711f5f0249f4e98875e1342411df",
+        "src/satellite_coverage/explorer/server.py": "sha256:41678d780e0d864ea04b65edaa805aac6a7cea426a9eac354fad1f4c9737570f",
+        "src/satellite_coverage/geodata.py": "sha256:7d78f68f9a4bab25eac21519b46ae10f7fed1d57ae3904c6ea4a8e08e65555bb",
+        "src/satellite_coverage/geometry/__init__.py": "sha256:3792d4025d91309abc1bd0ef31f726f0ae8c88cbe6e12c2955575cb69ed0a1a9",
+        "src/satellite_coverage/geometry/antenna.py": "sha256:31bd9a26e425595e0f1694b1d5c08f854d98446d0e5bea627b81ee2f78f306a3",
+        "src/satellite_coverage/geometry/cell_horizon.py": "sha256:b6eb74f1b0add1ce3e56522f3fb604a8ac49136ad044550307a9892a56d73df7",
+        "src/satellite_coverage/geometry/cell_profile.py": "sha256:535474dfe1d4573531165d8c1681d28f7c730b7d4b926f03db8d65c2709ba8fb",
+        "src/satellite_coverage/geometry/geodetic.py": "sha256:b7b0db3af87b3de4ec43898565b4f6e1c455d2a34e10ee92584fba4b64f25c08",
+        "src/satellite_coverage/geometry/local.py": "sha256:3ae22387133a3a26c7b39e95f7c69d93405f15f85712752423babfdb05cf58cd",
+        "src/satellite_coverage/geometry/terrain.py": "sha256:fadcbd869f9eceb0146738f971f7d3cbd811f8eb8d144973753ca79232dca59e",
+        "src/satellite_coverage/io/__init__.py": "sha256:29b412b2f8fac2b8fc88afd6817b9bceddff1d8b7a5cc4cfbb66bcf8d21f8733",
+        "src/satellite_coverage/io/run_record.py": "sha256:f1ee820187ff785ade978df8384b0bb48ce53e23144c95d4ebc6f757d5a46c32",
+        "src/satellite_coverage/orbit/__init__.py": "sha256:151857f1a76f4d51ea4d0307f1eaffed619307a54b187b586de639db7616e695",
+        "src/satellite_coverage/orbit/visibility.py": "sha256:ebdb5e3e03470570eabf712419069b5a567985e462ad6b13db46af9e69ad054c",
+        "src/satellite_coverage/propagation.py": "sha256:40127b1fe0ffac950fe7877d88625f91c97574a25800e4954c573aefa62ba018",
+        "src/satellite_coverage/scenario.py": "sha256:5923e4bdede60d6d276ae7e58be8ea97c41786477f7aa0f6c662a05b02ae7c67",
+        "src/satellite_coverage/scheduling/__init__.py": "sha256:b7a1fb8df93e0a9ad823d79a4cf51a4fb75b89a2a88a7acd148762d0857f7d54",
+        "src/satellite_coverage/tle.py": "sha256:cd654ae53972aa5fa980116cc8cbcf3988421aaa257ae448682a45f48fb38181",
+        "src/satrm_benchmark/__init__.py": "sha256:29f909c6de430212922d1990be6acce4896715660bb6dd765f74ce343b94004d",
+        "scripts/verify_terrain_reader.py": "sha256:34a100e75825a0f7471c4a76fec11c4798843d3f1a856b57aaf6368ca352f97c",
+        "tests/fixtures/terrain_dem_legacy.py": "sha256:a527a8c2402dce7b237eb7d91fd204707c3a3b164615e228dbc8e83ef869ebc5"
+      },
+      "load_seconds": 6.510582617949694,
+      "metadata": {
+        "file_sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+        "declaration": {
+          "sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+          "height_unit": "m",
+          "vertical_datum": "EGM2008",
+          "surface_type": "DSM",
+          "evidence": "Product identified by user, specifications checked against official source. The local mosaic release, original tiles and processing/vertical-conversion history are not independently reconstructed."
+        },
+        "path": "/home/Users_Work_Space/zsfang/Satellite-Ground-Radiomap/data/l2_topo/china_dem_30.tif",
+        "source_crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4326\"]]",
+        "local_crs": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"World Geodetic System 1984\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1]],ID[\"EPSG\",6326]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Azimuthal Equidistant\",ID[\"EPSG\",1125]],PARAMETER[\"Latitude of natural origin\",34.24,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8801]],PARAMETER[\"Longitude of natural origin\",108.9,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8802]],PARAMETER[\"False easting\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8806]],PARAMETER[\"False northing\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8807]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+        "lon_deg": 108.9,
+        "lat_deg": 34.24,
+        "radius_m": 3000.0,
+        "resolution_m": 60,
+        "estimated_native_spacing_max_m": 30.813119771957933,
+        "native_window": [
+          129120,
+          81837,
+          240,
+          199
+        ],
+        "shape": [
+          103,
+          103
+        ],
+        "scale": 1.0,
+        "offset": 0.0,
+        "resampling": "nearest native cell; no display decimation",
+        "vertical_conversion": {
+          "method": "h=H+N; PROJ local grid, multiplier=+1, no optional grid or ballpark",
+          "grid": {
+            "path": "/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif",
+            "sha256": "sha256:4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a",
+            "model": "EGM2008",
+            "evidence": "https://cdn.proj.org/us_nga_egm08_25.tif"
+          },
+          "pipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=vgridshift +grids=\"/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif\" +multiplier=1 +step +proj=unitconvert +xy_in=rad +xy_out=deg",
+          "grid_tags": {
+            "TIFFTAG_IMAGEDESCRIPTION": "WGS 84 (EPSG:4979) to EGM2008 height (EPSG:3855). Converted from egm08_25.gtx (last modified at 2018/10/08)",
+            "TIFFTAG_DATETIME": "2019:12:27 00:00:00",
+            "TIFFTAG_COPYRIGHT": "Derived from work by NGA. Public Domain",
+            "area_of_use": "World",
+            "target_crs_epsg_code": "3855",
+            "TYPE": "VERTICAL_OFFSET_GEOGRAPHIC_TO_VERTICAL",
+            "AREA_OR_POINT": "Point"
+          }
+        },
+        "scope": "local AEQD distances; ellipsoid heights after declared conversion; DSM is not bare earth"
+      },
+      "source_id": "sha256:1a92b0e5662433d4ae2397c906ac160bd7db814b594ed261e3d53d70e7b81566",
+      "buffered_write_seconds": 0.000741549301892519,
+      "reader_and_write_peak_rss_bytes": 161058816,
+      "rss_under_512_mib": true,
+      "output_sha256": "sha256:dec602f3c073d5497b92280f7931d08450a10633add5c247913e3cf7b457d0c9",
+      "output_hash_seconds": 0.00012022163718938828,
+      "read_windows": [
+        [
+          129120,
+          81837,
+          149,
+          123
+        ],
+        [
+          129270,
+          81837,
+          90,
+          123
+        ],
+        [
+          129120,
+          81961,
+          149,
+          75
+        ],
+        [
+          129270,
+          81961,
+          90,
+          75
+        ]
+      ],
+      "unique_read_cells": 47322,
+      "repeated_read_cells": 0,
+      "status": "passed",
+      "exact_legacy_match": true
+    },
+    {
+      "mode": "bounded",
+      "radius_m": 6000.0,
+      "site": [
+        108.9,
+        34.24
+      ],
+      "resolution_m": 60,
+      "declaration": {
+        "sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+        "height_unit": "m",
+        "vertical_datum": "EGM2008",
+        "surface_type": "DSM",
+        "evidence": "Product identified by user, specifications checked against official source. The local mosaic release, original tiles and processing/vertical-conversion history are not independently reconstructed."
+      },
+      "geoid": {
+        "path": "/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif",
+        "sha256": "sha256:4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a",
+        "model": "EGM2008",
+        "evidence": "https://cdn.proj.org/us_nga_egm08_25.tif"
+      },
+      "versions": {
+        "python": "3.12.2",
+        "numpy": "1.26.4",
+        "gdal": "3.9.3",
+        "proj": "9.5.1"
+      },
+      "stats": {
+        "read_windows": 16,
+        "read_cells": 183828,
+        "max_read_cells": 18476,
+        "subdivisions": 0,
+        "execution_transform_seconds": 0.01658493233844638,
+        "read_seconds": 0.008364253211766481,
+        "vertical_seconds": 0.006186695769429207,
+        "validation_geoid_seconds": 0.06310537690296769,
+        "dem_hash_seconds": 6.130557043012232,
+        "planning_transform_seconds": 0.016848203726112843,
+        "freeze_seconds": 0.00014403695240616798,
+        "budget": {
+          "tile_size": 64,
+          "target_cells": 4000000,
+          "source_window_cells": 262144,
+          "memory_bytes": 536870912,
+          "gdal_cache_bytes": 33554432
+        },
+        "estimated_memory_bytes": 270669656,
+        "source_block_shapes": [
+          [
+            256,
+            256
+          ]
+        ],
+        "strategy": "two_pass_target_tiles"
+      },
+      "source_hashes": {
+        "src/satellite_coverage/__init__.py": "sha256:0cdebc751405fe8e804b3d93ab3d8e55b64bf071ec1476905743290d34ec23f4",
+        "src/satellite_coverage/adapters/__init__.py": "sha256:9c63b7fd5dc11ad327928d558e89553fc3fbf5515bf568776a40c057ecedabcf",
+        "src/satellite_coverage/adapters/legacy_output.py": "sha256:397e51fe8143bb2d806b8d5af931c24afc93cd0c22729fe047c5aee23be1b489",
+        "src/satellite_coverage/cli.py": "sha256:bb9209aa6e5ba02e6797526dec373d8ce44d1aba470b2839e03679601823d75d",
+        "src/satellite_coverage/compatibility/__init__.py": "sha256:318e2bd9579ce36d10e6d4a7f49a455d6a137bdbc36ef336601d4272f3174df3",
+        "src/satellite_coverage/compatibility/legacy_scenario.py": "sha256:c2421839f16e1057656a3ca7d26725c9ed55b8e673c770c15d12ca97f527ff62",
+        "src/satellite_coverage/config/__init__.py": "sha256:9a84ffbc2a0b863bc9395ffdd36a9598eda5b9cb8b2f507cfef383bfacd170b0",
+        "src/satellite_coverage/config/link.py": "sha256:18c7182777c8297a1d9713925401724beb0b69027b8710f6595b53faf541aa57",
+        "src/satellite_coverage/config/loader.py": "sha256:e6e21874498d46091ec67870fb0fa487dcb783e41fc9c32dff35bed1936a552a",
+        "src/satellite_coverage/config/models.py": "sha256:84034cd579cb8612d04f732ac5d0bbedcdfd8f93e77c4bea778306611bc40e46",
+        "src/satellite_coverage/config/pilot.py": "sha256:abb424341ab5f48dd6de5e3b895bf090bc4ad433604d113c0a14972e32476660",
+        "src/satellite_coverage/coordinates.py": "sha256:3c9969626629ce0e4dd3a70065c98cf244a17a1593ae139455aaffe2857ebfd2",
+        "src/satellite_coverage/data_sources/__init__.py": "sha256:93ace53b1341dd62741e62a7e8f81257b442140f773ddd561b21ebd3ce528eb4",
+        "src/satellite_coverage/data_sources/dem_audit.py": "sha256:cc0d256eb72e172bcd051a511bbbf9d5123cf1189a6287cbbd5a7568d681fc26",
+        "src/satellite_coverage/data_sources/dem_preview.py": "sha256:6f642ab9f3980673560be030900313356b8d6a5e33db398efdbc842281f53eaf",
+        "src/satellite_coverage/data_sources/manifest.py": "sha256:9d3619eda92cfa8bc7817a1d2b945533d4c7856f16c71edfe709ae338b304d44",
+        "src/satellite_coverage/data_sources/terrain_dem.py": "sha256:e56be10248c57c0b21f227700769b44d9d9f39495da8a340c82145fc4f5de64b",
+        "src/satellite_coverage/data_sources/terrain_tiles.py": "sha256:1d642d6bbeb72658305165ff14751550410639c2e345ae1b2c1c7e0b28a8a8db",
+        "src/satellite_coverage/domain/__init__.py": "sha256:c5f86bd31889595ad3485cbb06cfd4b99473b83b6966005b0cdf6d3f46f0e30d",
+        "src/satellite_coverage/domain/arrays.py": "sha256:13d1c4200aac5587a08c082e73e5bd6b2ed4c0a59c425f640bb5f715d638986e",
+        "src/satellite_coverage/domain/grid.py": "sha256:a76b21c5311a288930624e4ab1e4bf6fb4815735051bf6e61617492602b0a0c2",
+        "src/satellite_coverage/domain/link_record.py": "sha256:d112aaebfdea03a44da56ab9889ce860581c5a453b5e39cfade282bd5dfced0c",
+        "src/satellite_coverage/domain/release.py": "sha256:bee800d39b1442a043d6b82edf7581877bb5ebe478cfa683a902a263298aa621",
+        "src/satellite_coverage/domain/state.py": "sha256:16dbb904c4f328c777341b481281a93120140b8e86c9035b78e149122fd3410a",
+        "src/satellite_coverage/domain/units.py": "sha256:c65443f31b44af966157a73db9a74731d2095e28230c72c8b00e3d1fb2198340",
+        "src/satellite_coverage/domain/validation.py": "sha256:26340399e16e170e83678c855ee03bb01f786aecaba6cb8b7a75f0dc8442630d",
+        "src/satellite_coverage/engine/__init__.py": "sha256:c79409633bc242c4178d4ac6d51a7cb759ee98705851f52143c49d1b9ab5dac3",
+        "src/satellite_coverage/engine/_legacy.py": "sha256:3e9bec9abbab539e4998fe4b69dc2c1c84ee9a2352dc2af608b6c07892b13b9a",
+        "src/satellite_coverage/engine/analytic_link.py": "sha256:74bf94e4e06ba0a96f0c28ae55246fe3824cf2ac4343f252331169d6743c04b6",
+        "src/satellite_coverage/engine/api.py": "sha256:1d39c74d7eb511beac3c6b7388771c9c7c007078a47265f5ba1f0947dc7007ba",
+        "src/satellite_coverage/engine/interval_extrema.py": "sha256:547fe15a4cef04a2a3e5d66e59dbda15ade94647f5f4708f20458641ed53a154",
+        "src/satellite_coverage/engine/link_budget.py": "sha256:4279bd9832918f821e3d2e17383230361bcb5c403dcc48c11a436dc44d6f9693",
+        "src/satellite_coverage/engine/links.py": "sha256:38bc1d5e9a34df7753858287185fdd038e265ff3e2cbf693bbe13838137224c7",
+        "src/satellite_coverage/engine/orbit_link.py": "sha256:4f79b3c1d8c8c0045a91305c8030514c68f490d60b35754008ceaf1097f04f1e",
+        "src/satellite_coverage/engine/terrain_context.py": "sha256:ce1b0e9f7a60ad7d9da55c6614134d1542550ebf2c11a2ce3a02d4e3d499740f",
+        "src/satellite_coverage/engine/terrain_link.py": "sha256:b88b80283b3244b255ad3fc5cf9d071dd5d28f93940301126a152268db90a901",
+        "src/satellite_coverage/experiments/__init__.py": "sha256:fedb5bab652286af739e71bc5f9ea7c20f7490208ecb3cf7a88fcd4f42ef0bad",
+        "src/satellite_coverage/experiments/link.py": "sha256:efd5eda87473af8043b666877af7dd4c1ef497d16e3c79862f20cb87a11d4639",
+        "src/satellite_coverage/experiments/orbit_link.py": "sha256:aa564c0997111279979f7e2619886d27a50e4bccbf4e8caab9a1a771b609b1bb",
+        "src/satellite_coverage/experiments/pilot.py": "sha256:c7562659c9abc0468c59e6c4deba10a28a588d1ba53dc65ad0c9c4609268846d",
+        "src/satellite_coverage/experiments/terrain_sensitivity.py": "sha256:2d0cbb9affc78ce929301ac58e23b79b11748e6305884ba13fc5bc2fe7bb3325",
+        "src/satellite_coverage/explorer/__init__.py": "sha256:5678effb118e2e34e797872472567e43bc79ac8b143499c11db5bd7fe6f55014",
+        "src/satellite_coverage/explorer/__main__.py": "sha256:ddd60a1df996b2b744c45953165711e5afe2711f5f0249f4e98875e1342411df",
+        "src/satellite_coverage/explorer/server.py": "sha256:41678d780e0d864ea04b65edaa805aac6a7cea426a9eac354fad1f4c9737570f",
+        "src/satellite_coverage/geodata.py": "sha256:7d78f68f9a4bab25eac21519b46ae10f7fed1d57ae3904c6ea4a8e08e65555bb",
+        "src/satellite_coverage/geometry/__init__.py": "sha256:3792d4025d91309abc1bd0ef31f726f0ae8c88cbe6e12c2955575cb69ed0a1a9",
+        "src/satellite_coverage/geometry/antenna.py": "sha256:31bd9a26e425595e0f1694b1d5c08f854d98446d0e5bea627b81ee2f78f306a3",
+        "src/satellite_coverage/geometry/cell_horizon.py": "sha256:b6eb74f1b0add1ce3e56522f3fb604a8ac49136ad044550307a9892a56d73df7",
+        "src/satellite_coverage/geometry/cell_profile.py": "sha256:535474dfe1d4573531165d8c1681d28f7c730b7d4b926f03db8d65c2709ba8fb",
+        "src/satellite_coverage/geometry/geodetic.py": "sha256:b7b0db3af87b3de4ec43898565b4f6e1c455d2a34e10ee92584fba4b64f25c08",
+        "src/satellite_coverage/geometry/local.py": "sha256:3ae22387133a3a26c7b39e95f7c69d93405f15f85712752423babfdb05cf58cd",
+        "src/satellite_coverage/geometry/terrain.py": "sha256:fadcbd869f9eceb0146738f971f7d3cbd811f8eb8d144973753ca79232dca59e",
+        "src/satellite_coverage/io/__init__.py": "sha256:29b412b2f8fac2b8fc88afd6817b9bceddff1d8b7a5cc4cfbb66bcf8d21f8733",
+        "src/satellite_coverage/io/run_record.py": "sha256:f1ee820187ff785ade978df8384b0bb48ce53e23144c95d4ebc6f757d5a46c32",
+        "src/satellite_coverage/orbit/__init__.py": "sha256:151857f1a76f4d51ea4d0307f1eaffed619307a54b187b586de639db7616e695",
+        "src/satellite_coverage/orbit/visibility.py": "sha256:ebdb5e3e03470570eabf712419069b5a567985e462ad6b13db46af9e69ad054c",
+        "src/satellite_coverage/propagation.py": "sha256:40127b1fe0ffac950fe7877d88625f91c97574a25800e4954c573aefa62ba018",
+        "src/satellite_coverage/scenario.py": "sha256:5923e4bdede60d6d276ae7e58be8ea97c41786477f7aa0f6c662a05b02ae7c67",
+        "src/satellite_coverage/scheduling/__init__.py": "sha256:b7a1fb8df93e0a9ad823d79a4cf51a4fb75b89a2a88a7acd148762d0857f7d54",
+        "src/satellite_coverage/tle.py": "sha256:cd654ae53972aa5fa980116cc8cbcf3988421aaa257ae448682a45f48fb38181",
+        "src/satrm_benchmark/__init__.py": "sha256:29f909c6de430212922d1990be6acce4896715660bb6dd765f74ce343b94004d",
+        "scripts/verify_terrain_reader.py": "sha256:34a100e75825a0f7471c4a76fec11c4798843d3f1a856b57aaf6368ca352f97c",
+        "tests/fixtures/terrain_dem_legacy.py": "sha256:a527a8c2402dce7b237eb7d91fd204707c3a3b164615e228dbc8e83ef869ebc5"
+      },
+      "load_seconds": 6.257736742962152,
+      "metadata": {
+        "file_sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+        "declaration": {
+          "sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+          "height_unit": "m",
+          "vertical_datum": "EGM2008",
+          "surface_type": "DSM",
+          "evidence": "Product identified by user, specifications checked against official source. The local mosaic release, original tiles and processing/vertical-conversion history are not independently reconstructed."
+        },
+        "path": "/home/Users_Work_Space/zsfang/Satellite-Ground-Radiomap/data/l2_topo/china_dem_30.tif",
+        "source_crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4326\"]]",
+        "local_crs": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"World Geodetic System 1984\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1]],ID[\"EPSG\",6326]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Azimuthal Equidistant\",ID[\"EPSG\",1125]],PARAMETER[\"Latitude of natural origin\",34.24,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8801]],PARAMETER[\"Longitude of natural origin\",108.9,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8802]],PARAMETER[\"False easting\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8806]],PARAMETER[\"False northing\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8807]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+        "lon_deg": 108.9,
+        "lat_deg": 34.24,
+        "radius_m": 6000.0,
+        "resolution_m": 60,
+        "estimated_native_spacing_max_m": 30.813260361754274,
+        "native_window": [
+          129003,
+          81739,
+          474,
+          395
+        ],
+        "shape": [
+          203,
+          203
+        ],
+        "scale": 1.0,
+        "offset": 0.0,
+        "resampling": "nearest native cell; no display decimation",
+        "vertical_conversion": {
+          "method": "h=H+N; PROJ local grid, multiplier=+1, no optional grid or ballpark",
+          "grid": {
+            "path": "/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif",
+            "sha256": "sha256:4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a",
+            "model": "EGM2008",
+            "evidence": "https://cdn.proj.org/us_nga_egm08_25.tif"
+          },
+          "pipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=vgridshift +grids=\"/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif\" +multiplier=1 +step +proj=unitconvert +xy_in=rad +xy_out=deg",
+          "grid_tags": {
+            "TIFFTAG_IMAGEDESCRIPTION": "WGS 84 (EPSG:4979) to EGM2008 height (EPSG:3855). Converted from egm08_25.gtx (last modified at 2018/10/08)",
+            "TIFFTAG_DATETIME": "2019:12:27 00:00:00",
+            "TIFFTAG_COPYRIGHT": "Derived from work by NGA. Public Domain",
+            "area_of_use": "World",
+            "target_crs_epsg_code": "3855",
+            "TYPE": "VERTICAL_OFFSET_GEOGRAPHIC_TO_VERTICAL",
+            "AREA_OR_POINT": "Point"
+          }
+        },
+        "scope": "local AEQD distances; ellipsoid heights after declared conversion; DSM is not bare earth"
+      },
+      "source_id": "sha256:c42b47be3d6c69e9195033929080864db6193dcaf5e7b6394614436ec5abd2bc",
+      "buffered_write_seconds": 0.0009451489895582199,
+      "reader_and_write_peak_rss_bytes": 164421632,
+      "rss_under_512_mib": true,
+      "output_sha256": "sha256:6107f5590ed5618b196ee6d470f8d2907ee420d65701056aea0fa8d785b88f5a",
+      "output_hash_seconds": 0.00028935400769114494,
+      "read_windows": [
+        [
+          129003,
+          81739,
+          148,
+          124
+        ],
+        [
+          129153,
+          81739,
+          149,
+          124
+        ],
+        [
+          129303,
+          81739,
+          149,
+          124
+        ],
+        [
+          129453,
+          81739,
+          24,
+          124
+        ],
+        [
+          129003,
+          81864,
+          148,
+          124
+        ],
+        [
+          129153,
+          81864,
+          148,
+          124
+        ],
+        [
+          129303,
+          81864,
+          149,
+          124
+        ],
+        [
+          129453,
+          81864,
+          24,
+          124
+        ],
+        [
+          129003,
+          81989,
+          148,
+          123
+        ],
+        [
+          129153,
+          81989,
+          148,
+          123
+        ],
+        [
+          129303,
+          81989,
+          148,
+          123
+        ],
+        [
+          129453,
+          81989,
+          24,
+          123
+        ],
+        [
+          129003,
+          82113,
+          148,
+          21
+        ],
+        [
+          129153,
+          82113,
+          148,
+          21
+        ],
+        [
+          129303,
+          82113,
+          148,
+          21
+        ],
+        [
+          129453,
+          82113,
+          24,
+          21
+        ]
+      ],
+      "unique_read_cells": 183828,
+      "repeated_read_cells": 0,
+      "status": "passed",
+      "exact_legacy_match": true
+    },
+    {
+      "mode": "bounded",
+      "radius_m": 24000.0,
+      "site": [
+        108.9,
+        34.24
+      ],
+      "resolution_m": 60,
+      "declaration": {
+        "sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+        "height_unit": "m",
+        "vertical_datum": "EGM2008",
+        "surface_type": "DSM",
+        "evidence": "Product identified by user, specifications checked against official source. The local mosaic release, original tiles and processing/vertical-conversion history are not independently reconstructed."
+      },
+      "geoid": {
+        "path": "/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif",
+        "sha256": "sha256:4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a",
+        "model": "EGM2008",
+        "evidence": "https://cdn.proj.org/us_nga_egm08_25.tif"
+      },
+      "versions": {
+        "python": "3.12.2",
+        "numpy": "1.26.4",
+        "gdal": "3.9.3",
+        "proj": "9.5.1"
+      },
+      "stats": {
+        "read_windows": 169,
+        "read_cells": 2900724,
+        "max_read_cells": 18600,
+        "subdivisions": 0,
+        "execution_transform_seconds": 0.24572175228968263,
+        "read_seconds": 0.0516098951920867,
+        "vertical_seconds": 0.06205085525289178,
+        "validation_geoid_seconds": 0.0634709601290524,
+        "dem_hash_seconds": 6.300551413092762,
+        "planning_transform_seconds": 0.24504845822229981,
+        "freeze_seconds": 0.004355314187705517,
+        "budget": {
+          "tile_size": 64,
+          "target_cells": 4000000,
+          "source_window_cells": 262144,
+          "memory_bytes": 536870912,
+          "gdal_cache_bytes": 33554432
+        },
+        "estimated_memory_bytes": 285156056,
+        "source_block_shapes": [
+          [
+            256,
+            256
+          ]
+        ],
+        "strategy": "two_pass_target_tiles"
+      },
+      "source_hashes": {
+        "src/satellite_coverage/__init__.py": "sha256:0cdebc751405fe8e804b3d93ab3d8e55b64bf071ec1476905743290d34ec23f4",
+        "src/satellite_coverage/adapters/__init__.py": "sha256:9c63b7fd5dc11ad327928d558e89553fc3fbf5515bf568776a40c057ecedabcf",
+        "src/satellite_coverage/adapters/legacy_output.py": "sha256:397e51fe8143bb2d806b8d5af931c24afc93cd0c22729fe047c5aee23be1b489",
+        "src/satellite_coverage/cli.py": "sha256:bb9209aa6e5ba02e6797526dec373d8ce44d1aba470b2839e03679601823d75d",
+        "src/satellite_coverage/compatibility/__init__.py": "sha256:318e2bd9579ce36d10e6d4a7f49a455d6a137bdbc36ef336601d4272f3174df3",
+        "src/satellite_coverage/compatibility/legacy_scenario.py": "sha256:c2421839f16e1057656a3ca7d26725c9ed55b8e673c770c15d12ca97f527ff62",
+        "src/satellite_coverage/config/__init__.py": "sha256:9a84ffbc2a0b863bc9395ffdd36a9598eda5b9cb8b2f507cfef383bfacd170b0",
+        "src/satellite_coverage/config/link.py": "sha256:18c7182777c8297a1d9713925401724beb0b69027b8710f6595b53faf541aa57",
+        "src/satellite_coverage/config/loader.py": "sha256:e6e21874498d46091ec67870fb0fa487dcb783e41fc9c32dff35bed1936a552a",
+        "src/satellite_coverage/config/models.py": "sha256:84034cd579cb8612d04f732ac5d0bbedcdfd8f93e77c4bea778306611bc40e46",
+        "src/satellite_coverage/config/pilot.py": "sha256:abb424341ab5f48dd6de5e3b895bf090bc4ad433604d113c0a14972e32476660",
+        "src/satellite_coverage/coordinates.py": "sha256:3c9969626629ce0e4dd3a70065c98cf244a17a1593ae139455aaffe2857ebfd2",
+        "src/satellite_coverage/data_sources/__init__.py": "sha256:93ace53b1341dd62741e62a7e8f81257b442140f773ddd561b21ebd3ce528eb4",
+        "src/satellite_coverage/data_sources/dem_audit.py": "sha256:cc0d256eb72e172bcd051a511bbbf9d5123cf1189a6287cbbd5a7568d681fc26",
+        "src/satellite_coverage/data_sources/dem_preview.py": "sha256:6f642ab9f3980673560be030900313356b8d6a5e33db398efdbc842281f53eaf",
+        "src/satellite_coverage/data_sources/manifest.py": "sha256:9d3619eda92cfa8bc7817a1d2b945533d4c7856f16c71edfe709ae338b304d44",
+        "src/satellite_coverage/data_sources/terrain_dem.py": "sha256:e56be10248c57c0b21f227700769b44d9d9f39495da8a340c82145fc4f5de64b",
+        "src/satellite_coverage/data_sources/terrain_tiles.py": "sha256:1d642d6bbeb72658305165ff14751550410639c2e345ae1b2c1c7e0b28a8a8db",
+        "src/satellite_coverage/domain/__init__.py": "sha256:c5f86bd31889595ad3485cbb06cfd4b99473b83b6966005b0cdf6d3f46f0e30d",
+        "src/satellite_coverage/domain/arrays.py": "sha256:13d1c4200aac5587a08c082e73e5bd6b2ed4c0a59c425f640bb5f715d638986e",
+        "src/satellite_coverage/domain/grid.py": "sha256:a76b21c5311a288930624e4ab1e4bf6fb4815735051bf6e61617492602b0a0c2",
+        "src/satellite_coverage/domain/link_record.py": "sha256:d112aaebfdea03a44da56ab9889ce860581c5a453b5e39cfade282bd5dfced0c",
+        "src/satellite_coverage/domain/release.py": "sha256:bee800d39b1442a043d6b82edf7581877bb5ebe478cfa683a902a263298aa621",
+        "src/satellite_coverage/domain/state.py": "sha256:16dbb904c4f328c777341b481281a93120140b8e86c9035b78e149122fd3410a",
+        "src/satellite_coverage/domain/units.py": "sha256:c65443f31b44af966157a73db9a74731d2095e28230c72c8b00e3d1fb2198340",
+        "src/satellite_coverage/domain/validation.py": "sha256:26340399e16e170e83678c855ee03bb01f786aecaba6cb8b7a75f0dc8442630d",
+        "src/satellite_coverage/engine/__init__.py": "sha256:c79409633bc242c4178d4ac6d51a7cb759ee98705851f52143c49d1b9ab5dac3",
+        "src/satellite_coverage/engine/_legacy.py": "sha256:3e9bec9abbab539e4998fe4b69dc2c1c84ee9a2352dc2af608b6c07892b13b9a",
+        "src/satellite_coverage/engine/analytic_link.py": "sha256:74bf94e4e06ba0a96f0c28ae55246fe3824cf2ac4343f252331169d6743c04b6",
+        "src/satellite_coverage/engine/api.py": "sha256:1d39c74d7eb511beac3c6b7388771c9c7c007078a47265f5ba1f0947dc7007ba",
+        "src/satellite_coverage/engine/interval_extrema.py": "sha256:547fe15a4cef04a2a3e5d66e59dbda15ade94647f5f4708f20458641ed53a154",
+        "src/satellite_coverage/engine/link_budget.py": "sha256:4279bd9832918f821e3d2e17383230361bcb5c403dcc48c11a436dc44d6f9693",
+        "src/satellite_coverage/engine/links.py": "sha256:38bc1d5e9a34df7753858287185fdd038e265ff3e2cbf693bbe13838137224c7",
+        "src/satellite_coverage/engine/orbit_link.py": "sha256:4f79b3c1d8c8c0045a91305c8030514c68f490d60b35754008ceaf1097f04f1e",
+        "src/satellite_coverage/engine/terrain_context.py": "sha256:ce1b0e9f7a60ad7d9da55c6614134d1542550ebf2c11a2ce3a02d4e3d499740f",
+        "src/satellite_coverage/engine/terrain_link.py": "sha256:b88b80283b3244b255ad3fc5cf9d071dd5d28f93940301126a152268db90a901",
+        "src/satellite_coverage/experiments/__init__.py": "sha256:fedb5bab652286af739e71bc5f9ea7c20f7490208ecb3cf7a88fcd4f42ef0bad",
+        "src/satellite_coverage/experiments/link.py": "sha256:efd5eda87473af8043b666877af7dd4c1ef497d16e3c79862f20cb87a11d4639",
+        "src/satellite_coverage/experiments/orbit_link.py": "sha256:aa564c0997111279979f7e2619886d27a50e4bccbf4e8caab9a1a771b609b1bb",
+        "src/satellite_coverage/experiments/pilot.py": "sha256:c7562659c9abc0468c59e6c4deba10a28a588d1ba53dc65ad0c9c4609268846d",
+        "src/satellite_coverage/experiments/terrain_sensitivity.py": "sha256:2d0cbb9affc78ce929301ac58e23b79b11748e6305884ba13fc5bc2fe7bb3325",
+        "src/satellite_coverage/explorer/__init__.py": "sha256:5678effb118e2e34e797872472567e43bc79ac8b143499c11db5bd7fe6f55014",
+        "src/satellite_coverage/explorer/__main__.py": "sha256:ddd60a1df996b2b744c45953165711e5afe2711f5f0249f4e98875e1342411df",
+        "src/satellite_coverage/explorer/server.py": "sha256:41678d780e0d864ea04b65edaa805aac6a7cea426a9eac354fad1f4c9737570f",
+        "src/satellite_coverage/geodata.py": "sha256:7d78f68f9a4bab25eac21519b46ae10f7fed1d57ae3904c6ea4a8e08e65555bb",
+        "src/satellite_coverage/geometry/__init__.py": "sha256:3792d4025d91309abc1bd0ef31f726f0ae8c88cbe6e12c2955575cb69ed0a1a9",
+        "src/satellite_coverage/geometry/antenna.py": "sha256:31bd9a26e425595e0f1694b1d5c08f854d98446d0e5bea627b81ee2f78f306a3",
+        "src/satellite_coverage/geometry/cell_horizon.py": "sha256:b6eb74f1b0add1ce3e56522f3fb604a8ac49136ad044550307a9892a56d73df7",
+        "src/satellite_coverage/geometry/cell_profile.py": "sha256:535474dfe1d4573531165d8c1681d28f7c730b7d4b926f03db8d65c2709ba8fb",
+        "src/satellite_coverage/geometry/geodetic.py": "sha256:b7b0db3af87b3de4ec43898565b4f6e1c455d2a34e10ee92584fba4b64f25c08",
+        "src/satellite_coverage/geometry/local.py": "sha256:3ae22387133a3a26c7b39e95f7c69d93405f15f85712752423babfdb05cf58cd",
+        "src/satellite_coverage/geometry/terrain.py": "sha256:fadcbd869f9eceb0146738f971f7d3cbd811f8eb8d144973753ca79232dca59e",
+        "src/satellite_coverage/io/__init__.py": "sha256:29b412b2f8fac2b8fc88afd6817b9bceddff1d8b7a5cc4cfbb66bcf8d21f8733",
+        "src/satellite_coverage/io/run_record.py": "sha256:f1ee820187ff785ade978df8384b0bb48ce53e23144c95d4ebc6f757d5a46c32",
+        "src/satellite_coverage/orbit/__init__.py": "sha256:151857f1a76f4d51ea4d0307f1eaffed619307a54b187b586de639db7616e695",
+        "src/satellite_coverage/orbit/visibility.py": "sha256:ebdb5e3e03470570eabf712419069b5a567985e462ad6b13db46af9e69ad054c",
+        "src/satellite_coverage/propagation.py": "sha256:40127b1fe0ffac950fe7877d88625f91c97574a25800e4954c573aefa62ba018",
+        "src/satellite_coverage/scenario.py": "sha256:5923e4bdede60d6d276ae7e58be8ea97c41786477f7aa0f6c662a05b02ae7c67",
+        "src/satellite_coverage/scheduling/__init__.py": "sha256:b7a1fb8df93e0a9ad823d79a4cf51a4fb75b89a2a88a7acd148762d0857f7d54",
+        "src/satellite_coverage/tle.py": "sha256:cd654ae53972aa5fa980116cc8cbcf3988421aaa257ae448682a45f48fb38181",
+        "src/satrm_benchmark/__init__.py": "sha256:29f909c6de430212922d1990be6acce4896715660bb6dd765f74ce343b94004d",
+        "scripts/verify_terrain_reader.py": "sha256:34a100e75825a0f7471c4a76fec11c4798843d3f1a856b57aaf6368ca352f97c",
+        "tests/fixtures/terrain_dem_legacy.py": "sha256:a527a8c2402dce7b237eb7d91fd204707c3a3b164615e228dbc8e83ef869ebc5"
+      },
+      "load_seconds": 7.000708069186658,
+      "metadata": {
+        "file_sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+        "declaration": {
+          "sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+          "height_unit": "m",
+          "vertical_datum": "EGM2008",
+          "surface_type": "DSM",
+          "evidence": "Product identified by user, specifications checked against official source. The local mosaic release, original tiles and processing/vertical-conversion history are not independently reconstructed."
+        },
+        "path": "/home/Users_Work_Space/zsfang/Satellite-Ground-Radiomap/data/l2_topo/china_dem_30.tif",
+        "source_crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4326\"]]",
+        "local_crs": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"World Geodetic System 1984\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1]],ID[\"EPSG\",6326]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Azimuthal Equidistant\",ID[\"EPSG\",1125]],PARAMETER[\"Latitude of natural origin\",34.24,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8801]],PARAMETER[\"Longitude of natural origin\",108.9,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8802]],PARAMETER[\"False easting\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8806]],PARAMETER[\"False northing\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8807]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+        "lon_deg": 108.9,
+        "lat_deg": 34.24,
+        "radius_m": 24000.0,
+        "resolution_m": 60,
+        "estimated_native_spacing_max_m": 30.814147650031483,
+        "native_window": [
+          128297,
+          81155,
+          1886,
+          1564
+        ],
+        "shape": [
+          803,
+          803
+        ],
+        "scale": 1.0,
+        "offset": 0.0,
+        "resampling": "nearest native cell; no display decimation",
+        "vertical_conversion": {
+          "method": "h=H+N; PROJ local grid, multiplier=+1, no optional grid or ballpark",
+          "grid": {
+            "path": "/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif",
+            "sha256": "sha256:4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a",
+            "model": "EGM2008",
+            "evidence": "https://cdn.proj.org/us_nga_egm08_25.tif"
+          },
+          "pipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=vgridshift +grids=\"/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif\" +multiplier=1 +step +proj=unitconvert +xy_in=rad +xy_out=deg",
+          "grid_tags": {
+            "TIFFTAG_IMAGEDESCRIPTION": "WGS 84 (EPSG:4979) to EGM2008 height (EPSG:3855). Converted from egm08_25.gtx (last modified at 2018/10/08)",
+            "TIFFTAG_DATETIME": "2019:12:27 00:00:00",
+            "TIFFTAG_COPYRIGHT": "Derived from work by NGA. Public Domain",
+            "area_of_use": "World",
+            "target_crs_epsg_code": "3855",
+            "TYPE": "VERTICAL_OFFSET_GEOGRAPHIC_TO_VERTICAL",
+            "AREA_OR_POINT": "Point"
+          }
+        },
+        "scope": "local AEQD distances; ellipsoid heights after declared conversion; DSM is not bare earth"
+      },
+      "source_id": "sha256:3c630a2d1b26974da06417b337b1dbfbbf11ba4b9d11a5eb76ad32dd2637c602",
+      "buffered_write_seconds": 0.0025421087630093098,
+      "reader_and_write_peak_rss_bytes": 164646912,
+      "rss_under_512_mib": true,
+      "output_sha256": "sha256:76dd5c54fa5eed1ce35aa24f7970bc8ef84786643ef7fda5ab22fab2e73bf3fb",
+      "output_hash_seconds": 0.0038650278002023697,
+      "read_windows": [
+        [
+          128297,
+          81156,
+          149,
+          124
+        ],
+        [
+          128447,
+          81156,
+          150,
+          124
+        ],
+        [
+          128598,
+          81155,
+          149,
+          124
+        ],
+        [
+          128748,
+          81155,
+          149,
+          124
+        ],
+        [
+          128899,
+          81155,
+          149,
+          124
+        ],
+        [
+          129049,
+          81155,
+          149,
+          124
+        ],
+        [
+          129200,
+          81155,
+          149,
+          124
+        ],
+        [
+          129350,
+          81155,
+          149,
+          124
+        ],
+        [
+          129500,
+          81155,
+          150,
+          124
+        ],
+        [
+          129651,
+          81155,
+          149,
+          124
+        ],
+        [
+          129801,
+          81156,
+          149,
+          123
+        ],
+        [
+          129951,
+          81156,
+          150,
+          124
+        ],
+        [
+          130102,
+          81156,
+          81,
+          124
+        ],
+        [
+          128297,
+          81281,
+          150,
+          123
+        ],
+        [
+          128448,
+          81280,
+          149,
+          124
+        ],
+        [
+          128598,
+          81280,
+          149,
+          124
+        ],
+        [
+          128748,
+          81280,
+          150,
+          124
+        ],
+        [
+          128899,
+          81280,
+          149,
+          124
+        ],
+        [
+          129049,
+          81280,
+          149,
+          124
+        ],
+        [
+          129200,
+          81280,
+          149,
+          123
+        ],
+        [
+          129350,
+          81280,
+          149,
+          124
+        ],
+        [
+          129500,
+          81280,
+          149,
+          124
+        ],
+        [
+          129651,
+          81280,
+          149,
+          124
+        ],
+        [
+          129801,
+          81280,
+          149,
+          124
+        ],
+        [
+          129951,
+          81280,
+          150,
+          124
+        ],
+        [
+          130102,
+          81281,
+          81,
+          123
+        ],
+        [
+          128298,
+          81405,
+          149,
+          124
+        ],
+        [
+          128448,
+          81405,
+          149,
+          124
+        ],
+        [
+          128598,
+          81405,
+          149,
+          124
+        ],
+        [
+          128749,
+          81405,
+          149,
+          123
+        ],
+        [
+          128899,
+          81404,
+          149,
+          124
+        ],
+        [
+          129049,
+          81404,
+          149,
+          124
+        ],
+        [
+          129200,
+          81404,
+          149,
+          124
+        ],
+        [
+          129350,
+          81404,
+          149,
+          124
+        ],
+        [
+          129500,
+          81404,
+          149,
+          124
+        ],
+        [
+          129650,
+          81405,
+          150,
+          123
+        ],
+        [
+          129801,
+          81405,
+          149,
+          124
+        ],
+        [
+          129951,
+          81405,
+          149,
+          124
+        ],
+        [
+          130101,
+          81405,
+          81,
+          124
+        ],
+        [
+          128298,
+          81530,
+          149,
+          124
+        ],
+        [
+          128448,
+          81530,
+          149,
+          123
+        ],
+        [
+          128599,
+          81529,
+          149,
+          124
+        ],
+        [
+          128749,
+          81529,
+          149,
+          124
+        ],
+        [
+          128899,
+          81529,
+          149,
+          124
+        ],
+        [
+          129049,
+          81529,
+          149,
+          124
+        ],
+        [
+          129200,
+          81529,
+          148,
+          124
+        ],
+        [
+          129350,
+          81529,
+          149,
+          124
+        ],
+        [
+          129500,
+          81529,
+          149,
+          124
+        ],
+        [
+          129650,
+          81529,
+          149,
+          124
+        ],
+        [
+          129800,
+          81529,
+          150,
+          124
+        ],
+        [
+          129951,
+          81530,
+          149,
+          124
+        ],
+        [
+          130101,
+          81530,
+          81,
+          124
+        ],
+        [
+          128298,
+          81654,
+          150,
+          124
+        ],
+        [
+          128449,
+          81654,
+          149,
+          124
+        ],
+        [
+          128599,
+          81654,
+          149,
+          124
+        ],
+        [
+          128749,
+          81654,
+          149,
+          124
+        ],
+        [
+          128899,
+          81654,
+          149,
+          123
+        ],
+        [
+          129049,
+          81654,
+          149,
+          123
+        ],
+        [
+          129200,
+          81654,
+          148,
+          123
+        ],
+        [
+          129350,
+          81654,
+          149,
+          123
+        ],
+        [
+          129500,
+          81654,
+          149,
+          124
+        ],
+        [
+          129650,
+          81654,
+          149,
+          124
+        ],
+        [
+          129800,
+          81654,
+          149,
+          124
+        ],
+        [
+          129950,
+          81654,
+          149,
+          124
+        ],
+        [
+          130100,
+          81654,
+          82,
+          124
+        ],
+        [
+          128299,
+          81779,
+          149,
+          124
+        ],
+        [
+          128449,
+          81779,
+          149,
+          124
+        ],
+        [
+          128599,
+          81779,
+          149,
+          123
+        ],
+        [
+          128749,
+          81778,
+          149,
+          124
+        ],
+        [
+          128899,
+          81778,
+          149,
+          124
+        ],
+        [
+          129049,
+          81778,
+          149,
+          124
+        ],
+        [
+          129200,
+          81778,
+          148,
+          124
+        ],
+        [
+          129350,
+          81778,
+          149,
+          124
+        ],
+        [
+          129500,
+          81778,
+          149,
+          124
+        ],
+        [
+          129650,
+          81778,
+          149,
+          124
+        ],
+        [
+          129800,
+          81779,
+          149,
+          124
+        ],
+        [
+          129950,
+          81779,
+          149,
+          124
+        ],
+        [
+          130100,
+          81779,
+          81,
+          124
+        ],
+        [
+          128299,
+          81904,
+          149,
+          124
+        ],
+        [
+          128449,
+          81903,
+          149,
+          124
+        ],
+        [
+          128599,
+          81903,
+          149,
+          124
+        ],
+        [
+          128749,
+          81903,
+          149,
+          124
+        ],
+        [
+          128899,
+          81903,
+          149,
+          124
+        ],
+        [
+          129050,
+          81903,
+          148,
+          124
+        ],
+        [
+          129200,
+          81903,
+          148,
+          124
+        ],
+        [
+          129350,
+          81903,
+          148,
+          124
+        ],
+        [
+          129500,
+          81903,
+          149,
+          124
+        ],
+        [
+          129650,
+          81903,
+          149,
+          124
+        ],
+        [
+          129800,
+          81903,
+          149,
+          124
+        ],
+        [
+          129950,
+          81903,
+          149,
+          124
+        ],
+        [
+          130100,
+          81904,
+          81,
+          124
+        ],
+        [
+          128300,
+          82028,
+          149,
+          124
+        ],
+        [
+          128450,
+          82028,
+          149,
+          124
+        ],
+        [
+          128600,
+          82028,
+          148,
+          124
+        ],
+        [
+          128750,
+          82028,
+          148,
+          123
+        ],
+        [
+          128900,
+          82028,
+          148,
+          123
+        ],
+        [
+          129050,
+          82028,
+          148,
+          123
+        ],
+        [
+          129200,
+          82028,
+          148,
+          123
+        ],
+        [
+          129350,
+          82028,
+          148,
+          123
+        ],
+        [
+          129500,
+          82028,
+          148,
+          123
+        ],
+        [
+          129650,
+          82028,
+          148,
+          124
+        ],
+        [
+          129799,
+          82028,
+          149,
+          124
+        ],
+        [
+          129949,
+          82028,
+          149,
+          124
+        ],
+        [
+          130099,
+          82028,
+          81,
+          124
+        ],
+        [
+          128300,
+          82153,
+          149,
+          124
+        ],
+        [
+          128450,
+          82153,
+          149,
+          124
+        ],
+        [
+          128600,
+          82152,
+          149,
+          124
+        ],
+        [
+          128750,
+          82152,
+          149,
+          124
+        ],
+        [
+          128900,
+          82152,
+          148,
+          124
+        ],
+        [
+          129050,
+          82152,
+          148,
+          124
+        ],
+        [
+          129200,
+          82152,
+          148,
+          124
+        ],
+        [
+          129350,
+          82152,
+          148,
+          124
+        ],
+        [
+          129499,
+          82152,
+          149,
+          124
+        ],
+        [
+          129649,
+          82152,
+          149,
+          124
+        ],
+        [
+          129799,
+          82152,
+          149,
+          124
+        ],
+        [
+          129949,
+          82153,
+          149,
+          124
+        ],
+        [
+          130099,
+          82153,
+          81,
+          124
+        ],
+        [
+          128300,
+          82277,
+          149,
+          124
+        ],
+        [
+          128450,
+          82277,
+          149,
+          124
+        ],
+        [
+          128600,
+          82277,
+          149,
+          124
+        ],
+        [
+          128750,
+          82277,
+          149,
+          124
+        ],
+        [
+          128900,
+          82277,
+          149,
+          124
+        ],
+        [
+          129050,
+          82277,
+          148,
+          123
+        ],
+        [
+          129200,
+          82277,
+          148,
+          123
+        ],
+        [
+          129350,
+          82277,
+          148,
+          124
+        ],
+        [
+          129499,
+          82277,
+          149,
+          124
+        ],
+        [
+          129649,
+          82277,
+          149,
+          124
+        ],
+        [
+          129799,
+          82277,
+          149,
+          124
+        ],
+        [
+          129949,
+          82277,
+          149,
+          124
+        ],
+        [
+          130099,
+          82278,
+          81,
+          123
+        ],
+        [
+          128301,
+          82402,
+          149,
+          124
+        ],
+        [
+          128451,
+          82402,
+          148,
+          124
+        ],
+        [
+          128600,
+          82402,
+          149,
+          124
+        ],
+        [
+          128750,
+          82402,
+          149,
+          123
+        ],
+        [
+          128900,
+          82401,
+          149,
+          124
+        ],
+        [
+          129050,
+          82401,
+          148,
+          124
+        ],
+        [
+          129200,
+          82401,
+          148,
+          124
+        ],
+        [
+          129349,
+          82401,
+          149,
+          124
+        ],
+        [
+          129499,
+          82401,
+          149,
+          124
+        ],
+        [
+          129649,
+          82402,
+          149,
+          123
+        ],
+        [
+          129799,
+          82402,
+          149,
+          124
+        ],
+        [
+          129949,
+          82402,
+          148,
+          124
+        ],
+        [
+          130098,
+          82402,
+          81,
+          124
+        ],
+        [
+          128301,
+          82527,
+          149,
+          124
+        ],
+        [
+          128451,
+          82526,
+          149,
+          124
+        ],
+        [
+          128601,
+          82526,
+          148,
+          124
+        ],
+        [
+          128750,
+          82526,
+          149,
+          124
+        ],
+        [
+          128900,
+          82526,
+          149,
+          124
+        ],
+        [
+          129050,
+          82526,
+          148,
+          124
+        ],
+        [
+          129200,
+          82526,
+          148,
+          124
+        ],
+        [
+          129349,
+          82526,
+          149,
+          124
+        ],
+        [
+          129499,
+          82526,
+          149,
+          124
+        ],
+        [
+          129649,
+          82526,
+          148,
+          124
+        ],
+        [
+          129799,
+          82526,
+          148,
+          124
+        ],
+        [
+          129948,
+          82527,
+          149,
+          124
+        ],
+        [
+          130098,
+          82527,
+          81,
+          124
+        ],
+        [
+          128301,
+          82651,
+          149,
+          68
+        ],
+        [
+          128451,
+          82651,
+          149,
+          68
+        ],
+        [
+          128601,
+          82651,
+          148,
+          67
+        ],
+        [
+          128751,
+          82651,
+          148,
+          67
+        ],
+        [
+          128900,
+          82651,
+          149,
+          67
+        ],
+        [
+          129050,
+          82651,
+          148,
+          67
+        ],
+        [
+          129200,
+          82651,
+          148,
+          67
+        ],
+        [
+          129349,
+          82651,
+          149,
+          67
+        ],
+        [
+          129499,
+          82651,
+          149,
+          67
+        ],
+        [
+          129649,
+          82651,
+          148,
+          67
+        ],
+        [
+          129798,
+          82651,
+          149,
+          67
+        ],
+        [
+          129948,
+          82651,
+          149,
+          68
+        ],
+        [
+          130098,
+          82651,
+          81,
+          68
+        ]
+      ],
+      "unique_read_cells": 2900724,
+      "repeated_read_cells": 0,
+      "status": "passed",
+      "exact_legacy_match": true
+    }
+  ]
+}

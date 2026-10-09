@@ -1,3 +1,4 @@
+# Frozen test oracle from b234bcb; only imports adapted. Never use in production.
 """Bounded GeoTIFF -> local azimuthal-equidistant metre grid for M3.
 
 An explicit file-bound height declaration is mandatory. Display metadata alone
@@ -11,24 +12,14 @@ from pathlib import Path
 import numpy as np
 from pyproj import CRS, Transformer
 import rasterio
-from time import perf_counter
-from dataclasses import asdict
+from rasterio.windows import Window
 
-from .terrain_tiles import TerrainReadBudget, plan_bounds, read_tiles
-
-from .manifest import checksum_sha256
-from ..config.pilot import exact_keys, identity, number, text_field
-from ..geometry.terrain import TerrainGrid
+from satellite_coverage.data_sources.manifest import checksum_sha256
+from satellite_coverage.config.pilot import exact_keys, identity, number, text_field
+from satellite_coverage.geometry.terrain import TerrainGrid
 
 
-def load_terrain_dem(path, declaration, *, lon_deg, lat_deg, radius_m, resolution_m, geoid=None,
-                     read_budget=None, diagnostics=None, window_observer=None):
-    budget = TerrainReadBudget() if read_budget is None else read_budget
-    if not isinstance(budget, TerrainReadBudget):
-        raise ValueError("read_budget must be TerrainReadBudget")
-    stats = dict(read_windows=0, read_cells=0, max_read_cells=0, subdivisions=0,
-                 execution_transform_seconds=0.0, read_seconds=0.0, vertical_seconds=0.0)
-    started = perf_counter()
+def load_terrain_dem(path, declaration, *, lon_deg, lat_deg, radius_m, resolution_m, geoid=None):
     exact_keys(declaration, {"sha256", "height_unit", "vertical_datum", "surface_type", "evidence"}, "DEM declaration")
     text_field(declaration["evidence"], "DEM evidence")
     if declaration["height_unit"] != "m" or declaration["vertical_datum"] not in ("WGS84_ellipsoid", "EGM2008"):
@@ -69,30 +60,37 @@ def load_terrain_dem(path, declaration, *, lon_deg, lat_deg, radius_m, resolutio
         raise ValueError("require 0 < resolution <= radius <= 100 km")
     n = math.ceil(radius_m/resolution_m)
     size = 2*n+3  # center pixel at receiver; one-pixel boundary padding
-    budget.check_memory(size)
+    if size*size > 1_000_000:
+        raise ValueError("local terrain grid exceeds one million cells")
     path = Path(path)
-    stats["validation_geoid_seconds"] = perf_counter()-started
-    started = perf_counter()
     digest = checksum_sha256(path)
-    stats["dem_hash_seconds"] = perf_counter()-started
     if declaration["sha256"] != digest:
         raise ValueError("DEM checksum does not match height declaration")
     local = CRS.from_proj4(f"+proj=aeqd +lat_0={lat_deg} +lon_0={lon_deg} +datum=WGS84 +units=m")
     half = size*resolution_m/2
-    with rasterio.Env(GDAL_CACHEMAX=budget.gdal_cache_bytes), rasterio.open(path) as src:
+    x, y = np.meshgrid((np.arange(size)+.5)*resolution_m-half,
+                       half-(np.arange(size)+.5)*resolution_m)
+    with rasterio.Env(GDAL_CACHEMAX=32*1024*1024), rasterio.open(path) as src:
         if src.crs is None or src.count != 1:
             raise ValueError("DEM requires CRS and exactly one height band")
         if src.units[0] not in (None, "m", "metre", "meter"):
             raise ValueError("DEM embedded height unit conflicts with declaration")
         if max(a*b for a, b in src.block_shapes) > 4_000_000:
             raise ValueError("DEM native block too large; prepare a tiled source")
-        estimate = budget.check_memory(size, max(a*b for a, b in src.block_shapes),
-                                       np.dtype(src.dtypes[0]).itemsize)
         forward = Transformer.from_crs(local, src.crs, always_xy=True)
         reverse = Transformer.from_crs(src.crs, local, always_xy=True)
-        started = perf_counter()
-        c0, r0, c1, r1 = plan_bounds(src, forward, size, half, resolution_m, budget)
-        stats["planning_transform_seconds"] = perf_counter()-started
+        sx, sy = forward.transform(x, y, errcheck=True)
+        cols, rows = (~src.transform)*(sx, sy)
+        if not np.isfinite(cols).all() or not np.isfinite(rows).all():
+            raise ValueError("nonfinite DEM coordinates")
+        cols, rows = np.floor(cols).astype(np.int64), np.floor(rows).astype(np.int64)
+        valid = (cols >= 0) & (cols < src.width) & (rows >= 0) & (rows < src.height)
+        if not valid.any():
+            raise ValueError("requested terrain does not intersect DEM")
+        c0, c1 = int(cols[valid].min()), int(cols[valid].max())+1
+        r0, r1 = int(rows[valid].min()), int(rows[valid].max())+1
+        if (c1-c0)*(r1-r0) > 4_000_000:
+            raise ValueError("native terrain window exceeds four million cells; reduce radius")
         # Estimate source spacing at center and corners; no higher-resolution
         # truth claim is made by interpolating or oversampling native data.
         spacings = []
@@ -103,12 +101,20 @@ def load_terrain_dem(path, declaration, *, lon_deg, lat_deg, radius_m, resolutio
         native_spacing = max(spacings)
         if resolution_m < native_spacing*(1-1e-6):
             raise ValueError("requested terrain resolution is finer than source spacing")
+        values = src.read(1, window=Window(c0,r0,c1-c0,r1-r0), masked=True, out_dtype="float64").filled(np.nan)
         scale, offset = src.scales[0], src.offsets[0]
         if not math.isfinite(scale) or scale <= 0 or not math.isfinite(offset):
             raise ValueError("invalid DEM scale/offset")
-        to_lonlat = Transformer.from_crs(src.crs, "EPSG:4326", always_xy=True)
-        target = read_tiles(src, forward, to_lonlat, vertical, size, half, resolution_m,
-                            scale, offset, budget, stats, window_observer)
+        target = np.full((size,size), np.nan)
+        target[valid] = values[rows[valid]-r0, cols[valid]-c0]*scale+offset
+        if vertical is not None:
+            finite = np.isfinite(target)
+            # Shift the actual sampled source pixel's center, not a fictitious
+            # higher-resolution location in the resampled output raster.
+            cx, cy = src.transform*(cols[finite]+.5, rows[finite]+.5)
+            lon, lat = Transformer.from_crs(src.crs, "EPSG:4326", always_xy=True).transform(cx,cy,errcheck=True)
+            _, _, shifted = vertical.transform(lon,lat,target[finite],errcheck=True)
+            target[finite] = shifted
         if np.isinf(target).any():
             raise ValueError("DEM conversion overflow")
         metadata = {"file_sha256": digest, "declaration": dict(declaration), "path": str(path.resolve()),
@@ -120,12 +126,5 @@ def load_terrain_dem(path, declaration, *, lon_deg, lat_deg, radius_m, resolutio
                     "vertical_conversion": vertical_metadata,
                     "scope": "local AEQD distances; ellipsoid heights after declared conversion; DSM is not bare earth"}
     source_id = identity(metadata)
-    started = perf_counter()
-    grid = TerrainGrid(target, -half, half, resolution_m, "WGS84_ellipsoid", source_id,
-                       surface_type=declaration["surface_type"])
-    stats["freeze_seconds"] = perf_counter()-started
-    if diagnostics is not None:
-        diagnostics.update(stats, budget=asdict(budget), estimated_memory_bytes=estimate,
-                           source_block_shapes=[list(s) for s in src.block_shapes],
-                           strategy="two_pass_target_tiles")
-    return grid, metadata
+    return TerrainGrid(target, -half, half, resolution_m, "WGS84_ellipsoid", source_id,
+                       surface_type=declaration["surface_type"]), metadata

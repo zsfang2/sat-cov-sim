@@ -26,6 +26,20 @@
 
 ## Applied Changes
 
+### M3-READ-07 — Bounded target tiles and exact source windows
+
+| Field | Value |
+|---|---|
+| Kind | `proven_numerically_equivalent` within tested small-window domain; expanded read capability |
+| Components affected | Declared DEM reader; no propagation solver change |
+| Before behavior | Full target coordinate arrays and one source window; 1M output / 4M source-window cell limits |
+| After behavior | Two-pass target tiles, recursive source-window subdivision, resource preflight; 4M output / 262144 per-read source cells |
+| Validation evidence | 289 tests; frozen oracle, real 3/6/24 km exact values/masks/metadata/source_id; 36/48 km resource records in bounded-reader report |
+| Current generated maps change | `no` — old map generator unchanged; tested scalar reader inputs exactly preserved |
+| Published benchmark results change | `no` — no published artifacts regenerated |
+| Existing dataset impact | No automatic reclassification; larger readable extents do not prove propagation sufficiency |
+| Regeneration decision | Diagnostic reader runs only |
+
 ### M3-RADIUS-06 — Explicit finite-extent radius audit
 
 | Field | Value |
