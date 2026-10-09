@@ -3,6 +3,7 @@
 import math
 
 from ..geometry.geodetic import finite_number
+from .interval_extrema import loss_extrema
 
 
 def evaluate_profile(profile, *, elevation_deg, slant_range_m, frequency_hz, loss_cap_db=60.0):
@@ -13,7 +14,11 @@ def evaluate_profile(profile, *, elevation_deg, slant_range_m, frequency_hz, los
         raise ValueError("require elevation in [0,90), positive range/frequency and nonnegative cap")
     el = math.radians(elevation_deg)
     horizontal_range = slant_range_m*math.cos(el)
-    usable = [s for s in profile["samples"] if s["distance_m"] < horizontal_range]
+    candidates = list(profile["samples"])
+    interval_mode = profile.get("sampling_method") == "cell_intervals"
+    if interval_mode:
+        candidates.extend(loss_extrema(profile, elevation_deg, slant_range_m, frequency_hz))
+    usable = [s for s in candidates if s["distance_m"] < horizontal_range]
     reasons = list(profile["incomplete_reasons"])
     if horizontal_range <= profile["radius_m"]:
         reasons.append("satellite_within_profile_radius; shorten_profile")
@@ -21,14 +26,24 @@ def evaluate_profile(profile, *, elevation_deg, slant_range_m, frequency_hz, los
         reasons.append("no_interior_samples")
     detailed = []
     wavelength = 299792458.0/frequency_hz
+    excluded_behind_receiver = 0
     for sample in usable:
         relative = sample["relative_height_m"]
         if relative is None:
             continue
         x = sample["distance_m"]
+        # The receiver endpoint below/at the antenna is not a distinct knife
+        # edge. A positive-height discontinuity at the origin stays unsupported.
+        if profile.get("sampling_method") == "cell_intervals" and x == 0 and relative <= 0:
+            continue
         # Projection onto the direct ray, and perpendicular signed height.
         d1 = x*math.cos(el)+relative*math.sin(el)
         h = relative*math.cos(el)-x*math.sin(el)
+        if interval_mode and d1 <= 0 and h < 0:
+            # Below-ray points whose projection is behind the receiver are
+            # outside the forward knife-edge domain, not missing terrain.
+            excluded_behind_receiver += 1
+            continue
         if not 0 < d1 < slant_range_m:
             reasons.append("obstacle_projection_outside_link")
             continue
@@ -39,6 +54,7 @@ def evaluate_profile(profile, *, elevation_deg, slant_range_m, frequency_hz, los
         # matters: geometric LOS alone does not imply zero diffraction loss.
         raw = 0.0 if v <= -.78 else max(0.0, 6.9 + 20/math.log(10)*math.asinh(v-.1))
         detailed.append({"distance_m": x, "clearance_m": -h,
+                         "candidate_kind": sample.get("candidate_kind", "profile_point"),
                          "first_fresnel_radius_m": fresnel, "fresnel_v": v, "raw_loss_db": raw})
     dominant = max(detailed, key=lambda s: s["raw_loss_db"]) if detailed else None
     blocked = any(s["clearance_m"] < -1e-8 for s in detailed)
@@ -52,4 +68,6 @@ def evaluate_profile(profile, *, elevation_deg, slant_range_m, frequency_hz, los
             "used_loss_db": min(raw_loss, loss_cap_db) if complete and raw_loss is not None else None,
             "loss_status": "known" if complete and raw_loss is not None else "not_computed",
             "loss_cap_db": loss_cap_db, "cap_triggered": bool(complete and raw_loss is not None and raw_loss > loss_cap_db),
+            "loss_sampling": "cell boundaries and stationary Fresnel-v candidates" if interval_mode else "profile samples only",
+            "excluded_behind_receiver_points": excluded_behind_receiver,
             "dominant_edge": dominant, "samples": detailed}

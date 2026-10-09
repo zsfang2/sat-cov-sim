@@ -11,6 +11,7 @@ from satellite_coverage.engine.terrain_link import evaluate_profile
 from satellite_coverage.experiments.terrain_sensitivity import compare_profiles
 from satellite_coverage.geometry.terrain import terrain_profile
 from satellite_coverage.geometry.cell_horizon import cell_horizon
+from satellite_coverage.geometry.cell_profile import cell_profile
 from satellite_coverage.io.run_record import RunRecord, archive_sources, environment_record
 
 
@@ -19,6 +20,7 @@ def main():
     parser.add_argument("--dem",type=Path,required=True)
     parser.add_argument("--geoid",type=Path,required=True)
     parser.add_argument("--output",type=Path,required=True)
+    parser.add_argument("--sampling-method",choices=("uniform","cell_intervals"),default="uniform")
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     settings = {"sites":[{"id":"xian_city","lon":108.9,"lat":34.24},
@@ -30,6 +32,8 @@ def main():
                 "effective_radius_m":6371000,"horizon_tolerance_deg":.1,"raw_loss_tolerance_db":1,
                 "threshold_basis":"diagnostic engineering thresholds, not an accepted scientific accuracy requirement",
                 "source_scope":"same 60 m nearest-cell DSM; finer ray steps do not increase native DEM truth resolution"}
+    settings["sampling_method"] = args.sampling_method
+    profile_builder = cell_profile if args.sampling_method == "cell_intervals" else terrain_profile
     run = RunRecord(args.output)
     try:
         evidence = json.loads((root/"reports/m3/copernicus-source.json").read_text())
@@ -54,7 +58,7 @@ def main():
                 for step in settings["steps_m"]:
                     for height in settings["heights_above_surface_m"]:
                         for azimuth in settings["azimuths_deg"]:
-                            profile = terrain_profile(grid,receiver_east_m=0,receiver_north_m=0,antenna_agl_m=height,
+                            profile = profile_builder(grid,receiver_east_m=0,receiver_north_m=0,antenna_agl_m=height,
                                                       azimuth_deg=azimuth,radius_m=radius,step_m=step,effective_radius_m=6371000)
                             queries = {}
                             for elevation in settings["query_elevations_deg"]:

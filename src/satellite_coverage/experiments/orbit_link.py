@@ -47,7 +47,8 @@ def execute(config_path, tle_path, output, project_root, terrain_path=None):
             options = yaml.safe_load(terrain_text)
             required = {"dem_path", "declaration", "geoid", "radius_m", "resolution_m",
                         "step_m", "effective_radius_m", "loss_cap_db"}
-            exact_keys(options, required | ({"horizon_tolerance_deg"} if "horizon_tolerance_deg" in options else set()), "terrain config")
+            optional = {"horizon_tolerance_deg", "sampling_method"} & options.keys()
+            exact_keys(options, required | optional, "terrain config")
             dem_path = (terrain_path.parent / options["dem_path"]).resolve()
             geoid = options["geoid"]
             if geoid is not None:
@@ -58,7 +59,7 @@ def execute(config_path, tle_path, output, project_root, terrain_path=None):
                                               radius_m=options["radius_m"], resolution_m=options["resolution_m"], geoid=geoid)
             terrain = TerrainContext(grid, data["receiver"]["lon_deg"], data["receiver"]["lat_deg"],
                                      options["radius_m"], options["step_m"], options["effective_radius_m"], options["loss_cap_db"],
-                                     options.get("horizon_tolerance_deg"))
+                                     options.get("horizon_tolerance_deg"), options.get("sampling_method", "uniform"))
             run.write("terrain.json", metadata)
             np.save(run.path / "terrain_ellipsoid_m.npy", grid.elevations_m, allow_pickle=False)
         result = calculate_links(data, catalog, terrain=terrain) if "source" in data else calculate_orbit_links(catalog, data)

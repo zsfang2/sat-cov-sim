@@ -19,6 +19,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--run",type=Path,required=True)
     parser.add_argument("--output",type=Path,required=True)
+    parser.add_argument("--sampling-method",choices=("uniform","cell_intervals"),default="uniform")
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     run = RunRecord(args.output)
@@ -38,12 +39,13 @@ def main():
         run.write("replay.json",{"source_run":str(args.run),"verified_inputs":{n:expected[n] for n in
                                  ("terrain.json","terrain_ellipsoid_m.npy","config.json","input.tle")},
                                  "horizon_tolerance_deg":.1,"steps_m":[60,15,7.5],
+                                 "sampling_method":args.sampling_method,
                                  "scope":"finite-radius sampling guard; not loss/radius accuracy certification"})
         run.write("environment.json",environment_record(root))
         archive_sources(root,run.path/"sources.zip")
         summaries = []
         for step in (60,15,7.5):
-            terrain = TerrainContext(grid,metadata["lon_deg"],metadata["lat_deg"],3000,step,6371000,60,.1)
+            terrain = TerrainContext(grid,metadata["lon_deg"],metadata["lat_deg"],3000,step,6371000,60,.1,args.sampling_method)
             result = calculate_links(config,catalog,terrain=terrain)
             audits = [r["terrain"]["sampling_audit"] for r in result["records"] if "sampling_audit" in r.get("terrain",{})]
             known = [r for r in result["records"] if r["budget"] and r["budget"]["received_power"]["status"]=="known"]

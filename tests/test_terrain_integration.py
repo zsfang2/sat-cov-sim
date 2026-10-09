@@ -167,7 +167,8 @@ def test_explicit_egm2008_conversion_sign_and_missing_grid(tmp_path):
         load(path,declaration,geoid=geoid)
 
 
-def test_unified_cli_archives_terrain_input_and_result(tmp_path):
+@pytest.mark.parametrize("sampling_method", ["uniform", "cell_intervals"])
+def test_unified_cli_archives_terrain_input_and_result(tmp_path, sampling_method):
     import json
     from satellite_coverage.experiments.link import execute
     path, declaration = raster(tmp_path)
@@ -176,7 +177,8 @@ def test_unified_cli_archives_terrain_input_and_result(tmp_path):
     terrain_cfg = tmp_path / "terrain.yaml"
     terrain_cfg.write_text(yaml.safe_dump({"dem_path":path.name,"declaration":declaration,"geoid":None,
                                          "radius_m":150,"resolution_m":10,"step_m":10,
-                                         "effective_radius_m":None,"loss_cap_db":60}))
+                                         "effective_radius_m":None,"loss_cap_db":60,
+                                         "sampling_method":sampling_method}))
     result = execute(cfg,None,tmp_path/"run",ROOT,terrain_cfg)
     assert result["complete"]
     assert (tmp_path/"run/terrain_ellipsoid_m.npy").exists()
@@ -196,3 +198,8 @@ def test_horizon_sampling_guard_withholds_unconverged_power():
     assert row["terrain"]["raw_loss_db"] is None
     flat = calculate_links(config(),terrain=context(horizon_tolerance_deg=.1))
     assert flat["complete"] and flat["records"][0]["terrain"]["sampling_audit"]["passed"]
+    resolved = calculate_links(config(),terrain=context(heights,horizon_tolerance_deg=.1,
+                                                        sampling_method="cell_intervals"))
+    assert resolved["complete"]
+    assert resolved["records"][0]["terrain"]["sampling_audit"]["horizon_error_deg"] == pytest.approx(0)
+    assert resolved["records"][0]["budget"]["received_power"]["status"] == "known"

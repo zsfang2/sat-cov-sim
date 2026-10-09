@@ -1,0 +1,30 @@
+{
+  "run": "output/m3-loss-extrema-20261009",
+  "scope": "same raster and local ideal-edge model only",
+  "results": [
+    {
+      "site": "xian_city",
+      "max_step_loss_error_db": 0.0,
+      "unavailable_step_queries": 0,
+      "all_step_checks_passed": true,
+      "max_change_from_previous_db": 0.0,
+      "restored_queries": 0
+    },
+    {
+      "site": "qinling_foothill",
+      "max_step_loss_error_db": 0.0,
+      "unavailable_step_queries": 0,
+      "all_step_checks_passed": true,
+      "max_change_from_previous_db": 0.0,
+      "restored_queries": 0
+    },
+    {
+      "site": "qinling_mountain",
+      "max_step_loss_error_db": 0.0,
+      "unavailable_step_queries": 0,
+      "all_step_checks_passed": true,
+      "max_change_from_previous_db": 0.0,
+      "restored_queries": 48
+    }
+  ]
+}

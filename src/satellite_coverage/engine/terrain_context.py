@@ -6,6 +6,7 @@ import hashlib
 from ..config.pilot import number
 from ..geometry.terrain import TerrainGrid, terrain_profile
 from ..geometry.cell_horizon import cell_horizon
+from ..geometry.cell_profile import cell_profile
 from .terrain_link import evaluate_profile
 
 
@@ -19,8 +20,11 @@ class TerrainContext:
     effective_radius_m: float | None = None
     loss_cap_db: float = 60.0
     horizon_tolerance_deg: float | None = None
+    sampling_method: str = "uniform"
 
     def __post_init__(self):
+        if self.sampling_method not in ("uniform", "cell_intervals"):
+            raise ValueError("sampling_method must be uniform or cell_intervals")
         if self.grid.vertical_datum != "WGS84_ellipsoid":
             raise ValueError("M1 integration requires terrain in WGS84 ellipsoid heights")
         for key in ("lon_deg", "lat_deg", "loss_cap_db"):
@@ -41,7 +45,8 @@ class TerrainContext:
                 "lon_deg": self.lon_deg, "lat_deg": self.lat_deg, "radius_m": self.radius_m,
                 "step_m": self.step_m, "effective_radius_m": self.effective_radius_m,
                 "loss_cap_db": self.loss_cap_db, "vertical_datum": self.grid.vertical_datum,
-                "surface_type": self.grid.surface_type,"horizon_tolerance_deg":self.horizon_tolerance_deg}
+                "surface_type": self.grid.surface_type,"horizon_tolerance_deg":self.horizon_tolerance_deg,
+                "sampling_method":self.sampling_method}
 
     def validate_receiver(self, receiver):
         if abs(receiver["lon_deg"]-self.lon_deg) > 1e-10 or abs(receiver["lat_deg"]-self.lat_deg) > 1e-10:
@@ -59,7 +64,8 @@ class TerrainContext:
         if geometry["azimuth_deg"] is None:
             return {"loss_status": "not_computed", "used_loss_db": None, "los_status": "unknown",
                     "coverage_complete": False, "reason": "zenith_profile_not_supported"}
-        profile = terrain_profile(self.grid, receiver_east_m=0, receiver_north_m=0, antenna_agl_m=agl,
+        profile_builder = cell_profile if self.sampling_method == "cell_intervals" else terrain_profile
+        profile = profile_builder(self.grid, receiver_east_m=0, receiver_north_m=0, antenna_agl_m=agl,
                                   azimuth_deg=geometry["azimuth_deg"], radius_m=self.radius_m,
                                   step_m=self.step_m, effective_radius_m=self.effective_radius_m)
         result = evaluate_profile(profile, elevation_deg=geometry["elevation_deg"],

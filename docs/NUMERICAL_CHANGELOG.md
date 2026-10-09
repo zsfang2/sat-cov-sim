@@ -26,6 +26,34 @@
 
 ## Applied Changes
 
+### M3-LOSS-05 — Interior Fresnel extrema and forward projection domain
+
+| Field | Value |
+|---|---|
+| Kind | `physics_model_correction` in the optional local scalar solver |
+| Components affected | Cell-interval dominant loss and power availability |
+| Before behavior | Interior loss extrema could be missed; below-ray terrain projected behind the receiver made the whole profile incomplete |
+| After behavior | Add stationary Fresnel-v candidates; exclude below-ray backward projections with a diagnostic count; retain other unsupported projection states |
+| Validation evidence | 264-test regression including 200001-point direct interval comparisons; fifth-batch real-data report |
+| Current generated maps change | `no` — legacy map generation unchanged; new scalar terrain values/availability can change |
+| Published benchmark results change | `no` — no published artifact modified |
+| Existing dataset impact | Earlier diagnostic runs retain their original numerical behavior and limitations |
+| Regeneration decision | Diagnostic scalar experiments only |
+
+### M3-CELL-04 — Preserve one-sided cell boundaries in local profiles
+
+| Field | Value |
+|---|---|
+| Kind | `geometry_or_orbit_change` in the opt-in local raster profile |
+| Components affected | Scalar terrain horizon, sampled dominant edge and conditional power |
+| Before behavior | Uniform distances could skip cell-entry extrema even at 7.5 m spacing |
+| After behavior | Explicit cell_intervals mode retains both boundary heights, interior points and analytic horizon extrema; example enables it; receiver endpoint at/below antenna is excluded as a separate knife edge |
+| Validation evidence | 249-test regression; same-raster horizon comparisons and TLE replay in fourth-batch M3 report |
+| Current generated maps change | `no` — existing map path unchanged; new scalar terrain results change when selected |
+| Published benchmark results change | `no` — no published outputs changed |
+| Existing dataset impact | Prior scalar runs retained with original settings; no retroactive accuracy certification |
+| Regeneration decision | Diagnostic scalar runs only; no dataset regeneration |
+
 ### M3-SAMPLING-03 — Cell-interval horizon audit and optional power guard
 
 | Field | Value |
