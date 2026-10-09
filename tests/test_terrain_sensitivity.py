@@ -2,7 +2,7 @@ from copy import deepcopy
 
 import pytest
 
-from satellite_coverage.experiments.terrain_sensitivity import compare_profiles
+from satellite_coverage.experiments.terrain_sensitivity import compare_profiles, assess_radius_stability
 
 
 def rows():
@@ -40,3 +40,52 @@ def test_comparison_rejects_unpaired_experiments():
     different = rows()
     different[0]["azimuth_deg"] = 5
     with pytest.raises(ValueError): compare_profiles(rows(),different)
+
+
+def radius_rows(horizons=(3,3,3,3)):
+    result = []
+    for radius, horizon in zip((3000,6000,12000,24000),horizons):
+        row = rows()[0]
+        row.update(radius_m=radius,horizon_deg=horizon)
+        result.append(row)
+    return result
+
+
+def test_radius_stability_requires_multiple_extensions_and_is_not_global():
+    result = assess_radius_stability(radius_rows())
+    assert result["smallest_stable_tested_radius_m"] == 3000
+    assert result["global_radius_sufficiency"] == "not_verified"
+    assert [r["status"] for r in result["entries"]] == [
+        "stable_within_tested_extent", "stable_within_tested_extent",
+        "insufficient_larger_radius_evidence", "insufficient_larger_radius_evidence"]
+
+
+def test_later_ridge_cannot_be_hidden_by_early_plateau():
+    result = assess_radius_stability(radius_rows((3,3,3,8)))
+    assert result["smallest_stable_tested_radius_m"] is None
+    assert all(e["status"] == "changed_with_expansion" for e in result["entries"][:-1])
+
+
+def test_cumulative_drift_checks_all_larger_radii():
+    result = assess_radius_stability(radius_rows((3,3.06,3.12,3.18)))
+    assert result["entries"][0]["status"] == "changed_with_expansion"
+    assert result["entries"][1]["status"] == "changed_with_expansion"
+
+
+def test_missing_outer_coverage_blocks_radius_stability():
+    data = radius_rows()
+    data[-1]["coverage_complete"] = False
+    result = assess_radius_stability(data)
+    assert all(e["status"] == "unknown_missing_or_unsupported_queries" for e in result["entries"])
+
+
+@pytest.mark.parametrize("value", [-1,float("nan"),float("inf")])
+def test_invalid_diagnostic_tolerance_rejected(value):
+    with pytest.raises(ValueError):
+        assess_radius_stability(radius_rows(),horizon_tolerance_deg=value)
+
+
+def test_radius_audit_rejects_mixed_steps_duplicate_directions_and_single_radius():
+    with pytest.raises(ValueError): assess_radius_stability(radius_rows()[:1])
+    with pytest.raises(ValueError): assess_radius_stability(radius_rows()*2)
+    with pytest.raises(ValueError): assess_radius_stability(radius_rows(),minimum_extensions=0)

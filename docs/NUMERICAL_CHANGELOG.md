@@ -26,6 +26,20 @@
 
 ## Applied Changes
 
+### M3-RADIUS-06 — Explicit finite-extent radius audit
+
+| Field | Value |
+|---|---|
+| Kind | `metadata_or_gate_only` |
+| Components affected | Experiment radius comparisons and validation reporting |
+| Before behavior | Only comparisons against a fixed 12 km reference; no multi-extension status |
+| After behavior | Compare every candidate to all larger tested radii; insufficient outer evidence and unavailable queries cannot claim stability; global sufficiency remains unverified |
+| Validation evidence | 272-test regression and 24 km matrix in sixth-batch report |
+| Current generated maps change | `no` — solver and map generation unchanged |
+| Published benchmark results change | `no` |
+| Existing dataset impact | No automatic upgrade of previous outputs |
+| Regeneration decision | Diagnostic experiments only |
+
 ### M3-LOSS-05 — Interior Fresnel extrema and forward projection domain
 
 | Field | Value |

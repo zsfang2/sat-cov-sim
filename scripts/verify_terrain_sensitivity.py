@@ -8,7 +8,7 @@ import numpy as np
 
 from satellite_coverage.data_sources.terrain_dem import load_terrain_dem
 from satellite_coverage.engine.terrain_link import evaluate_profile
-from satellite_coverage.experiments.terrain_sensitivity import compare_profiles
+from satellite_coverage.experiments.terrain_sensitivity import compare_profiles, assess_radius_stability
 from satellite_coverage.geometry.terrain import terrain_profile
 from satellite_coverage.geometry.cell_horizon import cell_horizon
 from satellite_coverage.geometry.cell_profile import cell_profile
@@ -21,6 +21,8 @@ def main():
     parser.add_argument("--geoid",type=Path,required=True)
     parser.add_argument("--output",type=Path,required=True)
     parser.add_argument("--sampling-method",choices=("uniform","cell_intervals"),default="uniform")
+    parser.add_argument("--radii-m",type=float,nargs="+",default=[3000,6000,12000])
+    parser.add_argument("--steps-m",type=float,nargs="+",default=[60,30,15,7.5])
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     settings = {"sites":[{"id":"xian_city","lon":108.9,"lat":34.24},
@@ -33,6 +35,12 @@ def main():
                 "threshold_basis":"diagnostic engineering thresholds, not an accepted scientific accuracy requirement",
                 "source_scope":"same 60 m nearest-cell DSM; finer ray steps do not increase native DEM truth resolution"}
     settings["sampling_method"] = args.sampling_method
+    settings["radii_m"] = sorted(set(args.radii_m))
+    settings["steps_m"] = sorted(set(args.steps_m),reverse=True)
+    if (len(settings["radii_m"]) < 2 or not all(np.isfinite(r) and 0 < r <= 100000 for r in settings["radii_m"])
+            or not all(np.isfinite(s) and 0 < s <= min(settings["radii_m"]) for s in settings["steps_m"])):
+        parser.error("require at least two positive radii <=100 km, and positive steps <= smallest radius")
+    max_radius, reference_step = max(settings["radii_m"]), min(settings["steps_m"])
     profile_builder = cell_profile if args.sampling_method == "cell_intervals" else terrain_profile
     run = RunRecord(args.output)
     try:
@@ -50,7 +58,7 @@ def main():
         summaries = []
         for site in settings["sites"]:
             grid, metadata = load_terrain_dem(args.dem,declaration,lon_deg=site["lon"],lat_deg=site["lat"],
-                                              radius_m=12000,resolution_m=60,geoid=geoid)
+                                              radius_m=max_radius,resolution_m=60,geoid=geoid)
             run.write(site["id"]+"-terrain.json",metadata)
             np.save(run.path/(site["id"]+"-ellipsoid.npy"),grid.elevations_m,allow_pickle=False)
             rows = []
@@ -70,23 +78,25 @@ def main():
                     print(f"{site['id']}: radius={radius} step={step} done",flush=True)
             def select(radius,step):
                 return [r for r in rows if r["radius_m"]==radius and r["step_m"]==step]
-            step_comparisons = [{"radius_m":r,"step_m":s,"reference_step_m":7.5,
-                                 **compare_profiles(select(r,s),select(r,7.5))}
+            step_comparisons = [{"radius_m":r,"step_m":s,"reference_step_m":reference_step,
+                                 **compare_profiles(select(r,s),select(r,reference_step))}
                                 for r in settings["radii_m"] for s in settings["steps_m"][:-1]]
-            radius_comparisons = [{"radius_m":r,"reference_radius_m":12000,"step_m":7.5,
-                                   **compare_profiles(select(r,7.5),select(12000,7.5))} for r in (3000,6000)]
+            radius_comparisons = [{"radius_m":r,"reference_radius_m":max_radius,"step_m":reference_step,
+                                   **compare_profiles(select(r,reference_step),select(max_radius,reference_step))}
+                                  for r in settings["radii_m"][:-1]]
+            radius_audit = assess_radius_stability([r for r in rows if r["step_m"] == reference_step])
             exact_rows = []
             for height in settings["heights_above_surface_m"]:
                 for azimuth in settings["azimuths_deg"]:
                     exact_rows.append({"height_above_surface_m":height,"azimuth_deg":azimuth,
                                        **cell_horizon(grid,receiver_east_m=0,receiver_north_m=0,antenna_agl_m=height,
-                                                      azimuth_deg=azimuth,radius_m=12000,effective_radius_m=6371000)})
+                                                      azimuth_deg=azimuth,radius_m=max_radius,effective_radius_m=6371000)})
             exact_map = {(r["height_above_surface_m"],r["azimuth_deg"]):r for r in exact_rows}
             exact_comparisons = []
             for step in settings["steps_m"]:
                 errors = []
                 unavailable = 0
-                for row in select(12000,step):
+                for row in select(max_radius,step):
                     ref = exact_map[(row["height_above_surface_m"],row["azimuth_deg"])]
                     if not row["coverage_complete"] or not ref["coverage_complete"]:
                         unavailable += 1
@@ -98,7 +108,8 @@ def main():
             run.write(site["id"]+"-cell-horizons.json",exact_rows)
             summary = {"site":site,"profiles":len(rows),"step_comparisons":step_comparisons,
                        "radius_comparisons":radius_comparisons,"cell_horizon_comparisons":exact_comparisons,
-                       "scope":"stability within this sampled experiment; no guarantee beyond 12 km or between azimuths"}
+                       "radius_audit":radius_audit,
+                       "scope":"stability within tested radii only; no guarantee outside the maximum radius or between azimuths"}
             run.write(site["id"]+"-samples.json",rows)
             summaries.append(summary)
         run.write("summary.json",summaries)
