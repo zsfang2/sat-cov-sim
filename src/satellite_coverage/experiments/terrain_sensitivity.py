@@ -97,3 +97,31 @@ def assess_radius_stability(rows, *, horizon_tolerance_deg=.1, loss_tolerance_db
             "global_radius_sufficiency": "not_verified",
             "scope": "fixed-input diagnostic comparisons; no guarantee beyond maximum tested radius or between directions",
             "entries": entries}
+
+
+def assess_query_radius_stability(rows, **options):
+    """Keep a radius audit for every height/azimuth/elevation query.
+
+    A failed query must not hide its neighbours, nor may missing directions or
+    elevations be dropped to create an apparently stable subset.
+    """
+    assess_radius_stability(rows, **options)  # validate complete paired profile sets
+    by_direction = {}
+    for row in rows:
+        key = (row['height_above_surface_m'], row['azimuth_deg'])
+        by_direction.setdefault(key, []).append(row)
+    results = []
+    for (height, azimuth), profiles in sorted(by_direction.items()):
+        elevations = set(profiles[0]['queries'])
+        if not elevations or any(set(p['queries']) != elevations for p in profiles):
+            raise ValueError('query audit requires identical nonempty elevations at every radius')
+        for elevation in sorted(elevations, key=float):
+            subset = [{**p, 'queries': {elevation: p['queries'][elevation]}} for p in profiles]
+            results.append({'height_above_surface_m': height, 'azimuth_deg': azimuth,
+                            'elevation_deg': float(elevation),
+                            'samples': [{'radius_m': p['radius_m'],
+                                         'coverage_complete': p['coverage_complete'],
+                                         'horizon_deg': p['horizon_deg'], **p['queries'][elevation]}
+                                        for p in sorted(profiles, key=lambda p:p['radius_m'])],
+                            **assess_radius_stability(subset, **options)})
+    return results

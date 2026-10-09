@@ -1,0 +1,2255 @@
+{
+  "propagation_summary": [
+    {
+      "cell_horizon_comparisons": [
+        {
+          "max_error_deg": 0.0,
+          "p95_error_deg": 0.0,
+          "step_m": 60.0,
+          "unavailable_pairs": 0
+        }
+      ],
+      "profiles": 1008,
+      "radius_audit": {
+        "entries": [
+          {
+            "comparisons": [
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.2545820763166457,
+                  "p95": 0.1236932592355816
+                },
+                "los_classification_changes": 0,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 0.0,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 6000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.5622207443071309,
+                  "p95": 0.2988153845033127
+                },
+                "los_classification_changes": 0,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 0.0,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 12000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.9125229642928832,
+                  "p95": 0.5505798183754379
+                },
+                "los_classification_changes": 0,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 0.0,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 18000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 1.297506192574838,
+                  "p95": 0.8918002041635263
+                },
+                "los_classification_changes": 6,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 32.181503259940584,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 24000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 2.690733379914713,
+                  "p95": 2.3028183233206176
+                },
+                "los_classification_changes": 36,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 48.880853451242636,
+                  "p95": 33.484149130295954
+                },
+                "reference_radius_m": 36000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 3.0292545978888925,
+                  "p95": 2.535458596051362
+                },
+                "los_classification_changes": 42,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 50.279427967823885,
+                  "p95": 42.29607780473573
+                },
+                "reference_radius_m": 48000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              }
+            ],
+            "radius_m": 3000.0,
+            "status": "changed_with_expansion"
+          },
+          {
+            "comparisons": [
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.48685361696707086,
+                  "p95": 0.29801071197314205
+                },
+                "los_classification_changes": 0,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 0.0,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 12000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.7734585327031653,
+                  "p95": 0.5237899019153391
+                },
+                "los_classification_changes": 0,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 0.0,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 18000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 1.297506192574838,
+                  "p95": 0.7949518879881977
+                },
+                "los_classification_changes": 6,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 32.181503259940584,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 24000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 2.690733379914713,
+                  "p95": 2.292285623073864
+                },
+                "los_classification_changes": 36,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 48.880853451242636,
+                  "p95": 33.484149130295954
+                },
+                "reference_radius_m": 36000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 2.9037853233972304,
+                  "p95": 2.5352367365469584
+                },
+                "los_classification_changes": 42,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 50.279427967823885,
+                  "p95": 42.29607780473573
+                },
+                "reference_radius_m": 48000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              }
+            ],
+            "radius_m": 6000.0,
+            "status": "changed_with_expansion"
+          },
+          {
+            "comparisons": [
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.595044681975588,
+                  "p95": 0.33588060614784654
+                },
+                "los_classification_changes": 0,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 0.0,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 18000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 1.2171534375451116,
+                  "p95": 0.7015260421251657
+                },
+                "los_classification_changes": 6,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 32.181503259940584,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 24000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 2.625313517657008,
+                  "p95": 2.2277674700912753
+                },
+                "los_classification_changes": 36,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 48.880853451242636,
+                  "p95": 33.484149130295954
+                },
+                "reference_radius_m": 36000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 2.886956685218282,
+                  "p95": 2.485275630252851
+                },
+                "los_classification_changes": 42,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 50.279427967823885,
+                  "p95": 42.29607780473573
+                },
+                "reference_radius_m": 48000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              }
+            ],
+            "radius_m": 12000.0,
+            "status": "changed_with_expansion"
+          },
+          {
+            "comparisons": [
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 1.2171534375451116,
+                  "p95": 0.6248275576249342
+                },
+                "los_classification_changes": 6,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 32.181503259940584,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 24000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 2.529260914411964,
+                  "p95": 2.2277674700912753
+                },
+                "los_classification_changes": 36,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 48.880853451242636,
+                  "p95": 33.484149130295954
+                },
+                "reference_radius_m": 36000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 2.886956685218282,
+                  "p95": 2.485275630252851
+                },
+                "los_classification_changes": 42,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 50.279427967823885,
+                  "p95": 42.29607780473573
+                },
+                "reference_radius_m": 48000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              }
+            ],
+            "radius_m": 18000.0,
+            "status": "changed_with_expansion"
+          },
+          {
+            "comparisons": [
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 2.524551112781497,
+                  "p95": 2.0679359690801378
+                },
+                "los_classification_changes": 30,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 48.880853451242636,
+                  "p95": 26.69704713231203
+                },
+                "reference_radius_m": 36000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 2.7304371050301492,
+                  "p95": 2.3997656642181724
+                },
+                "los_classification_changes": 36,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 50.04345658919381,
+                  "p95": 36.39171361737367
+                },
+                "reference_radius_m": 48000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              }
+            ],
+            "radius_m": 24000.0,
+            "status": "changed_with_expansion"
+          },
+          {
+            "comparisons": [
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 1.627702758193668,
+                  "p95": 0.9519784991706929
+                },
+                "los_classification_changes": 6,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 42.60115477641369,
+                  "p95": 3.617215137211714
+                },
+                "reference_radius_m": 48000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              }
+            ],
+            "radius_m": 36000.0,
+            "status": "changed_with_expansion"
+          },
+          {
+            "comparisons": [],
+            "radius_m": 48000.0,
+            "status": "insufficient_larger_radius_evidence"
+          }
+        ],
+        "global_radius_sufficiency": "not_verified",
+        "maximum_tested_radius_m": 48000.0,
+        "minimum_extensions": 2,
+        "radii_m": [
+          3000.0,
+          6000.0,
+          12000.0,
+          18000.0,
+          24000.0,
+          36000.0,
+          48000.0
+        ],
+        "scope": "fixed-input diagnostic comparisons; no guarantee beyond maximum tested radius or between directions",
+        "smallest_stable_tested_radius_m": null
+      },
+      "radius_comparisons": [
+        {
+          "diagnostic_thresholds": {
+            "horizon_deg": 0.1,
+            "los_changes": 0,
+            "raw_loss_db": 1.0
+          },
+          "horizon_error_deg": {
+            "max": 3.0292545978888925,
+            "p95": 2.535458596051362
+          },
+          "los_classification_changes": 42,
+          "paired_queries": 576,
+          "profile_pairs": 144,
+          "radius_m": 3000.0,
+          "raw_loss_error_db": {
+            "max": 50.279427967823885,
+            "p95": 42.29607780473573
+          },
+          "reference_radius_m": 48000.0,
+          "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+          "stable_under_diagnostic_thresholds": false,
+          "step_m": 60.0,
+          "unavailable_pairs_or_queries": 0
+        },
+        {
+          "diagnostic_thresholds": {
+            "horizon_deg": 0.1,
+            "los_changes": 0,
+            "raw_loss_db": 1.0
+          },
+          "horizon_error_deg": {
+            "max": 2.9037853233972304,
+            "p95": 2.5352367365469584
+          },
+          "los_classification_changes": 42,
+          "paired_queries": 576,
+          "profile_pairs": 144,
+          "radius_m": 6000.0,
+          "raw_loss_error_db": {
+            "max": 50.279427967823885,
+            "p95": 42.29607780473573
+          },
+          "reference_radius_m": 48000.0,
+          "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+          "stable_under_diagnostic_thresholds": false,
+          "step_m": 60.0,
+          "unavailable_pairs_or_queries": 0
+        },
+        {
+          "diagnostic_thresholds": {
+            "horizon_deg": 0.1,
+            "los_changes": 0,
+            "raw_loss_db": 1.0
+          },
+          "horizon_error_deg": {
+            "max": 2.886956685218282,
+            "p95": 2.485275630252851
+          },
+          "los_classification_changes": 42,
+          "paired_queries": 576,
+          "profile_pairs": 144,
+          "radius_m": 12000.0,
+          "raw_loss_error_db": {
+            "max": 50.279427967823885,
+            "p95": 42.29607780473573
+          },
+          "reference_radius_m": 48000.0,
+          "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+          "stable_under_diagnostic_thresholds": false,
+          "step_m": 60.0,
+          "unavailable_pairs_or_queries": 0
+        },
+        {
+          "diagnostic_thresholds": {
+            "horizon_deg": 0.1,
+            "los_changes": 0,
+            "raw_loss_db": 1.0
+          },
+          "horizon_error_deg": {
+            "max": 2.886956685218282,
+            "p95": 2.485275630252851
+          },
+          "los_classification_changes": 42,
+          "paired_queries": 576,
+          "profile_pairs": 144,
+          "radius_m": 18000.0,
+          "raw_loss_error_db": {
+            "max": 50.279427967823885,
+            "p95": 42.29607780473573
+          },
+          "reference_radius_m": 48000.0,
+          "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+          "stable_under_diagnostic_thresholds": false,
+          "step_m": 60.0,
+          "unavailable_pairs_or_queries": 0
+        },
+        {
+          "diagnostic_thresholds": {
+            "horizon_deg": 0.1,
+            "los_changes": 0,
+            "raw_loss_db": 1.0
+          },
+          "horizon_error_deg": {
+            "max": 2.7304371050301492,
+            "p95": 2.3997656642181724
+          },
+          "los_classification_changes": 36,
+          "paired_queries": 576,
+          "profile_pairs": 144,
+          "radius_m": 24000.0,
+          "raw_loss_error_db": {
+            "max": 50.04345658919381,
+            "p95": 36.39171361737367
+          },
+          "reference_radius_m": 48000.0,
+          "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+          "stable_under_diagnostic_thresholds": false,
+          "step_m": 60.0,
+          "unavailable_pairs_or_queries": 0
+        },
+        {
+          "diagnostic_thresholds": {
+            "horizon_deg": 0.1,
+            "los_changes": 0,
+            "raw_loss_db": 1.0
+          },
+          "horizon_error_deg": {
+            "max": 1.627702758193668,
+            "p95": 0.9519784991706929
+          },
+          "los_classification_changes": 6,
+          "paired_queries": 576,
+          "profile_pairs": 144,
+          "radius_m": 36000.0,
+          "raw_loss_error_db": {
+            "max": 42.60115477641369,
+            "p95": 3.617215137211714
+          },
+          "reference_radius_m": 48000.0,
+          "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+          "stable_under_diagnostic_thresholds": false,
+          "step_m": 60.0,
+          "unavailable_pairs_or_queries": 0
+        }
+      ],
+      "scope": "stability within tested radii only; no guarantee outside the maximum radius or between azimuths",
+      "site": {
+        "id": "xian_city",
+        "lat": 34.24,
+        "lon": 108.9
+      },
+      "step_comparisons": []
+    },
+    {
+      "cell_horizon_comparisons": [
+        {
+          "max_error_deg": 0.0,
+          "p95_error_deg": 0.0,
+          "step_m": 60.0,
+          "unavailable_pairs": 0
+        }
+      ],
+      "profiles": 1008,
+      "radius_audit": {
+        "entries": [
+          {
+            "comparisons": [
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 3.6516932284135954,
+                  "p95": 2.2025381284814354
+                },
+                "los_classification_changes": 7,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 44.88498252947316,
+                  "p95": 5.9516913798396285
+                },
+                "reference_radius_m": 6000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 4.628665051595305,
+                  "p95": 2.9468848960228398
+                },
+                "los_classification_changes": 12,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 46.17068501728472,
+                  "p95": 7.93445211229772
+                },
+                "reference_radius_m": 12000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 4.628665051595305,
+                  "p95": 3.566930575988191
+                },
+                "los_classification_changes": 16,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 51.02165926744917,
+                  "p95": 11.155085516914264
+                },
+                "reference_radius_m": 18000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 4.628665051595305,
+                  "p95": 3.5731840953446223
+                },
+                "los_classification_changes": 16,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 51.02165926744917,
+                  "p95": 11.155085516914264
+                },
+                "reference_radius_m": 24000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 4.628665051595305,
+                  "p95": 3.5731840953446223
+                },
+                "los_classification_changes": 16,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 51.02165926744917,
+                  "p95": 11.155085516914264
+                },
+                "reference_radius_m": 36000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 4.628665051595305,
+                  "p95": 3.5731840953446223
+                },
+                "los_classification_changes": 16,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 51.02165926744917,
+                  "p95": 11.155085516914264
+                },
+                "reference_radius_m": 48000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              }
+            ],
+            "radius_m": 3000.0,
+            "status": "changed_with_expansion"
+          },
+          {
+            "comparisons": [
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 2.290238468557905,
+                  "p95": 1.4850299003603173
+                },
+                "los_classification_changes": 5,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 42.94830917588004,
+                  "p95": 1.0750778860185601
+                },
+                "reference_radius_m": 12000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 3.1622019767783542,
+                  "p95": 2.233765738629382
+                },
+                "los_classification_changes": 9,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 47.8800846564036,
+                  "p95": 1.6021009692044377
+                },
+                "reference_radius_m": 18000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 3.1622019767783542,
+                  "p95": 2.252838047410465
+                },
+                "los_classification_changes": 9,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 49.53957476887188,
+                  "p95": 1.954960395815391
+                },
+                "reference_radius_m": 24000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 3.1622019767783542,
+                  "p95": 2.252838047410465
+                },
+                "los_classification_changes": 9,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 49.85204999687078,
+                  "p95": 1.954960395815391
+                },
+                "reference_radius_m": 36000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 3.1622019767783542,
+                  "p95": 2.252838047410465
+                },
+                "los_classification_changes": 9,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 49.85204999687078,
+                  "p95": 2.2566121510125825
+                },
+                "reference_radius_m": 48000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              }
+            ],
+            "radius_m": 6000.0,
+            "status": "changed_with_expansion"
+          },
+          {
+            "comparisons": [
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.9130565231187973,
+                  "p95": 0.7430499910247457
+                },
+                "los_classification_changes": 4,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 34.89023235352699,
+                  "p95": 0.6941281710608145
+                },
+                "reference_radius_m": 18000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 1.3567694358204627,
+                  "p95": 0.8174217832753214
+                },
+                "los_classification_changes": 4,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 42.20923932710157,
+                  "p95": 1.2378686128821652
+                },
+                "reference_radius_m": 24000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 1.3567694358204627,
+                  "p95": 0.8174217832753214
+                },
+                "los_classification_changes": 4,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 44.09131081844768,
+                  "p95": 1.2378686128821652
+                },
+                "reference_radius_m": 36000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 1.5197114784965713,
+                  "p95": 0.8174217832753214
+                },
+                "los_classification_changes": 4,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 45.52486483832743,
+                  "p95": 1.26022210405959
+                },
+                "reference_radius_m": 48000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              }
+            ],
+            "radius_m": 12000.0,
+            "status": "changed_with_expansion"
+          },
+          {
+            "comparisons": [
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.5624258409939471,
+                  "p95": 0.09999681928300454
+                },
+                "los_classification_changes": 0,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 7.5847452891225515,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 24000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.5624258409939471,
+                  "p95": 0.20179015119542898
+                },
+                "los_classification_changes": 0,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 9.522704960724369,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 36000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.7253678836700557,
+                  "p95": 0.4206282898086282
+                },
+                "los_classification_changes": 0,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 10.973006131711855,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 48000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              }
+            ],
+            "radius_m": 18000.0,
+            "status": "changed_with_expansion"
+          },
+          {
+            "comparisons": [
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.11252453495937648,
+                  "p95": 0.06941150630482297
+                },
+                "los_classification_changes": 0,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 1.937959671601817,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 36000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.6072084950828994,
+                  "p95": 0.27239575747254186
+                },
+                "los_classification_changes": 0,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 3.388260842589304,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 48000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              }
+            ],
+            "radius_m": 24000.0,
+            "status": "changed_with_expansion"
+          },
+          {
+            "comparisons": [
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.5058483429108128,
+                  "p95": 0.22586024316369657
+                },
+                "los_classification_changes": 0,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 1.7828422138900706,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 48000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              }
+            ],
+            "radius_m": 36000.0,
+            "status": "changed_with_expansion"
+          },
+          {
+            "comparisons": [],
+            "radius_m": 48000.0,
+            "status": "insufficient_larger_radius_evidence"
+          }
+        ],
+        "global_radius_sufficiency": "not_verified",
+        "maximum_tested_radius_m": 48000.0,
+        "minimum_extensions": 2,
+        "radii_m": [
+          3000.0,
+          6000.0,
+          12000.0,
+          18000.0,
+          24000.0,
+          36000.0,
+          48000.0
+        ],
+        "scope": "fixed-input diagnostic comparisons; no guarantee beyond maximum tested radius or between directions",
+        "smallest_stable_tested_radius_m": null
+      },
+      "radius_comparisons": [
+        {
+          "diagnostic_thresholds": {
+            "horizon_deg": 0.1,
+            "los_changes": 0,
+            "raw_loss_db": 1.0
+          },
+          "horizon_error_deg": {
+            "max": 4.628665051595305,
+            "p95": 3.5731840953446223
+          },
+          "los_classification_changes": 16,
+          "paired_queries": 576,
+          "profile_pairs": 144,
+          "radius_m": 3000.0,
+          "raw_loss_error_db": {
+            "max": 51.02165926744917,
+            "p95": 11.155085516914264
+          },
+          "reference_radius_m": 48000.0,
+          "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+          "stable_under_diagnostic_thresholds": false,
+          "step_m": 60.0,
+          "unavailable_pairs_or_queries": 0
+        },
+        {
+          "diagnostic_thresholds": {
+            "horizon_deg": 0.1,
+            "los_changes": 0,
+            "raw_loss_db": 1.0
+          },
+          "horizon_error_deg": {
+            "max": 3.1622019767783542,
+            "p95": 2.252838047410465
+          },
+          "los_classification_changes": 9,
+          "paired_queries": 576,
+          "profile_pairs": 144,
+          "radius_m": 6000.0,
+          "raw_loss_error_db": {
+            "max": 49.85204999687078,
+            "p95": 2.2566121510125825
+          },
+          "reference_radius_m": 48000.0,
+          "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+          "stable_under_diagnostic_thresholds": false,
+          "step_m": 60.0,
+          "unavailable_pairs_or_queries": 0
+        },
+        {
+          "diagnostic_thresholds": {
+            "horizon_deg": 0.1,
+            "los_changes": 0,
+            "raw_loss_db": 1.0
+          },
+          "horizon_error_deg": {
+            "max": 1.5197114784965713,
+            "p95": 0.8174217832753214
+          },
+          "los_classification_changes": 4,
+          "paired_queries": 576,
+          "profile_pairs": 144,
+          "radius_m": 12000.0,
+          "raw_loss_error_db": {
+            "max": 45.52486483832743,
+            "p95": 1.26022210405959
+          },
+          "reference_radius_m": 48000.0,
+          "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+          "stable_under_diagnostic_thresholds": false,
+          "step_m": 60.0,
+          "unavailable_pairs_or_queries": 0
+        },
+        {
+          "diagnostic_thresholds": {
+            "horizon_deg": 0.1,
+            "los_changes": 0,
+            "raw_loss_db": 1.0
+          },
+          "horizon_error_deg": {
+            "max": 0.7253678836700557,
+            "p95": 0.4206282898086282
+          },
+          "los_classification_changes": 0,
+          "paired_queries": 576,
+          "profile_pairs": 144,
+          "radius_m": 18000.0,
+          "raw_loss_error_db": {
+            "max": 10.973006131711855,
+            "p95": 0.0
+          },
+          "reference_radius_m": 48000.0,
+          "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+          "stable_under_diagnostic_thresholds": false,
+          "step_m": 60.0,
+          "unavailable_pairs_or_queries": 0
+        },
+        {
+          "diagnostic_thresholds": {
+            "horizon_deg": 0.1,
+            "los_changes": 0,
+            "raw_loss_db": 1.0
+          },
+          "horizon_error_deg": {
+            "max": 0.6072084950828994,
+            "p95": 0.27239575747254186
+          },
+          "los_classification_changes": 0,
+          "paired_queries": 576,
+          "profile_pairs": 144,
+          "radius_m": 24000.0,
+          "raw_loss_error_db": {
+            "max": 3.388260842589304,
+            "p95": 0.0
+          },
+          "reference_radius_m": 48000.0,
+          "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+          "stable_under_diagnostic_thresholds": false,
+          "step_m": 60.0,
+          "unavailable_pairs_or_queries": 0
+        },
+        {
+          "diagnostic_thresholds": {
+            "horizon_deg": 0.1,
+            "los_changes": 0,
+            "raw_loss_db": 1.0
+          },
+          "horizon_error_deg": {
+            "max": 0.5058483429108128,
+            "p95": 0.22586024316369657
+          },
+          "los_classification_changes": 0,
+          "paired_queries": 576,
+          "profile_pairs": 144,
+          "radius_m": 36000.0,
+          "raw_loss_error_db": {
+            "max": 1.7828422138900706,
+            "p95": 0.0
+          },
+          "reference_radius_m": 48000.0,
+          "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+          "stable_under_diagnostic_thresholds": false,
+          "step_m": 60.0,
+          "unavailable_pairs_or_queries": 0
+        }
+      ],
+      "scope": "stability within tested radii only; no guarantee outside the maximum radius or between azimuths",
+      "site": {
+        "id": "qinling_foothill",
+        "lat": 34.05,
+        "lon": 108.9
+      },
+      "step_comparisons": []
+    },
+    {
+      "cell_horizon_comparisons": [
+        {
+          "max_error_deg": 0.0,
+          "p95_error_deg": 0.0,
+          "step_m": 60.0,
+          "unavailable_pairs": 0
+        }
+      ],
+      "profiles": 1008,
+      "radius_audit": {
+        "entries": [
+          {
+            "comparisons": [
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.0,
+                  "p95": 0.0
+                },
+                "los_classification_changes": 0,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 3.0496739914894917,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 6000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.9079215144344079,
+                  "p95": 0.0
+                },
+                "los_classification_changes": 2,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 18.117394819428515,
+                  "p95": 0.5287644536336664
+                },
+                "reference_radius_m": 12000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.9079215144344079,
+                  "p95": 0.0
+                },
+                "los_classification_changes": 2,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 18.117394819428515,
+                  "p95": 0.8160588530661332
+                },
+                "reference_radius_m": 18000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.9079215144344079,
+                  "p95": 0.0
+                },
+                "los_classification_changes": 2,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 18.117394819428515,
+                  "p95": 0.8160588530661332
+                },
+                "reference_radius_m": 24000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.9079215144344079,
+                  "p95": 0.0
+                },
+                "los_classification_changes": 2,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 18.117394819428515,
+                  "p95": 0.8160588530661332
+                },
+                "reference_radius_m": 36000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.9079215144344079,
+                  "p95": 0.0
+                },
+                "los_classification_changes": 2,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 18.117394819428515,
+                  "p95": 0.8160588530661332
+                },
+                "reference_radius_m": 48000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              }
+            ],
+            "radius_m": 3000.0,
+            "status": "changed_with_expansion"
+          },
+          {
+            "comparisons": [
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.9079215144344079,
+                  "p95": 0.0
+                },
+                "los_classification_changes": 2,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 18.117394819428515,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 12000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.9079215144344079,
+                  "p95": 0.0
+                },
+                "los_classification_changes": 2,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 18.117394819428515,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 18000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.9079215144344079,
+                  "p95": 0.0
+                },
+                "los_classification_changes": 2,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 18.117394819428515,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 24000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.9079215144344079,
+                  "p95": 0.0
+                },
+                "los_classification_changes": 2,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 18.117394819428515,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 36000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.9079215144344079,
+                  "p95": 0.0
+                },
+                "los_classification_changes": 2,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 18.117394819428515,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 48000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              }
+            ],
+            "radius_m": 6000.0,
+            "status": "changed_with_expansion"
+          },
+          {
+            "comparisons": [
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.0,
+                  "p95": 0.0
+                },
+                "los_classification_changes": 0,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 1.2918798502281916,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 18000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.0,
+                  "p95": 0.0
+                },
+                "los_classification_changes": 0,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 1.2918798502281916,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 24000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.0,
+                  "p95": 0.0
+                },
+                "los_classification_changes": 0,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 1.2918798502281916,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 36000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.0,
+                  "p95": 0.0
+                },
+                "los_classification_changes": 0,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 1.2918798502281916,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 48000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": false,
+                "unavailable_pairs_or_queries": 0
+              }
+            ],
+            "radius_m": 12000.0,
+            "status": "changed_with_expansion"
+          },
+          {
+            "comparisons": [
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.0,
+                  "p95": 0.0
+                },
+                "los_classification_changes": 0,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 0.0,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 24000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": true,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.0,
+                  "p95": 0.0
+                },
+                "los_classification_changes": 0,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 0.0,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 36000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": true,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.0,
+                  "p95": 0.0
+                },
+                "los_classification_changes": 0,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 0.0,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 48000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": true,
+                "unavailable_pairs_or_queries": 0
+              }
+            ],
+            "radius_m": 18000.0,
+            "status": "stable_within_tested_extent"
+          },
+          {
+            "comparisons": [
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.0,
+                  "p95": 0.0
+                },
+                "los_classification_changes": 0,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 0.0,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 36000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": true,
+                "unavailable_pairs_or_queries": 0
+              },
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.0,
+                  "p95": 0.0
+                },
+                "los_classification_changes": 0,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 0.0,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 48000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": true,
+                "unavailable_pairs_or_queries": 0
+              }
+            ],
+            "radius_m": 24000.0,
+            "status": "stable_within_tested_extent"
+          },
+          {
+            "comparisons": [
+              {
+                "diagnostic_thresholds": {
+                  "horizon_deg": 0.1,
+                  "los_changes": 0,
+                  "raw_loss_db": 1.0
+                },
+                "horizon_error_deg": {
+                  "max": 0.0,
+                  "p95": 0.0
+                },
+                "los_classification_changes": 0,
+                "paired_queries": 576,
+                "profile_pairs": 144,
+                "raw_loss_error_db": {
+                  "max": 0.0,
+                  "p95": 0.0
+                },
+                "reference_radius_m": 48000.0,
+                "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+                "stable_under_diagnostic_thresholds": true,
+                "unavailable_pairs_or_queries": 0
+              }
+            ],
+            "radius_m": 36000.0,
+            "status": "insufficient_larger_radius_evidence"
+          },
+          {
+            "comparisons": [],
+            "radius_m": 48000.0,
+            "status": "insufficient_larger_radius_evidence"
+          }
+        ],
+        "global_radius_sufficiency": "not_verified",
+        "maximum_tested_radius_m": 48000.0,
+        "minimum_extensions": 2,
+        "radii_m": [
+          3000.0,
+          6000.0,
+          12000.0,
+          18000.0,
+          24000.0,
+          36000.0,
+          48000.0
+        ],
+        "scope": "fixed-input diagnostic comparisons; no guarantee beyond maximum tested radius or between directions",
+        "smallest_stable_tested_radius_m": 18000.0
+      },
+      "radius_comparisons": [
+        {
+          "diagnostic_thresholds": {
+            "horizon_deg": 0.1,
+            "los_changes": 0,
+            "raw_loss_db": 1.0
+          },
+          "horizon_error_deg": {
+            "max": 0.9079215144344079,
+            "p95": 0.0
+          },
+          "los_classification_changes": 2,
+          "paired_queries": 576,
+          "profile_pairs": 144,
+          "radius_m": 3000.0,
+          "raw_loss_error_db": {
+            "max": 18.117394819428515,
+            "p95": 0.8160588530661332
+          },
+          "reference_radius_m": 48000.0,
+          "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+          "stable_under_diagnostic_thresholds": false,
+          "step_m": 60.0,
+          "unavailable_pairs_or_queries": 0
+        },
+        {
+          "diagnostic_thresholds": {
+            "horizon_deg": 0.1,
+            "los_changes": 0,
+            "raw_loss_db": 1.0
+          },
+          "horizon_error_deg": {
+            "max": 0.9079215144344079,
+            "p95": 0.0
+          },
+          "los_classification_changes": 2,
+          "paired_queries": 576,
+          "profile_pairs": 144,
+          "radius_m": 6000.0,
+          "raw_loss_error_db": {
+            "max": 18.117394819428515,
+            "p95": 0.0
+          },
+          "reference_radius_m": 48000.0,
+          "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+          "stable_under_diagnostic_thresholds": false,
+          "step_m": 60.0,
+          "unavailable_pairs_or_queries": 0
+        },
+        {
+          "diagnostic_thresholds": {
+            "horizon_deg": 0.1,
+            "los_changes": 0,
+            "raw_loss_db": 1.0
+          },
+          "horizon_error_deg": {
+            "max": 0.0,
+            "p95": 0.0
+          },
+          "los_classification_changes": 0,
+          "paired_queries": 576,
+          "profile_pairs": 144,
+          "radius_m": 12000.0,
+          "raw_loss_error_db": {
+            "max": 1.2918798502281916,
+            "p95": 0.0
+          },
+          "reference_radius_m": 48000.0,
+          "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+          "stable_under_diagnostic_thresholds": false,
+          "step_m": 60.0,
+          "unavailable_pairs_or_queries": 0
+        },
+        {
+          "diagnostic_thresholds": {
+            "horizon_deg": 0.1,
+            "los_changes": 0,
+            "raw_loss_db": 1.0
+          },
+          "horizon_error_deg": {
+            "max": 0.0,
+            "p95": 0.0
+          },
+          "los_classification_changes": 0,
+          "paired_queries": 576,
+          "profile_pairs": 144,
+          "radius_m": 18000.0,
+          "raw_loss_error_db": {
+            "max": 0.0,
+            "p95": 0.0
+          },
+          "reference_radius_m": 48000.0,
+          "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+          "stable_under_diagnostic_thresholds": true,
+          "step_m": 60.0,
+          "unavailable_pairs_or_queries": 0
+        },
+        {
+          "diagnostic_thresholds": {
+            "horizon_deg": 0.1,
+            "los_changes": 0,
+            "raw_loss_db": 1.0
+          },
+          "horizon_error_deg": {
+            "max": 0.0,
+            "p95": 0.0
+          },
+          "los_classification_changes": 0,
+          "paired_queries": 576,
+          "profile_pairs": 144,
+          "radius_m": 24000.0,
+          "raw_loss_error_db": {
+            "max": 0.0,
+            "p95": 0.0
+          },
+          "reference_radius_m": 48000.0,
+          "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+          "stable_under_diagnostic_thresholds": true,
+          "step_m": 60.0,
+          "unavailable_pairs_or_queries": 0
+        },
+        {
+          "diagnostic_thresholds": {
+            "horizon_deg": 0.1,
+            "los_changes": 0,
+            "raw_loss_db": 1.0
+          },
+          "horizon_error_deg": {
+            "max": 0.0,
+            "p95": 0.0
+          },
+          "los_classification_changes": 0,
+          "paired_queries": 576,
+          "profile_pairs": 144,
+          "radius_m": 36000.0,
+          "raw_loss_error_db": {
+            "max": 0.0,
+            "p95": 0.0
+          },
+          "reference_radius_m": 48000.0,
+          "scope": "paired finite-radius sampled DSM comparison; reference is not ground truth",
+          "stable_under_diagnostic_thresholds": true,
+          "step_m": 60.0,
+          "unavailable_pairs_or_queries": 0
+        }
+      ],
+      "scope": "stability within tested radii only; no guarantee outside the maximum radius or between azimuths",
+      "site": {
+        "id": "qinling_mountain",
+        "lat": 33.9,
+        "lon": 108.9
+      },
+      "step_comparisons": []
+    }
+  ],
+  "query_summary": {
+    "global_radius_sufficiency": "not_verified",
+    "resource_refused_queries": 0,
+    "scope": "All archived query outcomes retained; no global or interpolated-direction guarantee",
+    "sites": [
+      {
+        "all_query_archive": "xian_city-queries.jsonl.gz",
+        "binding_id": "sha256:fccc4b53b42107aafdc1678722bbc8af898918aace95c9a5e0d0826ddd8d5920",
+        "by_radius": {
+          "12000.0": {
+            "changed_with_expansion": 296,
+            "stable_within_tested_extent": 280
+          },
+          "18000.0": {
+            "changed_with_expansion": 268,
+            "stable_within_tested_extent": 308
+          },
+          "24000.0": {
+            "changed_with_expansion": 204,
+            "stable_within_tested_extent": 372
+          },
+          "3000.0": {
+            "changed_with_expansion": 340,
+            "stable_within_tested_extent": 236
+          },
+          "36000.0": {
+            "changed_with_expansion": 148,
+            "insufficient_larger_radius_evidence": 428
+          },
+          "48000.0": {
+            "insufficient_larger_radius_evidence": 576
+          },
+          "6000.0": {
+            "changed_with_expansion": 300,
+            "stable_within_tested_extent": 276
+          }
+        },
+        "queries": 576,
+        "query_radius_records": 4032,
+        "sha256": "sha256:b6f844e9882af35d6f0f10c8df62eebb71da216895734ad6d2565151d458eee0",
+        "site": {
+          "id": "xian_city",
+          "lat": 34.24,
+          "lon": 108.9
+        },
+        "status_counts": {
+          "changed_with_expansion": 1556,
+          "insufficient_larger_radius_evidence": 1004,
+          "stable_within_tested_extent": 1472
+        }
+      },
+      {
+        "all_query_archive": "qinling_foothill-queries.jsonl.gz",
+        "binding_id": "sha256:07283b11b9d71bac7c4e1ba7cc809c0c5fe3fdb5a50cc81d903de52f8975edbd",
+        "by_radius": {
+          "12000.0": {
+            "changed_with_expansion": 270,
+            "stable_within_tested_extent": 306
+          },
+          "18000.0": {
+            "changed_with_expansion": 216,
+            "stable_within_tested_extent": 360
+          },
+          "24000.0": {
+            "changed_with_expansion": 146,
+            "stable_within_tested_extent": 430
+          },
+          "3000.0": {
+            "changed_with_expansion": 481,
+            "stable_within_tested_extent": 95
+          },
+          "36000.0": {
+            "changed_with_expansion": 138,
+            "insufficient_larger_radius_evidence": 438
+          },
+          "48000.0": {
+            "insufficient_larger_radius_evidence": 576
+          },
+          "6000.0": {
+            "changed_with_expansion": 388,
+            "stable_within_tested_extent": 188
+          }
+        },
+        "queries": 576,
+        "query_radius_records": 4032,
+        "sha256": "sha256:6d5df9d70829f2426823a3a1ebba4232feba059e18b03dc4db9c3dc0ddb53a1b",
+        "site": {
+          "id": "qinling_foothill",
+          "lat": 34.05,
+          "lon": 108.9
+        },
+        "status_counts": {
+          "changed_with_expansion": 1639,
+          "insufficient_larger_radius_evidence": 1014,
+          "stable_within_tested_extent": 1379
+        }
+      },
+      {
+        "all_query_archive": "qinling_mountain-queries.jsonl.gz",
+        "binding_id": "sha256:c14f2c2514f2cd8d3ab58f475ccd1c95e337898d7cc6cea57ea478f60fdd3654",
+        "by_radius": {
+          "12000.0": {
+            "changed_with_expansion": 2,
+            "stable_within_tested_extent": 574
+          },
+          "18000.0": {
+            "stable_within_tested_extent": 576
+          },
+          "24000.0": {
+            "stable_within_tested_extent": 576
+          },
+          "3000.0": {
+            "changed_with_expansion": 39,
+            "stable_within_tested_extent": 537
+          },
+          "36000.0": {
+            "insufficient_larger_radius_evidence": 576
+          },
+          "48000.0": {
+            "insufficient_larger_radius_evidence": 576
+          },
+          "6000.0": {
+            "changed_with_expansion": 24,
+            "stable_within_tested_extent": 552
+          }
+        },
+        "queries": 576,
+        "query_radius_records": 4032,
+        "sha256": "sha256:9fc7da8184a211f661db70c511b3d4b52d689a5240732b9e34a97cd2803faf2d",
+        "site": {
+          "id": "qinling_mountain",
+          "lat": 33.9,
+          "lon": 108.9
+        },
+        "status_counts": {
+          "changed_with_expansion": 65,
+          "insufficient_larger_radius_evidence": 1152,
+          "stable_within_tested_extent": 2815
+        }
+      }
+    ],
+    "source_run_status": "passed"
+  },
+  "propagation_resources": {
+    "json_write_time_s_before_resource_record": 0.07702635927125812,
+    "peak_rss": 224920,
+    "wall_time_s": 47.706451246049255
+  },
+  "query_resources": {
+    "json_write_time_s_before_resource_record": 0.0029627266339957714,
+    "peak_rss": 160392,
+    "wall_time_s": 4.586009457241744
+  },
+  "propagation_artifacts": {
+    "files": {
+      "config.json": "sha256:a384b1e35dced457443626701e5b50474dd292150369195ac2046667715538bf",
+      "environment.json": "sha256:abf6435e367a37b7ebf7be3cc9d4e992921c16b8130f7d91f308d6c06a7de3f7",
+      "geoid_evidence.json": "sha256:1c5d20aaa22581f4851b584f72f0da31500e0d6d15bc9005e04bc04eb85bff68",
+      "qinling_foothill-cell-horizons.json": "sha256:7e83cefd4eb336f0a88c28fb54c1a4237dd03d8871a979b414b310bd4016df34",
+      "qinling_foothill-ellipsoid.npy": "sha256:b4b780f2899a3739f8a1a63eaa56586b26fca8530d605eacd85706ce269d3346",
+      "qinling_foothill-samples.json": "sha256:cb4e2058449f38569ef60c68ec1bcc64385a945b699b43bd2f7237dcf80b5be1",
+      "qinling_foothill-terrain.json": "sha256:796761e4a8801b7fc40e363fea1c265b343ddcd3ab81003136db3ff1ead4184b",
+      "qinling_mountain-cell-horizons.json": "sha256:bc88ccddcb9985c93bffb32626cd95e377660b40323311d30266f9f404ecd61d",
+      "qinling_mountain-ellipsoid.npy": "sha256:a4b378d75ace849573fd50e9a3eabb9bb7745df173998582ee1f7c0d1c6926b0",
+      "qinling_mountain-samples.json": "sha256:3bb5664a1b1cbf403ec5646943fabf58af4b6919846ab5367919cec6e3e71c27",
+      "qinling_mountain-terrain.json": "sha256:b381c28cb1905f375172dabea75efb5f78728d6044fdcf9d21d6ce7f985bb872",
+      "resources.json": "sha256:c779f6c05dcdfe15f51fe0fdf9c4ef777038db5f33945fa766d0dc6bfeb84ae7",
+      "run.log": "sha256:83316dfd5e7c7c4a7e913ed30d3d5462eb89e84ce578c6a2640dd8d5c0e0a717",
+      "source_evidence.json": "sha256:88c497cba506e0fd51fc19c26659bb695ad913f52ffdf97e58d678e4d147dd8a",
+      "sources.zip": "sha256:06323b9df12b170990117865c37e1f3acd926ca823cb102f3f91de405eb693b1",
+      "summary.json": "sha256:435611825434293efd9d0b6c20433536e6025dacb6c0f49ee522b33fb2e94f8d",
+      "validation.json": "sha256:b25e791fb37c656cd65af64e8e5a1241ab67c7ffa93b03952c5f5b31e0194db3",
+      "xian_city-cell-horizons.json": "sha256:4063863b68e932d0f61899c1cb1a971f2424cb218e0595d6e7d4d946c5c25bdf",
+      "xian_city-ellipsoid.npy": "sha256:73c1f1cac0827b76b4801be0b7556b009d4a4ba2399f54efd0ac4a0aac68655c",
+      "xian_city-samples.json": "sha256:c02233183e62be7e3596e1e6aff59051b68b8d42f50c6c54ada4287397aa8d1f",
+      "xian_city-terrain.json": "sha256:d98c81f05f9ccc43ee5453012e1e62c9048749dad8f00502a053dc2e62fae433"
+    },
+    "schema_version": 1
+  },
+  "query_artifacts": {
+    "files": {
+      "environment.json": "sha256:4f4038ef2f9ee4899ab8a68595d2b9342dd0c1320605c9624b539d66023ecf85",
+      "input.json": "sha256:505284e3df7b348872ea0518a602ea1ca873843e522d9d8ca61e8b35863ca67d",
+      "qinling_foothill-queries.jsonl.gz": "sha256:6d5df9d70829f2426823a3a1ebba4232feba059e18b03dc4db9c3dc0ddb53a1b",
+      "qinling_mountain-queries.jsonl.gz": "sha256:9fc7da8184a211f661db70c511b3d4b52d689a5240732b9e34a97cd2803faf2d",
+      "resources.json": "sha256:833ad846b9f23e9426d584b30690cce47a4544491d667f8fefb3d259f9a44f0a",
+      "run.log": "sha256:539447a5c3063d6d39fec9bf2fe620136787ed33ebc21476d98481fd453c2029",
+      "sources.zip": "sha256:339411e67f336e7db59b093eaacfe153bd3d2e0609a1baddbc68025fe99e04c8",
+      "summary.json": "sha256:e69502d9afff73a9d16ccd0264a0308b1bd7d6b6436586e458e569c10f968ae4",
+      "validation.json": "sha256:401f489ef766f7e0fc07206f01c53609d6534ee98021d9aeef2f0887543f373c",
+      "xian_city-queries.jsonl.gz": "sha256:b6f844e9882af35d6f0f10c8df62eebb71da216895734ad6d2565151d458eee0"
+    },
+    "schema_version": 1
+  },
+  "propagation_run": "output/m3-radius-48km-20261009",
+  "query_run": "output/m3-radius-48km-queries-20261009"
+}

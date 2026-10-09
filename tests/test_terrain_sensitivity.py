@@ -3,6 +3,7 @@ from copy import deepcopy
 import pytest
 
 from satellite_coverage.experiments.terrain_sensitivity import compare_profiles, assess_radius_stability
+from satellite_coverage.experiments.terrain_sensitivity import assess_query_radius_stability
 
 
 def rows():
@@ -89,3 +90,33 @@ def test_radius_audit_rejects_mixed_steps_duplicate_directions_and_single_radius
     with pytest.raises(ValueError): assess_radius_stability(radius_rows()[:1])
     with pytest.raises(ValueError): assess_radius_stability(radius_rows()*2)
     with pytest.raises(ValueError): assess_radius_stability(radius_rows(),minimum_extensions=0)
+
+
+def test_per_query_audit_retains_failed_elevations_without_hiding_neighbours():
+    data = radius_rows()
+    for row in data:
+        row['queries']['10'] = dict(row['queries']['5'])
+    data[-1]['queries']['10'].update(loss_status='not_computed', raw_loss_db=None)
+    result = assess_query_radius_stability(data)
+    assert len(result) == 2
+    assert result[0]['entries'][0]['status'] == 'stable_within_tested_extent'
+    assert result[1]['entries'][0]['status'] == 'unknown_missing_or_unsupported_queries'
+    assert result[1]['samples'][-1]['raw_loss_db'] is None
+    assert all(r['global_radius_sufficiency'] == 'not_verified' for r in result)
+
+
+def test_per_query_audit_keeps_loss_change_even_with_fixed_horizon():
+    data = radius_rows()
+    data[-1]['queries']['5']['raw_loss_db'] = 12
+    result = assess_query_radius_stability(data)[0]
+    assert result['entries'][0]['status'] == 'changed_with_expansion'
+    assert result['entries'][0]['comparisons'][-1]['raw_loss_error_db']['max'] == 12
+    assert result['entries'][-1]['status'] == 'insufficient_larger_radius_evidence'
+
+
+def test_per_query_missing_elevation_rejected_even_with_incomplete_profile():
+    data = radius_rows()
+    data[-1]['coverage_complete'] = False
+    data[-1]['queries'] = {}
+    with pytest.raises(ValueError, match='elevations'):
+        assess_query_radius_stability(data)
