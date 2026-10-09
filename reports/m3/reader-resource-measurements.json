@@ -1,0 +1,366 @@
+{
+  "runs": [
+    {
+      "radius_m": 3000.0,
+      "resolution_m": 60,
+      "site": [
+        108.9,
+        34.24
+      ],
+      "baseline_rss_bytes": 76300288,
+      "baseline_high_water_rss_bytes": 161075200,
+      "process_high_water_rss_bytes": 161075200,
+      "stages": [
+        {
+          "stage": "validation_and_geoid_hash_setup",
+          "rss_start_bytes": 76300288,
+          "seconds": 0.0640686652623117,
+          "rss_end_bytes": 90050560,
+          "traced_peak_bytes": 2121040
+        },
+        {
+          "stage": "dem_hash",
+          "rss_start_bytes": 90050560,
+          "seconds": 6.13257424486801,
+          "rss_end_bytes": 91762688,
+          "traced_peak_bytes": 2146574
+        },
+        {
+          "stage": "target_coordinates",
+          "rss_start_bytes": 91762688,
+          "seconds": 0.0030348910950124264,
+          "rss_end_bytes": 92037120,
+          "traced_peak_bytes": 256323
+        },
+        {
+          "stage": "source_coordinates_and_checks",
+          "rss_start_bytes": 92037120,
+          "seconds": 0.018462713807821274,
+          "rss_end_bytes": 95170560,
+          "traced_peak_bytes": 858339
+        },
+        {
+          "stage": "source_window_read",
+          "rss_start_bytes": 95170560,
+          "seconds": 0.00651098508387804,
+          "rss_end_bytes": 105721856,
+          "traced_peak_bytes": 1149025
+        },
+        {
+          "stage": "sample_target",
+          "rss_start_bytes": 105721856,
+          "seconds": 0.0004393570125102997,
+          "rss_end_bytes": 105721856,
+          "traced_peak_bytes": 1355415
+        },
+        {
+          "stage": "vertical_conversion",
+          "rss_start_bytes": 105721856,
+          "seconds": 0.004728860221803188,
+          "rss_end_bytes": 107032576,
+          "traced_peak_bytes": 1789971
+        },
+        {
+          "stage": "metadata",
+          "rss_start_bytes": 107032576,
+          "seconds": 0.0011342489160597324,
+          "rss_end_bytes": 98598912,
+          "traced_peak_bytes": 1639633
+        },
+        {
+          "stage": "freeze_grid",
+          "rss_start_bytes": 98598912,
+          "seconds": 0.0005656778812408447,
+          "rss_end_bytes": 98598912,
+          "traced_peak_bytes": 1795291
+        },
+        {
+          "stage": "buffered_npy_write",
+          "rss_start_bytes": 98598912,
+          "seconds": 0.0004419749602675438,
+          "rss_end_bytes": 98598912,
+          "traced_peak_bytes": 202179
+        },
+        {
+          "stage": "output_hash",
+          "rss_start_bytes": 98598912,
+          "seconds": 0.00020994897931814194,
+          "rss_end_bytes": 98598912,
+          "traced_peak_bytes": 1331074
+        }
+      ],
+      "terrain_metadata": {
+        "file_sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+        "declaration": {
+          "sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+          "height_unit": "m",
+          "vertical_datum": "EGM2008",
+          "surface_type": "DSM",
+          "evidence": "Product identified by user, specifications checked against official source. The local mosaic release, original tiles and processing/vertical-conversion history are not independently reconstructed."
+        },
+        "path": "/home/Users_Work_Space/zsfang/Satellite-Ground-Radiomap/data/l2_topo/china_dem_30.tif",
+        "source_crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4326\"]]",
+        "local_crs": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"World Geodetic System 1984\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1]],ID[\"EPSG\",6326]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Azimuthal Equidistant\",ID[\"EPSG\",1125]],PARAMETER[\"Latitude of natural origin\",34.24,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8801]],PARAMETER[\"Longitude of natural origin\",108.9,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8802]],PARAMETER[\"False easting\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8806]],PARAMETER[\"False northing\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8807]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+        "lon_deg": 108.9,
+        "lat_deg": 34.24,
+        "radius_m": 3000.0,
+        "resolution_m": 60,
+        "estimated_native_spacing_max_m": 30.813119771957933,
+        "native_window": [
+          129120,
+          81837,
+          240,
+          199
+        ],
+        "shape": [
+          103,
+          103
+        ],
+        "scale": 1.0,
+        "offset": 0.0,
+        "resampling": "nearest native cell; no display decimation",
+        "vertical_conversion": {
+          "method": "h=H+N; PROJ local grid, multiplier=+1, no optional grid or ballpark",
+          "grid": {
+            "path": "/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif",
+            "sha256": "sha256:4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a",
+            "model": "EGM2008",
+            "evidence": "https://cdn.proj.org/us_nga_egm08_25.tif"
+          },
+          "pipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=vgridshift +grids=\"/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif\" +multiplier=1 +step +proj=unitconvert +xy_in=rad +xy_out=deg",
+          "grid_tags": {
+            "TIFFTAG_IMAGEDESCRIPTION": "WGS 84 (EPSG:4979) to EGM2008 height (EPSG:3855). Converted from egm08_25.gtx (last modified at 2018/10/08)",
+            "TIFFTAG_DATETIME": "2019:12:27 00:00:00",
+            "TIFFTAG_COPYRIGHT": "Derived from work by NGA. Public Domain",
+            "area_of_use": "World",
+            "target_crs_epsg_code": "3855",
+            "TYPE": "VERTICAL_OFFSET_GEOGRAPHIC_TO_VERTICAL",
+            "AREA_OR_POINT": "Point"
+          }
+        },
+        "scope": "local AEQD distances; ellipsoid heights after declared conversion; DSM is not bare earth"
+      },
+      "source_storage": {
+        "block_shapes": [
+          [
+            256,
+            256
+          ]
+        ],
+        "dtype": "int16"
+      },
+      "output_bytes": 85000,
+      "output_sha256": "sha256:dec602f3c073d5497b92280f7931d08450a10633add5c247913e3cf7b457d0c9",
+      "versions": {
+        "python": "3.12.2",
+        "numpy": "1.26.4",
+        "rasterio": "1.4.3",
+        "pyproj": "3.7.2",
+        "gdal": "3.9.3",
+        "proj": "9.5.1"
+      },
+      "machine": {
+        "platform": "Linux-5.15.0-187-generic-x86_64-with-glibc2.35",
+        "meminfo": [
+          "MemTotal:       1056489728 kB",
+          "MemFree:        154709020 kB",
+          "MemAvailable:   1022427520 kB"
+        ]
+      },
+      "commit": "0993ddbba32b01fc4c79c1225ebc126db77d10a1",
+      "reader_sha256": "0aafb8d97cb9fe003edda997fc628c93018e82866925e23fed89963545298fe5",
+      "probe_sha256": "0b5cd6a6043ac52d8eb447f1bd2c8199a18046110171f630c37769d3bb24e010",
+      "caveats": [
+        "Single instrumented run, not throughput SLA; OS page cache uncontrolled",
+        "Stage RSS endpoints are not per-stage peaks; process high water includes imports",
+        "tracemalloc excludes some native memory; phase overhead is included",
+        "Input hashes verified by original reader; output write is buffered"
+      ]
+    },
+    {
+      "radius_m": 24000.0,
+      "resolution_m": 60,
+      "site": [
+        108.9,
+        34.24
+      ],
+      "baseline_rss_bytes": 76132352,
+      "baseline_high_water_rss_bytes": 161177600,
+      "process_high_water_rss_bytes": 215818240,
+      "stages": [
+        {
+          "stage": "validation_and_geoid_hash_setup",
+          "rss_start_bytes": 76132352,
+          "seconds": 0.0671111149713397,
+          "rss_end_bytes": 90271744,
+          "traced_peak_bytes": 2121040
+        },
+        {
+          "stage": "dem_hash",
+          "rss_start_bytes": 90271744,
+          "seconds": 6.272236888296902,
+          "rss_end_bytes": 91799552,
+          "traced_peak_bytes": 2146638
+        },
+        {
+          "stage": "target_coordinates",
+          "rss_start_bytes": 91799552,
+          "seconds": 0.006787134800106287,
+          "rss_end_bytes": 102637568,
+          "traced_peak_bytes": 10406772
+        },
+        {
+          "stage": "source_coordinates_and_checks",
+          "rss_start_bytes": 102637568,
+          "seconds": 0.27389096608385444,
+          "rss_end_bytes": 142262272,
+          "traced_peak_bytes": 46520852
+        },
+        {
+          "stage": "source_window_read",
+          "rss_start_bytes": 142262272,
+          "seconds": 0.04120452795177698,
+          "rss_end_bytes": 176640000,
+          "traced_peak_bytes": 64146614
+        },
+        {
+          "stage": "sample_target",
+          "rss_start_bytes": 176640000,
+          "seconds": 0.0096122189424932,
+          "rss_end_bytes": 188448768,
+          "traced_peak_bytes": 75941380
+        },
+        {
+          "stage": "vertical_conversion",
+          "rss_start_bytes": 188448768,
+          "seconds": 0.06765259196981788,
+          "rss_end_bytes": 215498752,
+          "traced_peak_bytes": 102378136
+        },
+        {
+          "stage": "metadata",
+          "rss_start_bytes": 215498752,
+          "seconds": 0.0016604228876531124,
+          "rss_end_bytes": 215818240,
+          "traced_peak_bytes": 92714798
+        },
+        {
+          "stage": "freeze_grid",
+          "rss_start_bytes": 215818240,
+          "seconds": 0.0025930171832442284,
+          "rss_end_bytes": 171573248,
+          "traced_peak_bytes": 102383601
+        },
+        {
+          "stage": "buffered_npy_write",
+          "rss_start_bytes": 171573248,
+          "seconds": 0.002980775199830532,
+          "rss_end_bytes": 171573248,
+          "traced_peak_bytes": 5275968
+        },
+        {
+          "stage": "output_hash",
+          "rss_start_bytes": 171573248,
+          "seconds": 0.00363406864926219,
+          "rss_end_bytes": 171573248,
+          "traced_peak_bytes": 7368468
+        }
+      ],
+      "terrain_metadata": {
+        "file_sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+        "declaration": {
+          "sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+          "height_unit": "m",
+          "vertical_datum": "EGM2008",
+          "surface_type": "DSM",
+          "evidence": "Product identified by user, specifications checked against official source. The local mosaic release, original tiles and processing/vertical-conversion history are not independently reconstructed."
+        },
+        "path": "/home/Users_Work_Space/zsfang/Satellite-Ground-Radiomap/data/l2_topo/china_dem_30.tif",
+        "source_crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4326\"]]",
+        "local_crs": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"World Geodetic System 1984\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1]],ID[\"EPSG\",6326]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Azimuthal Equidistant\",ID[\"EPSG\",1125]],PARAMETER[\"Latitude of natural origin\",34.24,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8801]],PARAMETER[\"Longitude of natural origin\",108.9,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8802]],PARAMETER[\"False easting\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8806]],PARAMETER[\"False northing\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8807]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+        "lon_deg": 108.9,
+        "lat_deg": 34.24,
+        "radius_m": 24000.0,
+        "resolution_m": 60,
+        "estimated_native_spacing_max_m": 30.814147650031483,
+        "native_window": [
+          128297,
+          81155,
+          1886,
+          1564
+        ],
+        "shape": [
+          803,
+          803
+        ],
+        "scale": 1.0,
+        "offset": 0.0,
+        "resampling": "nearest native cell; no display decimation",
+        "vertical_conversion": {
+          "method": "h=H+N; PROJ local grid, multiplier=+1, no optional grid or ballpark",
+          "grid": {
+            "path": "/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif",
+            "sha256": "sha256:4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a",
+            "model": "EGM2008",
+            "evidence": "https://cdn.proj.org/us_nga_egm08_25.tif"
+          },
+          "pipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=vgridshift +grids=\"/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif\" +multiplier=1 +step +proj=unitconvert +xy_in=rad +xy_out=deg",
+          "grid_tags": {
+            "TIFFTAG_IMAGEDESCRIPTION": "WGS 84 (EPSG:4979) to EGM2008 height (EPSG:3855). Converted from egm08_25.gtx (last modified at 2018/10/08)",
+            "TIFFTAG_DATETIME": "2019:12:27 00:00:00",
+            "TIFFTAG_COPYRIGHT": "Derived from work by NGA. Public Domain",
+            "area_of_use": "World",
+            "target_crs_epsg_code": "3855",
+            "TYPE": "VERTICAL_OFFSET_GEOGRAPHIC_TO_VERTICAL",
+            "AREA_OR_POINT": "Point"
+          }
+        },
+        "scope": "local AEQD distances; ellipsoid heights after declared conversion; DSM is not bare earth"
+      },
+      "source_storage": {
+        "block_shapes": [
+          [
+            256,
+            256
+          ]
+        ],
+        "dtype": "int16"
+      },
+      "output_bytes": 5158600,
+      "output_sha256": "sha256:76dd5c54fa5eed1ce35aa24f7970bc8ef84786643ef7fda5ab22fab2e73bf3fb",
+      "versions": {
+        "python": "3.12.2",
+        "numpy": "1.26.4",
+        "rasterio": "1.4.3",
+        "pyproj": "3.7.2",
+        "gdal": "3.9.3",
+        "proj": "9.5.1"
+      },
+      "machine": {
+        "platform": "Linux-5.15.0-187-generic-x86_64-with-glibc2.35",
+        "meminfo": [
+          "MemTotal:       1056489728 kB",
+          "MemFree:        154682744 kB",
+          "MemAvailable:   1022406392 kB"
+        ]
+      },
+      "commit": "0993ddbba32b01fc4c79c1225ebc126db77d10a1",
+      "reader_sha256": "0aafb8d97cb9fe003edda997fc628c93018e82866925e23fed89963545298fe5",
+      "probe_sha256": "0b5cd6a6043ac52d8eb447f1bd2c8199a18046110171f630c37769d3bb24e010",
+      "caveats": [
+        "Single instrumented run, not throughput SLA; OS page cache uncontrolled",
+        "Stage RSS endpoints are not per-stage peaks; process high water includes imports",
+        "tracemalloc excludes some native memory; phase overhead is included",
+        "Input hashes verified by original reader; output write is buffered"
+      ]
+    }
+  ],
+  "verification": {
+    "24km_exactly_matches_archive": "output/m3-radius-24km-20261009/xian_city-ellipsoid.npy",
+    "stage_count_per_run": 11
+  },
+  "notes": [
+    "Final two processes overlapped; timings are diagnostic, not isolated throughput measurements.",
+    "Initial probe incorrectly counted context-manager exit as another phase; final runs corrected it."
+  ]
+}

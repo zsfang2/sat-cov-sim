@@ -2,6 +2,10 @@
 
 日期：2026-10-09。实现起点 `be261ea`，分支 `refactor/modular-sim-engine`。
 
+后续更新：本文保留初次失败记录；同日用户授权修复后，CLI 参数兼容阻塞已解除，
+官方分析调用成功，G01 已交付测量与设计，见 [large-area-design.md](large-area-design.md)。
+原生轮次审查是否通过仍须以实际 hook 结果为准。
+
 ## 启动结果
 
 运行 `setup-rlcr-loop.sh docs/humanize261009plan.md --track-plan-file` 成功。

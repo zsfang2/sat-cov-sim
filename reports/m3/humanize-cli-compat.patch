@@ -1,0 +1,29 @@
+--- a/scripts/ask-codex.sh
++++ b/scripts/ask-codex.sh
+@@ -245 +245 @@
+-CODEX_EXEC_ARGS=("-m" "$CODEX_MODEL")
++CODEX_EXEC_ARGS=("--disable" "codex_hooks" "-m" "$CODEX_MODEL")
+@@ -251 +251 @@
+-CODEX_AUTO_FLAG="--full-auto"
++CODEX_AUTO_ARGS=("--sandbox" "workspace-write")
+@@ -253,4 +253,4 @@
+-    CODEX_AUTO_FLAG="--dangerously-bypass-approvals-and-sandbox"
+-fi
+-
+-CODEX_EXEC_ARGS+=("$CODEX_AUTO_FLAG" "-C" "$PROJECT_ROOT")
++    CODEX_AUTO_ARGS=("--dangerously-bypass-approvals-and-sandbox")
++fi
++
++CODEX_EXEC_ARGS+=("${CODEX_AUTO_ARGS[@]}" "-C" "$PROJECT_ROOT")
+--- a/hooks/loop-codex-stop-hook.sh
++++ b/hooks/loop-codex-stop-hook.sh
+@@ -1189 +1189 @@
+-CODEX_AUTO_FLAG="--full-auto"
++CODEX_AUTO_ARGS=("--sandbox" "workspace-write")
+@@ -1191,3 +1191,3 @@
+-    CODEX_AUTO_FLAG="--dangerously-bypass-approvals-and-sandbox"
+-fi
+-CODEX_EXEC_ARGS+=("$CODEX_AUTO_FLAG" "-C" "$PROJECT_ROOT")
++    CODEX_AUTO_ARGS=("--dangerously-bypass-approvals-and-sandbox")
++fi
++CODEX_EXEC_ARGS+=("${CODEX_AUTO_ARGS[@]}" "-C" "$PROJECT_ROOT")
