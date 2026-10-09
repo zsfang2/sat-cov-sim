@@ -12,6 +12,9 @@ def evaluate_profile(profile, *, elevation_deg, slant_range_m, frequency_hz, los
         finite_number(value, name)
     if not 0 <= elevation_deg < 90 or min(slant_range_m, frequency_hz) <= 0 or loss_cap_db < 0:
         raise ValueError("require elevation in [0,90), positive range/frequency and nonnegative cap")
+    wavelength = 299792458.0/frequency_hz
+    if not math.isfinite(wavelength) or wavelength <= 0:
+        raise ValueError("terrain wavelength outside finite numerical range")
     el = math.radians(elevation_deg)
     horizontal_range = slant_range_m*math.cos(el)
     candidates = list(profile["samples"])
@@ -25,7 +28,6 @@ def evaluate_profile(profile, *, elevation_deg, slant_range_m, frequency_hz, los
     if not usable:
         reasons.append("no_interior_samples")
     detailed = []
-    wavelength = 299792458.0/frequency_hz
     excluded_behind_receiver = 0
     for sample in usable:
         relative = sample["relative_height_m"]
@@ -39,6 +41,8 @@ def evaluate_profile(profile, *, elevation_deg, slant_range_m, frequency_hz, los
         # Projection onto the direct ray, and perpendicular signed height.
         d1 = x*math.cos(el)+relative*math.sin(el)
         h = relative*math.cos(el)-x*math.sin(el)
+        if not math.isfinite(d1) or not math.isfinite(h):
+            raise ValueError("terrain projection outside finite numerical range")
         if interval_mode and d1 <= 0 and h < 0:
             # Below-ray points whose projection is behind the receiver are
             # outside the forward knife-edge domain, not missing terrain.
@@ -49,7 +53,11 @@ def evaluate_profile(profile, *, elevation_deg, slant_range_m, frequency_hz, los
             continue
         d2 = slant_range_m-d1
         fresnel = math.sqrt(wavelength*d1*d2/slant_range_m)
+        if not math.isfinite(fresnel) or fresnel <= 0:
+            raise ValueError("terrain Fresnel radius outside finite numerical range")
         v = math.sqrt(2)*h/fresnel
+        if not math.isfinite(v):
+            raise ValueError("terrain Fresnel parameter outside finite numerical range")
         # ITU-R P.526 single ideal knife-edge approximation. Signed clearance
         # matters: geometric LOS alone does not imply zero diffraction loss.
         raw = 0.0 if v <= -.78 else max(0.0, 6.9 + 20/math.log(10)*math.asinh(v-.1))
@@ -60,6 +68,14 @@ def evaluate_profile(profile, *, elevation_deg, slant_range_m, frequency_hz, los
     blocked = any(s["clearance_m"] < -1e-8 for s in detailed)
     complete = not reasons
     raw_loss = dominant["raw_loss_db"] if dominant else None
+    # All terrain candidates below the ray and behind the receiver contribute
+    # no forward knife edge. Interval candidates include projection vertices,
+    # so a forward interior segment cannot be hidden between negative endpoints.
+    if complete and dominant is None and excluded_behind_receiver:
+        raw_loss = 0.0
+    elif complete and dominant is None:
+        reasons.append("no_forward_knife_edge_candidates")
+        complete = False
     return {"los_status": "blocked" if blocked else ("clear_within_radius" if complete else "unknown"),
             "coverage_complete": complete, "incomplete_reasons": sorted(set(reasons)),
             "radius_m": profile["radius_m"], "truncated_before_satellite": horizontal_range > profile["radius_m"],

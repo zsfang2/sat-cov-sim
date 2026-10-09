@@ -26,6 +26,20 @@
 
 ## Applied Changes
 
+### M3-DOMAIN-09 — Forward-domain and finite arithmetic counterexamples
+
+| Field | Value |
+|---|---|
+| Kind | `physics_model_correction` within declared local single-edge domain; numeric validation |
+| Components affected | Terrain profile arithmetic, interval projection candidates, scalar local loss |
+| Before behavior | All-behind flat rays could report complete LOS with unexplained missing loss; tiny finite frequency could emit infinite Fresnel radius; projection interior vertex not retained explicitly |
+| After behavior | Zero local loss for completely known all-behind candidates; include interior projection vertex; explicit empty-domain reason; reject nonfinite derived wavelength/projection/Fresnel/height values |
+| Validation evidence | reports/m3/domain-matrix.md/json; 21 new tests, 330 total; 16 archived synthetic cases and 11520 real diagnostic queries |
+| Current generated maps change | `possibly` if affected terrain scalar outputs are regenerated; old map-generator path unchanged |
+| Published benchmark results change | `possibly` — no provenance to certify downstream independence |
+| Existing dataset impact | No rewriting or promotion of old artifacts |
+| Regeneration decision | Diagnostic cases/matrix/replay only; no formal reference regeneration |
+
 ### M3-CONTRACT-08 — Structured finite-range applicability
 
 | Field | Value |

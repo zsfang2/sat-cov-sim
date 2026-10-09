@@ -45,6 +45,8 @@ class TerrainGrid:
         object.__setattr__(self, "elevations_m", frozen)
 
     def sample(self, east_m, north_m):
+        finite_number(east_m, "east_m")
+        finite_number(north_m, "north_m")
         col = math.floor((east_m-self.west_m)/self.resolution_m)
         row = math.floor((self.north_m-north_m)/self.resolution_m)
         if not 0 <= row < self.elevations_m.shape[0] or not 0 <= col < self.elevations_m.shape[1]:
@@ -76,6 +78,8 @@ def terrain_profile(grid, *, receiver_east_m, receiver_north_m, antenna_agl_m,
             raise ValueError("effective radius must be >= 1000 km for local quadratic approximation")
     ground, ground_status = grid.sample(receiver_east_m, receiver_north_m)
     antenna = None if ground is None else ground+antenna_agl_m
+    if antenna is not None and not math.isfinite(antenna):
+        raise ValueError("terrain antenna height outside finite numerical range")
     az = math.radians(azimuth_deg)
     count = math.ceil(radius_m/step_m)
     distances = sorted(set(min(i*step_m, radius_m) for i in range(1, count+1)))
@@ -85,6 +89,8 @@ def terrain_profile(grid, *, receiver_east_m, receiver_north_m, antenna_agl_m,
                                         receiver_north_m+distance*math.cos(az))
         drop = 0.0 if effective_radius_m is None else distance**2/(2*effective_radius_m)
         relative = None if elevation is None or antenna is None else elevation-antenna-drop
+        if relative is not None and not math.isfinite(relative):
+            raise ValueError("terrain relative height outside finite numerical range")
         samples.append({"distance_m": distance, "elevation_m": elevation, "status": status,
                         "curvature_drop_m": drop, "relative_height_m": relative,
                         "angle_deg": None if relative is None else math.degrees(math.atan2(relative, distance))})

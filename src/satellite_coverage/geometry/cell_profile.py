@@ -50,6 +50,8 @@ def cell_profile(grid, *, receiver_east_m, receiver_north_m, antenna_agl_m,
         distances = {left, right}
         distances.update(left+(right-left)*i/count for i in range(1, count))
         delta = None if height is None or ground is None else height-ground-antenna_agl_m
+        if delta is not None and not math.isfinite(delta):
+            raise ValueError("terrain relative height outside finite numerical range")
         if effective_radius_m is not None and delta is not None and delta < 0:
             critical = math.sqrt(-2*effective_radius_m*delta)
             if left < critical < right:

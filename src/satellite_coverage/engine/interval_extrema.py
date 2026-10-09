@@ -38,11 +38,18 @@ def loss_extrema(profile, elevation_deg, slant_range_m, frequency_hz):
             vertex = cosine/(2*coefficient*sine)
             if left < vertex < right:
                 distances.append(projected(vertex))
+                output.append({"distance_m": vertex,
+                               "relative_height_m": delta-coefficient*vertex*vertex,
+                               "interval_index": index, "candidate_kind": "projection_vertex"})
+        if not all(math.isfinite(d) for d in distances):
+            raise ValueError("terrain projection outside finite numerical range")
         lower, upper = max(0, min(distances)), min(slant_range_m, max(distances))
         if lower >= upper:
             continue
         peak = min(upper, max(lower, slant_range_m/2))
         fresnel_max = math.sqrt(wavelength*peak*(slant_range_m-peak)/slant_range_m)
+        if not math.isfinite(fresnel_max) or fresnel_max <= 0:
+            raise ValueError("terrain Fresnel radius outside finite numerical range")
         h_left = (delta-coefficient*left*left)*cosine-left*sine
         if h_left < 0 and math.sqrt(2)*h_left/fresnel_max <= -.78:
             continue
@@ -57,6 +64,8 @@ def loss_extrema(profile, elevation_deg, slant_range_m, frequency_hz):
         h = relative*cosine - x*sine
         numerator = 2*h.deriv()*d*(slant_range_m-d) - h*d.deriv()*(slant_range_m-2*d)
         scale = float(np.max(np.abs(numerator.coef)))
+        if not math.isfinite(scale):
+            raise ValueError("terrain stationary polynomial outside finite numerical range")
         if scale == 0:
             continue
         for root in (numerator/scale).roots():

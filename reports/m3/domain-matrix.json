@@ -1,0 +1,1770 @@
+{
+  "regression_replay": {
+    "after": "output/m3-domain-guard-20261009",
+    "artifact_hashes_verified": true,
+    "artifacts": {
+      "files": {
+        "config.json": "sha256:7dd0a2c3221a355be69b4a0b2d5ab9614cad265e075796055d1fde77d4f18a1f",
+        "environment.json": "sha256:fd09d2158a638a680953b8d1dcb30916dc01edb1b2197456610d16a004812c6e",
+        "input.tle": "sha256:e661f17444e4fdc4eed85ccfef437d87f33796193bf8ca000bdb3058715b9b7f",
+        "links-step-15.json": "sha256:0ef63b3ec44d03973232c423215a1b471a76d445eea9ad00a4365ee5cae24975",
+        "links-step-60.json": "sha256:ed9b509ae25026e43108d06941dd8de9361d521e8187c6050261f12a8003d2ff",
+        "links-step-7.5.json": "sha256:8a848e6876e75914a635b053b8c5ef9e9d7d7313ca78d88362cbfca9249dc5fa",
+        "replay.json": "sha256:33af16e31777b576cb3ada3923839cfe4fb5aa2bcd733a64da6c383a0d0137dd",
+        "resources.json": "sha256:cd7ddf25ea15325dcb28c3005f7b0523577bb19dd97ee553cbb7e34f98e3ac95",
+        "run.log": "sha256:55dbd31d27c78cb222801a7d88d79a6f6e7a31a1eaef9c99a0b647b4e56f8ed7",
+        "sources.zip": "sha256:1d7534c4a98e3b14acc3973f32208f89e45e45077f7c25f6ac3557e2529239cf",
+        "summary.json": "sha256:fd2b5d66449b2b875cf7318ef30d378222cb7eae5ac7e9e8dd582a4d7ffbf0b0",
+        "terrain.json": "sha256:f1dfc684b34df9f5ebcb5e5d96be0a74b0ba4137d73dbd9ffe40e283d200bc07",
+        "terrain_ellipsoid_m.npy": "sha256:dec602f3c073d5497b92280f7931d08450a10633add5c247913e3cf7b457d0c9",
+        "validation.json": "sha256:c040a0d756739e0a9bdd94dad557cc3b375ea2ab0b156a6afb58e032c159afff"
+      },
+      "schema_version": 1
+    },
+    "before": "output/m3-contract-guard-20261009",
+    "comparisons": [
+      {
+        "after_sha256": "sha256:ed9b509ae25026e43108d06941dd8de9361d521e8187c6050261f12a8003d2ff",
+        "before_sha256": "sha256:ed9b509ae25026e43108d06941dd8de9361d521e8187c6050261f12a8003d2ff",
+        "exact_result_equal": true,
+        "step_m": 60.0
+      },
+      {
+        "after_sha256": "sha256:0ef63b3ec44d03973232c423215a1b471a76d445eea9ad00a4365ee5cae24975",
+        "before_sha256": "sha256:0ef63b3ec44d03973232c423215a1b471a76d445eea9ad00a4365ee5cae24975",
+        "exact_result_equal": true,
+        "step_m": 15.0
+      },
+      {
+        "after_sha256": "sha256:8a848e6876e75914a635b053b8c5ef9e9d7d7313ca78d88362cbfca9249dc5fa",
+        "before_sha256": "sha256:8a848e6876e75914a635b053b8c5ef9e9d7d7313ca78d88362cbfca9249dc5fa",
+        "exact_result_equal": true,
+        "step_m": 7.5
+      }
+    ]
+  },
+  "runs": [
+    {
+      "artifact_hashes_verified": true,
+      "artifacts": {
+        "files": {
+          "config.json": "sha256:429f9331d5b1380e3cf6c3218d4c7b8aed9f1e124661db68686d88e0a8ad449f",
+          "curvature-geometry.json": "sha256:5008cc17bf0ea318887ffa9c80fd32f627fac4082888300481df9ee23fd700f9",
+          "environment.json": "sha256:962794cf74abca0f3fc20d14b69f2eaf13942a2ace2bfe17b879c2942b56fd0c",
+          "geoid_evidence.json": "sha256:1c5d20aaa22581f4851b584f72f0da31500e0d6d15bc9005e04bc04eb85bff68",
+          "qinling_foothill-32-grid.npy": "sha256:f2f535d97f4ec27990d28733b8edb8405fde72f27b4602dff916e94d9c4ce175",
+          "qinling_foothill-32-read.json": "sha256:5ce4b10e67668e349cc38538454b48e79cd78a45b64e798dc0086150825b7a5e",
+          "qinling_foothill-32-terrain.json": "sha256:c43da2ac6b7bfb295173249e061aaa1bcbbcd9ddce6aa33af839d890942015ae",
+          "qinling_foothill-40-grid.npy": "sha256:32f85ba0a773b432bb6fa5737d4dc400e8b66d94d800bdfbe0f27f527a75da1f",
+          "qinling_foothill-40-read.json": "sha256:a246c504d35e2a653a9e4e5a27b3a33477ed791716bd8d8760ded6ab4ed20ec3",
+          "qinling_foothill-40-terrain.json": "sha256:dd35d86a71aea73074df8b12f56f6ce899a2e054632ad8d36805601010e63f98",
+          "qinling_foothill-60-grid.npy": "sha256:c20b148428e6ddcd94fbb7e07cccff89f4d86f60045dabd80a85147bba6a6a4f",
+          "qinling_foothill-60-read.json": "sha256:509245c7d6250d06920ed9ac613929bfd4381f14426256e3625fd7961a9eddf3",
+          "qinling_foothill-60-terrain.json": "sha256:128c43d8c5433f79a6cec42b3418f311825e26d1674a4524807026885e0432a5",
+          "qinling_foothill-queries.json": "sha256:93fa4e9082b2044f3b43ff746230a606eba40e9ecc4bd412c257eb7dffaadc61",
+          "qinling_mountain-32-grid.npy": "sha256:c90b49187ca05410c64a7430ced5b0b0907388d10eeb6c73c89e1391f1ec19c8",
+          "qinling_mountain-32-read.json": "sha256:16f6db6e09508193f46a2e4bfb20ea3c032d5346fc68c22b7ea57e0c4a58ce0a",
+          "qinling_mountain-32-terrain.json": "sha256:49902e6b90c485dd579a821fce505bea9c14918d73b5461a7ec4f2a43a8e0372",
+          "qinling_mountain-40-grid.npy": "sha256:8376ccefc67de2d8e1d4f51e26c1767b7d0b3ffd2572b4a7e4b6dc7851338de1",
+          "qinling_mountain-40-read.json": "sha256:17e9de416d74ef5d5aa090865c6c9d79e25f2d51f913866585ac67fecba94556",
+          "qinling_mountain-40-terrain.json": "sha256:6d529506eda02aa863efa157d86b498a75bd63495eec6f804f3a654a67c3b51a",
+          "qinling_mountain-60-grid.npy": "sha256:ea5fd32a04d677a457fb4cca702c4d6b5cef967a7517f2c8518b8d7f97485f0c",
+          "qinling_mountain-60-read.json": "sha256:7ab8ceb3f3c99315ae77fd1ebed024f293e86458f45cd8357177edb1217f4edf",
+          "qinling_mountain-60-terrain.json": "sha256:1a734c326b5deb505258bba102124869b837d73e9d78cb7bd036d608ea7f284b",
+          "qinling_mountain-queries.json": "sha256:73a7a23b4d6f93bba90e691db59fc918379554610b0a603acf75a1816d98130c",
+          "resources.json": "sha256:c7b7d81560d04f8e209e1441c59f763252f247f46aaf560bae6f6759dc80ae0a",
+          "run.log": "sha256:6cf8cfb74aecbb620b3cce8c04ebd607cef106ed8e8967b7110a94db1b8e76d6",
+          "source_evidence.json": "sha256:88c497cba506e0fd51fc19c26659bb695ad913f52ffdf97e58d678e4d147dd8a",
+          "sources.zip": "sha256:23d5361db3bb543a4d6b42558f0f632345bfcf9466319184097a7680329e5adc",
+          "summary.json": "sha256:a5e7f6eec6a1ba936045da3fe870773c341ac737dee18dca50630798e4047ed8",
+          "validation.json": "sha256:34b8b90603eac65c30e67b6549921b2c070327f35072aa9df4c243a4188bc805",
+          "xian_city-32-grid.npy": "sha256:45e35032009da8338480c6f80935e71ee712f575d57ae90ecb09fa7ab51c8a57",
+          "xian_city-32-read.json": "sha256:e8dc69b9aad697f6c980c399cc5ae2d1b82cd4bd3898bcb2691d38d9bd0cf7a4",
+          "xian_city-32-terrain.json": "sha256:a0fd95d3dc2cc0bf68fbe6371da6546aa7ee1c0d8e4cc90c657774c5441bc92e",
+          "xian_city-40-grid.npy": "sha256:cff0c0610d66cd33c97fa6888cf50b438541d831ff47cb8d00829658164d3337",
+          "xian_city-40-read.json": "sha256:d4743c78d42038c422cce81e8273a3e327744d24be8f36c57a915f025f32f575",
+          "xian_city-40-terrain.json": "sha256:2377da2617a5099da7053f2e0ce9cbe2790e9f4007ba32a3a8f363c045b75f5b",
+          "xian_city-60-grid.npy": "sha256:19833b34a9ded8e6f097d0aff31b06eccd93044097017111c14ca497239491af",
+          "xian_city-60-read.json": "sha256:a5312163cea9d41c38781f20fe99154eede2bb4e4f651f7595e6cf03512219f6",
+          "xian_city-60-terrain.json": "sha256:ef2b3e7b201ffc2c8261583d43edd0e8eec9df130f78e8899a53794e9c258a65",
+          "xian_city-queries.json": "sha256:c639e517c1d70dca59f9b9f732ef47f29beec88579b28c6cad09199a50ee6e69"
+        },
+        "schema_version": 1
+      },
+      "config": {
+        "azimuths_deg": [
+          0,
+          15,
+          30,
+          45,
+          60,
+          75,
+          90,
+          105,
+          120,
+          135,
+          150,
+          165,
+          180,
+          195,
+          210,
+          225,
+          240,
+          255,
+          270,
+          285,
+          300,
+          315,
+          330,
+          345
+        ],
+        "diagnostic_thresholds": {
+          "horizon_deg": 0.1,
+          "raw_loss_db": 1
+        },
+        "effective_radii_m": [
+          null,
+          6371000.0,
+          8494666.666666666
+        ],
+        "elevations_deg": [
+          0,
+          1,
+          5,
+          30,
+          80
+        ],
+        "frequency_hz": 14500000000.0,
+        "grid_resolutions_m": [
+          32,
+          40,
+          60
+        ],
+        "heights_m": [
+          2,
+          10
+        ],
+        "radius_m": 12000.0,
+        "range_m": 550000,
+        "scope": "sampled native-cell comparison and model sensitivity; not physical truth or business acceptance",
+        "sites": [
+          [
+            "xian_city",
+            108.9,
+            34.24
+          ],
+          [
+            "qinling_foothill",
+            108.9,
+            34.05
+          ],
+          [
+            "qinling_mountain",
+            108.9,
+            33.9
+          ]
+        ],
+        "steps_m": [
+          30,
+          15,
+          7.5
+        ]
+      },
+      "curvature-geometry": [
+        {
+          "effective_radius_m": 1000000.0,
+          "horizontal_delta_m": 0.0044999979750173225,
+          "radius_m": 3000.0,
+          "vertical_drop_delta_m": 3.37499898783733e-06
+        },
+        {
+          "effective_radius_m": 1000000.0,
+          "horizontal_delta_m": 0.2879979264052963,
+          "radius_m": 12000.0,
+          "vertical_drop_delta_m": 0.0008639958528249281
+        },
+        {
+          "effective_radius_m": 1000000.0,
+          "horizontal_delta_m": 2.3039336457113677,
+          "radius_m": 24000.0,
+          "vertical_drop_delta_m": 0.013823734581876579
+        },
+        {
+          "effective_radius_m": 1000000.0,
+          "horizontal_delta_m": 18.429876750073163,
+          "radius_m": 48000.0,
+          "vertical_drop_delta_m": 0.22116701376762649
+        },
+        {
+          "effective_radius_m": 1000000.0,
+          "horizontal_delta_m": 166.5833531718381,
+          "radius_m": 100000.0,
+          "vertical_drop_delta_m": 4.165278025765474
+        },
+        {
+          "effective_radius_m": 6371000.0,
+          "horizontal_delta_m": 0.00011086572430940578,
+          "radius_m": 3000.0,
+          "vertical_drop_delta_m": 1.3051215441706177e-08
+        },
+        {
+          "effective_radius_m": 6371000.0,
+          "horizontal_delta_m": 0.007095405177096836,
+          "radius_m": 12000.0,
+          "vertical_drop_delta_m": 3.3411107818182018e-06
+        },
+        {
+          "effective_radius_m": 6371000.0,
+          "horizontal_delta_m": 0.056763211214274634,
+          "radius_m": 24000.0,
+          "vertical_drop_delta_m": 5.345775354470561e-05
+        },
+        {
+          "effective_radius_m": 6371000.0,
+          "horizontal_delta_m": 0.454104723103228,
+          "radius_m": 48000.0,
+          "vertical_drop_delta_m": 0.0008553228429946103
+        },
+        {
+          "effective_radius_m": 6371000.0,
+          "horizontal_delta_m": 4.106087403197307,
+          "radius_m": 100000.0,
+          "vertical_drop_delta_m": 0.016112479451408035
+        },
+        {
+          "effective_radius_m": 8494666.666666666,
+          "horizontal_delta_m": 6.236197032194468e-05,
+          "radius_m": 3000.0,
+          "vertical_drop_delta_m": 5.505981559572604e-09
+        },
+        {
+          "effective_radius_m": 8494666.666666666,
+          "horizontal_delta_m": 0.003991165720435674,
+          "radius_m": 12000.0,
+          "vertical_drop_delta_m": 1.4095311833273172e-06
+        },
+        {
+          "effective_radius_m": 8494666.666666666,
+          "horizontal_delta_m": 0.031929316217429005,
+          "radius_m": 24000.0,
+          "vertical_drop_delta_m": 2.2552494442606985e-05
+        },
+        {
+          "effective_radius_m": 8494666.666666666,
+          "horizontal_delta_m": 0.25543422390910564,
+          "radius_m": 48000.0,
+          "vertical_drop_delta_m": 0.0003608396230845301
+        },
+        {
+          "effective_radius_m": 8494666.666666666,
+          "horizontal_delta_m": 2.3096866118721664,
+          "radius_m": 100000.0,
+          "vertical_drop_delta_m": 0.006797476690962867
+        }
+      ],
+      "path": "output/m3-domain-20261009",
+      "resources": {
+        "json_write_time_s_before_resource_record": 0.09188768174499273,
+        "peak_rss": 184980,
+        "wall_time_s": 81.3307137619704
+      },
+      "summary": [
+        {
+          "comparisons": [
+            {
+              "factor": "native_to_local",
+              "horizon_over_0_1_deg": 40,
+              "known_loss_pairs": 209,
+              "left": "local-32-uniform-15",
+              "loss_over_1_db": 21,
+              "max_horizon_delta_deg": 5.6455823530583515,
+              "max_point_height_delta_m": 19.996896465047314,
+              "max_raw_loss_delta_db": 25.35301251038809,
+              "pairs": 240,
+              "right": "native-15",
+              "state_disagreements": 5,
+              "unavailable_pairs": 31
+            },
+            {
+              "factor": "native_to_local",
+              "horizon_over_0_1_deg": 55,
+              "known_loss_pairs": 209,
+              "left": "local-40-uniform-15",
+              "loss_over_1_db": 29,
+              "max_horizon_delta_deg": 5.6455823530583515,
+              "max_point_height_delta_m": 19.996896465047314,
+              "max_raw_loss_delta_db": 25.35301251038809,
+              "pairs": 240,
+              "right": "native-15",
+              "state_disagreements": 6,
+              "unavailable_pairs": 31
+            },
+            {
+              "factor": "native_to_local",
+              "horizon_over_0_1_deg": 115,
+              "known_loss_pairs": 209,
+              "left": "local-60-uniform-15",
+              "loss_over_1_db": 56,
+              "max_horizon_delta_deg": 12.419429746152304,
+              "max_point_height_delta_m": 16.001391317749096,
+              "max_raw_loss_delta_db": 34.15136155247016,
+              "pairs": 240,
+              "right": "native-15",
+              "state_disagreements": 31,
+              "unavailable_pairs": 31
+            },
+            {
+              "factor": "native_sampling",
+              "horizon_over_0_1_deg": 65,
+              "known_loss_pairs": 200,
+              "left": "native-30",
+              "loss_over_1_db": 32,
+              "max_horizon_delta_deg": 4.146213721443916,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 21.026800953157863,
+              "pairs": 240,
+              "right": "native-7.5",
+              "state_disagreements": 21,
+              "unavailable_pairs": 40
+            },
+            {
+              "factor": "local_sampling",
+              "horizon_over_0_1_deg": 40,
+              "known_loss_pairs": 192,
+              "left": "local-60-uniform-30",
+              "loss_over_1_db": 11,
+              "max_horizon_delta_deg": 2.263336880400404,
+              "max_point_height_delta_m": 14.997461250813899,
+              "max_raw_loss_delta_db": 19.654599659393178,
+              "pairs": 240,
+              "right": "local-60-uniform-7.5",
+              "state_disagreements": 26,
+              "unavailable_pairs": 48
+            },
+            {
+              "factor": "local_sampling",
+              "horizon_over_0_1_deg": 0,
+              "known_loss_pairs": 240,
+              "left": "local-60-interval-30",
+              "loss_over_1_db": 0,
+              "max_horizon_delta_deg": 0.0,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 0.0,
+              "pairs": 240,
+              "right": "local-60-interval-7.5",
+              "state_disagreements": 0,
+              "unavailable_pairs": 0
+            },
+            {
+              "factor": "native_sampling",
+              "horizon_over_0_1_deg": 55,
+              "known_loss_pairs": 200,
+              "left": "native-15",
+              "loss_over_1_db": 27,
+              "max_horizon_delta_deg": 4.146213721443916,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 21.026800953157863,
+              "pairs": 240,
+              "right": "native-7.5",
+              "state_disagreements": 11,
+              "unavailable_pairs": 40
+            },
+            {
+              "factor": "local_sampling",
+              "horizon_over_0_1_deg": 25,
+              "known_loss_pairs": 192,
+              "left": "local-60-uniform-15",
+              "loss_over_1_db": 5,
+              "max_horizon_delta_deg": 0.5075486770656328,
+              "max_point_height_delta_m": 16.001391317749096,
+              "max_raw_loss_delta_db": 1.560120476843501,
+              "pairs": 240,
+              "right": "local-60-uniform-7.5",
+              "state_disagreements": 24,
+              "unavailable_pairs": 48
+            },
+            {
+              "factor": "local_sampling",
+              "horizon_over_0_1_deg": 0,
+              "known_loss_pairs": 240,
+              "left": "local-60-interval-15",
+              "loss_over_1_db": 0,
+              "max_horizon_delta_deg": 0.0,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 0.0,
+              "pairs": 240,
+              "right": "local-60-interval-7.5",
+              "state_disagreements": 0,
+              "unavailable_pairs": 0
+            },
+            {
+              "factor": "local_resolution",
+              "horizon_over_0_1_deg": 115,
+              "known_loss_pairs": 240,
+              "left": "local-40-interval-15",
+              "loss_over_1_db": 43,
+              "max_horizon_delta_deg": 3.3171696131645767,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 15.866340525789939,
+              "pairs": 240,
+              "right": "local-32-interval-15",
+              "state_disagreements": 5,
+              "unavailable_pairs": 0
+            },
+            {
+              "factor": "local_resolution",
+              "horizon_over_0_1_deg": 105,
+              "known_loss_pairs": 240,
+              "left": "local-60-interval-15",
+              "loss_over_1_db": 56,
+              "max_horizon_delta_deg": 13.540620500577642,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 32.40246007660886,
+              "pairs": 240,
+              "right": "local-32-interval-15",
+              "state_disagreements": 25,
+              "unavailable_pairs": 0
+            },
+            {
+              "factor": "curvature",
+              "horizon_over_0_1_deg": 0,
+              "known_loss_pairs": 240,
+              "left": "curvature-none",
+              "loss_over_1_db": 16,
+              "max_horizon_delta_deg": 0.05152988963591959,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 4.888388632681108,
+              "pairs": 240,
+              "right": "local-60-interval-15",
+              "state_disagreements": 1,
+              "unavailable_pairs": 0
+            },
+            {
+              "factor": "curvature",
+              "horizon_over_0_1_deg": 0,
+              "known_loss_pairs": 240,
+              "left": "curvature-4R3",
+              "loss_over_1_db": 2,
+              "max_horizon_delta_deg": 0.012882543537127367,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 1.3764587962323258,
+              "pairs": 240,
+              "right": "local-60-interval-15",
+              "state_disagreements": 0,
+              "unavailable_pairs": 0
+            },
+            {
+              "factor": "spherical_geometry",
+              "horizon_over_0_1_deg": 0,
+              "known_loss_pairs": 216,
+              "left": "local-60-spherical-15",
+              "loss_over_1_db": 0,
+              "max_horizon_delta_deg": 1.1808457113460236e-05,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 9.287194972529278e-05,
+              "pairs": 240,
+              "right": "local-60-uniform-15",
+              "state_disagreements": 0,
+              "unavailable_pairs": 24
+            }
+          ],
+          "queries": 3840,
+          "site": "xian_city",
+          "variants": {
+            "curvature-4R3": {
+              "cap_denominator": 240,
+              "capped": 0,
+              "incomplete_reasons": {},
+              "known_loss": 240,
+              "queries": 240,
+              "unknown_loss": 0
+            },
+            "curvature-none": {
+              "cap_denominator": 240,
+              "capped": 0,
+              "incomplete_reasons": {},
+              "known_loss": 240,
+              "queries": 240,
+              "unknown_loss": 0
+            },
+            "local-32-interval-15": {
+              "cap_denominator": 240,
+              "capped": 0,
+              "incomplete_reasons": {},
+              "known_loss": 240,
+              "queries": 240,
+              "unknown_loss": 0
+            },
+            "local-32-uniform-15": {
+              "cap_denominator": 210,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 30
+              },
+              "known_loss": 210,
+              "queries": 240,
+              "unknown_loss": 30
+            },
+            "local-40-interval-15": {
+              "cap_denominator": 240,
+              "capped": 0,
+              "incomplete_reasons": {},
+              "known_loss": 240,
+              "queries": 240,
+              "unknown_loss": 0
+            },
+            "local-40-uniform-15": {
+              "cap_denominator": 210,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 30
+              },
+              "known_loss": 210,
+              "queries": 240,
+              "unknown_loss": 30
+            },
+            "local-60-interval-15": {
+              "cap_denominator": 240,
+              "capped": 0,
+              "incomplete_reasons": {},
+              "known_loss": 240,
+              "queries": 240,
+              "unknown_loss": 0
+            },
+            "local-60-interval-30": {
+              "cap_denominator": 240,
+              "capped": 0,
+              "incomplete_reasons": {},
+              "known_loss": 240,
+              "queries": 240,
+              "unknown_loss": 0
+            },
+            "local-60-interval-7.5": {
+              "cap_denominator": 240,
+              "capped": 0,
+              "incomplete_reasons": {},
+              "known_loss": 240,
+              "queries": 240,
+              "unknown_loss": 0
+            },
+            "local-60-spherical-15": {
+              "cap_denominator": 216,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 24
+              },
+              "known_loss": 216,
+              "queries": 240,
+              "unknown_loss": 24
+            },
+            "local-60-uniform-15": {
+              "cap_denominator": 216,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 24
+              },
+              "known_loss": 216,
+              "queries": 240,
+              "unknown_loss": 24
+            },
+            "local-60-uniform-30": {
+              "cap_denominator": 216,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 24
+              },
+              "known_loss": 216,
+              "queries": 240,
+              "unknown_loss": 24
+            },
+            "local-60-uniform-7.5": {
+              "cap_denominator": 192,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 48
+              },
+              "known_loss": 192,
+              "queries": 240,
+              "unknown_loss": 48
+            },
+            "native-15": {
+              "cap_denominator": 209,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 31
+              },
+              "known_loss": 209,
+              "queries": 240,
+              "unknown_loss": 31
+            },
+            "native-30": {
+              "cap_denominator": 218,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 22
+              },
+              "known_loss": 218,
+              "queries": 240,
+              "unknown_loss": 22
+            },
+            "native-7.5": {
+              "cap_denominator": 200,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 40
+              },
+              "known_loss": 200,
+              "queries": 240,
+              "unknown_loss": 40
+            }
+          }
+        },
+        {
+          "comparisons": [
+            {
+              "factor": "native_to_local",
+              "horizon_over_0_1_deg": 20,
+              "known_loss_pairs": 216,
+              "left": "local-32-uniform-15",
+              "loss_over_1_db": 1,
+              "max_horizon_delta_deg": 0.23780963483785733,
+              "max_point_height_delta_m": 52.9948865496317,
+              "max_raw_loss_delta_db": 1.7666721798226002,
+              "pairs": 240,
+              "right": "native-15",
+              "state_disagreements": 0,
+              "unavailable_pairs": 24
+            },
+            {
+              "factor": "native_to_local",
+              "horizon_over_0_1_deg": 35,
+              "known_loss_pairs": 216,
+              "left": "local-40-uniform-15",
+              "loss_over_1_db": 2,
+              "max_horizon_delta_deg": 0.5310851389358525,
+              "max_point_height_delta_m": 58.005198947143526,
+              "max_raw_loss_delta_db": 5.943177373056189,
+              "pairs": 240,
+              "right": "native-15",
+              "state_disagreements": 0,
+              "unavailable_pairs": 24
+            },
+            {
+              "factor": "native_to_local",
+              "horizon_over_0_1_deg": 45,
+              "known_loss_pairs": 216,
+              "left": "local-60-uniform-15",
+              "loss_over_1_db": 3,
+              "max_horizon_delta_deg": 0.3099159640556284,
+              "max_point_height_delta_m": 52.9948865496317,
+              "max_raw_loss_delta_db": 5.943177373056189,
+              "pairs": 240,
+              "right": "native-15",
+              "state_disagreements": 0,
+              "unavailable_pairs": 24
+            },
+            {
+              "factor": "native_sampling",
+              "horizon_over_0_1_deg": 0,
+              "known_loss_pairs": 192,
+              "left": "native-30",
+              "loss_over_1_db": 0,
+              "max_horizon_delta_deg": 0.08246778293906143,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 0.11254896927636793,
+              "pairs": 240,
+              "right": "native-7.5",
+              "state_disagreements": 24,
+              "unavailable_pairs": 48
+            },
+            {
+              "factor": "local_sampling",
+              "horizon_over_0_1_deg": 10,
+              "known_loss_pairs": 192,
+              "left": "local-60-uniform-30",
+              "loss_over_1_db": 0,
+              "max_horizon_delta_deg": 0.29108729791358634,
+              "max_point_height_delta_m": 52.00248444383408,
+              "max_raw_loss_delta_db": 0.21907206431541937,
+              "pairs": 240,
+              "right": "local-60-uniform-7.5",
+              "state_disagreements": 24,
+              "unavailable_pairs": 48
+            },
+            {
+              "factor": "local_sampling",
+              "horizon_over_0_1_deg": 0,
+              "known_loss_pairs": 240,
+              "left": "local-60-interval-30",
+              "loss_over_1_db": 0,
+              "max_horizon_delta_deg": 0.0,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 0.0,
+              "pairs": 240,
+              "right": "local-60-interval-7.5",
+              "state_disagreements": 0,
+              "unavailable_pairs": 0
+            },
+            {
+              "factor": "native_sampling",
+              "horizon_over_0_1_deg": 0,
+              "known_loss_pairs": 192,
+              "left": "native-15",
+              "loss_over_1_db": 0,
+              "max_horizon_delta_deg": 0.02029985042246185,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 0.11254896927636793,
+              "pairs": 240,
+              "right": "native-7.5",
+              "state_disagreements": 24,
+              "unavailable_pairs": 48
+            },
+            {
+              "factor": "local_sampling",
+              "horizon_over_0_1_deg": 0,
+              "known_loss_pairs": 192,
+              "left": "local-60-uniform-15",
+              "loss_over_1_db": 0,
+              "max_horizon_delta_deg": 0.03504709240982962,
+              "max_point_height_delta_m": 52.9948865496317,
+              "max_raw_loss_delta_db": 0.06070429591108528,
+              "pairs": 240,
+              "right": "local-60-uniform-7.5",
+              "state_disagreements": 24,
+              "unavailable_pairs": 48
+            },
+            {
+              "factor": "local_sampling",
+              "horizon_over_0_1_deg": 0,
+              "known_loss_pairs": 240,
+              "left": "local-60-interval-15",
+              "loss_over_1_db": 0,
+              "max_horizon_delta_deg": 0.0,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 0.0,
+              "pairs": 240,
+              "right": "local-60-interval-7.5",
+              "state_disagreements": 0,
+              "unavailable_pairs": 0
+            },
+            {
+              "factor": "local_resolution",
+              "horizon_over_0_1_deg": 15,
+              "known_loss_pairs": 240,
+              "left": "local-40-interval-15",
+              "loss_over_1_db": 1,
+              "max_horizon_delta_deg": 0.5270251410791221,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 5.943177373056189,
+              "pairs": 240,
+              "right": "local-32-interval-15",
+              "state_disagreements": 0,
+              "unavailable_pairs": 0
+            },
+            {
+              "factor": "local_resolution",
+              "horizon_over_0_1_deg": 40,
+              "known_loss_pairs": 240,
+              "left": "local-60-interval-15",
+              "loss_over_1_db": 2,
+              "max_horizon_delta_deg": 0.21150243915742184,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 5.9481191263988595,
+              "pairs": 240,
+              "right": "local-32-interval-15",
+              "state_disagreements": 0,
+              "unavailable_pairs": 0
+            },
+            {
+              "factor": "curvature",
+              "horizon_over_0_1_deg": 0,
+              "known_loss_pairs": 240,
+              "left": "curvature-none",
+              "loss_over_1_db": 7,
+              "max_horizon_delta_deg": 0.053954432075647096,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 7.76592657387205,
+              "pairs": 240,
+              "right": "local-60-interval-15",
+              "state_disagreements": 0,
+              "unavailable_pairs": 0
+            },
+            {
+              "factor": "curvature",
+              "horizon_over_0_1_deg": 0,
+              "known_loss_pairs": 240,
+              "left": "curvature-4R3",
+              "loss_over_1_db": 2,
+              "max_horizon_delta_deg": 0.013488516854451182,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 2.1671907115859037,
+              "pairs": 240,
+              "right": "local-60-interval-15",
+              "state_disagreements": 0,
+              "unavailable_pairs": 0
+            },
+            {
+              "factor": "spherical_geometry",
+              "horizon_over_0_1_deg": 0,
+              "known_loss_pairs": 216,
+              "left": "local-60-spherical-15",
+              "loss_over_1_db": 0,
+              "max_horizon_delta_deg": 0.0013754943516328666,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 0.0054467407748504115,
+              "pairs": 240,
+              "right": "local-60-uniform-15",
+              "state_disagreements": 0,
+              "unavailable_pairs": 24
+            }
+          ],
+          "queries": 3840,
+          "site": "qinling_foothill",
+          "variants": {
+            "curvature-4R3": {
+              "cap_denominator": 240,
+              "capped": 0,
+              "incomplete_reasons": {},
+              "known_loss": 240,
+              "queries": 240,
+              "unknown_loss": 0
+            },
+            "curvature-none": {
+              "cap_denominator": 240,
+              "capped": 0,
+              "incomplete_reasons": {},
+              "known_loss": 240,
+              "queries": 240,
+              "unknown_loss": 0
+            },
+            "local-32-interval-15": {
+              "cap_denominator": 240,
+              "capped": 0,
+              "incomplete_reasons": {},
+              "known_loss": 240,
+              "queries": 240,
+              "unknown_loss": 0
+            },
+            "local-32-uniform-15": {
+              "cap_denominator": 216,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 24
+              },
+              "known_loss": 216,
+              "queries": 240,
+              "unknown_loss": 24
+            },
+            "local-40-interval-15": {
+              "cap_denominator": 240,
+              "capped": 0,
+              "incomplete_reasons": {},
+              "known_loss": 240,
+              "queries": 240,
+              "unknown_loss": 0
+            },
+            "local-40-uniform-15": {
+              "cap_denominator": 216,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 24
+              },
+              "known_loss": 216,
+              "queries": 240,
+              "unknown_loss": 24
+            },
+            "local-60-interval-15": {
+              "cap_denominator": 240,
+              "capped": 0,
+              "incomplete_reasons": {},
+              "known_loss": 240,
+              "queries": 240,
+              "unknown_loss": 0
+            },
+            "local-60-interval-30": {
+              "cap_denominator": 240,
+              "capped": 0,
+              "incomplete_reasons": {},
+              "known_loss": 240,
+              "queries": 240,
+              "unknown_loss": 0
+            },
+            "local-60-interval-7.5": {
+              "cap_denominator": 240,
+              "capped": 0,
+              "incomplete_reasons": {},
+              "known_loss": 240,
+              "queries": 240,
+              "unknown_loss": 0
+            },
+            "local-60-spherical-15": {
+              "cap_denominator": 216,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 24
+              },
+              "known_loss": 216,
+              "queries": 240,
+              "unknown_loss": 24
+            },
+            "local-60-uniform-15": {
+              "cap_denominator": 216,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 24
+              },
+              "known_loss": 216,
+              "queries": 240,
+              "unknown_loss": 24
+            },
+            "local-60-uniform-30": {
+              "cap_denominator": 216,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 24
+              },
+              "known_loss": 216,
+              "queries": 240,
+              "unknown_loss": 24
+            },
+            "local-60-uniform-7.5": {
+              "cap_denominator": 192,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 48
+              },
+              "known_loss": 192,
+              "queries": 240,
+              "unknown_loss": 48
+            },
+            "native-15": {
+              "cap_denominator": 216,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 24
+              },
+              "known_loss": 216,
+              "queries": 240,
+              "unknown_loss": 24
+            },
+            "native-30": {
+              "cap_denominator": 216,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 24
+              },
+              "known_loss": 216,
+              "queries": 240,
+              "unknown_loss": 24
+            },
+            "native-7.5": {
+              "cap_denominator": 192,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 48
+              },
+              "known_loss": 192,
+              "queries": 240,
+              "unknown_loss": 48
+            }
+          }
+        },
+        {
+          "comparisons": [
+            {
+              "factor": "native_to_local",
+              "horizon_over_0_1_deg": 130,
+              "known_loss_pairs": 199,
+              "left": "local-32-uniform-15",
+              "loss_over_1_db": 14,
+              "max_horizon_delta_deg": 21.007504895548248,
+              "max_point_height_delta_m": 65.00211208902988,
+              "max_raw_loss_delta_db": 26.975460278187104,
+              "pairs": 240,
+              "right": "native-15",
+              "state_disagreements": 2,
+              "unavailable_pairs": 41
+            },
+            {
+              "factor": "native_to_local",
+              "horizon_over_0_1_deg": 175,
+              "known_loss_pairs": 199,
+              "left": "local-40-uniform-15",
+              "loss_over_1_db": 34,
+              "max_horizon_delta_deg": 18.22672142523498,
+              "max_point_height_delta_m": 75.99970275531336,
+              "max_raw_loss_delta_db": 24.291616072605144,
+              "pairs": 240,
+              "right": "native-15",
+              "state_disagreements": 1,
+              "unavailable_pairs": 41
+            },
+            {
+              "factor": "native_to_local",
+              "horizon_over_0_1_deg": 210,
+              "known_loss_pairs": 198,
+              "left": "local-60-uniform-15",
+              "loss_over_1_db": 28,
+              "max_horizon_delta_deg": 19.04554808754392,
+              "max_point_height_delta_m": 86.99630317077663,
+              "max_raw_loss_delta_db": 37.81693204430754,
+              "pairs": 240,
+              "right": "native-15",
+              "state_disagreements": 3,
+              "unavailable_pairs": 42
+            },
+            {
+              "factor": "native_sampling",
+              "horizon_over_0_1_deg": 155,
+              "known_loss_pairs": 198,
+              "left": "native-30",
+              "loss_over_1_db": 16,
+              "max_horizon_delta_deg": 8.0332312417367,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 26.79226440044584,
+              "pairs": 240,
+              "right": "native-7.5",
+              "state_disagreements": 9,
+              "unavailable_pairs": 42
+            },
+            {
+              "factor": "local_sampling",
+              "horizon_over_0_1_deg": 155,
+              "known_loss_pairs": 191,
+              "left": "local-60-uniform-30",
+              "loss_over_1_db": 14,
+              "max_horizon_delta_deg": 26.026899168360224,
+              "max_point_height_delta_m": 86.99630317077663,
+              "max_raw_loss_delta_db": 40.38601657282427,
+              "pairs": 240,
+              "right": "local-60-uniform-7.5",
+              "state_disagreements": 11,
+              "unavailable_pairs": 49
+            },
+            {
+              "factor": "local_sampling",
+              "horizon_over_0_1_deg": 0,
+              "known_loss_pairs": 240,
+              "left": "local-60-interval-30",
+              "loss_over_1_db": 0,
+              "max_horizon_delta_deg": 0.0,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 0.0,
+              "pairs": 240,
+              "right": "local-60-interval-7.5",
+              "state_disagreements": 0,
+              "unavailable_pairs": 0
+            },
+            {
+              "factor": "native_sampling",
+              "horizon_over_0_1_deg": 115,
+              "known_loss_pairs": 198,
+              "left": "native-15",
+              "loss_over_1_db": 11,
+              "max_horizon_delta_deg": 7.778688189273538,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 26.79226440044584,
+              "pairs": 240,
+              "right": "native-7.5",
+              "state_disagreements": 2,
+              "unavailable_pairs": 42
+            },
+            {
+              "factor": "local_sampling",
+              "horizon_over_0_1_deg": 115,
+              "known_loss_pairs": 191,
+              "left": "local-60-uniform-15",
+              "loss_over_1_db": 6,
+              "max_horizon_delta_deg": 5.2146531589120855,
+              "max_point_height_delta_m": 86.99630317077663,
+              "max_raw_loss_delta_db": 4.304627972571758,
+              "pairs": 240,
+              "right": "local-60-uniform-7.5",
+              "state_disagreements": 7,
+              "unavailable_pairs": 49
+            },
+            {
+              "factor": "local_sampling",
+              "horizon_over_0_1_deg": 0,
+              "known_loss_pairs": 240,
+              "left": "local-60-interval-15",
+              "loss_over_1_db": 0,
+              "max_horizon_delta_deg": 0.0,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 0.0,
+              "pairs": 240,
+              "right": "local-60-interval-7.5",
+              "state_disagreements": 0,
+              "unavailable_pairs": 0
+            },
+            {
+              "factor": "local_resolution",
+              "horizon_over_0_1_deg": 200,
+              "known_loss_pairs": 240,
+              "left": "local-40-interval-15",
+              "loss_over_1_db": 41,
+              "max_horizon_delta_deg": 7.713697193225968,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 33.71111239547841,
+              "pairs": 240,
+              "right": "local-32-interval-15",
+              "state_disagreements": 3,
+              "unavailable_pairs": 0
+            },
+            {
+              "factor": "local_resolution",
+              "horizon_over_0_1_deg": 200,
+              "known_loss_pairs": 240,
+              "left": "local-60-interval-15",
+              "loss_over_1_db": 30,
+              "max_horizon_delta_deg": 15.089669007700468,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 37.6891011832307,
+              "pairs": 240,
+              "right": "local-32-interval-15",
+              "state_disagreements": 2,
+              "unavailable_pairs": 0
+            },
+            {
+              "factor": "curvature",
+              "horizon_over_0_1_deg": 0,
+              "known_loss_pairs": 240,
+              "left": "curvature-none",
+              "loss_over_1_db": 2,
+              "max_horizon_delta_deg": 0.03347813919176801,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 3.0543871862325993,
+              "pairs": 240,
+              "right": "local-60-interval-15",
+              "state_disagreements": 0,
+              "unavailable_pairs": 0
+            },
+            {
+              "factor": "curvature",
+              "horizon_over_0_1_deg": 0,
+              "known_loss_pairs": 240,
+              "left": "curvature-4R3",
+              "loss_over_1_db": 0,
+              "max_horizon_delta_deg": 0.008369603420891769,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 0.8360427448956766,
+              "pairs": 240,
+              "right": "local-60-interval-15",
+              "state_disagreements": 0,
+              "unavailable_pairs": 0
+            },
+            {
+              "factor": "spherical_geometry",
+              "horizon_over_0_1_deg": 0,
+              "known_loss_pairs": 198,
+              "left": "local-60-spherical-15",
+              "loss_over_1_db": 0,
+              "max_horizon_delta_deg": 0.00114055696161941,
+              "max_point_height_delta_m": null,
+              "max_raw_loss_delta_db": 0.0029603966579330177,
+              "pairs": 240,
+              "right": "local-60-uniform-15",
+              "state_disagreements": 0,
+              "unavailable_pairs": 42
+            }
+          ],
+          "queries": 3840,
+          "site": "qinling_mountain",
+          "variants": {
+            "curvature-4R3": {
+              "cap_denominator": 240,
+              "capped": 0,
+              "incomplete_reasons": {},
+              "known_loss": 240,
+              "queries": 240,
+              "unknown_loss": 0
+            },
+            "curvature-none": {
+              "cap_denominator": 240,
+              "capped": 0,
+              "incomplete_reasons": {},
+              "known_loss": 240,
+              "queries": 240,
+              "unknown_loss": 0
+            },
+            "local-32-interval-15": {
+              "cap_denominator": 240,
+              "capped": 0,
+              "incomplete_reasons": {},
+              "known_loss": 240,
+              "queries": 240,
+              "unknown_loss": 0
+            },
+            "local-32-uniform-15": {
+              "cap_denominator": 199,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 41
+              },
+              "known_loss": 199,
+              "queries": 240,
+              "unknown_loss": 41
+            },
+            "local-40-interval-15": {
+              "cap_denominator": 240,
+              "capped": 0,
+              "incomplete_reasons": {},
+              "known_loss": 240,
+              "queries": 240,
+              "unknown_loss": 0
+            },
+            "local-40-uniform-15": {
+              "cap_denominator": 200,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 40
+              },
+              "known_loss": 200,
+              "queries": 240,
+              "unknown_loss": 40
+            },
+            "local-60-interval-15": {
+              "cap_denominator": 240,
+              "capped": 0,
+              "incomplete_reasons": {},
+              "known_loss": 240,
+              "queries": 240,
+              "unknown_loss": 0
+            },
+            "local-60-interval-30": {
+              "cap_denominator": 240,
+              "capped": 0,
+              "incomplete_reasons": {},
+              "known_loss": 240,
+              "queries": 240,
+              "unknown_loss": 0
+            },
+            "local-60-interval-7.5": {
+              "cap_denominator": 240,
+              "capped": 0,
+              "incomplete_reasons": {},
+              "known_loss": 240,
+              "queries": 240,
+              "unknown_loss": 0
+            },
+            "local-60-spherical-15": {
+              "cap_denominator": 198,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 42
+              },
+              "known_loss": 198,
+              "queries": 240,
+              "unknown_loss": 42
+            },
+            "local-60-uniform-15": {
+              "cap_denominator": 198,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 42
+              },
+              "known_loss": 198,
+              "queries": 240,
+              "unknown_loss": 42
+            },
+            "local-60-uniform-30": {
+              "cap_denominator": 199,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 41
+              },
+              "known_loss": 199,
+              "queries": 240,
+              "unknown_loss": 41
+            },
+            "local-60-uniform-7.5": {
+              "cap_denominator": 191,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 49
+              },
+              "known_loss": 191,
+              "queries": 240,
+              "unknown_loss": 49
+            },
+            "native-15": {
+              "cap_denominator": 199,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 41
+              },
+              "known_loss": 199,
+              "queries": 240,
+              "unknown_loss": 41
+            },
+            "native-30": {
+              "cap_denominator": 205,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 35
+              },
+              "known_loss": 205,
+              "queries": 240,
+              "unknown_loss": 35
+            },
+            "native-7.5": {
+              "cap_denominator": 198,
+              "capped": 0,
+              "incomplete_reasons": {
+                "obstacle_projection_outside_link": 42
+              },
+              "known_loss": 198,
+              "queries": 240,
+              "unknown_loss": 42
+            }
+          }
+        }
+      ],
+      "validation": {
+        "meaning": "diagnostic matrix executed; differences are not accuracy certification",
+        "queries": 11520,
+        "status": "passed"
+      }
+    },
+    {
+      "artifact_hashes_verified": true,
+      "artifacts": {
+        "files": {
+          "cases.json": "sha256:288924b68521567ffd04d88f67fe204309815a419e2d47aacac30ecede3eca67",
+          "config.json": "sha256:25702197ced9d283ec4ad88e1c8abcdda648811092b2d111176e414b50ebdd50",
+          "double-ridge.npy": "sha256:3ec65059a3c5aea9ded0c51df9fb0914857200276684a41489a5030ea81bfe42",
+          "environment.json": "sha256:a1931ccd11c75706ac69093d222d5678a3d5046127624aae56321a108c8e3eee",
+          "flat-high.npy": "sha256:c45f5bdb14abf1a2ece92934a73b27e50e32063686323be7b4a67e4f776c02a8",
+          "flat-horizontal.npy": "sha256:c45f5bdb14abf1a2ece92934a73b27e50e32063686323be7b4a67e4f776c02a8",
+          "flat-low.npy": "sha256:c45f5bdb14abf1a2ece92934a73b27e50e32063686323be7b4a67e4f776c02a8",
+          "height-overflow.npy": "sha256:5c76d9fc1985d894cf6f41d2d7f2103e019cb4524eff569343ce90ce3947d3a8",
+          "near-transmitter.npy": "sha256:c45f5bdb14abf1a2ece92934a73b27e50e32063686323be7b4a67e4f776c02a8",
+          "near-zenith.npy": "sha256:c45f5bdb14abf1a2ece92934a73b27e50e32063686323be7b4a67e4f776c02a8",
+          "outside.npy": "sha256:c45f5bdb14abf1a2ece92934a73b27e50e32063686323be7b4a67e4f776c02a8",
+          "radius-equality.npy": "sha256:c45f5bdb14abf1a2ece92934a73b27e50e32063686323be7b4a67e4f776c02a8",
+          "raised-antenna.npy": "sha256:3cd2ef8a5260a5badb52cbc21af316c945d3b227bf3545a23bce72b0135fe4a7",
+          "ray-nodata.npy": "sha256:ec656efe15a4cf9ddb76ab5a53c513fff5e30d200d5f5fa6727a18abcfa15368",
+          "receiver-nodata.npy": "sha256:0319aeb4b3e4e40665afc81b218aa6e5e1f48fb34fce61803ac4cfbd73552785",
+          "resources.json": "sha256:2980e9c14623afedd9f07af7456367b6dfbbdd68e5941b15bd31dd7038d9f4fc",
+          "ridge.npy": "sha256:3cd2ef8a5260a5badb52cbc21af316c945d3b227bf3545a23bce72b0135fe4a7",
+          "run.log": "sha256:b53ad1cf3bbd563aef81419ffab576ea6dfba8e04dd6d7fb01ef7ed076b46a13",
+          "shifted-ridge.npy": "sha256:b5f5a250c20495742d9aa8f47e5c3da6ade52d97b3aeeb70e0bfdeff3aa554db",
+          "sources.zip": "sha256:1d7534c4a98e3b14acc3973f32208f89e45e45077f7c25f6ac3557e2529239cf",
+          "tiny-frequency.npy": "sha256:c45f5bdb14abf1a2ece92934a73b27e50e32063686323be7b4a67e4f776c02a8",
+          "validation.json": "sha256:0954787fbb45629405176e2bcdaf110033cd9d221941c250b320d2175560573c",
+          "zenith.npy": "sha256:c45f5bdb14abf1a2ece92934a73b27e50e32063686323be7b4a67e4f776c02a8"
+        },
+        "schema_version": 1
+      },
+      "cases": [
+        {
+          "actual": {
+            "cap_triggered": false,
+            "incomplete_reasons": [],
+            "los_status": "clear_within_radius",
+            "loss_status": "known",
+            "raw_loss_db": 0.0,
+            "used_loss_db": 0.0
+          },
+          "case": {
+            "elevation": 0,
+            "id": "flat-horizontal",
+            "los": "clear_within_radius",
+            "loss": "known"
+          },
+          "input_id": "sha256:405ad7c5d55d54751a3b7c7451a67890b9002127796c915c8036237a75e3cb61",
+          "passed": true
+        },
+        {
+          "actual": {
+            "cap_triggered": false,
+            "incomplete_reasons": [],
+            "los_status": "clear_within_radius",
+            "loss_status": "known",
+            "raw_loss_db": 0.0,
+            "used_loss_db": 0.0
+          },
+          "case": {
+            "elevation": 1e-12,
+            "id": "flat-low",
+            "los": "clear_within_radius",
+            "loss": "known"
+          },
+          "input_id": "sha256:cf4b568d3f021d41162041ecc2b78311d8982219ece87bf83b3540745d4c73a2",
+          "passed": true
+        },
+        {
+          "actual": {
+            "cap_triggered": false,
+            "incomplete_reasons": [],
+            "los_status": "clear_within_radius",
+            "loss_status": "known",
+            "raw_loss_db": 0.0,
+            "used_loss_db": 0.0
+          },
+          "case": {
+            "elevation": 89.9,
+            "id": "flat-high",
+            "los": "clear_within_radius",
+            "loss": "known",
+            "raw": 0
+          },
+          "input_id": "sha256:109b08ed4b40bf4f240dd49701a996812be18941bcf379da874479ebfcd5944e",
+          "passed": true
+        },
+        {
+          "actual": {
+            "cap_triggered": false,
+            "incomplete_reasons": [
+              "satellite_within_profile_radius; shorten_profile"
+            ],
+            "los_status": "unknown",
+            "loss_status": "not_computed",
+            "raw_loss_db": null,
+            "used_loss_db": null
+          },
+          "case": {
+            "elevation": 89.999,
+            "id": "near-zenith",
+            "loss": "not_computed",
+            "reason": "satellite_within_profile_radius; shorten_profile"
+          },
+          "input_id": "sha256:bb8a815f9e62398ecd89ed2d66822a316e36492d9072ac3d9730b8f10a6f8dfc",
+          "passed": true
+        },
+        {
+          "actual": {
+            "cap_triggered": false,
+            "incomplete_reasons": [
+              "satellite_within_profile_radius; shorten_profile"
+            ],
+            "los_status": "unknown",
+            "loss_status": "not_computed",
+            "raw_loss_db": null,
+            "used_loss_db": null
+          },
+          "case": {
+            "id": "near-transmitter",
+            "loss": "not_computed",
+            "range": 100,
+            "reason": "satellite_within_profile_radius; shorten_profile"
+          },
+          "input_id": "sha256:f293f9cba9b62372b0db90e798da47cd6e7d4dca5ed02e8d1633beac42aa0029",
+          "passed": true
+        },
+        {
+          "actual": {
+            "cap_triggered": false,
+            "incomplete_reasons": [
+              "satellite_within_profile_radius; shorten_profile"
+            ],
+            "los_status": "unknown",
+            "loss_status": "not_computed",
+            "raw_loss_db": null,
+            "used_loss_db": null
+          },
+          "case": {
+            "elevation": 0,
+            "id": "radius-equality",
+            "loss": "not_computed",
+            "range": 150,
+            "reason": "satellite_within_profile_radius; shorten_profile"
+          },
+          "input_id": "sha256:48399d75b6df92e9e2e98a88b57c2b14ab43c28b725b950bab7de8fbb907a5e9",
+          "passed": true
+        },
+        {
+          "actual": {
+            "cap_triggered": true,
+            "incomplete_reasons": [],
+            "los_status": "blocked",
+            "loss_status": "known",
+            "raw_loss_db": 43.382765844928336,
+            "used_loss_db": 3
+          },
+          "case": {
+            "cap": 3,
+            "capped": true,
+            "id": "ridge",
+            "los": "blocked",
+            "loss": "known",
+            "terrain": "ridge"
+          },
+          "input_id": "sha256:ff6c3832575623dda1e6ea17d7e506393fc13d9aeff602e078352894c0da10bb",
+          "passed": true
+        },
+        {
+          "actual": {
+            "cap_triggered": false,
+            "incomplete_reasons": [],
+            "los_status": "blocked",
+            "loss_status": "known",
+            "raw_loss_db": 44.08187620600896,
+            "used_loss_db": 44.08187620600896
+          },
+          "case": {
+            "id": "double-ridge",
+            "los": "blocked",
+            "loss": "known",
+            "terrain": "double"
+          },
+          "input_id": "sha256:8d9b47e1f6118a10dd657589a7fa16acbd68a19cc4a7f8201ee1cee00056fd83",
+          "passed": true
+        },
+        {
+          "actual": {
+            "cap_triggered": false,
+            "incomplete_reasons": [],
+            "los_status": "blocked",
+            "loss_status": "known",
+            "raw_loss_db": 43.382765844928336,
+            "used_loss_db": 43.382765844928336
+          },
+          "case": {
+            "id": "shifted-ridge",
+            "los": "blocked",
+            "loss": "known",
+            "shift": 500,
+            "terrain": "ridge"
+          },
+          "input_id": "sha256:3f0a793a40107418ce62d6d35c27a0895d3ca446ce05524873a4e3d3faaf53a2",
+          "passed": true
+        },
+        {
+          "actual": {
+            "cap_triggered": false,
+            "incomplete_reasons": [],
+            "los_status": "clear_within_radius",
+            "loss_status": "known",
+            "raw_loss_db": 0.0,
+            "used_loss_db": 0.0
+          },
+          "case": {
+            "height": 202,
+            "id": "raised-antenna",
+            "los": "clear_within_radius",
+            "loss": "known",
+            "raw": 0,
+            "terrain": "ridge"
+          },
+          "input_id": "sha256:6810466644cbb668b4ca453286adcef2fdf163bb2d0c472e1d254cd0610bd205",
+          "passed": true
+        },
+        {
+          "actual": {
+            "cap_triggered": false,
+            "incomplete_reasons": [
+              "nodata"
+            ],
+            "los_status": "unknown",
+            "loss_status": "not_computed",
+            "raw_loss_db": null,
+            "used_loss_db": null
+          },
+          "case": {
+            "id": "ray-nodata",
+            "loss": "not_computed",
+            "reason": "nodata",
+            "terrain": "gap"
+          },
+          "input_id": "sha256:4aba345e4fbfc1b629b605aeec2c2c480e575956a6146bd45dcc4f39b2f34060",
+          "passed": true
+        },
+        {
+          "actual": {
+            "cap_triggered": false,
+            "incomplete_reasons": [
+              "nodata",
+              "receiver_nodata"
+            ],
+            "los_status": "unknown",
+            "loss_status": "not_computed",
+            "raw_loss_db": null,
+            "used_loss_db": null
+          },
+          "case": {
+            "id": "receiver-nodata",
+            "loss": "not_computed",
+            "reason": "receiver_nodata",
+            "terrain": "receiver-gap"
+          },
+          "input_id": "sha256:69e246fcaec2ad8055e3af5146a8b1aaa80c6982837484fbc0e9b60ef89da5f1",
+          "passed": true
+        },
+        {
+          "actual": {
+            "cap_triggered": false,
+            "incomplete_reasons": [
+              "outside_dem"
+            ],
+            "los_status": "unknown",
+            "loss_status": "not_computed",
+            "raw_loss_db": null,
+            "used_loss_db": null
+          },
+          "case": {
+            "id": "outside",
+            "loss": "not_computed",
+            "radius": 300,
+            "reason": "outside_dem"
+          },
+          "input_id": "sha256:f16f921edd13fbfc14bcf850e19efedb8d8f15aaf2920e91ac56932925ef20a8",
+          "passed": true
+        },
+        {
+          "actual": {},
+          "case": {
+            "error": "finite numerical range",
+            "frequency": 1e-320,
+            "id": "tiny-frequency"
+          },
+          "error": "terrain wavelength outside finite numerical range",
+          "input_id": "sha256:8f24be6393c2c5095cb83068af5b1382dc94f995d59a0f208d3c5d8400287782",
+          "passed": true
+        },
+        {
+          "actual": {},
+          "case": {
+            "error": "finite numerical range",
+            "id": "height-overflow",
+            "terrain": "overflow"
+          },
+          "error": "terrain relative height outside finite numerical range",
+          "input_id": "sha256:684a1ce845bc9e4fb891cba0fe04be5ce02b43d9603050d7fb5653dd403ecd80",
+          "passed": true
+        },
+        {
+          "actual": {
+            "los_status": "unknown",
+            "loss_status": "not_computed",
+            "reason": "zenith_profile_not_supported",
+            "used_loss_db": null
+          },
+          "case": {
+            "id": "zenith",
+            "loss": "not_computed",
+            "reason": "zenith_profile_not_supported",
+            "zenith": true
+          },
+          "input_id": "sha256:983d3f78317840b89b774e339d5695a6a49638c3069a1298b29ec757bf3d7a63",
+          "passed": true
+        }
+      ],
+      "config": [
+        {
+          "elevation": 0,
+          "id": "flat-horizontal",
+          "los": "clear_within_radius",
+          "loss": "known"
+        },
+        {
+          "elevation": 1e-12,
+          "id": "flat-low",
+          "los": "clear_within_radius",
+          "loss": "known"
+        },
+        {
+          "elevation": 89.9,
+          "id": "flat-high",
+          "los": "clear_within_radius",
+          "loss": "known",
+          "raw": 0
+        },
+        {
+          "elevation": 89.999,
+          "id": "near-zenith",
+          "loss": "not_computed",
+          "reason": "satellite_within_profile_radius; shorten_profile"
+        },
+        {
+          "id": "near-transmitter",
+          "loss": "not_computed",
+          "range": 100,
+          "reason": "satellite_within_profile_radius; shorten_profile"
+        },
+        {
+          "elevation": 0,
+          "id": "radius-equality",
+          "loss": "not_computed",
+          "range": 150,
+          "reason": "satellite_within_profile_radius; shorten_profile"
+        },
+        {
+          "cap": 3,
+          "capped": true,
+          "id": "ridge",
+          "los": "blocked",
+          "loss": "known",
+          "terrain": "ridge"
+        },
+        {
+          "id": "double-ridge",
+          "los": "blocked",
+          "loss": "known",
+          "terrain": "double"
+        },
+        {
+          "id": "shifted-ridge",
+          "los": "blocked",
+          "loss": "known",
+          "shift": 500,
+          "terrain": "ridge"
+        },
+        {
+          "height": 202,
+          "id": "raised-antenna",
+          "los": "clear_within_radius",
+          "loss": "known",
+          "raw": 0,
+          "terrain": "ridge"
+        },
+        {
+          "id": "ray-nodata",
+          "loss": "not_computed",
+          "reason": "nodata",
+          "terrain": "gap"
+        },
+        {
+          "id": "receiver-nodata",
+          "loss": "not_computed",
+          "reason": "receiver_nodata",
+          "terrain": "receiver-gap"
+        },
+        {
+          "id": "outside",
+          "loss": "not_computed",
+          "radius": 300,
+          "reason": "outside_dem"
+        },
+        {
+          "error": "finite numerical range",
+          "frequency": 1e-320,
+          "id": "tiny-frequency"
+        },
+        {
+          "error": "finite numerical range",
+          "id": "height-overflow",
+          "terrain": "overflow"
+        },
+        {
+          "id": "zenith",
+          "loss": "not_computed",
+          "reason": "zenith_profile_not_supported",
+          "zenith": true
+        }
+      ],
+      "path": "output/m3-domain-cases-20261009",
+      "resources": {
+        "json_write_time_s_before_resource_record": 0.004962413106113672,
+        "peak_rss": 183176,
+        "wall_time_s": 0.2093584188260138
+      },
+      "validation": {
+        "cases": 16,
+        "common_datum_raw_loss_invariant": true,
+        "status": "passed"
+      }
+    }
+  ],
+  "scope": "diagnostic conditional model evidence; M3 pending G06"
+}
