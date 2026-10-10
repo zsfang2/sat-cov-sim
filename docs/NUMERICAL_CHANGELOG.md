@@ -26,6 +26,20 @@
 
 ## Applied Changes
 
+### M4-COMPARISON-10 — Three-role finite-terrain experiment
+
+| Field | Value |
+|---|---|
+| Kind | `unknown_numerical_risk` for the new optional multi-edge model; existing M3 path unchanged |
+| Components affected | New comparison adapters, independent recursive edge kernel, E2 statistics/figures |
+| Before behavior | No executable three-role comparison or E2 evidence |
+| After behavior | Sky geometry without invented attenuation; original M3 adapter; independent fixed-axis positive-branch reference with bounded recursion and explicit reference eligibility |
+| Validation evidence | reports/m4/e2.md/json; 372 tests; 1189 paired cases / 3567 role rows, plus one archived invalid request; M3 direct/adapter exact equality |
+| Current generated maps change | `no` — comparison is separate and existing production path unchanged |
+| Published benchmark results change | `no` — no benchmark/dataset regeneration or promotion |
+| Existing dataset impact | No rewriting; new reference role is not a physical-truth certification |
+| Regeneration decision | Frozen E2 diagnostic experiment only |
+
 ### M3-DOMAIN-09 — Forward-domain and finite arithmetic counterexamples
 
 | Field | Value |

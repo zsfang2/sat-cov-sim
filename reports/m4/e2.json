@@ -1,0 +1,2720 @@
+{
+  "groups": [
+    {
+      "blockage": "not_applicable",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": -1,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "paired_known": 0,
+      "received_power_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "scene_id": "below_horizon",
+      "total_pairs": 1,
+      "used_loss_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      }
+    },
+    {
+      "blockage": "not_applicable",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 0,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "paired_known": 0,
+      "received_power_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "scene_id": "deep_ridge",
+      "total_pairs": 24,
+      "used_loss_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 2,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 1,
+      "frequency_hz": 1000000000.0,
+      "model_difference": {
+        "count": 1,
+        "mae_db": 4.87471963102346,
+        "max_absolute_db": 4.87471963102346,
+        "p95_absolute_db": 4.87471963102346,
+        "signed_mean_db": 4.87471963102346
+      },
+      "paired_known": 3,
+      "received_power_difference": {
+        "count": 1,
+        "mae_db": 4.874719631023453,
+        "max_absolute_db": 4.874719631023453,
+        "p95_absolute_db": 4.874719631023453,
+        "signed_mean_db": -4.874719631023453
+      },
+      "scene_id": "deep_ridge",
+      "total_pairs": 3,
+      "used_loss_difference": {
+        "count": 1,
+        "mae_db": 4.87471963102346,
+        "max_absolute_db": 4.87471963102346,
+        "p95_absolute_db": 4.87471963102346,
+        "signed_mean_db": 4.87471963102346
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 21,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 1,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "paired_known": 21,
+      "received_power_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "scene_id": "deep_ridge",
+      "total_pairs": 21,
+      "used_loss_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 1,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 18,
+      "received_power_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "deep_ridge",
+      "total_pairs": 18,
+      "used_loss_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 1000000000.0,
+      "model_difference": {
+        "count": 3,
+        "mae_db": 1.849265150891938,
+        "max_absolute_db": 3.0884096074166507,
+        "p95_absolute_db": 2.9760267305443358,
+        "signed_mean_db": 1.849265150891938
+      },
+      "paired_known": 3,
+      "received_power_difference": {
+        "count": 3,
+        "mae_db": 1.849265150891938,
+        "max_absolute_db": 3.0884096074166507,
+        "p95_absolute_db": 2.976026730544336,
+        "signed_mean_db": -1.849265150891938
+      },
+      "scene_id": "deep_ridge",
+      "total_pairs": 3,
+      "used_loss_difference": {
+        "count": 3,
+        "mae_db": 1.849265150891938,
+        "max_absolute_db": 3.0884096074166507,
+        "p95_absolute_db": 2.9760267305443358,
+        "signed_mean_db": 1.849265150891938
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 21,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "paired_known": 21,
+      "received_power_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "scene_id": "deep_ridge",
+      "total_pairs": 21,
+      "used_loss_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 18,
+      "received_power_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "deep_ridge",
+      "total_pairs": 18,
+      "used_loss_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 30,
+      "frequency_hz": 1000000000.0,
+      "model_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 3,
+      "received_power_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "deep_ridge",
+      "total_pairs": 3,
+      "used_loss_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 3,
+      "converged_reference_difference": {
+        "count": 18,
+        "mae_db": 1.1842378929335002e-15,
+        "max_absolute_db": 7.105427357601002e-15,
+        "p95_absolute_db": 7.105427357601002e-15,
+        "signed_mean_db": 1.1842378929335002e-15
+      },
+      "elevation_deg": 30,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 18,
+        "mae_db": 1.1842378929335002e-15,
+        "max_absolute_db": 7.105427357601002e-15,
+        "p95_absolute_db": 7.105427357601002e-15,
+        "signed_mean_db": 1.1842378929335002e-15
+      },
+      "paired_known": 21,
+      "received_power_difference": {
+        "count": 18,
+        "mae_db": 4.736951571734001e-15,
+        "max_absolute_db": 2.842170943040401e-14,
+        "p95_absolute_db": 2.842170943040401e-14,
+        "signed_mean_db": -4.736951571734001e-15
+      },
+      "scene_id": "deep_ridge",
+      "total_pairs": 21,
+      "used_loss_difference": {
+        "count": 18,
+        "mae_db": 1.1842378929335002e-15,
+        "max_absolute_db": 7.105427357601002e-15,
+        "p95_absolute_db": 7.105427357601002e-15,
+        "signed_mean_db": 1.1842378929335002e-15
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 30,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 18,
+      "received_power_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "deep_ridge",
+      "total_pairs": 18,
+      "used_loss_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "not_applicable",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 0,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "paired_known": 0,
+      "received_power_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "scene_id": "double_ridge",
+      "total_pairs": 24,
+      "used_loss_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 1,
+      "frequency_hz": 1000000000.0,
+      "model_difference": {
+        "count": 3,
+        "mae_db": 5.138630308343854,
+        "max_absolute_db": 5.423084059580148,
+        "p95_absolute_db": 5.3980184864240615,
+        "signed_mean_db": 5.138630308343854
+      },
+      "paired_known": 3,
+      "received_power_difference": {
+        "count": 3,
+        "mae_db": 5.138630308343863,
+        "max_absolute_db": 5.423084059580162,
+        "p95_absolute_db": 5.398018486424076,
+        "signed_mean_db": -5.138630308343863
+      },
+      "scene_id": "double_ridge",
+      "total_pairs": 3,
+      "used_loss_difference": {
+        "count": 3,
+        "mae_db": 5.138630308343854,
+        "max_absolute_db": 5.423084059580148,
+        "p95_absolute_db": 5.3980184864240615,
+        "signed_mean_db": 5.138630308343854
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 3,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 1,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 18,
+        "mae_db": 2.8475742231378884,
+        "max_absolute_db": 3.8137987059374225,
+        "p95_absolute_db": 3.8137987059374225,
+        "signed_mean_db": 2.8475742231378884
+      },
+      "paired_known": 21,
+      "received_power_difference": {
+        "count": 18,
+        "mae_db": 2.847574223137888,
+        "max_absolute_db": 3.813798705937444,
+        "p95_absolute_db": 3.813798705937444,
+        "signed_mean_db": -2.847574223137888
+      },
+      "scene_id": "double_ridge",
+      "total_pairs": 21,
+      "used_loss_difference": {
+        "count": 18,
+        "mae_db": 2.8475742231378884,
+        "max_absolute_db": 3.8137987059374225,
+        "p95_absolute_db": 3.8137987059374225,
+        "signed_mean_db": 2.8475742231378884
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 1,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 18,
+      "received_power_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "double_ridge",
+      "total_pairs": 18,
+      "used_loss_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 1000000000.0,
+      "model_difference": {
+        "count": 3,
+        "mae_db": 1.8150491430839704,
+        "max_absolute_db": 3.062995495163925,
+        "p95_absolute_db": 2.9497708559869804,
+        "signed_mean_db": 1.8150491430839704
+      },
+      "paired_known": 3,
+      "received_power_difference": {
+        "count": 3,
+        "mae_db": 1.815049143083968,
+        "max_absolute_db": 3.062995495163932,
+        "p95_absolute_db": 2.949770855986986,
+        "signed_mean_db": -1.815049143083968
+      },
+      "scene_id": "double_ridge",
+      "total_pairs": 3,
+      "used_loss_difference": {
+        "count": 3,
+        "mae_db": 1.8150491430839704,
+        "max_absolute_db": 3.062995495163925,
+        "p95_absolute_db": 2.9497708559869804,
+        "signed_mean_db": 1.8150491430839704
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 3,
+      "converged_reference_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 21,
+      "received_power_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "double_ridge",
+      "total_pairs": 21,
+      "used_loss_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 18,
+      "received_power_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "double_ridge",
+      "total_pairs": 18,
+      "used_loss_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 3,
+        "mae_db": 8.881784197001252e-16,
+        "max_absolute_db": 8.881784197001252e-16,
+        "p95_absolute_db": 8.881784197001252e-16,
+        "signed_mean_db": -8.881784197001252e-16
+      },
+      "elevation_deg": 30,
+      "frequency_hz": 1000000000.0,
+      "model_difference": {
+        "count": 3,
+        "mae_db": 8.881784197001252e-16,
+        "max_absolute_db": 8.881784197001252e-16,
+        "p95_absolute_db": 8.881784197001252e-16,
+        "signed_mean_db": -8.881784197001252e-16
+      },
+      "paired_known": 3,
+      "received_power_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "double_ridge",
+      "total_pairs": 3,
+      "used_loss_difference": {
+        "count": 3,
+        "mae_db": 8.881784197001252e-16,
+        "max_absolute_db": 8.881784197001252e-16,
+        "p95_absolute_db": 8.881784197001252e-16,
+        "signed_mean_db": -8.881784197001252e-16
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 30,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 39,
+      "received_power_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "double_ridge",
+      "total_pairs": 39,
+      "used_loss_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "not_applicable",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 0,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "paired_known": 0,
+      "received_power_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "scene_id": "flat",
+      "total_pairs": 24,
+      "used_loss_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 1,
+      "frequency_hz": 1000000000.0,
+      "model_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 3,
+      "received_power_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "flat",
+      "total_pairs": 3,
+      "used_loss_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 1,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 39,
+      "received_power_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "flat",
+      "total_pairs": 39,
+      "used_loss_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 1000000000.0,
+      "model_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 3,
+      "received_power_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "flat",
+      "total_pairs": 3,
+      "used_loss_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 39,
+      "received_power_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "flat",
+      "total_pairs": 39,
+      "used_loss_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 30,
+      "frequency_hz": 1000000000.0,
+      "model_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 3,
+      "received_power_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "flat",
+      "total_pairs": 3,
+      "used_loss_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 30,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 39,
+      "received_power_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "flat",
+      "total_pairs": 39,
+      "used_loss_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "unknown",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "paired_known": 0,
+      "received_power_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "scene_id": "near_transmitter",
+      "total_pairs": 1,
+      "used_loss_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      }
+    },
+    {
+      "blockage": "unknown",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "paired_known": 0,
+      "received_power_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "scene_id": "nodata",
+      "total_pairs": 1,
+      "used_loss_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      }
+    },
+    {
+      "blockage": "unknown",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "paired_known": 0,
+      "received_power_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "scene_id": "outside_dem",
+      "total_pairs": 1,
+      "used_loss_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 6,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 1,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 12,
+        "mae_db": 1.0464911075735521,
+        "max_absolute_db": 2.341007553257988,
+        "p95_absolute_db": 2.3394091188062465,
+        "signed_mean_db": 1.0464911075735521
+      },
+      "paired_known": 18,
+      "received_power_difference": {
+        "count": 12,
+        "mae_db": 1.0464911075735515,
+        "max_absolute_db": 2.341007553257981,
+        "p95_absolute_db": 2.3394091188062434,
+        "signed_mean_db": -1.0464911075735515
+      },
+      "scene_id": "qinling_foothill",
+      "total_pairs": 18,
+      "used_loss_difference": {
+        "count": 12,
+        "mae_db": 1.0464911075735521,
+        "max_absolute_db": 2.341007553257988,
+        "p95_absolute_db": 2.3394091188062465,
+        "signed_mean_db": 1.0464911075735521
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 30,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 1,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 30,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 30,
+      "received_power_difference": {
+        "count": 30,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "qinling_foothill",
+      "total_pairs": 30,
+      "used_loss_difference": {
+        "count": 30,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 6,
+      "converged_reference_difference": {
+        "count": 6,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 6,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 12,
+      "received_power_difference": {
+        "count": 6,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "qinling_foothill",
+      "total_pairs": 12,
+      "used_loss_difference": {
+        "count": 6,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 36,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 36,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 36,
+      "received_power_difference": {
+        "count": 36,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "qinling_foothill",
+      "total_pairs": 36,
+      "used_loss_difference": {
+        "count": 36,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 48,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 30,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 48,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 48,
+      "received_power_difference": {
+        "count": 48,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "qinling_foothill",
+      "total_pairs": 48,
+      "used_loss_difference": {
+        "count": 48,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 33,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 1,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 15,
+        "mae_db": 1.0213844635686882,
+        "max_absolute_db": 2.28798959200234,
+        "p95_absolute_db": 2.280171129228303,
+        "signed_mean_db": 1.0213844635686873
+      },
+      "paired_known": 48,
+      "received_power_difference": {
+        "count": 15,
+        "mae_db": 1.0213844635686806,
+        "max_absolute_db": 2.287989592002333,
+        "p95_absolute_db": 2.280171129228293,
+        "signed_mean_db": -1.0213844635686806
+      },
+      "scene_id": "qinling_mountain",
+      "total_pairs": 48,
+      "used_loss_difference": {
+        "count": 15,
+        "mae_db": 1.0213844635686882,
+        "max_absolute_db": 2.28798959200234,
+        "p95_absolute_db": 2.280171129228303,
+        "signed_mean_db": 1.0213844635686873
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 27,
+      "converged_reference_difference": {
+        "count": 9,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 9,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 36,
+      "received_power_difference": {
+        "count": 9,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "qinling_mountain",
+      "total_pairs": 36,
+      "used_loss_difference": {
+        "count": 9,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 12,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 12,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 12,
+      "received_power_difference": {
+        "count": 12,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "qinling_mountain",
+      "total_pairs": 12,
+      "used_loss_difference": {
+        "count": 12,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 6,
+      "converged_reference_difference": {
+        "count": 6,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 30,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 6,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 12,
+      "received_power_difference": {
+        "count": 6,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "qinling_mountain",
+      "total_pairs": 12,
+      "used_loss_difference": {
+        "count": 6,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 36,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 30,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 36,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 36,
+      "received_power_difference": {
+        "count": 36,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "qinling_mountain",
+      "total_pairs": 36,
+      "used_loss_difference": {
+        "count": 36,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "unknown",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "paired_known": 0,
+      "received_power_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "scene_id": "receiver_nodata",
+      "total_pairs": 1,
+      "used_loss_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "paired_known": 0,
+      "received_power_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "scene_id": "resource_refusal",
+      "total_pairs": 1,
+      "used_loss_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      }
+    },
+    {
+      "blockage": "not_applicable",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 0,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "paired_known": 0,
+      "received_power_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "scene_id": "single_ridge",
+      "total_pairs": 24,
+      "used_loss_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 1,
+      "frequency_hz": 1000000000.0,
+      "model_difference": {
+        "count": 3,
+        "mae_db": 5.136135284845793,
+        "max_absolute_db": 5.421374717128643,
+        "p95_absolute_db": 5.396239611709491,
+        "signed_mean_db": 5.136135284845793
+      },
+      "paired_known": 3,
+      "received_power_difference": {
+        "count": 3,
+        "mae_db": 5.136135284845788,
+        "max_absolute_db": 5.421374717128629,
+        "p95_absolute_db": 5.396239611709478,
+        "signed_mean_db": -5.136135284845788
+      },
+      "scene_id": "single_ridge",
+      "total_pairs": 3,
+      "used_loss_difference": {
+        "count": 3,
+        "mae_db": 5.136135284845793,
+        "max_absolute_db": 5.421374717128643,
+        "p95_absolute_db": 5.396239611709491,
+        "signed_mean_db": 5.136135284845793
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 3,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 1,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 18,
+        "mae_db": 2.8416849820368975,
+        "max_absolute_db": 3.8137987059374225,
+        "p95_absolute_db": 3.8137987059374225,
+        "signed_mean_db": 2.8416849820368975
+      },
+      "paired_known": 21,
+      "received_power_difference": {
+        "count": 18,
+        "mae_db": 2.8416849820369015,
+        "max_absolute_db": 3.813798705937444,
+        "p95_absolute_db": 3.813798705937444,
+        "signed_mean_db": -2.8416849820369015
+      },
+      "scene_id": "single_ridge",
+      "total_pairs": 21,
+      "used_loss_difference": {
+        "count": 18,
+        "mae_db": 2.8416849820368975,
+        "max_absolute_db": 3.8137987059374225,
+        "p95_absolute_db": 3.8137987059374225,
+        "signed_mean_db": 2.8416849820368975
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 1,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 18,
+      "received_power_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "single_ridge",
+      "total_pairs": 18,
+      "used_loss_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 1000000000.0,
+      "model_difference": {
+        "count": 3,
+        "mae_db": 1.8131044236680154,
+        "max_absolute_db": 3.0615502198101723,
+        "p95_absolute_db": 2.9482777915404688,
+        "signed_mean_db": 1.8131044236680154
+      },
+      "paired_known": 3,
+      "received_power_difference": {
+        "count": 3,
+        "mae_db": 1.813104423668013,
+        "max_absolute_db": 3.061550219810158,
+        "p95_absolute_db": 2.9482777915404568,
+        "signed_mean_db": -1.813104423668013
+      },
+      "scene_id": "single_ridge",
+      "total_pairs": 3,
+      "used_loss_difference": {
+        "count": 3,
+        "mae_db": 1.8131044236680154,
+        "max_absolute_db": 3.0615502198101723,
+        "p95_absolute_db": 2.9482777915404688,
+        "signed_mean_db": 1.8131044236680154
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 3,
+      "converged_reference_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 21,
+      "received_power_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "single_ridge",
+      "total_pairs": 21,
+      "used_loss_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 18,
+      "received_power_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "single_ridge",
+      "total_pairs": 18,
+      "used_loss_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 30,
+      "frequency_hz": 1000000000.0,
+      "model_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 3,
+      "received_power_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "single_ridge",
+      "total_pairs": 3,
+      "used_loss_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 30,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 39,
+      "received_power_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "single_ridge",
+      "total_pairs": 39,
+      "used_loss_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "not_applicable",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 0,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "paired_known": 0,
+      "received_power_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "scene_id": "terrace",
+      "total_pairs": 24,
+      "used_loss_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 1,
+      "frequency_hz": 1000000000.0,
+      "model_difference": {
+        "count": 3,
+        "mae_db": 5.134472188820458,
+        "max_absolute_db": 5.420235297469816,
+        "p95_absolute_db": 5.395053845820444,
+        "signed_mean_db": 5.134472188820458
+      },
+      "paired_known": 3,
+      "received_power_difference": {
+        "count": 3,
+        "mae_db": 5.134472188820458,
+        "max_absolute_db": 5.420235297469816,
+        "p95_absolute_db": 5.395053845820445,
+        "signed_mean_db": -5.134472188820458
+      },
+      "scene_id": "terrace",
+      "total_pairs": 3,
+      "used_loss_difference": {
+        "count": 3,
+        "mae_db": 5.134472188820458,
+        "max_absolute_db": 5.420235297469816,
+        "p95_absolute_db": 5.395053845820444,
+        "signed_mean_db": 5.134472188820458
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 3,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 1,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 18,
+        "mae_db": 2.836073020478299,
+        "max_absolute_db": 3.8099736006660123,
+        "p95_absolute_db": 3.809973600666006,
+        "signed_mean_db": 2.836073020478299
+      },
+      "paired_known": 21,
+      "received_power_difference": {
+        "count": 18,
+        "mae_db": 2.8360730204783002,
+        "max_absolute_db": 3.8099736006660123,
+        "p95_absolute_db": 3.8099736006660123,
+        "signed_mean_db": -2.8360730204783002
+      },
+      "scene_id": "terrace",
+      "total_pairs": 21,
+      "used_loss_difference": {
+        "count": 18,
+        "mae_db": 2.836073020478299,
+        "max_absolute_db": 3.8099736006660123,
+        "p95_absolute_db": 3.809973600666006,
+        "signed_mean_db": 2.836073020478299
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 1,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 18,
+      "received_power_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "terrace",
+      "total_pairs": 18,
+      "used_loss_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 1000000000.0,
+      "model_difference": {
+        "count": 3,
+        "mae_db": 1.8118082194997907,
+        "max_absolute_db": 3.0605868582951743,
+        "p95_absolute_db": 2.9472825806166916,
+        "signed_mean_db": 1.8118082194997907
+      },
+      "paired_known": 3,
+      "received_power_difference": {
+        "count": 3,
+        "mae_db": 1.8118082194997858,
+        "max_absolute_db": 3.060586858295153,
+        "p95_absolute_db": 2.9472825806166725,
+        "signed_mean_db": -1.8118082194997858
+      },
+      "scene_id": "terrace",
+      "total_pairs": 3,
+      "used_loss_difference": {
+        "count": 3,
+        "mae_db": 1.8118082194997907,
+        "max_absolute_db": 3.0605868582951743,
+        "p95_absolute_db": 2.9472825806166916,
+        "signed_mean_db": 1.8118082194997907
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 3,
+      "converged_reference_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 21,
+      "received_power_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "terrace",
+      "total_pairs": 21,
+      "used_loss_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 18,
+      "received_power_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "terrace",
+      "total_pairs": 18,
+      "used_loss_difference": {
+        "count": 18,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 30,
+      "frequency_hz": 1000000000.0,
+      "model_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 3,
+      "received_power_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "terrace",
+      "total_pairs": 3,
+      "used_loss_difference": {
+        "count": 3,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 30,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 39,
+      "received_power_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "terrace",
+      "total_pairs": 39,
+      "used_loss_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "blocked",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 1,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 9,
+        "mae_db": 1.009656796159443,
+        "max_absolute_db": 2.2830448998562147,
+        "p95_absolute_db": 2.2429118740365213,
+        "signed_mean_db": 1.0096567961594427
+      },
+      "paired_known": 9,
+      "received_power_difference": {
+        "count": 9,
+        "mae_db": 1.0096567961594411,
+        "max_absolute_db": 2.2830448998562076,
+        "p95_absolute_db": 2.242911874036514,
+        "signed_mean_db": -1.0096567961594411
+      },
+      "scene_id": "xian_city",
+      "total_pairs": 9,
+      "used_loss_difference": {
+        "count": 9,
+        "mae_db": 1.009656796159443,
+        "max_absolute_db": 2.2830448998562147,
+        "p95_absolute_db": 2.2429118740365213,
+        "signed_mean_db": 1.0096567961594427
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 1,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 39,
+      "received_power_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "xian_city",
+      "total_pairs": 39,
+      "used_loss_difference": {
+        "count": 39,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 48,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 5,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 48,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 48,
+      "received_power_difference": {
+        "count": 48,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "xian_city",
+      "total_pairs": 48,
+      "used_loss_difference": {
+        "count": 48,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "clear_within_radius",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 48,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "elevation_deg": 30,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 48,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "paired_known": 48,
+      "received_power_difference": {
+        "count": 48,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      },
+      "scene_id": "xian_city",
+      "total_pairs": 48,
+      "used_loss_difference": {
+        "count": 48,
+        "mae_db": 0.0,
+        "max_absolute_db": 0.0,
+        "p95_absolute_db": 0.0,
+        "signed_mean_db": 0.0
+      }
+    },
+    {
+      "blockage": "unknown",
+      "capped_pairs": 0,
+      "converged_reference_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "elevation_deg": 90,
+      "frequency_hz": 14500000000.0,
+      "model_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "paired_known": 0,
+      "received_power_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      },
+      "scene_id": "zenith",
+      "total_pairs": 1,
+      "used_loss_difference": {
+        "count": 0,
+        "mae_db": null,
+        "max_absolute_db": null,
+        "p95_absolute_db": null,
+        "signed_mean_db": null
+      }
+    }
+  ],
+  "pair_count": 1189,
+  "rejected_request_count": 1,
+  "roles": [
+    {
+      "cap_count": 0,
+      "failure_kinds": {
+        "data_gap": 3,
+        "none": 1063,
+        "not_applicable": 121,
+        "unsupported_geometry": 2
+      },
+      "memory_attribution": "process_shared_not_per_solver",
+      "peak_process_rss_kib": 246880,
+      "reference_eligibility": {
+        "not_reference": 1189
+      },
+      "role_id": "sky_horizon_outline_v1",
+      "rows": 1189,
+      "solver_wall_s": 0.2570376005023718,
+      "statuses": {
+        "known": 1063,
+        "not_applicable": 121,
+        "not_computed": 5
+      }
+    },
+    {
+      "cap_count": 63,
+      "failure_kinds": {
+        "data_gap": 3,
+        "none": 1063,
+        "not_applicable": 121,
+        "unsupported_geometry": 2
+      },
+      "memory_attribution": "process_shared_not_per_solver",
+      "peak_process_rss_kib": 247144,
+      "reference_eligibility": {
+        "not_reference": 1189
+      },
+      "role_id": "m3_current_single_edge_v1",
+      "rows": 1189,
+      "solver_wall_s": 0.7355121541768312,
+      "statuses": {
+        "known": 1063,
+        "not_applicable": 121,
+        "not_computed": 5
+      }
+    },
+    {
+      "cap_count": 143,
+      "failure_kinds": {
+        "data_gap": 3,
+        "none": 1062,
+        "not_applicable": 121,
+        "resource_limit": 1,
+        "unsupported_geometry": 2
+      },
+      "memory_attribution": "process_shared_not_per_solver",
+      "peak_process_rss_kib": 247144,
+      "reference_eligibility": {
+        "eligible_within_tested_discretization": 879,
+        "unavailable": 127,
+        "unverified": 183
+      },
+      "role_id": "reference_multi_edge_deygout_v1",
+      "rows": 1189,
+      "solver_wall_s": 0.3668071054853499,
+      "statuses": {
+        "failed": 1,
+        "known": 1062,
+        "not_applicable": 121,
+        "not_computed": 5
+      }
+    }
+  ],
+  "row_count": 3567,
+  "scope": "finite-radius numerical-model differences, not measurement error; sky has no dB comparison",
+  "shared_preparation_s": 1.6469281842000782,
+  "thresholds": [
+    {
+      "capped": 143,
+      "disagreements": 0,
+      "known": 1062,
+      "offset_db": -10,
+      "total": 1189,
+      "uncapped_disagreements": 0,
+      "uncapped_known": 919,
+      "unknown": 127
+    },
+    {
+      "capped": 143,
+      "disagreements": 0,
+      "known": 1062,
+      "offset_db": -6,
+      "total": 1189,
+      "uncapped_disagreements": 0,
+      "uncapped_known": 919,
+      "unknown": 127
+    },
+    {
+      "capped": 143,
+      "disagreements": 0,
+      "known": 1062,
+      "offset_db": -3,
+      "total": 1189,
+      "uncapped_disagreements": 0,
+      "uncapped_known": 919,
+      "unknown": 127
+    },
+    {
+      "capped": 143,
+      "disagreements": 0,
+      "known": 1062,
+      "offset_db": 0,
+      "total": 1189,
+      "uncapped_disagreements": 0,
+      "uncapped_known": 919,
+      "unknown": 127
+    },
+    {
+      "capped": 143,
+      "disagreements": 0,
+      "known": 1062,
+      "offset_db": 3,
+      "total": 1189,
+      "uncapped_disagreements": 0,
+      "uncapped_known": 919,
+      "unknown": 127
+    },
+    {
+      "capped": 143,
+      "disagreements": 0,
+      "known": 1062,
+      "offset_db": 6,
+      "total": 1189,
+      "uncapped_disagreements": 0,
+      "uncapped_known": 919,
+      "unknown": 127
+    },
+    {
+      "capped": 143,
+      "disagreements": 0,
+      "known": 1062,
+      "offset_db": 10,
+      "total": 1189,
+      "uncapped_disagreements": 0,
+      "uncapped_known": 919,
+      "unknown": 127
+    }
+  ],
+  "visibility": [
+    {
+      "count": 351,
+      "role_a": "m3_current_single_edge_v1",
+      "role_b": "reference_multi_edge_deygout_v1",
+      "visibility_a": "blocked",
+      "visibility_b": "blocked"
+    },
+    {
+      "count": 711,
+      "role_a": "m3_current_single_edge_v1",
+      "role_b": "reference_multi_edge_deygout_v1",
+      "visibility_a": "clear_within_radius",
+      "visibility_b": "clear_within_radius"
+    },
+    {
+      "count": 1,
+      "role_a": "m3_current_single_edge_v1",
+      "role_b": "reference_multi_edge_deygout_v1",
+      "visibility_a": "clear_within_radius",
+      "visibility_b": "unknown"
+    },
+    {
+      "count": 121,
+      "role_a": "m3_current_single_edge_v1",
+      "role_b": "reference_multi_edge_deygout_v1",
+      "visibility_a": "not_applicable",
+      "visibility_b": "not_applicable"
+    },
+    {
+      "count": 5,
+      "role_a": "m3_current_single_edge_v1",
+      "role_b": "reference_multi_edge_deygout_v1",
+      "visibility_a": "unknown",
+      "visibility_b": "unknown"
+    },
+    {
+      "count": 351,
+      "role_a": "sky_horizon_outline_v1",
+      "role_b": "m3_current_single_edge_v1",
+      "visibility_a": "blocked",
+      "visibility_b": "blocked"
+    },
+    {
+      "count": 712,
+      "role_a": "sky_horizon_outline_v1",
+      "role_b": "m3_current_single_edge_v1",
+      "visibility_a": "clear_within_radius",
+      "visibility_b": "clear_within_radius"
+    },
+    {
+      "count": 121,
+      "role_a": "sky_horizon_outline_v1",
+      "role_b": "m3_current_single_edge_v1",
+      "visibility_a": "not_applicable",
+      "visibility_b": "not_applicable"
+    },
+    {
+      "count": 5,
+      "role_a": "sky_horizon_outline_v1",
+      "role_b": "m3_current_single_edge_v1",
+      "visibility_a": "unknown",
+      "visibility_b": "unknown"
+    },
+    {
+      "count": 351,
+      "role_a": "sky_horizon_outline_v1",
+      "role_b": "reference_multi_edge_deygout_v1",
+      "visibility_a": "blocked",
+      "visibility_b": "blocked"
+    },
+    {
+      "count": 711,
+      "role_a": "sky_horizon_outline_v1",
+      "role_b": "reference_multi_edge_deygout_v1",
+      "visibility_a": "clear_within_radius",
+      "visibility_b": "clear_within_radius"
+    },
+    {
+      "count": 1,
+      "role_a": "sky_horizon_outline_v1",
+      "role_b": "reference_multi_edge_deygout_v1",
+      "visibility_a": "clear_within_radius",
+      "visibility_b": "unknown"
+    },
+    {
+      "count": 121,
+      "role_a": "sky_horizon_outline_v1",
+      "role_b": "reference_multi_edge_deygout_v1",
+      "visibility_a": "not_applicable",
+      "visibility_b": "not_applicable"
+    },
+    {
+      "count": 5,
+      "role_a": "sky_horizon_outline_v1",
+      "role_b": "reference_multi_edge_deygout_v1",
+      "visibility_a": "unknown",
+      "visibility_b": "unknown"
+    }
+  ],
+  "run": "output/m4-e2-final-20261010",
+  "artifact_manifest_sha256": "sha256:5ed74f7609e7898d1e5055347629bbbbf3f2248dadb46ffa8b52d404d0fa863b",
+  "artifacts": {
+    "caps.csv": "sha256:3f1ee87f3376ef2a3cc1e2768909df777c4d2f49abd5dab05153e47a77ca582f",
+    "config.json": "sha256:cd74747b6758f56f109d63972ac780505b8220dde23497bac1afb64283c506fd",
+    "config.yaml": "sha256:224400a382ee145a05b9a052291d3923cf33572ee921b4ff65df769999d68a61",
+    "deep_ridge-grid.npy": "sha256:cb2d9f3c501de97fbceb34262e70a81e05f101e98ea4914b3586ae0c1d804e03",
+    "differences.csv": "sha256:7e52902ea237a234316b2213d43144d5346096a4fc1b231db736c73b7b0e9901",
+    "discrete-cases.json": "sha256:4ff7f487a3b99344e74f5211aba7e89cab31bc4f0d2ea8482bc24f8cd0d90af1",
+    "double_ridge-grid.npy": "sha256:b66c9e9c8774bd719bc573adf066d05412fc6d8e827a14304450dc283fb5fb3c",
+    "environment.json": "sha256:493817a5fbe193f72f1d6f1125d3feaa9e0e8d07c3179ece8f05a0bfc7ef07a3",
+    "failures.csv": "sha256:70cb004954cf708167d6c5cbbfbbba4d63cd92b1196cdca15372fe6a057373d1",
+    "flat-grid.npy": "sha256:c45f5bdb14abf1a2ece92934a73b27e50e32063686323be7b4a67e4f776c02a8",
+    "groups.csv": "sha256:dcbe0c4eec6cfb1f1e20549d2afc0e8abe981e65d81803abfbb67744d4044c18",
+    "inputs.json": "sha256:5646a7f9ee6b269377d9a97b04bafa8b2691cc2e14be437506fb44cf7e9fda89",
+    "profiles.jsonl": "sha256:5f8ab7a26a8c6d93db083d4028a0ab23ba55d3efd51d16ab7b042f160fa27479",
+    "qinling_foothill-60-grid.npy": "sha256:c20b148428e6ddcd94fbb7e07cccff89f4d86f60045dabd80a85147bba6a6a4f",
+    "qinling_foothill-60-terrain.json": "sha256:128c43d8c5433f79a6cec42b3418f311825e26d1674a4524807026885e0432a5",
+    "qinling_mountain-60-grid.npy": "sha256:ea5fd32a04d677a457fb4cca702c4d6b5cef967a7517f2c8518b8d7f97485f0c",
+    "qinling_mountain-60-terrain.json": "sha256:1a734c326b5deb505258bba102124869b837d73e9d78cb7bd036d608ea7f284b",
+    "raw-loss-comparison.png": "sha256:32a654c200cc2dc920253cbd01a5f82c404097b64fe7ccc55ff866bc0281a64e",
+    "refinements.csv": "sha256:f905906387a707142d623f79b7957fdd6973ffc4f0ab9d31f80888240ac75ab6",
+    "refinements.json": "sha256:3340d0f4805b2720f8d2214ecc6eae444671e6abffb3535ebe1da2f186a0b6b0",
+    "rejected-requests.json": "sha256:72f645ccc173ad39465c8315d432f4c22053dcf7170144cf271e7362377dc299",
+    "resources.json": "sha256:a2ff0e10c1fda760d8eb02485cdb35dacc8c1288711fbc278c00fec02eab44bd",
+    "role-cost.png": "sha256:5bfdbaced86814864429b340688252611f737bb75afab6189740251b615f90a9",
+    "role-resources.csv": "sha256:bf7bd9a6bd05af82f53cf258382debc8498e472ad057711299b05481c8fed757",
+    "roles.jsonl": "sha256:59013d0254b0b178a1b9ca8f78c5474ad041af0d98c72be152d617188218b4b7",
+    "run.log": "sha256:f1662bbd88f2c60465346997d1c7dd73f014db8aab6b6f94455fd67bedabc7f6",
+    "single_ridge-grid.npy": "sha256:5e7001eb1c28f24180df2b5339632df35f1a236aa90a4f73566aa451ef322690",
+    "sources.zip": "sha256:99e2483bc75c73ae98c8dd31f014e3cbd536004439e262a61adc49a5bac13339",
+    "summary.json": "sha256:95e676ae84a09bdb00db1d7a06f33a3faa08a82c9f64363a6a219abfd72bd490",
+    "terrace-grid.npy": "sha256:9d3ace4026961f5881765b5547042bcf0cc627191d3ffc532fb4990e69db9e98",
+    "threshold-details.csv": "sha256:10db8c9eb33d3d273ae01607b101efaf5b9f50a21b8dd8f78f9ec5f78cae6636",
+    "threshold-disagreement.png": "sha256:09bf6a26d92964f2218ab0b7ccc28cd33c5f8d3165a62dfacaf2d69362684dff",
+    "thresholds.csv": "sha256:23d99e6bf09050fa8860d7fafc4d275002c0b96fc49ed36029ac5cc7ee9212b5",
+    "validation.json": "sha256:920746790b7b28bce648462a8b9a0379a38f7e0ec07b057656ed0ab773cab5f9",
+    "visibility.csv": "sha256:f662473ab26104ee1cab81d5478e5d9a278480a011b90dbbd33d8e13d5f506ac",
+    "xian_city-60-grid.npy": "sha256:19833b34a9ded8e6f097d0aff31b06eccd93044097017111c14ca497239491af",
+    "xian_city-60-terrain.json": "sha256:ef2b3e7b201ffc2c8261583d43edd0e8eec9df130f78e8899a53794e9c258a65"
+  },
+  "tests": "372 passed in 9.36s",
+  "validation": {
+    "pair_count": 1189,
+    "real_inputs_verified": 6,
+    "reference_eligibility": {
+      "eligible_within_tested_discretization": 879,
+      "unavailable": 127,
+      "unverified": 183
+    },
+    "rejected_request_count": 1,
+    "row_count": 3567,
+    "scope": "software experiment completed; not a physical accuracy acceptance",
+    "status": "passed",
+    "unexpected_rejections": 0
+  },
+  "resources": {
+    "json_write_time_s_before_resource_record": 0.09181431774049997,
+    "peak_rss": 415552,
+    "wall_time_s": 8.811771818902344
+  },
+  "environment_source_fingerprint": "sha256:78c08cbf142b800b28a930db2a08981137e5fe33e76b6975ad7335b731c5e9c8"
+}

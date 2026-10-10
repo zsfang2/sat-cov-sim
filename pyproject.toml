@@ -19,6 +19,9 @@ dependencies = [
 [project.scripts]
 sat-cover = "satellite_coverage.cli:main"
 
+[project.optional-dependencies]
+reports = ["matplotlib>=3.7"]
+
 [tool.setuptools.packages.find]
 where = ["src"]
 
