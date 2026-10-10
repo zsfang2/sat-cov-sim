@@ -72,3 +72,28 @@ def test_missing_receiver_height_remains_unknown():
     result = profile(values)
     assert result["horizon_deg"] is None
     assert "receiver_nodata" in result["incomplete_reasons"]
+
+
+def test_angular_boundary_brackets_converge_to_analytic_cell_corners():
+    # The isolated obstacle spans east [15,25], north [95,105]. Its
+    # angular support is bounded by the far-west and near-east corners,
+    # independently of the implementation's cell traversal algorithm.
+    values = np.zeros((41, 41))
+    values[10, 22] = 102
+    left = math.degrees(math.atan2(15, 105))
+    right = math.degrees(math.atan2(25, 95))
+    previous = (math.inf, math.inf)
+    for spacing in (4., 2., 1., .5, .25):
+        blocked = []
+        for azimuth in np.arange(0, 24+spacing/2, spacing):
+            p = profile(values, azimuth_deg=float(azimuth))
+            result = evaluate_profile(p, elevation_deg=1, slant_range_m=550000, frequency_hz=14.5e9)
+            assert result["loss_status"] == "known"
+            expected = left < azimuth < right
+            assert (result["los_status"] == "blocked") == expected
+            if expected:
+                blocked.append(float(azimuth))
+        errors = (min(blocked)-left, right-max(blocked))
+        assert all(0 <= error <= spacing for error in errors)
+        assert all(new <= old+1e-12 for new, old in zip(errors, previous))
+        previous = errors

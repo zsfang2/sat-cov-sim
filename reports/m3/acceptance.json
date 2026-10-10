@@ -1,0 +1,54 @@
+{
+  "consultation": {
+    "input_sha256": "sha256:5779de75bcfdabd38581f1b5b85b1179dc679ad6d41887b2d948251fb8c0e07f",
+    "metadata": "---\ntool: codex\nmodel: gpt-5.5\neffort: high\ntimeout: 3600\nexit_code: 0\nduration: 186s\nstatus: success\nstarted_at: 2026-10-09T10:00:11Z\n---\n",
+    "output_sha256": "sha256:2cbe28a626edbfc7ae0e2258383eb14a9fa16d4f7515f1cb8de6fae4f365965e",
+    "path": ".humanize/skill/2026-10-09_10-00-11-2340095-c70556cd"
+  },
+  "decision": "accepted_with_declared_limits_pending_round_gate",
+  "evidence_hashes": {
+    "reports/m3/acceptance-review.md": "sha256:2cbe28a626edbfc7ae0e2258383eb14a9fa16d4f7515f1cb8de6fae4f365965e",
+    "reports/m3/bounded-reader-summary.json": "sha256:c96f18fa9ba0ee6b4a8ac78e2bb9c91b6921f41e6b1bf43e8a02ddb613121cc9",
+    "reports/m3/domain-matrix.json": "sha256:1570dbef7df108a2206f9a41b9d543acb6e11e6b368d2e2bf2571f2d1aecd6f9",
+    "reports/m3/radius-48km-summary.json": "sha256:2bfe11a16704fa094aaf05cf64505ec515d41d32dad40c0f0e45ca0deec57da3",
+    "reports/m3/terrain-contract-verification.json": "sha256:8bd48f72ed30c617e8510c6c5985f5d60c00b5e841d1a4fea83d718d1ddf6e71",
+    "tests/test_cell_profile.py": "sha256:94f503716e4e539b17b5fd8f929728d3436b8076b610f7840b5086fda9ad89cb"
+  },
+  "implementation_baseline": "8fb0991",
+  "layers": {
+    "implementation": "passed_declared_domain",
+    "numerical": "passed_declared_model_checks",
+    "physical_truth": "not_validated",
+    "source": "conditional_on_declared_DSM_EGM2008_chain"
+  },
+  "phase": "M3",
+  "remaining_plan_tasks": [
+    "G07",
+    "G08",
+    "G09",
+    "G10",
+    "G11",
+    "G12",
+    "G13",
+    "G14",
+    "G15",
+    "G16"
+  ],
+  "required_preserved_limits": [
+    "finite_radius_conditional",
+    "full_path_status=not_verified",
+    "business_threshold_status=undetermined",
+    "service_eligibility=unknown",
+    "DSM_not_bare_ground",
+    "zenith_and_near_transmitter_explicitly_unsupported",
+    "native_point_sampling_not_continuous_or_physical_oracle",
+    "local_grid_resolution_effects_not_certified_accuracy"
+  ],
+  "validation": {
+    "angular_test": "tests/test_cell_profile.py::test_angular_boundary_brackets_converge_to_analytic_cell_corners",
+    "command": "bash scripts/python_geo.sh -m pytest tests -q",
+    "passed": 331,
+    "production_code_changed": false,
+    "seconds": 8.86
+  }
+}
