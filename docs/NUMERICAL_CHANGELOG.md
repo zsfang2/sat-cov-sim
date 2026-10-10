@@ -26,6 +26,20 @@
 
 ## Applied Changes
 
+### M2-DIRECTION-11 — Bound local response lookup and cache
+
+| Field | Value |
+|---|---|
+| Kind | `unknown_numerical_risk` for optional off-grid approximation; original solver unchanged |
+| Components affected | New local provider, direction table and JSON cache; nearest/bilinear and direct fallback |
+| Before behavior | No local direction query/cache interface |
+| After behavior | Original sample reproduction, explicit interpolation uncertainty, state/domain/accuracy fallback, input/source/range identity invalidation |
+| Validation evidence | reports/m2/direction-table.md/json; 30 new tests, 402 total; 84-sample archive, zero sample roundtrip error |
+| Current generated maps change | `no` — no existing generation path switched to lookup |
+| Published benchmark results change | `no` — no dataset or benchmark regeneration |
+| Existing dataset impact | None; later callers must retain interpolation and finite-range limitations |
+| Regeneration decision | Small offline software verification only |
+
 ### M4-COMPARISON-10 — Three-role finite-terrain experiment
 
 | Field | Value |

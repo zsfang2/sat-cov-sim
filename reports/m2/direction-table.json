@@ -1,0 +1,58 @@
+{
+  "accuracy_claim": "sample reproduction only; no held-out interpolation error bound",
+  "boundary_sample_count": 40,
+  "build_s": 0.03098796121776104,
+  "cache_bytes": 59657,
+  "cache_file": "9a1026eaf5c20ddfc419823c6dac206cb8feccfc1997bd7d19a5e4945be1f379.json",
+  "cache_key": "sha256:9a1026eaf5c20ddfc419823c6dac206cb8feccfc1997bd7d19a5e4945be1f379",
+  "finite_scope": {
+    "business_threshold_status": "undetermined",
+    "full_path_status": "not_verified",
+    "limitations": [
+      "terrain_outside_radius_unverified",
+      "declared_local_diffraction_model",
+      "DSM_surface_is_not_bare_ground"
+    ],
+    "radius_m": 150,
+    "sampling_method": "cell_intervals",
+    "scope": "finite_radius_conditional",
+    "service_eligibility": "unknown",
+    "step_m": 5,
+    "version": 1
+  },
+  "known_sample_count": 72,
+  "max_sample_error_db": 0.0,
+  "query_methods": [
+    "sample",
+    "sample",
+    "nearest",
+    "nearest",
+    "direct_fallback",
+    "direct_fallback",
+    "direct_fallback",
+    "sample",
+    "sample",
+    "bilinear",
+    "bilinear",
+    "direct_fallback",
+    "direct_fallback",
+    "direct_fallback"
+  ],
+  "sample_count": 84,
+  "stale_cache_rejected": true,
+  "run": "output/m2-table-20261010",
+  "artifacts": {
+    "9a1026eaf5c20ddfc419823c6dac206cb8feccfc1997bd7d19a5e4945be1f379.json": "sha256:aa4305cce141c4b034e02a9dc324487a47de8ed182495e055fb3d9a81eb96387",
+    "config.json": "sha256:6b3739f222afc6848b82eb0aee6b9021138440bb3e75b8efa1688975718f188f",
+    "environment.json": "sha256:ef598bd673e6079a966a83f3a2979d1818ef71967ce90d89def94c835068f650",
+    "grid.npy": "sha256:5e7001eb1c28f24180df2b5339632df35f1a236aa90a4f73566aa451ef322690",
+    "queries.json": "sha256:12d6e7585fa6419cde08e3d8a089f3825a434965f37c28992667d81d48520569",
+    "resources.json": "sha256:fd0e9da87817c0cd40b4c110c4a6cd8d646ae744ec49fd75b55acc02e66b2e9b",
+    "run.log": "sha256:410f30d48fa9a19d0cbafe61aa63f628f01e346a9401ccd2f507375ea65457da",
+    "sources.zip": "sha256:93238ec7d97c407f9dc5113838c3b8d3e1aad5bcc087d52a7f7113d34c889e13",
+    "summary.json": "sha256:0260d013a8696450b53278ab1b67244bc48d32d786a5e2e233f1da335fafc8b8",
+    "validation.json": "sha256:a809f31856aa1cc77146c21336358ec753325eb149f4f9c52bbbe6e313d070a1"
+  },
+  "manifest_sha256": "sha256:9eca648335e075cfadb101577272e32b22f89d40bd6a39ed04ec1abf02992197",
+  "tests": "402 passed in 9.56s"
+}
