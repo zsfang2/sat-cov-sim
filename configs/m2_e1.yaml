@@ -1,0 +1,47 @@
+schema_version: 1
+experiment_id: m2-e1-frozen-v1
+scenes:
+  - {id: flat_synthetic, radius_m: 150, step_m: 5}
+  - {id: qinling_mountain, radius_m: 3000, step_m: 15, source_run: output/m3-domain-20261009}
+frequency_hz: [14500000000.0, 1000000000.0]
+height_agl_m: [2.0, 10.0]
+slant_range_m: 550000.0
+effective_radius_m: 6371000.0
+loss_cap_db: 60.0
+azimuth_steps_deg: [30.0, 15.0]
+elevations_deg: [0, 5, 10, 15, 20, 25, 30]
+heldout:
+  azimuth_start_deg: 7.5
+  azimuth_step_deg: 15.0
+  azimuth_count: 24
+  elevation_start_deg: 2.5
+  elevation_step_deg: 5.0
+  elevation_count: 6
+baseline:
+  frequency_hz: 14500000000.0
+  height_agl_m: 2.0
+  eirp_dbm: 40.0
+  antenna: isotropic
+  azimuth_deg: 0.0
+  elevation_deg: 5.0
+antenna_models:
+  isotropic: {model: isotropic, gain_dbi: 0.0, basis: receiver_enu}
+  cosine: {model: cosine, peak_gain_dbi: 12.0, floor_gain_dbi: -20.0, exponent: 2.0, boresight_enu: [0, 1, 1], basis: receiver_enu}
+factor_cases:
+  - {id: baseline}
+  - {id: power, eirp_dbm: 50.0}
+  - {id: antenna, antenna: cosine}
+  - {id: frequency, frequency_hz: 1000000000.0}
+  - {id: direction, azimuth_deg: 15.0, elevation_deg: 7.5}
+  - {id: height, height_agl_m: 10.0}
+  - {id: joint_direction_antenna, azimuth_deg: 15.0, elevation_deg: 7.5, antenna: cosine}
+  - {id: joint_frequency_height, frequency_hz: 1000000000.0, height_agl_m: 10.0}
+atmosphere_loss_db: 1.0
+atmosphere_basis: fixed declared 1 dB across frequency; not a weather or gaseous absorption model
+threshold_dbm: -150.0
+threshold_basis: hypothetical diagnostic threshold, not a business requirement
+methods: [strict_fallback, nearest_raw_diagnostic, bilinear_raw_diagnostic]
+hot_repeats: 5
+exact_recomposition_tolerance_db: 0.000001
+heldout_error_requirement: undetermined
+business_thresholds: undetermined

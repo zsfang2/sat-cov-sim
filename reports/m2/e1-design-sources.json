@@ -1,0 +1,15 @@
+{
+  "config_sha256": "sha256:8c03c5d45e9b751709cd5ef802d15a8f6a26fddb91c875b14040161298558948",
+  "consultation": ".humanize/skill/2026-10-10_04-18-18-3091601-f69aa6b6",
+  "consultation_output_sha256": "sha256:402d7be4720271191b580df2e0f0b1f27f6310ef64b21c0762a8923c95d35053",
+  "consultation_metadata": "---\ntool: codex\nmodel: gpt-5.5\neffort: high\ntimeout: 3600\nexit_code: 0\nduration: 204s\nstatus: success\nstarted_at: 2026-10-10T04:18:18Z\n---\n",
+  "real_inputs": {
+    "qinling_mountain-60-grid.npy": "sha256:ea5fd32a04d677a457fb4cca702c4d6b5cef967a7517f2c8518b8d7f97485f0c",
+    "qinling_mountain-60-terrain.json": "sha256:1a734c326b5deb505258bba102124869b837d73e9d78cb7bd036d608ea7f284b"
+  },
+  "ground_ellipsoid_height_m": 1933.3074593633019,
+  "antenna_ellipsoid_heights_m": [
+    1935.3074593633019,
+    1943.3074593633019
+  ]
+}
