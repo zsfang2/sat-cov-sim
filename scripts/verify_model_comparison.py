@@ -28,7 +28,7 @@ def write_csv(path, records):
         if not records:
             return
         fields = list(dict.fromkeys(k for r in records for k in r))
-        writer = csv.DictWriter(stream, fieldnames=fields)
+        writer = csv.DictWriter(stream, fieldnames=fields, lineterminator='\n')
         writer.writeheader()
         writer.writerows({k: json.dumps(v, sort_keys=True) if isinstance(v, (dict, list)) else v for k, v in r.items()} for r in records)
 

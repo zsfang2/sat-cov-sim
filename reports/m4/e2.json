@@ -2418,13 +2418,13 @@
         "unsupported_geometry": 2
       },
       "memory_attribution": "process_shared_not_per_solver",
-      "peak_process_rss_kib": 246880,
+      "peak_process_rss_kib": 247536,
       "reference_eligibility": {
         "not_reference": 1189
       },
       "role_id": "sky_horizon_outline_v1",
       "rows": 1189,
-      "solver_wall_s": 0.2570376005023718,
+      "solver_wall_s": 0.26456788228824735,
       "statuses": {
         "known": 1063,
         "not_applicable": 121,
@@ -2440,13 +2440,13 @@
         "unsupported_geometry": 2
       },
       "memory_attribution": "process_shared_not_per_solver",
-      "peak_process_rss_kib": 247144,
+      "peak_process_rss_kib": 247788,
       "reference_eligibility": {
         "not_reference": 1189
       },
       "role_id": "m3_current_single_edge_v1",
       "rows": 1189,
-      "solver_wall_s": 0.7355121541768312,
+      "solver_wall_s": 0.752970561850816,
       "statuses": {
         "known": 1063,
         "not_applicable": 121,
@@ -2463,7 +2463,7 @@
         "unsupported_geometry": 2
       },
       "memory_attribution": "process_shared_not_per_solver",
-      "peak_process_rss_kib": 247144,
+      "peak_process_rss_kib": 247788,
       "reference_eligibility": {
         "eligible_within_tested_discretization": 879,
         "unavailable": 127,
@@ -2471,7 +2471,7 @@
       },
       "role_id": "reference_multi_edge_deygout_v1",
       "rows": 1189,
-      "solver_wall_s": 0.3668071054853499,
+      "solver_wall_s": 0.36675044568255544,
       "statuses": {
         "failed": 1,
         "known": 1062,
@@ -2482,7 +2482,7 @@
   ],
   "row_count": 3567,
   "scope": "finite-radius numerical-model differences, not measurement error; sky has no dB comparison",
-  "shared_preparation_s": 1.6469281842000782,
+  "shared_preparation_s": 1.6486907745711505,
   "thresholds": [
     {
       "capped": 143,
@@ -2655,20 +2655,20 @@
       "visibility_b": "unknown"
     }
   ],
-  "run": "output/m4-e2-final-20261010",
-  "artifact_manifest_sha256": "sha256:5ed74f7609e7898d1e5055347629bbbbf3f2248dadb46ffa8b52d404d0fa863b",
+  "run": "output/m4-e2-lf-20261010",
+  "artifact_manifest_sha256": "sha256:020e338e7e96085198de0ed1da17627aff64d8fc2c2047fab1c7e369a48fb593",
   "artifacts": {
-    "caps.csv": "sha256:3f1ee87f3376ef2a3cc1e2768909df777c4d2f49abd5dab05153e47a77ca582f",
+    "caps.csv": "sha256:e1e87cb08865fa0fa0536907643e9b01ae95beb85a388bc4b92ca4a545e42f1d",
     "config.json": "sha256:cd74747b6758f56f109d63972ac780505b8220dde23497bac1afb64283c506fd",
     "config.yaml": "sha256:224400a382ee145a05b9a052291d3923cf33572ee921b4ff65df769999d68a61",
     "deep_ridge-grid.npy": "sha256:cb2d9f3c501de97fbceb34262e70a81e05f101e98ea4914b3586ae0c1d804e03",
-    "differences.csv": "sha256:7e52902ea237a234316b2213d43144d5346096a4fc1b231db736c73b7b0e9901",
+    "differences.csv": "sha256:6be34cd07545f61536fc53eced2665411e6aa00b3505011f2523a0a2f5e15b65",
     "discrete-cases.json": "sha256:4ff7f487a3b99344e74f5211aba7e89cab31bc4f0d2ea8482bc24f8cd0d90af1",
     "double_ridge-grid.npy": "sha256:b66c9e9c8774bd719bc573adf066d05412fc6d8e827a14304450dc283fb5fb3c",
-    "environment.json": "sha256:493817a5fbe193f72f1d6f1125d3feaa9e0e8d07c3179ece8f05a0bfc7ef07a3",
-    "failures.csv": "sha256:70cb004954cf708167d6c5cbbfbbba4d63cd92b1196cdca15372fe6a057373d1",
+    "environment.json": "sha256:ac23859731322faeca07dcb6e86d7e80dabb360b7e66dd73755e8cd3e1341233",
+    "failures.csv": "sha256:c0ec1e683895c7f2fbac0e6a4f87312f364100f151a29178ea4b5030d029fcc7",
     "flat-grid.npy": "sha256:c45f5bdb14abf1a2ece92934a73b27e50e32063686323be7b4a67e4f776c02a8",
-    "groups.csv": "sha256:dcbe0c4eec6cfb1f1e20549d2afc0e8abe981e65d81803abfbb67744d4044c18",
+    "groups.csv": "sha256:2ed0e413215538fe42e6520030d8b997c759011ee97fed213a99066e104fc158",
     "inputs.json": "sha256:5646a7f9ee6b269377d9a97b04bafa8b2691cc2e14be437506fb44cf7e9fda89",
     "profiles.jsonl": "sha256:5f8ab7a26a8c6d93db083d4028a0ab23ba55d3efd51d16ab7b042f160fa27479",
     "qinling_foothill-60-grid.npy": "sha256:c20b148428e6ddcd94fbb7e07cccff89f4d86f60045dabd80a85147bba6a6a4f",
@@ -2676,27 +2676,27 @@
     "qinling_mountain-60-grid.npy": "sha256:ea5fd32a04d677a457fb4cca702c4d6b5cef967a7517f2c8518b8d7f97485f0c",
     "qinling_mountain-60-terrain.json": "sha256:1a734c326b5deb505258bba102124869b837d73e9d78cb7bd036d608ea7f284b",
     "raw-loss-comparison.png": "sha256:32a654c200cc2dc920253cbd01a5f82c404097b64fe7ccc55ff866bc0281a64e",
-    "refinements.csv": "sha256:f905906387a707142d623f79b7957fdd6973ffc4f0ab9d31f80888240ac75ab6",
+    "refinements.csv": "sha256:21ea9039f01346126a8102cdb33b9aff5036bdcefaccf4a90cb30eeb65cbae4f",
     "refinements.json": "sha256:3340d0f4805b2720f8d2214ecc6eae444671e6abffb3535ebe1da2f186a0b6b0",
     "rejected-requests.json": "sha256:72f645ccc173ad39465c8315d432f4c22053dcf7170144cf271e7362377dc299",
-    "resources.json": "sha256:a2ff0e10c1fda760d8eb02485cdb35dacc8c1288711fbc278c00fec02eab44bd",
-    "role-cost.png": "sha256:5bfdbaced86814864429b340688252611f737bb75afab6189740251b615f90a9",
-    "role-resources.csv": "sha256:bf7bd9a6bd05af82f53cf258382debc8498e472ad057711299b05481c8fed757",
-    "roles.jsonl": "sha256:59013d0254b0b178a1b9ca8f78c5474ad041af0d98c72be152d617188218b4b7",
-    "run.log": "sha256:f1662bbd88f2c60465346997d1c7dd73f014db8aab6b6f94455fd67bedabc7f6",
+    "resources.json": "sha256:ec0d0ddb39f88964f84ce4d9339723a05fb8217f1960bd702dbe8f7328aa3cd3",
+    "role-cost.png": "sha256:b56ab3fa5f5ec9e5085e0209ee7e5dac1bc8023ee68c8c8f883350dbafd9b7b0",
+    "role-resources.csv": "sha256:1a75a6d449add98ccf1c54127b4455121caccd95316b5d672b268c475564a333",
+    "roles.jsonl": "sha256:d3aa88533a1b6b5f112cdf6a1a977558f89a4e5d33cdf07e66d97475c2c45fb7",
+    "run.log": "sha256:0b5593fb75aa26fd182835695b79fe99dcd190592f696a1540d0175d83d712b9",
     "single_ridge-grid.npy": "sha256:5e7001eb1c28f24180df2b5339632df35f1a236aa90a4f73566aa451ef322690",
-    "sources.zip": "sha256:99e2483bc75c73ae98c8dd31f014e3cbd536004439e262a61adc49a5bac13339",
-    "summary.json": "sha256:95e676ae84a09bdb00db1d7a06f33a3faa08a82c9f64363a6a219abfd72bd490",
+    "sources.zip": "sha256:7e31a23ac865fba1a164c1cc11ba167b837b8d68b58c5ca15f925a03d3ad9ead",
+    "summary.json": "sha256:75a8cca21ec155fc1f6fa5aef552215646055bdb5c97be336fda38fbc96620b4",
     "terrace-grid.npy": "sha256:9d3ace4026961f5881765b5547042bcf0cc627191d3ffc532fb4990e69db9e98",
-    "threshold-details.csv": "sha256:10db8c9eb33d3d273ae01607b101efaf5b9f50a21b8dd8f78f9ec5f78cae6636",
+    "threshold-details.csv": "sha256:45cdcca8d6bd0b7e6da488988753ed9e9bd13c38b2ac46069b3b1206bd479824",
     "threshold-disagreement.png": "sha256:09bf6a26d92964f2218ab0b7ccc28cd33c5f8d3165a62dfacaf2d69362684dff",
-    "thresholds.csv": "sha256:23d99e6bf09050fa8860d7fafc4d275002c0b96fc49ed36029ac5cc7ee9212b5",
+    "thresholds.csv": "sha256:bd629d2da8e0155d888d30698284917d220fe23f582322c236d545d7041577ff",
     "validation.json": "sha256:920746790b7b28bce648462a8b9a0379a38f7e0ec07b057656ed0ab773cab5f9",
-    "visibility.csv": "sha256:f662473ab26104ee1cab81d5478e5d9a278480a011b90dbbd33d8e13d5f506ac",
+    "visibility.csv": "sha256:d2aa2ea6d7ceb1bb1665af4c945dfc28b6dc2cb8fb5e4d20cf0f5f090034d65c",
     "xian_city-60-grid.npy": "sha256:19833b34a9ded8e6f097d0aff31b06eccd93044097017111c14ca497239491af",
     "xian_city-60-terrain.json": "sha256:ef2b3e7b201ffc2c8261583d43edd0e8eec9df130f78e8899a53794e9c258a65"
   },
-  "tests": "372 passed in 9.36s",
+  "tests": "372 passed in 9.26s",
   "validation": {
     "pair_count": 1189,
     "real_inputs_verified": 6,
@@ -2712,9 +2712,15 @@
     "unexpected_rejections": 0
   },
   "resources": {
-    "json_write_time_s_before_resource_record": 0.09181431774049997,
-    "peak_rss": 415552,
-    "wall_time_s": 8.811771818902344
+    "json_write_time_s_before_resource_record": 0.09162619011476636,
+    "peak_rss": 416368,
+    "wall_time_s": 8.94301436515525
   },
-  "environment_source_fingerprint": "sha256:78c08cbf142b800b28a930db2a08981137e5fe33e76b6975ad7335b731c5e9c8"
+  "environment_source_fingerprint": "sha256:686b37acb14e6774a2b42743a5d028fa157746671aed21bbfd2d8147da1f93f4",
+  "equivalence": {
+    "previous_run": "output/m4-e2-final-20261010",
+    "rows_equal_ignoring_source_and_resources": 3567,
+    "grouped_differences_thresholds_failures_refinements_equal": true,
+    "all_csv_lf": true
+  }
 }
