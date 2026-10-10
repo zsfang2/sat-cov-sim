@@ -5,7 +5,7 @@
     "output_sha256": "sha256:2cbe28a626edbfc7ae0e2258383eb14a9fa16d4f7515f1cb8de6fae4f365965e",
     "path": ".humanize/skill/2026-10-09_10-00-11-2340095-c70556cd"
   },
-  "decision": "accepted_with_declared_limits_pending_round_gate",
+  "decision": "accepted_with_declared_limits",
   "evidence_hashes": {
     "reports/m3/acceptance-review.md": "sha256:2cbe28a626edbfc7ae0e2258383eb14a9fa16d4f7515f1cb8de6fae4f365965e",
     "reports/m3/bounded-reader-summary.json": "sha256:c96f18fa9ba0ee6b4a8ac78e2bb9c91b6921f41e6b1bf43e8a02ddb613121cc9",
@@ -20,6 +20,14 @@
     "numerical": "passed_declared_model_checks",
     "physical_truth": "not_validated",
     "source": "conditional_on_declared_DSM_EGM2008_chain"
+  },
+  "official_round_gate": {
+    "evidence": "reports/m3/acceptance-gate.md",
+    "loop": "2026-10-09_08-03-30",
+    "next_task": "G07",
+    "round": 5,
+    "sha256": "sha256:73063c876dec4fc744806012afd37bf4626d5775f070b768c270550bff9bd4c2",
+    "verdict": "ADVANCED"
   },
   "phase": "M3",
   "remaining_plan_tasks": [

@@ -1,0 +1,41 @@
+{
+  "consultation": {
+    "input_sha256": "sha256:369c5abe8c7752b3b7021f72da7a56c3fd9e0e1983d94ff001cc81e6a00ffeb6",
+    "metadata": "---\ntool: codex\nmodel: gpt-5.5\neffort: high\ntimeout: 3600\nexit_code: 0\nduration: 130s\nstatus: success\nstarted_at: 2026-10-10T01:39:14Z\n---\n",
+    "output_sha256": "sha256:29b7c5cbf010356700255ed60d0fb9127b2625cd33ad78e8dbb7dfd755fe85ff",
+    "path": ".humanize/skill/2026-10-10_01-39-14-2929726-0e42f13d"
+  },
+  "contract_sha256": "sha256:2be8f275ee9a183b5da38955faab9e022b64fe321ac2a2eb89983efa1e33ef78",
+  "frozen_config_sha256": "sha256:224400a382ee145a05b9a052291d3923cf33572ee921b4ff65df769999d68a61",
+  "primary_references": [
+    {
+      "accessed": "2026-10-10",
+      "id": "ITU-P526-16",
+      "scope": "single-edge approximation; no claim of implementing complete ITU method",
+      "sections": [
+        "4.1 equations 30/31",
+        "4.3 double isolated edges"
+      ],
+      "sha256": "sha256:7647c3cb3873dc0389a7007f487728359551ed82468a5677b7cd09430875f23d",
+      "url": "https://www.itu.int/dms_pubrec/itu-r/rec/p/R-REC-P.526-16-202511-I%21%21PDF-E.pdf"
+    },
+    {
+      "accessed": "2026-10-10",
+      "id": "NTIA-TR-26-580",
+      "publication": "October 2025",
+      "scope": "primary comparative research and explicit Deygout procedure; supports algorithm and limitations",
+      "sections": [
+        "3.3.3",
+        "Table 2",
+        "Appendix C"
+      ],
+      "url": "https://its.ntia.gov/publications/download/TR-26-580.pdf"
+    },
+    {
+      "doi": "10.1109/TAP.1966.1138719",
+      "full_text_verified": false,
+      "id": "Deygout1966",
+      "scope": "bibliographic origin only; original full text was not accessible, no direct replication claim"
+    }
+  ]
+}

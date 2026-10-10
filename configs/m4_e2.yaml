@@ -1,0 +1,57 @@
+schema_version: 1
+experiment_id: m4-e2-frozen-v1
+roles: [sky_horizon_outline_v1, m3_current_single_edge_v1, reference_multi_edge_deygout_v1]
+baseline:
+  frequency_hz: 14500000000.0
+  slant_range_m: 550000.0
+  eirp_dbm: 40.0
+  receiver_gain_dbi: 0.0
+  antenna_model: isotropic
+  height_above_surface_m: 2.0
+  effective_radius_m: 6371000.0
+  loss_cap_db: 60.0
+  nonlocal_losses_db: {gas: 0.0, rain: 0.0, clutter: 0.0, other: 0.0}
+  azimuths_deg: [0, 45, 90, 135, 180, 225, 270, 315]
+  elevations_deg: [0, 1, 5, 30]
+synthetic:
+  raster_shape: [41, 41]
+  resolution_m: 10.0
+  west_m: -205.0
+  north_m: 205.0
+  radius_m: 150.0
+  steps_m: [10.0, 5.0, 2.5]
+  scenes: [flat, single_ridge, double_ridge, terrace, deep_ridge]
+  special_cases: [nodata, receiver_nodata, outside_dem, below_horizon, zenith, near_transmitter, invalid_frequency, resource_refusal]
+real:
+  enabled_when_inputs_available: true
+  source_run: output/m3-domain-20261009
+  sites: [xian_city, qinling_foothill, qinling_mountain]
+  grid_resolution_m: 60.0
+  radius_m: 3000.0
+  steps_m: [30.0, 15.0, 7.5]
+  elevations_deg: [1, 5, 30]
+  heights_above_surface_m: [2.0, 10.0]
+one_factor_sweeps:
+  frequency_hz: [1000000000.0, 14500000000.0]
+  height_above_surface_m: [2.0, 10.0]
+  effective_radius_m: [null, 6371000.0, 8494666.666666666]
+  loss_cap_db: [10.0, 60.0]
+  synthetic_radius_m: [75.0, 150.0]
+  scope: synthetic baseline scenes at azimuth 0 and elevations 1,5,30; change one factor only
+threshold_offsets_from_unobstructed_power_db: [-10, -6, -3, 0, 3, 6, 10]
+reference:
+  variant: recursive_dominant_edge_positive_branch_v1
+  maximum_points: 8192
+  maximum_depth: 256
+  maximum_nodes: 16383
+  local_diffraction_effect_count: 1
+  convergence_raw_loss_db: 0.1
+  require_two_refinements: true
+  require_identical_visibility_and_cap_state: true
+validation:
+  exact_formula_tolerance_db: 0.000001
+  existing_dense_single_edge_tolerance_db: 0.000002
+  rounded_ntia_table_tolerance_db: 0.05
+  diagnostic_horizon_deg: 0.1
+  diagnostic_model_difference_db: 1.0
+  business_thresholds: undetermined
