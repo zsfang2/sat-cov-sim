@@ -30,6 +30,11 @@ def classify(record, minimum_elevation_deg=0):
     geometry = record.get('geometry')
     state = dict(geometry='unknown', quality='unknown', margin_db=None,
                  reason=record.get('reason', 'unavailable_geometry'), source_status=record['status'])
+    proxy = record.get('geometric_proxy')
+    if proxy is not None and (not isinstance(proxy, dict) or set(proxy) != {'visibility', 'scope'}
+            or proxy['visibility'] not in ('blocked', 'clear_within_radius', 'unknown', 'not_applicable')
+            or proxy['scope'] != 'finite_radius_sky_outline_only' or record.get('budget') is not None):
+        raise ValueError('sky geometric proxy cannot contain a power budget')
     if geometry is None:
         return state
     elevation = geometry.get('elevation_deg')
@@ -39,6 +44,10 @@ def classify(record, minimum_elevation_deg=0):
     state['geometry'] = 'visible' if visible else 'invisible'
     if not visible:
         state.update(quality='invisible', reason='geometrically_invisible')
+        return state
+    if proxy is not None:
+        state.update(quality='invisible' if record['status'] == 'computed' and proxy['visibility'] == 'blocked' else 'unknown',
+                     reason='geometric_proxy_blocked' if record['status'] == 'computed' and proxy['visibility'] == 'blocked' else 'sky_has_no_quality_model')
         return state
     if record['status'] != 'computed':
         return state

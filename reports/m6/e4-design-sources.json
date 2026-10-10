@@ -1,0 +1,93 @@
+{
+  "consultation": ".humanize/skill/2026-10-10_09-08-22-3370150-23b61c01",
+  "consultation_metadata": "---\ntool: codex\nmodel: gpt-5.5\neffort: high\ntimeout: 3600\nexit_code: 0\nduration: 198s\nstatus: success\nstarted_at: 2026-10-10T09:08:22Z\n---\n",
+  "consultation_output_sha256": "sha256:ce37800cff7ea3cfabda3b89db4a3ce5537dcbc52344781a27a579b64e53ff68",
+  "freeze": {
+    "candidate_set_checksum": "sha256:59c7521acf6891a3d95514d48afe33fc0a45520a33136d9844da98a56e4d501c",
+    "config_checksum": "sha256:e890cefc61a49c7738a090124e5d66b1c2671d79c613929578b8ab6c5b012c2c",
+    "config_sha256": "sha256:072210b38c6bf7f9e90797987ae157a19af9576c64d967850d0e915f9970609b",
+    "pass_registry_checksum": "sha256:c46047ae066111818186f416d95e15799d424208566f5ed39e59157ccf9b8bbc",
+    "quality_evaluated": false,
+    "selected_tle_record_sha256": "d86e70429a5027bfd4abd871327005fd9baca5d1c7762be06db7359033e76098",
+    "selection_basis": "geometry and declared locations only",
+    "sites": [
+      {
+        "candidate_id": "Q0",
+        "grid": "Q0-grid.npy",
+        "grid_sha256": "sha256:2eeed0cd491b5fecb80abadba31348c66d57bdb400dc396ea12d6400feba5827",
+        "metadata": "Q0-terrain.json",
+        "metadata_sha256": "sha256:b8b9761e86171f2c22c89fdbae38844d7b6f68bcfca37c514f82648a99e94738",
+        "receiver": {
+          "antenna_ellipsoid_height_m": 1935.3074593633019,
+          "basis": "declared Copernicus DSM + EGM2008 undulation + fixed above-surface height",
+          "height_basis": "ellipsoid",
+          "lat_deg": 33.9,
+          "lon_deg": 108.9
+        }
+      },
+      {
+        "candidate_id": "Q_E300",
+        "grid": "Q_E300-grid.npy",
+        "grid_sha256": "sha256:51775cb887155e0a9bd7e32b629bd078dfd230a04ab4a1c0ea75bd1ffd5afa2d",
+        "metadata": "Q_E300-terrain.json",
+        "metadata_sha256": "sha256:cf3778149f7e51662db71b6db61f7f976acaed3a90109f9c01cfd359cb00216f",
+        "receiver": {
+          "antenna_ellipsoid_height_m": 1789.315818743388,
+          "basis": "declared Copernicus DSM + EGM2008 undulation + fixed above-surface height",
+          "height_basis": "ellipsoid",
+          "lat_deg": 33.899999957302235,
+          "lon_deg": 108.9032434921086
+        }
+      },
+      {
+        "candidate_id": "Q_N300",
+        "grid": "Q_N300-grid.npy",
+        "grid_sha256": "sha256:3bfee53e15c8b49ac6bf56252fbda382c99e3be46c7e0899494e43c7fd3a3445",
+        "metadata": "Q_N300-terrain.json",
+        "metadata_sha256": "sha256:819b6ea260680090ccd1fa424610407af9b219dbb2b3cc9265fa5c2b40ef368c",
+        "receiver": {
+          "antenna_ellipsoid_height_m": 1950.2810560056898,
+          "basis": "declared Copernicus DSM + EGM2008 undulation + fixed above-surface height",
+          "height_basis": "ellipsoid",
+          "lat_deg": 33.902704637238415,
+          "lon_deg": 108.9
+        }
+      }
+    ],
+    "tle_sha256": "sha256:e661f17444e4fdc4eed85ccfef437d87f33796193bf8ca000bdb3058715b9b7f"
+  },
+  "registry": {
+    "passes": [
+      {
+        "basis": "chronological geometric overlap; union across candidates plus padding; no quality inspected",
+        "end_utc": "2025-01-01T14:37:16.666835+00:00",
+        "pass_id": "pass-5",
+        "split": "development",
+        "start_utc": "2025-01-01T14:28:21.192689+00:00"
+      },
+      {
+        "basis": "chronological geometric overlap; union across candidates plus padding; no quality inspected",
+        "end_utc": "2025-01-01T16:19:59.841453+00:00",
+        "pass_id": "pass-6",
+        "split": "development",
+        "start_utc": "2025-01-01T16:07:40.719045+00:00"
+      },
+      {
+        "basis": "chronological geometric overlap; union across candidates plus padding; no quality inspected",
+        "end_utc": "2025-01-01T18:00:27.976650+00:00",
+        "pass_id": "pass-7",
+        "split": "holdout",
+        "start_utc": "2025-01-01T17:46:52.373184+00:00"
+      },
+      {
+        "basis": "chronological geometric overlap; union across candidates plus padding; no quality inspected",
+        "end_utc": "2025-01-01T19:36:46.130100+00:00",
+        "pass_id": "pass-8",
+        "split": "holdout",
+        "start_utc": "2025-01-01T19:28:09.334509+00:00"
+      }
+    ]
+  },
+  "preparation_artifacts_sha256": "sha256:aa62f447fe54c52ab296ec3a6b57d11036eca239373cc5901c8aa95ed619c08b",
+  "frozen_before_quality": true
+}

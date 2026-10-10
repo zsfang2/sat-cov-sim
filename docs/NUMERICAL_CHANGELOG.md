@@ -26,6 +26,20 @@
 
 ## Applied Changes
 
+### INFORMATION-VALUE-14 — Frozen four-layer conditional decision experiment
+
+| Field | Value |
+|---|---|
+| Kind | `benchmark_only_change` for new optional four-layer research evaluation |
+| Components affected | Frozen terrain/pass preparation, power/threshold derivations, sky-only event proxy, reference eligibility and decision evidence |
+| Before behavior | Candidate evaluator verified with artificial costs only; no actual common-holdout information-layer experiment |
+| After behavior | Four development information layers, sealed receipts before holdout propagation, common reference, explicit spatial/time qualification and unknown-time gain/regret intervals |
+| Validation evidence | tests/test_information_value.py; scripts/verify_information_value.py; scripts/audit_information_value.py; reports/m6/e4.md |
+| Current generated maps change | `no` — existing scalar formulas and dataset generation unchanged |
+| Published benchmark results change | `no` — new diagnostic experiment only; historical artifacts retained |
+| Existing dataset impact | None; sky proxy cannot supply power, unknown reference does not establish physical optimum, source and business limits remain |
+| Regeneration decision | Small local research experiment; no formal reference dataset regeneration |
+
 ### CANDIDATE-EVALUATION-13 — Isolate development selection from holdout evaluation
 
 | Field | Value |

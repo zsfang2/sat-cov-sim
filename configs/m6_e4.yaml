@@ -1,0 +1,61 @@
+schema_version: 1
+origin_lon_deg: 108.9
+origin_lat_deg: 33.9
+sites:
+  - {id: Q0, east_m: 0, north_m: 0}
+  - {id: Q_E300, east_m: 300, north_m: 0}
+  - {id: Q_N300, east_m: 0, north_m: 300}
+height_agl_m: 2
+resolution_m: 60
+radius_m: 3000
+effective_radius_m: 6371000
+loss_cap_db: 60
+dem_path: ../Satellite-Ground-Radiomap/data/l2_topo/china_dem_30.tif
+dem_declaration:
+  sha256: sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b
+  height_unit: m
+  vertical_datum: EGM2008
+  surface_type: DSM
+  evidence: User identified Copernicus GLO30-CHINA; original metre EGM2008 assumed; local mosaic lineage unverified; reports/m3/copernicus-source.json
+geoid:
+  path: output/geoid/egm2008-complete.tif
+  sha256: sha256:4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a
+  model: EGM2008
+  evidence: https://cdn.proj.org/us_nga_egm08_25.tif
+tle_path: ../Satellite-Ground-Radiomap/data/starlink-2025-tle/2025-01-01.tle
+tle_sha256: sha256:e661f17444e4fdc4eed85ccfef437d87f33796193bf8ca000bdb3058715b9b7f
+norad_id: '44714'
+tle_policy: past_only
+max_age_days: 7
+search_start: '2025-01-01T05:00:00Z'
+search_end: '2025-01-03T05:00:00Z'
+skip_complete_passes: 4
+complete_pass_count: 4
+development_pass_count: 2
+padding_s: 30
+frequency_hz: 14500000000.0
+eirps_dbm: [55, 45]
+thresholds_dbm: [-160, -150, -140]
+atmosphere_loss_db: 1
+spatial_steps_m: [15, 7.5, 3.75]
+spatial_raw_tolerance_db: 0.1
+reference_levels:
+  - {probe_s: 1, tolerance_s: 0.05}
+  - {probe_s: 0.5, tolerance_s: 0.025}
+  - {probe_s: 0.25, tolerance_s: 0.0125}
+initial_step_s: 20
+nonreference_time_level: 2
+boundary_change_tolerance_s: 0.1
+duration_change_tolerance_s: 0.5
+max_samples: 20001
+maximum_points: 8192
+maximum_depth: 256
+maximum_nodes: 16383
+methods: [no_terrain, sky_proxy, m3_single_edge, m4_multi_edge_reference]
+selection_rule: minimize insufficient+invisible+unknown seconds; ties within 1e-6 seconds then lexical ID
+sky_policy: blocked is geometric unavailable; clear and unknown remain quality unknown; no power or attenuation
+temporal_failure_policy: whole candidate-pass reference quality unknown; geometry preserved
+reference_scope: two adjacent spatial and temporal refinements only; finite-radius numerical diagnostic, not physical truth
+minimum_useful_gain: undetermined
+max_compute_budget: undetermined
+allowed_event_error: undetermined
