@@ -26,6 +26,20 @@
 
 ## Applied Changes
 
+### CONDITIONAL-EVENTS-12 — Direct-time conditional event intervals
+
+| Field | Value |
+|---|---|
+| Kind | `unknown_numerical_risk` for new optional event aggregation; original scalar formulas unchanged |
+| Components affected | New conditional geometry/quality event layer; optional arbitrary-time scalar evaluation |
+| Before behavior | Scalar sampled candidates and separate geometric display windows; no conditional event integration |
+| After behavior | Direct midpoint refinement, explicit unresolved transition/gap intervals, duration-weighted statistics, candidate opportunity and censoring; original-interval TLE selection preserved |
+| Validation evidence | tests/test_quality_events.py; scripts/verify_quality_events.py; reports/m5/events.md |
+| Current generated maps change | `no` — existing map path does not use this optional event API |
+| Published benchmark results change | `no` — no dataset or benchmark regeneration |
+| Existing dataset impact | None; event estimates retain finite sampling and propagation limitations |
+| Regeneration decision | Small offline software verification only |
+
 ### M2-DIRECTION-11 — Bound local response lookup and cache
 
 | Field | Value |

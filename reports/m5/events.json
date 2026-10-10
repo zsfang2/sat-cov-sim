@@ -1,0 +1,114 @@
+{
+  "business_event_tolerance": "undetermined",
+  "contact": {
+    "contacts": [
+      "2025-01-01T00:00:05+00:00"
+    ],
+    "direct_times": 71,
+    "longest_seconds": {
+      "insufficient": 4.980469,
+      "invisible": 0,
+      "sufficient": 0,
+      "unknown": 0.039063
+    },
+    "seconds": {
+      "insufficient": 9.960937,
+      "invisible": 0.0,
+      "sufficient": 0.0,
+      "unknown": 0.039063
+    }
+  },
+  "crossing": {
+    "contacts": [],
+    "direct_times": 71,
+    "longest_seconds": {
+      "insufficient": 2.695313,
+      "invisible": 0,
+      "sufficient": 5.136719,
+      "unknown": 0.019531
+    },
+    "seconds": {
+      "insufficient": 4.824219,
+      "invisible": 0.0,
+      "sufficient": 5.136719,
+      "unknown": 0.039062
+    }
+  },
+  "geometry": {
+    "contacts": [],
+    "direct_times": 71,
+    "longest_seconds": {
+      "insufficient": 1.9726569999999999,
+      "invisible": 1.992187,
+      "sufficient": 5.996094,
+      "unknown": 0.019531
+    },
+    "seconds": {
+      "insufficient": 1.972657,
+      "invisible": 1.992187,
+      "sufficient": 5.996094,
+      "unknown": 0.039062
+    }
+  },
+  "m1_direct_times": 65,
+  "max_analytic_boundary_error_s": 0.018437000000000037,
+  "missing": {
+    "contacts": [],
+    "direct_times": 77,
+    "longest_seconds": {
+      "insufficient": 0,
+      "invisible": 0,
+      "sufficient": 2.988282,
+      "unknown": 1.015625
+    },
+    "seconds": {
+      "insufficient": 0.0,
+      "invisible": 0.0,
+      "sufficient": 7.96875,
+      "unknown": 2.03125
+    }
+  },
+  "scope": "directly evaluated software fixtures; finite probe spacing does not prove all continuous events",
+  "short": {
+    "contacts": [],
+    "direct_times": 71,
+    "longest_seconds": {
+      "insufficient": 5.390625,
+      "invisible": 0,
+      "sufficient": 0.35156200000000004,
+      "unknown": 0.019532
+    },
+    "seconds": {
+      "insufficient": 9.609375,
+      "invisible": 0.0,
+      "sufficient": 0.351562,
+      "unknown": 0.039063
+    }
+  },
+  "run": "output/m5-events-final-20261010",
+  "artifacts": {
+    "config.json": "sha256:9d51dbc550fad5cf8f485672142f9600cc8bddf42c1bc0c86ca5a831919c90fe",
+    "contact.json": "sha256:c8d3697fb681b13e785bb02370bfb3afe1d17453da51bcc8f50f8c59fdc64ef3",
+    "crossing.json": "sha256:ff7a45dca248fc0eff26f40da1584d1d981d8b797b7d910fae02c73fe088bcf2",
+    "environment.json": "sha256:5af3403028271be8d424b92e3b37f544d3ad73e5720083ddeb4d19a297b6d94a",
+    "geometry.json": "sha256:27d6b9298af9b94021ab5b6c25eb9e8716f7ce9f1e430328a2076239b10bc81e",
+    "irregular.json": "sha256:345f7095c35827b6ee64d2f91ccc0e4bc0cea24d417cc25b94f42cd8348653eb",
+    "m1-config.json": "sha256:199dcc8ca558f286288638f4372ed7d94eea402bea06ece7fed6ea0a49e1343b",
+    "m1-events.json": "sha256:cd216655ee958d46f0e2e4ac5a66d506adf491c09c3bb4c14b776f53d0c238c1",
+    "missing.json": "sha256:ec527093f474cc7f80cb3370c37b24d761f51e26a86d6945f8522fc9553ff60b",
+    "resources.json": "sha256:ade36f324f5c46c9bc16edaae65d41e2c8be38a2d6219ad714f3f6abae1170fe",
+    "roots.json": "sha256:59bc2f74fb5415c2fad831a08ba2654706af002a70983f9518fe02accd342133",
+    "run.log": "sha256:17b81879eaa8784c8966b146a92a73e4e438053ac5b92347cf6cd2a8f950b53a",
+    "short.json": "sha256:a77a12fc38d4fb74de137076000dd51ea7153ee157815d1250599a19f75d74fd",
+    "sources.zip": "sha256:b746f77ade9c998aa6aae3c17caf45d1d7b5feb17bdbaed3170d21e245cec90f",
+    "summary.json": "sha256:966f6b10b6599555b44b1bb2b2332957baf74a897d0023ea5c289c305f273a0e",
+    "validation.json": "sha256:62a2ec7ea23aed9b55d5588aa911617482704992eeb912b0d6c9a87ea7f781a1"
+  },
+  "artifact_manifest_sha256": "sha256:8ef43213653e19b887edc6255b9d348a1ca8685c26f881e9ef2234397993c112",
+  "resources": {
+    "json_write_time_s_before_resource_record": 0.03254835959523916,
+    "peak_rss": 141096,
+    "wall_time_s": 0.2815851201303303
+  },
+  "tests": "417 passed in 9.71s"
+}

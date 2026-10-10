@@ -7,7 +7,7 @@ from ..config.pilot import identity
 from ..geometry.antenna import receive_gain
 from ..geometry.geodetic import antenna_position, ecef_and_basis, ecef_geometry
 from ..geometry.local import relative_enu_geometry, direction_to_enu
-from ..orbit.visibility import TS, select_record
+from ..orbit.visibility import TS, select_record, utc
 from .link_budget import compose_budget
 from .terrain_contract import terrain_scope, attach_terrain_contract
 
@@ -49,10 +49,19 @@ def input_geometry(source, index, time, receiver, satellite):
     return ecef_geometry(receiver, xyz)
 
 
-def calculate_links(config, catalog=None, *, terrain=None):
+def calculate_links(config, catalog=None, *, terrain=None, evaluation_times=None):
     config = config if isinstance(config, LinkConfig) else LinkConfig.from_mapping(config)
     data, config_id = config.to_mapping(), config.checksum
-    times = sample_times(data)
+    selection_times = sample_times(data)
+    times = selection_times
+    if evaluation_times is not None:
+        if data['source']['mode'] not in ('tle', 'fixed_ecef'):
+            raise ValueError('arbitrary-time evaluation requires TLE or fixed ECEF; sampled directions cannot be interpolated')
+        if not isinstance(evaluation_times, list) or not 1 <= len(evaluation_times) <= 10001:
+            raise ValueError('evaluation_times requires 1..10001 explicit UTC timestamps')
+        times = [utc(t) for t in evaluation_times]
+        if any(a >= b for a, b in zip(times, times[1:])) or not selection_times[0] <= times[0] <= times[-1] <= selection_times[-1]:
+            raise ValueError('evaluation times must increase within the original observation interval')
     receiver = antenna_position(data["receiver"])
     source, budget = data["source"], data["budget"]
     terrain_descriptor = None
@@ -64,7 +73,7 @@ def calculate_links(config, catalog=None, *, terrain=None):
     satellite, unavailable = None, None
     selection = {"policy": "not_applicable", "candidate_id": source["candidate_id"]}
     if source["mode"] == "tle":
-        satellite, selection, unavailable = select_tle(catalog, source, times)
+        satellite, selection, unavailable = select_tle(catalog, source, selection_times)
     physical_id = identity({"config_checksum": config_id, "terrain": terrain_descriptor, "selection": selection})
     losses = enabled_losses(budget["losses"])
     records = []
@@ -73,6 +82,8 @@ def calculate_links(config, catalog=None, *, terrain=None):
                   "timestamp_utc": time.isoformat(), "candidate_id": source["candidate_id"],
                   "norad_id": source.get("norad_id"), "config_checksum": config_id,
                   "input_type": source["mode"], "service_eligibility": "unknown", "geometry": None, "budget": None}
+        if evaluation_times is not None:
+            record['sample_id'] = f"{data['experiment_id']}:{source['candidate_id']}:{time.isoformat()}"
         if unavailable:
             record.update(status="not_computed", reason=unavailable)
         else:
@@ -119,4 +130,8 @@ def calculate_links(config, catalog=None, *, terrain=None):
         result.update(terrain=terrain_descriptor, physical_input_checksum=physical_id,
                       terrain_contract=terrain_scope(terrain_descriptor),
                       scope="M1 plus sampled local terrain within declared radius; outside terrain and service unverified")
+    if evaluation_times is not None:
+        result.update(evaluation_times_utc=[t.isoformat() for t in times],
+                      evaluation_checksum=identity({'physical_input': physical_id, 'times': [t.isoformat() for t in times]}),
+                      time_grid='explicit direct evaluation times; selection and age policy fixed over original interval')
     return result
