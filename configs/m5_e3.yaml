@@ -1,0 +1,53 @@
+schema_version: 1
+scene: qinling_mountain
+terrain_run: output/m3-domain-20261009
+terrain_grid: qinling_mountain-60-grid.npy
+terrain_metadata: qinling_mountain-60-terrain.json
+grid_sha256: sha256:ea5fd32a04d677a457fb4cca702c4d6b5cef967a7517f2c8518b8d7f97485f0c
+metadata_sha256: sha256:1a734c326b5deb505258bba102124869b837d73e9d78cb7bd036d608ea7f284b
+tle_path: ../Satellite-Ground-Radiomap/data/starlink-2025-tle/2025-01-01.tle
+tle_sha256: sha256:e661f17444e4fdc4eed85ccfef437d87f33796193bf8ca000bdb3058715b9b7f
+norad_id: '44714'
+tle_policy: past_only
+max_age_days: 7
+search_start: '2025-01-01T05:00:00Z'
+search_end: '2025-01-03T05:00:00Z'
+complete_pass_count: 4
+development_pass_count: 2
+padding_s: 30
+receiver:
+  lon_deg: 108.9
+  lat_deg: 33.9
+  height_basis: ellipsoid
+  antenna_ellipsoid_height_m: 1935.3074593633019
+  basis: G05 declared Copernicus EGM2008 to ellipsoid ground plus 2 m AGL
+radius_m: 3000
+step_m: 15
+effective_radius_m: 6371000
+loss_cap_db: 60
+frequency_hz: 14500000000.0
+eirp_dbm: 55
+atmosphere_loss_db: 1
+thresholds_dbm: [-160, -150, -140]
+threshold_basis: hypothetical conditional diagnostics, not service requirements
+initial_step_s: 20
+reference_levels:
+  - {probe_s: 2, tolerance_s: 0.1}
+  - {probe_s: 1, tolerance_s: 0.05}
+  - {probe_s: 0.5, tolerance_s: 0.025}
+  - {probe_s: 0.25, tolerance_s: 0.0125}
+  - {probe_s: 0.125, tolerance_s: 0.00625}
+minimum_reference_levels: 3
+required_adjacent_passes: 2
+boundary_change_tolerance_s: 0.1
+duration_change_tolerance_s: 0.5
+coarse_steps_s: [20, 10, 5]
+cache_azimuth_step_deg: 15
+cache_elevations_deg: [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85]
+cache_anchor: midpoint of first development observation interval
+cache_method: strict_identity_guard_sidecar_then_existing_M1_direct_result
+cache_exact_tolerance_db: 0.000001
+hot_repeats: 5
+hot_times_per_pass: 101
+max_samples: 20001
+business_allowed_event_error: undetermined

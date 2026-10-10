@@ -1,0 +1,45 @@
+{
+  "config_sha256": "sha256:ca7aef2511d6cd2a65d306a32f4e7a6de258f0c26c5d94fd5fa34adf437b555a",
+  "consultation": ".humanize/skill/2026-10-10_06-57-50-3252946-7ec36821",
+  "consultation_metadata": "---\ntool: codex\nmodel: gpt-5.5\neffort: high\ntimeout: 3600\nexit_code: 0\nduration: 169s\nstatus: success\nstarted_at: 2026-10-10T06:57:50Z\n---\n",
+  "consultation_output_sha256": "sha256:bfa017644227794e45cc3b49c5025f78175f39392450342fdb01ddbe1848e92c",
+  "selected_tle_record_sha256": "d86e70429a5027bfd4abd871327005fd9baca5d1c7762be06db7359033e76098",
+  "passes": [
+    {
+      "pass_id": "pass-1",
+      "split": "development",
+      "geometry_start": "2025-01-01T07:48:13.306Z",
+      "geometry_end": "2025-01-01T07:55:11.351Z",
+      "observation_start": "2025-01-01T07:47:43.306Z",
+      "observation_end": "2025-01-01T07:55:41.351Z",
+      "peak_elevation_deg": 4.046768849721245
+    },
+    {
+      "pass_id": "pass-2",
+      "split": "development",
+      "geometry_start": "2025-01-01T09:24:10.929Z",
+      "geometry_end": "2025-01-01T09:36:44.078Z",
+      "observation_start": "2025-01-01T09:23:40.929Z",
+      "observation_end": "2025-01-01T09:37:14.078Z",
+      "peak_elevation_deg": 58.62857069264663
+    },
+    {
+      "pass_id": "pass-3",
+      "split": "holdout",
+      "geometry_start": "2025-01-01T11:04:30.413Z",
+      "geometry_end": "2025-01-01T11:15:57.888Z",
+      "observation_start": "2025-01-01T11:04:00.413Z",
+      "observation_end": "2025-01-01T11:16:27.888Z",
+      "peak_elevation_deg": 19.041194508082015
+    },
+    {
+      "pass_id": "pass-4",
+      "split": "holdout",
+      "geometry_start": "2025-01-01T12:47:10.694Z",
+      "geometry_end": "2025-01-01T12:55:14.316Z",
+      "observation_start": "2025-01-01T12:46:40.694Z",
+      "observation_end": "2025-01-01T12:55:44.316Z",
+      "peak_elevation_deg": 5.403461897978119
+    }
+  ]
+}
