@@ -26,6 +26,20 @@
 
 ## Applied Changes
 
+### CANDIDATE-EVALUATION-13 — Isolate development selection from holdout evaluation
+
+| Field | Value |
+|---|---|
+| Kind | `benchmark_only_change` for new optional conditional candidate evaluation |
+| Components affected | Candidate/pass identities, duration score tables, exhaustive selection, receipt and holdout oracle |
+| Before behavior | No fixed candidate decision/evaluation layer |
+| After behavior | Equal cost/fixed AGL, full observation denominators, explicit unknown upper-bound penalty, development-only selector and common holdout comparison |
+| Validation evidence | tests/test_candidate_selection.py; scripts/verify_candidate_selection.py; reports/m6/selection.md |
+| Current generated maps change | `no` — propagation and dataset generation unchanged |
+| Published benchmark results change | `no` — new software fixtures only; no existing benchmark regenerated |
+| Existing dataset impact | None; later experiments must keep objective/unknown policy and source claims explicit |
+| Regeneration decision | Offline artificial verification only |
+
 ### CONDITIONAL-EVENTS-12 — Direct-time conditional event intervals
 
 | Field | Value |

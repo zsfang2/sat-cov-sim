@@ -6,7 +6,7 @@ Satellite Coverage Sim 是一个面向科研的动态卫星—地面无线电地
 
 ## 项目目标功能
 
-最新基础开发证据：[M3 有限范围验收](reports/m3/acceptance.md)、[M4 三模型 E2 实验](reports/m4/e2.md)、[M2/E1](reports/m2/e1.md)、[M5 条件事件](reports/m5/events.md)、[E3 完整过境](reports/m5/e3.md)。M4/E2、M2/E1、M5 事件软件已通过阶段审查；E3 实验完成待审查，选点评价与全流程验收继续按现有执行计划推进。
+最新基础开发证据：[M3 有限范围验收](reports/m3/acceptance.md)、[M4/E2](reports/m4/e2.md)、[M2/E1](reports/m2/e1.md)、[M5/E3 完整过境](reports/m5/e3.md)、[M6 候选选择](reports/m6/selection.md)。M4/E2、M2/E1、M5/E3 已通过阶段审查；M6 选择软件完成待审查，E4 收益实验与全流程验收继续按现有执行计划推进。
 
 ### 场景配置与地理数据
 
