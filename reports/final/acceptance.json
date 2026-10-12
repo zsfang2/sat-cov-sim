@@ -3,7 +3,7 @@
   "plan": "docs/humanize261009plan.md",
   "implementation_baseline": "70e93f088cdf1cf72d399e4d82098b0c0f99f1d1",
   "code_review_base": "a4458801673efc58e5d67bd71fbf225fdf67525c",
-  "status": "implementation_closure_prepared_pending_native_gates",
+  "status": "implementation_reviewed_pending_native_code_review_and_finalize",
   "criteria": [
     {
       "id": "AC-1",
@@ -25,9 +25,13 @@
         {
           "path": "reports/reproduction/gate.md",
           "sha256": "sha256:dddf0de56dfc8ca194b1c012c6838ef7930ab226311c87f165747d1f2f9e1e45"
+        },
+        {
+          "path": "reports/final/implementation-review.md",
+          "sha256": "sha256:1913b43a280690f5fb2f3f8fe69154270917dd30b6a5eae767626cc448e83214"
         }
       ],
-      "limits": "G16 实现审查与最终原生门禁尚待执行"
+      "limits": "G16 实现收尾已获 Round 16 独立审查；最终代码审查与收尾待执行"
     },
     {
       "id": "AC-2",
@@ -257,6 +261,10 @@
         {
           "path": "reports/reproduction/gate.md",
           "sha256": "sha256:dddf0de56dfc8ca194b1c012c6838ef7930ab226311c87f165747d1f2f9e1e45"
+        },
+        {
+          "path": "reports/final/implementation-review.md",
+          "sha256": "sha256:1913b43a280690f5fb2f3f8fe69154270917dd30b6a5eae767626cc448e83214"
         }
       ],
       "limits": "当前为进入最终门禁的准备记录；不能替代尚未执行的原生代码审查/Finalize"
@@ -282,7 +290,7 @@
     "frontend_modified": false
   },
   "pending_native_evidence": [
-    "G16 implementation review",
+    "native implementation-to-code-review transition",
     "native code-review phase and required fixes",
     "Finalize completion"
   ]

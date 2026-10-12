@@ -1,12 +1,12 @@
 # M0–M6 / E1–E4 最终验收账本
 
-2026-10-12。G01–G15 已获独立审查；G16 实现收尾准备完成，等待原生实现门禁、代码审查与 Finalize。此处不宣称 RLCR 已完成。绑定不可变计划 [humanize261009plan.md](../../docs/humanize261009plan.md)。
+2026-10-12。G01–G15 已获独立审查；G16 实现收尾已获 [Round 16 独立审查](implementation-review.md)，等待原生代码审查阶段交接与 Finalize。此处不宣称 RLCR 已完成。绑定不可变计划 [humanize261009plan.md](../../docs/humanize261009plan.md)。
 
 本轮分析见 [独立收尾分析](closure-analysis.md)。机器账本 [acceptance.json](acceptance.json) 为各证据保存 SHA256。以下“已验收”均限于声明的条件研究范围。
 
 | AC | 当前状态 | 实现/证据 | 不能据此推出 |
 | --- | --- | --- | --- |
-| AC-1 | ready_for_final_gate | 基线、阶段证据与历史/当前状态分离；[closure](../../reports/week1/closure.md)、[acceptance](../../reports/m1/acceptance.md)、[acceptance](../../reports/m3/acceptance.md)、[gate](../../reports/reproduction/gate.md) | G16 实现审查与最终原生门禁尚待执行 |
+| AC-1 | ready_for_final_gate | 基线、阶段证据与历史/当前状态分离；[closure](../../reports/week1/closure.md)、[acceptance](../../reports/m1/acceptance.md)、[acceptance](../../reports/m3/acceptance.md)、[gate](../../reports/reproduction/gate.md) | G16 实现收尾已审查；代码审查与最终收尾待执行 |
 | AC-2 | accepted_in_declared_scope | 来源/配置/环境身份与可恢复源码，小流程新环境复现；[terrain-contract](../../reports/m3/terrain-contract.md)、[direction-table](../../reports/m2/direction-table.md)、[summary](../../reports/reproduction/summary.json) | DEM 拼接履历和 TLE 上游获取未独立认证 |
 | AC-3 | accepted_in_declared_scope | M1 三类输入标量几何、链路与分量回归；[acceptance](../../reports/m1/acceptance.md)、[e1](../../reports/m2/e1.md)、[e1-gate](../../reports/m2/e1-gate.md) | 非实际 Starlink 设备规格；非独立轨道真值 |
 | AC-4 | accepted_in_declared_scope | M3 区间地形/单刀刃数值与反例；[domain-matrix](../../reports/m3/domain-matrix.md)、[acceptance](../../reports/m3/acceptance.md) | 理想模型、数值诊断，不是实测传播精度 |
@@ -40,3 +40,7 @@
 当前剩余执行顺序：原生实现审查 → 原生代码审查及必要修复 → Finalize。基础门禁真正完成以后才安排阶段 demo；本轮没有修改独立前端。未 push、merge、发布或重新生成正式 reference。
 
 本轮验证：选点测试25项通过（0.98 s），全量464项通过（13.79 s）；`output/m6-bound-closure-20261012` 的17项产物哈希核对通过，人工选点/逆转/无收益摘要与旧G13运行逐字节一致。证据见[verification.json](verification.json)。
+
+## 原生阶段交接
+
+Round 16 独立审查接受实现收尾，并复跑 464 项测试，未提出实现缺陷。Humanize 的实现审查通过信号只用于进入代码审查，并不代表整个循环完成：`humanize/SKILL.md` 将两阶段分开，原生 `loop-codex-stop-hook.sh` 在实现阶段收到审查者的通过信号后设置 `review_started`，随即调用代码审查。代码审查有问题则继续修复，无问题后才进入 Finalize。此账本在这些证据产生前保持最终状态待完成；不通过修改状态、跳过审查或取消循环来交接。
