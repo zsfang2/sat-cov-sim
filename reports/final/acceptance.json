@@ -3,7 +3,7 @@
   "plan": "docs/humanize261009plan.md",
   "implementation_baseline": "70e93f088cdf1cf72d399e4d82098b0c0f99f1d1",
   "code_review_base": "a4458801673efc58e5d67bd71fbf225fdf67525c",
-  "status": "native_code_review_passed_finalize_prepared",
+  "status": "rlcr_complete_in_declared_scope",
   "criteria": [
     {
       "id": "AC-1",
@@ -39,7 +39,7 @@
           "sha256": "sha256:4f0e0cecef6cfd186d37b0d76f6fde5899deb8cad705d94b80ddec59d6973666"
         }
       ],
-      "limits": "当前证据与历史快照分离；完整循环状态等待原生Finalize门禁"
+      "limits": "历史快照及当前修复证据分离，不追溯升级旧参考数据"
     },
     {
       "id": "AC-2",
@@ -259,7 +259,7 @@
     },
     {
       "id": "AC-13",
-      "status": "native_code_review_passed_finalize_pending",
+      "status": "accepted_in_declared_scope",
       "scope": "分轮任务、独立分析/实现审查、原生代码审查与收尾",
       "evidence": [
         {
@@ -293,9 +293,25 @@
         {
           "path": "reports/final/simplification-review.md",
           "sha256": "sha256:a45284fc7a874b3fb04fdce23b874b96d463b0f635b0ae4e353935375f19c932"
+        },
+        {
+          "path": "reports/final/finalize-verification.json",
+          "sha256": "sha256:0f33141bb85c3bc2062e5ef11ad8a572eab7e14c89c90bebd3d9186ccf77fcb9"
+        },
+        {
+          "path": "reports/final/rlcr-complete-state.md",
+          "sha256": "sha256:8c9c050c6b7b8131181cc69f1fb1340f10590936fe931e634ab49db690163c3f"
+        },
+        {
+          "path": "reports/final/finalize-summary.md",
+          "sha256": "sha256:8e98360d00bbc3e90e95f73d2ffdf1238950b4dbc9ca5abae6e3306415dd90a9"
+        },
+        {
+          "path": "reports/final/methodology-analysis.md",
+          "sha256": "sha256:b7423fb33541370756c4dcefcb4882d1e21e80186db129c9d1f8de0e343803d0"
         }
       ],
-      "limits": "原生代码审查通过；Finalize整理与回归完成，等待最后门禁"
+      "limits": "本计划的原生实现审查、代码审查、Finalize与复盘已完成；不等同于研究限制消失"
     }
   ],
   "frozen_reproduction_snapshot": {
@@ -317,9 +333,7 @@
     "formal_reference_regeneration": false,
     "frontend_modified": false
   },
-  "pending_native_evidence": [
-    "Finalize completion through native gate"
-  ],
+  "pending_native_evidence": [],
   "current_validation": {
     "reviewed_commit": "3a9d0e3",
     "native_code_review_round": 25,
@@ -328,5 +342,15 @@
     "final_tests_seconds": 13.83,
     "command": "bash scripts/python_geo.sh -m pytest tests -q",
     "runtime_changes_after_review": false
+  },
+  "loop_completion": {
+    "native_state": "complete-state.md",
+    "native_gate_exit_code": 0,
+    "implementation_review_round": 19,
+    "code_review_round": 25,
+    "reviewed_runtime_commit": "3a9d0e3",
+    "finalize_commit": "192c14a",
+    "methodology_archive_commit": "c9a5ea8",
+    "closed_plan": "docs/humanize261009plan.md"
   }
 }
