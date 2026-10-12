@@ -1,0 +1,57 @@
+{
+  "run": "output/m2-native-review-20261012",
+  "summary": {
+    "accuracy_claim": "sample reproduction only; no held-out interpolation error bound",
+    "boundary_sample_count": 40,
+    "build_s": 0.019903066102415323,
+    "cache_bytes": 59657,
+    "cache_file": "209f699c92b07b1b8616fdb481e7c81818e143f4736ddf697e40932f2b84790e.json",
+    "cache_key": "sha256:209f699c92b07b1b8616fdb481e7c81818e143f4736ddf697e40932f2b84790e",
+    "finite_scope": {
+      "business_threshold_status": "undetermined",
+      "full_path_status": "not_verified",
+      "limitations": [
+        "terrain_outside_radius_unverified",
+        "declared_local_diffraction_model",
+        "DSM_surface_is_not_bare_ground"
+      ],
+      "radius_m": 150,
+      "sampling_method": "cell_intervals",
+      "scope": "finite_radius_conditional",
+      "service_eligibility": "unknown",
+      "step_m": 5,
+      "version": 1
+    },
+    "known_sample_count": 72,
+    "max_sample_error_db": 0.0,
+    "query_methods": [
+      "sample",
+      "sample",
+      "nearest",
+      "nearest",
+      "direct_fallback",
+      "direct_fallback",
+      "direct_fallback",
+      "sample",
+      "sample",
+      "bilinear",
+      "bilinear",
+      "direct_fallback",
+      "direct_fallback",
+      "direct_fallback"
+    ],
+    "sample_count": 84,
+    "stale_cache_rejected": true
+  },
+  "verified_artifact_count": 10,
+  "tests": {
+    "focused": 45,
+    "full": 474,
+    "full_seconds": 13.23
+  },
+  "regression_before_fix": {
+    "failed": 6,
+    "passed": 32
+  },
+  "impact": "identity rejection only; source fingerprint invalidates older caches; frozen G15 unchanged"
+}

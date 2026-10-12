@@ -173,13 +173,44 @@ def test_build_budget_preflight_and_batch_order():
     assert [q for chunk in batch for q in chunk] == [a.query(*d, expected_descriptor=s.descriptor()) for d in directions]
 
 
-def test_solver_failures_are_retained():
-    t, s = table(AnalyticSolver('failure'))
+@pytest.mark.parametrize('error_type', [ValueError, ArithmeticError, RuntimeError])
+def test_solver_failures_are_retained(monkeypatch, error_type):
+    s = AnalyticSolver()
+    def fail(*args):
+        raise error_type('deliberate numerical failure')
+    monkeypatch.setattr(s, 'evaluate', fail)
+    t, s = table(s)
     assert len(t.samples) == 12
     assert all(r['response']['local_loss']['status'] == 'failed' for r in t.samples)
     query = t.query(45, 5, expected_descriptor=s.descriptor(), fallback_solver=s)
     assert query['method'] == 'direct_fallback'
     assert query['response']['local_loss']['status'] == 'failed'
+
+
+@pytest.mark.parametrize('mismatch', ['scope', 'cap', 'provider'])
+@pytest.mark.parametrize('operation', ['build', 'fallback'])
+def test_solver_identity_mismatch_is_not_saved_as_failed_sample(monkeypatch, mismatch, operation):
+    t, s = table()
+    evaluate = s.evaluate
+
+    def wrong_response(azimuth, elevation):
+        if mismatch == 'provider':
+            raise CacheMismatch('provider identity mismatch')
+        response = evaluate(azimuth, elevation)
+        if mismatch == 'scope':
+            environment = s.descriptor()['environment']
+            environment['radius_m'] *= 2
+            response['terrain_contract'] = terrain_scope(environment)
+        else:
+            response['loss_cap_db'] += 1
+        return response
+
+    monkeypatch.setattr(s, 'evaluate', wrong_response)
+    with pytest.raises(CacheMismatch, match='differs from descriptor|provider identity mismatch'):
+        if operation == 'build':
+            table(s)
+        else:
+            t.query(45, 5, expected_descriptor=s.descriptor(), fallback_solver=s, error_tolerance_db=0)
 
 
 @pytest.mark.parametrize('az,el', [(math.nan, 10), (0, math.inf), (None, 5), (0, 91), (True, 10)])

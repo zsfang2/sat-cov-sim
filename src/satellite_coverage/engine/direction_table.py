@@ -238,6 +238,8 @@ class DirectionTable:
                     or response['loss_cap_db'] != descriptor['environment']['loss_cap_db']):
                 raise CacheMismatch('solver response scope/cap differs from descriptor')
             return response
+        except CacheMismatch:
+            raise
         except (ValueError, ArithmeticError, RuntimeError) as exc:
             environment = descriptor['environment']
             return dict(local_loss=Quantity(None, 'dB', QuantityStatus.FAILED, str(exc) or type(exc).__name__).to_mapping(),
