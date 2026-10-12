@@ -205,8 +205,10 @@ def require_regeneration_ready(
         issues.append("explicit_user_approval")
     elif approval.scope is not RegenerationScope.REFERENCE_DATASET:
         issues.append("approval_scope")
-    elif _benchmark_recompute_risk(evidence) and not (
-        approval.acknowledges_benchmark_recompute_risk
+    elif (
+        "numerical_change_records" not in issues
+        and _benchmark_recompute_risk(evidence)
+        and not approval.acknowledges_benchmark_recompute_risk
     ):
         issues.append("benchmark_recompute_risk_acknowledgement")
 

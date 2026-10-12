@@ -102,4 +102,3 @@ def test_explorer_entrypoint_import_is_safe_and_module_execution_still_starts(mo
     monkeypatch.delitem(sys.modules, "satellite_coverage.explorer.__main__")
     runpy.run_module("satellite_coverage.explorer", run_name="__main__")
     assert calls == ["start"]
-

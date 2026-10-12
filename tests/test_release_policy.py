@@ -182,3 +182,16 @@ def test_benchmark_risk_requires_separate_acknowledgement():
             _complete_evidence(),
             _approval(acknowledge_risk=False),
         )
+
+
+@pytest.mark.parametrize("records", [None, (object(),), [], "invalid"])
+@pytest.mark.parametrize("approval_state", ["absent", "acknowledged", "unacknowledged"])
+def test_invalid_change_records_raise_actionable_block(records, approval_state):
+    evidence = replace(_complete_evidence(), numerical_change_records=records)
+    approval = None if approval_state == "absent" else _approval(
+        acknowledge_risk=approval_state == "acknowledged"
+    )
+    with pytest.raises(RegenerationBlocked, match="numerical_change_records") as error:
+        require_regeneration_ready(evidence, approval)
+    if approval is None:
+        assert "explicit_user_approval" in str(error.value)

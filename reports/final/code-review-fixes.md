@@ -31,3 +31,9 @@ G15 离线包继续是先前冻结的 `70e93f0` 快照（457 项新环境测试�
 [原生审查发现](code-review-round23.md)：导入 `satellite_coverage.explorer.__main__` 会无条件启动服务。为启动调用增加标准 `__name__ == "__main__"` 保护，保持模块正常启动入口。
 
 回归模拟启动函数，先验证普通导入不调用，再通过 `runpy.run_module(..., run_name="__main__")` 验证模块执行恰好启动一次。修复前1 failed/2 passed，修复后专项3 passed（1.13 s），全量484 passed（13.56 s）。独立前端没有变动；原生复审和 Finalize 仍待完成。
+
+## Round 24：非法数值变更证据的明确拒绝
+
+[原生审查发现](code-review-round24.md)：已有非法记录标记后，风险检查仍迭代非法记录，导致 TypeError/AttributeError。现在只对已通过结构检查的记录计算 benchmark 风险，非法记录由原门禁统一抛出含 `numerical_change_records` 的 `RegenerationBlocked`。无审批仍另列审批缺失，合法记录的风险确认规则不变。
+
+12个非法记录／审批状态组合覆盖None、非法元素元组、列表和字符串，修复前6 failed/17 passed，修复后专项23 passed（0.13 s），全量496 passed（13.55 s）。同时清除Round23测试文件末尾多余空行；未放宽任何发布条件，也未进行正式数据重生成。原生复审和Finalize仍待完成。
