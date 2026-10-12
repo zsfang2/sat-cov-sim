@@ -135,3 +135,41 @@ def test_event_adapter_keeps_no_satellite_time_and_binds_pass_interval():
     assert row['invisible_s']==10 and row['sufficient_s']==0 and row['longest_unavailable_s']==10
     with pytest.raises(ValueError,match='does not match'):
         score_row_from_events(empty,'A','test',PassRegistry.from_mapping(registry()))
+
+
+def test_complete_score_table_above_old_row_cap_is_supported():
+    """A legal 256 x 391 product must not hit an unrelated 100000-row cap."""
+    from datetime import datetime, timedelta, timezone
+    data=table()
+    data['candidate_set']['items']=[dict(candidates()['items'][0],candidate_id=f'C{i:03}',east_m=i)
+                                    for i in range(256)]
+    start=datetime(2025,1,1,tzinfo=timezone.utc)
+    data['pass_registry']['passes']=[dict(pass_id=f'P{i:03}',split='development' if i<391 else 'holdout',
+        start_utc=(start+timedelta(seconds=i*20)).isoformat(),end_utc=(start+timedelta(seconds=i*20+10)).isoformat(),
+        basis='disjoint complete artificial observations') for i in range(392)]
+    prototype=dict(data['rows'][0],sufficient_s=10,insufficient_s=0,longest_unavailable_s=0)
+    data['rows']=[dict(prototype,candidate_id=c['candidate_id'],pass_id=p['pass_id'])
+                  for c in data['candidate_set']['items'] for p in data['pass_registry']['passes'] if p['split']=='development']
+    assert len(data['rows'])==100096
+    accepted=DevelopmentScores.from_mapping(data)
+    assert len(accepted.to_mapping()['rows'])==100096
+
+
+@pytest.mark.parametrize('rows',[[{}]*2,[{}]*4])
+def test_score_cardinality_rejected_before_parsing_rows(rows):
+    data=table();data['rows']=rows
+    with pytest.raises(ValueError,match='complete candidate/pass product'):
+        DevelopmentScores.from_mapping(data)
+
+
+def test_duplicate_rows_with_correct_cardinality_are_still_rejected():
+    data=table();data['rows'][1]=deepcopy(data['rows'][0])
+    with pytest.raises(ValueError,match='duplicate'):
+        DevelopmentScores.from_mapping(data)
+
+
+@pytest.mark.parametrize('field,value',[('candidate_id','foreign'),('pass_id','foreign'),('pass_id','test')])
+def test_foreign_rows_with_correct_cardinality_are_still_rejected(field,value):
+    data=table();data['rows'][0][field]=value
+    with pytest.raises(ValueError,match='foreign or wrong-split'):
+        DevelopmentScores.from_mapping(data)

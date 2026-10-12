@@ -105,8 +105,8 @@ class _Scores(_Snapshot):
         items=data['candidate_set']['items']
         passes={p['pass_id']:p for p in data['pass_registry']['passes'] if p['split']==self.split}
         expected={(c['candidate_id'],p) for c in items for p in passes}
-        if not isinstance(data['rows'],list) or len(data['rows'])>100000:
-            raise ValueError('score table requires a bounded list of rows')
+        if not isinstance(data['rows'],list) or len(data['rows'])!=len(expected):
+            raise ValueError('score table requires the complete candidate/pass product')
         actual=set()
         for row in data['rows']:
             exact_keys(row,{'candidate_id','pass_id','source_id','longest_unavailable_s',*COMPONENTS},'score row')

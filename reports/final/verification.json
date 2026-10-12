@@ -1,0 +1,18 @@
+{
+  "baseline": "70e93f0",
+  "targeted_tests": {
+    "passed": 25,
+    "seconds": 0.98
+  },
+  "full_tests": {
+    "passed": 464,
+    "seconds": 13.79
+  },
+  "positive_complete_rows": 100096,
+  "maximum_per_split": 255744,
+  "verifier_run": "output/m6-bound-closure-20261012",
+  "verifier_artifacts_checked": 17,
+  "old_small_selection_summary_byte_identical": true,
+  "summary_sha256": "sha256:c0993c7e055dbab506114b1393ea3a721f0a6ccff27e366de75ccdbbfbaf5b34",
+  "numerical_change": "metadata_or_gate_only"
+}

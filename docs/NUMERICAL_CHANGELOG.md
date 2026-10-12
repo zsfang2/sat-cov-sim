@@ -300,3 +300,7 @@
 | Existing dataset impact | Previously invalidated artifacts remain invalidated; repaired code does not upgrade their status |
 | Remaining scope | Extended terrain profiles, curvature, nodata policy in the old loader, raw/used diffraction and reference cap still need validation |
 | Regeneration decision | No formal dataset regeneration performed |
+
+## 2026-10-12：完整评分表数量边界
+
+`metadata_or_gate_only`：以经过验证的候选数 × 当前划分过境数替换独立100,000行限制，允许合法100,096行表；重复、外来、错误划分和分母检查保留。未改变传播、阈值、积分或选择公式。G15离线科学快照仍对应70e93f0；G16后续验证见[最终账本](../reports/final/acceptance.md)，不追溯修改历史产物或触发正式reference重生成。

@@ -1,0 +1,289 @@
+{
+  "date": "2026-10-12",
+  "plan": "docs/humanize261009plan.md",
+  "implementation_baseline": "70e93f088cdf1cf72d399e4d82098b0c0f99f1d1",
+  "code_review_base": "a4458801673efc58e5d67bd71fbf225fdf67525c",
+  "status": "implementation_closure_prepared_pending_native_gates",
+  "criteria": [
+    {
+      "id": "AC-1",
+      "status": "ready_for_final_gate",
+      "scope": "基线、阶段证据与历史/当前状态分离",
+      "evidence": [
+        {
+          "path": "reports/week1/closure.md",
+          "sha256": "sha256:f6099787e6e5685368b61279aeb061b51b74345ed5fe8b47fa8de3b2a869946d"
+        },
+        {
+          "path": "reports/m1/acceptance.md",
+          "sha256": "sha256:7f56eb3b41d6e6d2cbab804e1b6b9633084af8965474f319cb4ef7cba62a6ee6"
+        },
+        {
+          "path": "reports/m3/acceptance.md",
+          "sha256": "sha256:8224e75ccee0dbeb9b131040afb7bd2d85b96e8a38f6b6e850b603cd4d05f91c"
+        },
+        {
+          "path": "reports/reproduction/gate.md",
+          "sha256": "sha256:dddf0de56dfc8ca194b1c012c6838ef7930ab226311c87f165747d1f2f9e1e45"
+        }
+      ],
+      "limits": "G16 实现审查与最终原生门禁尚待执行"
+    },
+    {
+      "id": "AC-2",
+      "status": "accepted_in_declared_scope",
+      "scope": "来源/配置/环境身份与可恢复源码，小流程新环境复现",
+      "evidence": [
+        {
+          "path": "reports/m3/terrain-contract.md",
+          "sha256": "sha256:84d6f356fdd3f5652d27dfbcc331320df96f6c5c5721d8da2286e8a2df932ec0"
+        },
+        {
+          "path": "reports/m2/direction-table.md",
+          "sha256": "sha256:a18dda4d7f6064e1e8c675a7d550183cc6f681621e3d3a33e1450f0d618bb792"
+        },
+        {
+          "path": "reports/reproduction/summary.json",
+          "sha256": "sha256:ea3bd2dd5eb0223a92051024561a93f63336bac1d211e2fd64343ec99d8ad33c"
+        }
+      ],
+      "limits": "DEM 拼接履历和 TLE 上游获取未独立认证"
+    },
+    {
+      "id": "AC-3",
+      "status": "accepted_in_declared_scope",
+      "scope": "M1 三类输入标量几何、链路与分量回归",
+      "evidence": [
+        {
+          "path": "reports/m1/acceptance.md",
+          "sha256": "sha256:7f56eb3b41d6e6d2cbab804e1b6b9633084af8965474f319cb4ef7cba62a6ee6"
+        },
+        {
+          "path": "reports/m2/e1.md",
+          "sha256": "sha256:d07efeaa12011402409bc88eb40cf6c8b692bc6d2e0ee2a8d6e6d8115abdcea4"
+        },
+        {
+          "path": "reports/m2/e1-gate.md",
+          "sha256": "sha256:bd9dfde090730d778a133a3f3832ecfe4602d9cae556fd535347c29e87f48dfe"
+        }
+      ],
+      "limits": "非实际 Starlink 设备规格；非独立轨道真值"
+    },
+    {
+      "id": "AC-4",
+      "status": "accepted_in_declared_scope",
+      "scope": "M3 区间地形/单刀刃数值与反例",
+      "evidence": [
+        {
+          "path": "reports/m3/domain-matrix.md",
+          "sha256": "sha256:6be14e6cfdcdcbfbba1da2f3088c08021fd96447d64d5a1dc1b799978e84094d"
+        },
+        {
+          "path": "reports/m3/acceptance.md",
+          "sha256": "sha256:8224e75ccee0dbeb9b131040afb7bd2d85b96e8a38f6b6e850b603cd4d05f91c"
+        }
+      ],
+      "limits": "理想模型、数值诊断，不是实测传播精度"
+    },
+    {
+      "id": "AC-5",
+      "status": "accepted_in_declared_scope",
+      "scope": "有界读取、逐查询半径诊断、有限范围输出契约",
+      "evidence": [
+        {
+          "path": "reports/m3/bounded-reader.md",
+          "sha256": "sha256:477496a32a7f26d390375a0bf7c0ec9a21c6a3ad993dd03b71514206b5f6ec40"
+        },
+        {
+          "path": "reports/m3/radius-48km.md",
+          "sha256": "sha256:bfe25122d1e07cf5866b5d9921feb71f816d8c9cfb07b8454dd5d86620fe2fdc"
+        },
+        {
+          "path": "reports/m3/terrain-contract.md",
+          "sha256": "sha256:84d6f356fdd3f5652d27dfbcc331320df96f6c5c5721d8da2286e8a2df932ec0"
+        }
+      ],
+      "limits": "48 km 实验不等于域外无遮挡或全路径充分"
+    },
+    {
+      "id": "AC-6",
+      "status": "accepted_in_declared_scope",
+      "scope": "M3 来源假设、适用域和条件软件验收",
+      "evidence": [
+        {
+          "path": "reports/m3/acceptance.md",
+          "sha256": "sha256:8224e75ccee0dbeb9b131040afb7bd2d85b96e8a38f6b6e850b603cd4d05f91c"
+        },
+        {
+          "path": "reports/m3/acceptance-review.md",
+          "sha256": "sha256:2cbe28a626edbfc7ae0e2258383eb14a9fa16d4f7515f1cb8de6fae4f365965e"
+        }
+      ],
+      "limits": "DSM 不等于裸地；不支持几何仍明确返回不适用/未计算"
+    },
+    {
+      "id": "AC-7",
+      "status": "accepted_in_declared_scope",
+      "scope": "M4 天空轮廓、单刀刃、多刀刃三路统一配对",
+      "evidence": [
+        {
+          "path": "reports/m4/e2.md",
+          "sha256": "sha256:75a9e37fe3553666e29e022828b3f644853909e69c69aaa0b349dd2673cec299"
+        },
+        {
+          "path": "reports/m4/e2-gate.md",
+          "sha256": "sha256:3a1dddf1fe1c7142bfd9f3afbbf8e81c090d7ce6ce8cc042835a72c49e268ead"
+        }
+      ],
+      "limits": "共享 DEM/剖面；V1 离散加密不等于真实物理参考"
+    },
+    {
+      "id": "AC-8",
+      "status": "accepted_in_declared_scope",
+      "scope": "M2 方向表、查询、回退、身份、磁盘缓存及 E1",
+      "evidence": [
+        {
+          "path": "reports/m2/direction-table.md",
+          "sha256": "sha256:a18dda4d7f6064e1e8c675a7d550183cc6f681621e3d3a33e1450f0d618bb792"
+        },
+        {
+          "path": "reports/m2/e1.md",
+          "sha256": "sha256:d07efeaa12011402409bc88eb40cf6c8b692bc6d2e0ee2a8d6e6d8115abdcea4"
+        },
+        {
+          "path": "reports/m2/e1-gate.md",
+          "sha256": "sha256:bd9dfde090730d778a133a3f3832ecfe4602d9cae556fd535347c29e87f48dfe"
+        }
+      ],
+      "limits": "严格回退未带来加速；普通插值无全域误差保证；有限斜距变化使缓存失效"
+    },
+    {
+      "id": "AC-9",
+      "status": "accepted_in_declared_scope",
+      "scope": "M5 几何/质量事件、未知积分与完整过境 E3",
+      "evidence": [
+        {
+          "path": "reports/m5/events.md",
+          "sha256": "sha256:a0ce4edc30ae04c095bdb93969f86e90dcd54279112537ade0a5e3bab03a3993"
+        },
+        {
+          "path": "reports/m5/e3.md",
+          "sha256": "sha256:a18de28b3d42313c7ace1dc2caa3091aaaa6c692c202cc7fbdd5f649d5817715"
+        },
+        {
+          "path": "reports/m5/e3-gate.md",
+          "sha256": "sha256:7574b4d02aefb3bc74772097374cc3448863f34f3f5bcd18d0885ec3a9de4565"
+        }
+      ],
+      "limits": "12/12 原实验参考通过仅表示已测时间加密收敛；有限采样仍可能漏更窄事件；不是服务调度"
+    },
+    {
+      "id": "AC-10",
+      "status": "accepted_in_declared_scope",
+      "scope": "M6 等成本固定高度选点、开发/留出隔离、共同参考评价",
+      "evidence": [
+        {
+          "path": "reports/m6/selection.md",
+          "sha256": "sha256:9c414522ed6d84b38eb9309613bb9d5df29f9755c52f40a36ca7bc2783eede69"
+        },
+        {
+          "path": "reports/m6/selection-gate.md",
+          "sha256": "sha256:298ac78eaf7a3d4db286bd26458d6928c980d7a22b2feeac8994ac6b5b166d5a"
+        },
+        {
+          "path": "reports/m6/e4.md",
+          "sha256": "sha256:c5663af22361f6100900619f5039311f515be99e8ba88c79b2d8cc8293acb964"
+        },
+        {
+          "path": "reports/m6/e4-gate.md",
+          "sha256": "sha256:556356ce3cb27483ea815d39e3595de541476c92cc72a379722ad0c99210c27f"
+        }
+      ],
+      "limits": "保守未知目标；零 regret 不证明真实最优；本轮另修评分表数量边界"
+    },
+    {
+      "id": "AC-11",
+      "status": "accepted_in_declared_scope",
+      "scope": "E1–E4 研究闭环，失败和无收益/不确定结果保留",
+      "evidence": [
+        {
+          "path": "reports/m2/e1-gate.md",
+          "sha256": "sha256:bd9dfde090730d778a133a3f3832ecfe4602d9cae556fd535347c29e87f48dfe"
+        },
+        {
+          "path": "reports/m4/e2-gate.md",
+          "sha256": "sha256:3a1dddf1fe1c7142bfd9f3afbbf8e81c090d7ce6ce8cc042835a72c49e268ead"
+        },
+        {
+          "path": "reports/m5/e3-gate.md",
+          "sha256": "sha256:7574b4d02aefb3bc74772097374cc3448863f34f3f5bcd18d0885ec3a9de4565"
+        },
+        {
+          "path": "reports/m6/e4-gate.md",
+          "sha256": "sha256:556356ce3cb27483ea815d39e3595de541476c92cc72a379722ad0c99210c27f"
+        }
+      ],
+      "limits": "真实 E4 0/72 严格参考合格，不能判定真实正收益或无收益"
+    },
+    {
+      "id": "AC-12",
+      "status": "accepted_in_declared_scope",
+      "scope": "可恢复输入/源码/依赖的离线小流程与新 venv",
+      "evidence": [
+        {
+          "path": "reports/reproduction/gate.md",
+          "sha256": "sha256:dddf0de56dfc8ca194b1c012c6838ef7930ab226311c87f165747d1f2f9e1e45"
+        },
+        {
+          "path": "reports/reproduction/summary.json",
+          "sha256": "sha256:ea3bd2dd5eb0223a92051024561a93f63336bac1d211e2fd64343ec99d8ad33c"
+        },
+        {
+          "path": "reproduction/README.md",
+          "sha256": "sha256:62f0d2200e0cb369a970983c8c8dc1ba12a5528e811a53d715ccab1ff4263ac6"
+        }
+      ],
+      "limits": "仅同主机 CPython3.12/Linux x86_64 新 venv；不是跨平台、独立硬件或全国 DEM 重建"
+    },
+    {
+      "id": "AC-13",
+      "status": "awaiting_native_code_review_and_finalize",
+      "scope": "分轮任务、独立分析/实现审查、原生代码审查与收尾",
+      "evidence": [
+        {
+          "path": "reports/final/closure-analysis.md",
+          "sha256": "sha256:6ab1537258cdcfa901cf7f989866ba591fc5c03f5c1eafc3f36645693dad5a42"
+        },
+        {
+          "path": "reports/reproduction/gate.md",
+          "sha256": "sha256:dddf0de56dfc8ca194b1c012c6838ef7930ab226311c87f165747d1f2f9e1e45"
+        }
+      ],
+      "limits": "当前为进入最终门禁的准备记录；不能替代尚未执行的原生代码审查/Finalize"
+    }
+  ],
+  "frozen_reproduction_snapshot": {
+    "commit": "70e93f0",
+    "source_fingerprint": "sha256:c6c820cd694b5bb55e23819861f9c5dffd8b619f19c33df1f61c2c63f881b168",
+    "tests": 457,
+    "scope": "accepted G15 snapshot; later bound-only cleanup is not retroactively included"
+  },
+  "current_cleanup": {
+    "change": "replace unrelated100000-row cap with exact bounded candidate x split-pass cardinality",
+    "positive_rows": 100096,
+    "maximum_per_split": 255744,
+    "impact": "input-validation/API boundary only; no propagation, threshold, event integration or ranking formula changes"
+  },
+  "release_boundary": {
+    "push": false,
+    "merge": false,
+    "publish": false,
+    "formal_reference_regeneration": false,
+    "frontend_modified": false
+  },
+  "pending_native_evidence": [
+    "G16 implementation review",
+    "native code-review phase and required fixes",
+    "Finalize completion"
+  ]
+}

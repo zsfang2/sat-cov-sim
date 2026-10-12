@@ -1,0 +1,6 @@
+{
+  "consultation": ".humanize/skill/2026-10-12_01-38-54-706804-0f6ed7e3",
+  "metadata": "---\ntool: codex\nmodel: gpt-5.5\neffort: high\ntimeout: 3600\nexit_code: 0\nduration: 120s\nstatus: success\nstarted_at: 2026-10-12T01:38:54Z\n---\n",
+  "response_sha256": "sha256:6ab1537258cdcfa901cf7f989866ba591fc5c03f5c1eafc3f36645693dad5a42",
+  "baseline": "70e93f0"
+}

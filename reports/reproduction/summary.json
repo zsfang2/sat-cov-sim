@@ -1,5 +1,5 @@
 {
-  "status": "implementation_and_fresh_replay_passed_pending_round15_review",
+  "status": "accepted_by_round15_for_declared_scope",
   "baseline": "output/reproduction-baseline-20261012-a",
   "baseline_resources": {
     "json_write_time_s_before_resource_record": 1.3637180854566395,
@@ -148,5 +148,7 @@
     "real M4 whole-pass reference remains unqualified",
     "mosaic lineage and original TLE acquisition source not independently established",
     "finite radius, diagnostic business thresholds, old reference pipeline backlog unchanged"
-  ]
+  ],
+  "review_gate": "reports/reproduction/gate.md",
+  "reviewed_snapshot": "70e93f088cdf1cf72d399e4d82098b0c0f99f1d1"
 }
