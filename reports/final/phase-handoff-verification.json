@@ -47,5 +47,11 @@
       "stdout": "ENTER_FINALIZE"
     }
   ],
-  "pending": "actual native reviewer decision and phase transition"
+  "pending": "actual native reviewer decision and phase transition",
+  "artifact_validation": {
+    "format": "zero-context unified diff; apply with git apply --unidiff-zero",
+    "patch_sha256": "b2d4bec3cc55c74f97df96a74be144fa09d4b11292a7d8d10fe2d8f90988211b",
+    "applied_to_backup_matches_installed_templates": true,
+    "round18_correction": "Unstaged diff check omitted the then-untracked patch; committed-range check found two whitespace-only context lines. Fixed in Round19 without changing template contents."
+  }
 }
