@@ -88,3 +88,18 @@ def test_http_catalog_job_track_dem_and_path_scope(tmp_path):
         server.server_close()
         thread.join()
         app.pool.shutdown(wait=True)
+def test_explorer_entrypoint_import_is_safe_and_module_execution_still_starts(monkeypatch):
+    import importlib
+    import runpy
+    import sys
+    from satellite_coverage.explorer import server
+
+    calls = []
+    monkeypatch.setattr(server, "main", lambda: calls.append("start"))
+    monkeypatch.delitem(sys.modules, "satellite_coverage.explorer.__main__", raising=False)
+    importlib.import_module("satellite_coverage.explorer.__main__")
+    assert calls == []
+    monkeypatch.delitem(sys.modules, "satellite_coverage.explorer.__main__")
+    runpy.run_module("satellite_coverage.explorer", run_name="__main__")
+    assert calls == ["start"]
+
