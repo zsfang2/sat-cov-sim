@@ -1,0 +1,13 @@
+{
+  "reviewed_commit": "3a9d0e3",
+  "base_commit": "a4458801673efc58e5d67bd71fbf225fdf67525c",
+  "native_round": 25,
+  "exit_code": 0,
+  "finding_count": 0,
+  "source_log": "/home/zsfang/.cache/humanize/-home-Users_Work_Space-zsfang-satellite-coverage-sim/2026-10-09_08-03-30/round-25-codex-review.log",
+  "source_log_sha256": "sha256:f62e6c6eeaccab268ee03db12ea714d06c02332cd536dcee0785c2786e3e2017",
+  "response_sha256": "sha256:4279e86bf07bd933a143821c2250d367de74fd8053dd22b8b1806a2d5df8f6ef",
+  "extraction": "exact text following last codex log marker; duplicate CLI final message retained",
+  "review_test_limitation": "reviewer used system Python and reported rasterio/PROJ setup failures; supported launcher tests independently passed496 in13.55s",
+  "native_transition": "hook automatically renamed state.md to finalize-state.md after no findings"
+}

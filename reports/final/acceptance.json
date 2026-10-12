@@ -3,7 +3,7 @@
   "plan": "docs/humanize261009plan.md",
   "implementation_baseline": "70e93f088cdf1cf72d399e4d82098b0c0f99f1d1",
   "code_review_base": "a4458801673efc58e5d67bd71fbf225fdf67525c",
-  "status": "native_code_review_fix_ready_for_rereview",
+  "status": "native_code_review_passed_finalize_prepared",
   "criteria": [
     {
       "id": "AC-1",
@@ -36,10 +36,10 @@
         },
         {
           "path": "reports/final/code-review-fixes.md",
-          "sha256": "sha256:38bdc40e3db271bb2d5fe2cb0cf49ca1f1f441e74f60fb31b400bbf301e7d9b5"
+          "sha256": "sha256:4f0e0cecef6cfd186d37b0d76f6fde5899deb8cad705d94b80ddec59d6973666"
         }
       ],
-      "limits": "实现阶段已由 Round 19 审查通过；代码复审与最终收尾仍待完成"
+      "limits": "当前证据与历史快照分离；完整循环状态等待原生Finalize门禁"
     },
     {
       "id": "AC-2",
@@ -259,7 +259,7 @@
     },
     {
       "id": "AC-13",
-      "status": "awaiting_native_code_review_and_finalize",
+      "status": "native_code_review_passed_finalize_pending",
       "scope": "分轮任务、独立分析/实现审查、原生代码审查与收尾",
       "evidence": [
         {
@@ -280,10 +280,22 @@
         },
         {
           "path": "reports/final/code-review-fixes.md",
-          "sha256": "sha256:38bdc40e3db271bb2d5fe2cb0cf49ca1f1f441e74f60fb31b400bbf301e7d9b5"
+          "sha256": "sha256:4f0e0cecef6cfd186d37b0d76f6fde5899deb8cad705d94b80ddec59d6973666"
+        },
+        {
+          "path": "reports/final/code-review-pass.md",
+          "sha256": "sha256:4279e86bf07bd933a143821c2250d367de74fd8053dd22b8b1806a2d5df8f6ef"
+        },
+        {
+          "path": "reports/final/code-review-pass-source.json",
+          "sha256": "sha256:2e0841cdd6b9bf3606be0136c8f03d6f0f37c789ea58207b1e8e5707708a4b97"
+        },
+        {
+          "path": "reports/final/simplification-review.md",
+          "sha256": "sha256:a45284fc7a874b3fb04fdce23b874b96d463b0f635b0ae4e353935375f19c932"
         }
       ],
-      "limits": "当前为进入最终门禁的准备记录；不能替代尚未执行的原生代码审查/Finalize"
+      "limits": "原生代码审查通过；Finalize整理与回归完成，等待最后门禁"
     }
   ],
   "frozen_reproduction_snapshot": {
@@ -306,7 +318,15 @@
     "frontend_modified": false
   },
   "pending_native_evidence": [
-    "native code re-review after malformed release-evidence rejection fix",
-    "Finalize completion"
-  ]
+    "Finalize completion through native gate"
+  ],
+  "current_validation": {
+    "reviewed_commit": "3a9d0e3",
+    "native_code_review_round": 25,
+    "native_code_review_findings": 0,
+    "final_tests_passed": 496,
+    "final_tests_seconds": 13.83,
+    "command": "bash scripts/python_geo.sh -m pytest tests -q",
+    "runtime_changes_after_review": false
+  }
 }

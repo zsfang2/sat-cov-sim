@@ -311,4 +311,4 @@
 
 ## 2026-10-12：地平线遍历限定到实际栅格
 
-`implementation_refactor`：cell_horizon 只枚举实际行列边界，保留请求半径和越界区间、outside_dem状态及曲率极值。前置100,000点预算未放宽。3×3细网格的8方向由708/1001区间降至3区间，解析边界地平线不变；专项52、全量483项通过。源码身份更新，历史科学快照不重写。见[原生修复记录](../reports/final/code-review-fixes.md)。
+`proven_numerically_equivalent`（已测栅格/解析用例范围）：cell_horizon 只枚举实际行列边界，保留请求半径和越界区间、outside_dem状态及曲率极值。前置100,000点预算未放宽。3×3细网格的8方向由708/1001区间降至3区间，解析边界地平线不变；专项52、全量483项通过。源码身份更新，历史科学快照不重写。见[原生修复记录](../reports/final/code-review-fixes.md)。

@@ -1,5 +1,7 @@
 # 原生代码审查修复记录
 
+当前状态：Round25原生代码审查通过，无新发现；最终回归496项通过（13.83 s）。以下Round20–24段落保留当时测试与待审状态，当前结论见[通过记录](code-review-pass.md)。
+
 2026-10-12。实现阶段已获 [Round 19 原生审查通过](implementation-gate.md)，hook 自动进入代码审查；[Round 20 发现](code-review-round20.md) 是源码运行缺少安装包元数据时，可见窗口计算在结果组装阶段抛出 `PackageNotFoundError`。
 
 修复仅捕获版本查询的 `PackageNotFoundError`，缺失版本记为 JSON `null`，与现有运行环境记录约定一致。已安装版本照常保留，其他元数据错误不吞掉；不修改轨道、可见窗口和研究实验计算。
