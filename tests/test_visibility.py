@@ -102,3 +102,36 @@ def test_failed_propagation_and_cancellation_are_not_empty_success(monkeypatch):
     result = calculate_visibility(catalog, request())
     assert not result["complete"] and len(result["failed"]) == 1
     assert result["satellites_computed"] == 0 and result["windows"] == []
+
+
+def test_source_checkout_visibility_without_distribution_metadata(monkeypatch):
+    from importlib.metadata import PackageNotFoundError
+    from satellite_coverage.orbit import visibility
+
+    catalog = parse_catalog(TLE)
+    installed = {name: visibility.version(name) for name in ("skyfield", "sgp4", "numpy")}
+
+    def source_checkout_version(name):
+        if name == "satellite-coverage-sim":
+            raise PackageNotFoundError(name)
+        return installed[name]
+
+    monkeypatch.setattr(visibility, "version", source_checkout_version)
+    result = calculate_visibility(catalog, request())
+    assert result["complete"] and result["windows"]
+    assert result["software"] == {**installed, "satellite-coverage-sim": None}
+
+
+def test_visibility_preserves_installed_version_and_metadata_errors(monkeypatch):
+    from satellite_coverage.orbit import visibility
+
+    catalog = parse_catalog(TLE)
+    monkeypatch.setattr(visibility, "version", lambda name: "1.2.3")
+    assert set(calculate_visibility(catalog, request())["software"].values()) == {"1.2.3"}
+
+    def broken_metadata(name):
+        raise RuntimeError("broken metadata reader")
+
+    monkeypatch.setattr(visibility, "version", broken_metadata)
+    with pytest.raises(RuntimeError, match="broken metadata reader"):
+        calculate_visibility(catalog, request())

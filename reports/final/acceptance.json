@@ -3,11 +3,11 @@
   "plan": "docs/humanize261009plan.md",
   "implementation_baseline": "70e93f088cdf1cf72d399e4d82098b0c0f99f1d1",
   "code_review_base": "a4458801673efc58e5d67bd71fbf225fdf67525c",
-  "status": "implementation_reviewed_pending_native_code_review_and_finalize",
+  "status": "native_code_review_fix_ready_for_rereview",
   "criteria": [
     {
       "id": "AC-1",
-      "status": "ready_for_final_gate",
+      "status": "accepted_in_declared_scope",
       "scope": "基线、阶段证据与历史/当前状态分离",
       "evidence": [
         {
@@ -29,9 +29,17 @@
         {
           "path": "reports/final/implementation-review.md",
           "sha256": "sha256:1913b43a280690f5fb2f3f8fe69154270917dd30b6a5eae767626cc448e83214"
+        },
+        {
+          "path": "reports/final/implementation-gate.md",
+          "sha256": "sha256:1e29b3f2c7d90c712339fce7b318d4a92bf5f1b688a9a1bd772678d8cadfd7c2"
+        },
+        {
+          "path": "reports/final/code-review-fixes.md",
+          "sha256": "sha256:2ee3a86bf76fbd4aa9eb64179b0fec45458a4d7327aaf32f1e123597a01c64b1"
         }
       ],
-      "limits": "G16 实现收尾已获 Round 16 独立审查；最终代码审查与收尾待执行"
+      "limits": "实现阶段已由 Round 19 审查通过；代码复审与最终收尾仍待完成"
     },
     {
       "id": "AC-2",
@@ -265,6 +273,14 @@
         {
           "path": "reports/final/implementation-review.md",
           "sha256": "sha256:1913b43a280690f5fb2f3f8fe69154270917dd30b6a5eae767626cc448e83214"
+        },
+        {
+          "path": "reports/final/implementation-gate.md",
+          "sha256": "sha256:1e29b3f2c7d90c712339fce7b318d4a92bf5f1b688a9a1bd772678d8cadfd7c2"
+        },
+        {
+          "path": "reports/final/code-review-fixes.md",
+          "sha256": "sha256:2ee3a86bf76fbd4aa9eb64179b0fec45458a4d7327aaf32f1e123597a01c64b1"
         }
       ],
       "limits": "当前为进入最终门禁的准备记录；不能替代尚未执行的原生代码审查/Finalize"
@@ -290,8 +306,7 @@
     "frontend_modified": false
   },
   "pending_native_evidence": [
-    "native implementation-to-code-review transition",
-    "native code-review phase and required fixes",
+    "native code re-review after source-checkout metadata fix",
     "Finalize completion"
   ]
 }

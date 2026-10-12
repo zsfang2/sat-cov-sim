@@ -6,7 +6,7 @@ No weather, terrain masking, beam scheduling or communications service is implie
 from dataclasses import dataclass
 from datetime import datetime, timezone
 import hashlib
-from importlib.metadata import version
+from importlib.metadata import PackageNotFoundError, version
 import math
 
 import numpy as np
@@ -276,9 +276,15 @@ def calculate_visibility(catalog, data, progress=lambda *args: None, cancelled=l
     # Across satellites, each point may use a different satellite for region-all.
     normalized = [merge_intervals([group]) for group in point_unions]
     coverage = merge_intervals(normalized, all_required=rule == "all")
+    software = {}
+    for name in ("skyfield", "sgp4", "numpy", "satellite-coverage-sim"):
+        try:
+            software[name] = version(name)
+        except PackageNotFoundError:
+            software[name] = None
     return {"request": data, "catalog_sha256": catalog.checksum, "points": points,
             "created_utc": datetime.now(timezone.utc).isoformat(),
-            "software": {name: version(name) for name in ("skyfield", "sgp4", "numpy", "satellite-coverage-sim")},
+            "software": software,
             "selection_policy": data.get("tle_policy", "historical_exploration") + "; fixed_over_interval; sha256_tie_break",
             "scope": "geometric_elevation_only; no terrain/refraction/beam/service; region is sampled, not continuous",
             "event_search_tolerance_s": 0.5, "region_rule": rule,
