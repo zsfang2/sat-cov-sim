@@ -1,0 +1,151 @@
+{
+  "artifact_count": 68,
+  "artifact_manifest_sha256": "sha256:494e0c5b33f216771129873a81abc826f49da3b7ac64768361feec61a9504db4",
+  "checks": [
+    {
+      "file": "Q0-pass-5-p55-t-150-no_terrain-level2.json",
+      "input_checksum": "sha256:3c780fca1dee2b489c4c3afd6d432ad297db0dbf28c7a2169825f3e48fc177bc",
+      "times": 3401
+    },
+    {
+      "file": "Q0-pass-5-p55-t-150-sky_proxy-level2.json",
+      "input_checksum": "sha256:871b019e0f40fe51964e86d1ec57cad33025a678e267b5e0742d63a11b6b64b1",
+      "times": 3401
+    },
+    {
+      "file": "Q0-pass-5-p55-t-150-m3_single_edge-level2.json",
+      "input_checksum": "sha256:b7bdfddbcd7cbe77a7b935ee45228f93437044db0011f66857c5f75deb1ddc97",
+      "times": 3401
+    },
+    {
+      "file": "Q0-pass-5-p55-t-150-m4_multi_edge_reference-level0.json",
+      "input_checksum": "sha256:8fa3da96aa006bac79fb2a0b0c19895482b4184c84a95766fac929c51ba04569",
+      "times": 929
+    },
+    {
+      "file": "Q0-pass-5-p55-t-150-m4_multi_edge_reference-level1.json",
+      "input_checksum": "sha256:d30eb9e46ed47d9701a39f52a6f3347ed94d9a0bb5c06a3ac43c0961d6faa04e",
+      "times": 1777
+    },
+    {
+      "file": "Q0-pass-5-p55-t-150-m4_multi_edge_reference-level2.json",
+      "input_checksum": "sha256:74971ded37abfd003980d81a613e612b427c57c2fd7b71e1e5bb24577362b9a3",
+      "times": 3473
+    },
+    {
+      "file": "Q_E300-pass-5-p55-t-150-no_terrain-level2.json",
+      "input_checksum": "sha256:20f5e50e9b1b581507820d5f68248f9ecf1c94c6d64b9be297fbd1c935de7c47",
+      "times": 3401
+    },
+    {
+      "file": "Q_E300-pass-5-p55-t-150-sky_proxy-level2.json",
+      "input_checksum": "sha256:2c0d7c582eedac65c4c53b33bbd1d833f73513c55e54e48841e2c2a3ddf7fac5",
+      "times": 3401
+    },
+    {
+      "file": "Q_E300-pass-5-p55-t-150-m3_single_edge-level2.json",
+      "input_checksum": "sha256:ba849f8d3bc0b63c513c8d5cd0571f4cd4b0f44ed1ad3c058e0f6148f2624c52",
+      "times": 3401
+    },
+    {
+      "file": "Q_E300-pass-5-p55-t-150-m4_multi_edge_reference-level0.json",
+      "input_checksum": "sha256:ab621387a1c1cf21c4ac12f0f1f793a16d85ad0f864484e6e10a69f74beff6c1",
+      "times": 945
+    },
+    {
+      "file": "Q_E300-pass-5-p55-t-150-m4_multi_edge_reference-level1.json",
+      "input_checksum": "sha256:a51707a5123d4cbf75cf4017695d2c459d4e6cc198afa20cf61de41d7d1dc953",
+      "times": 1817
+    },
+    {
+      "file": "Q_E300-pass-5-p55-t-150-m4_multi_edge_reference-level2.json",
+      "input_checksum": "sha256:4b7409c1daa39b3f94a85759a5054fbbbcc5ab5393b030fc8cbf37c45be2a290",
+      "times": 3537
+    },
+    {
+      "file": "Q0-pass-7-p55-t-150-m4_multi_edge_reference-level0.json",
+      "input_checksum": "sha256:6b60cbb0e430a0654a3cb7c0ca5d11f80bd022d7c3a6065a2dcd5526f8d872bf",
+      "times": 1345
+    },
+    {
+      "file": "Q0-pass-7-p55-t-150-m4_multi_edge_reference-level1.json",
+      "input_checksum": "sha256:352f0c5fbe16a36d67c331dc9601fd07ce001ee0730de65261a112c1b472716d",
+      "times": 2642
+    },
+    {
+      "file": "Q0-pass-7-p55-t-150-m4_multi_edge_reference-level2.json",
+      "input_checksum": "sha256:c8c2e3ec0818da1bc3c9bc9c4823ced27bf84152eb2bdaf626b8ea1ae8eac9e3",
+      "times": 5235
+    },
+    {
+      "file": "Q_E300-pass-7-p55-t-150-m4_multi_edge_reference-level0.json",
+      "input_checksum": "sha256:ccadcdc2004542fb987feb978969d2059d17085229601b33966ac8d5b82d8332",
+      "times": 1353
+    },
+    {
+      "file": "Q_E300-pass-7-p55-t-150-m4_multi_edge_reference-level1.json",
+      "input_checksum": "sha256:b12b79e98d2b0762af1de06b8a221d87a863edb2803eb4cbfb71802c3e75e3fc",
+      "times": 2649
+    },
+    {
+      "file": "Q_E300-pass-7-p55-t-150-m4_multi_edge_reference-level2.json",
+      "input_checksum": "sha256:9cf69d4fe595d941d1c8ca2516ab427eece2bd31a1066a44eba743c083c861f2",
+      "times": 5241
+    }
+  ],
+  "direct_rows": 17486,
+  "event_inputs": 18,
+  "final_scores": 10,
+  "receipts_before_holdout": 4,
+  "spatial_reference": [
+    {
+      "capped_reference_level_queries": 3522,
+      "denominator": "unique direct query times; not duration weighted; below-horizon separate",
+      "maximum_adjacent_raw_delta_db": 1.575397271642501,
+      "pass_id": "pass-5",
+      "query_counts": {
+        "below_horizon": 357,
+        "eligible_within_tested_discretization": 2246,
+        "unverified": 870
+      },
+      "site": "Q0"
+    },
+    {
+      "capped_reference_level_queries": 8889,
+      "denominator": "unique direct query times; not duration weighted; below-horizon separate",
+      "maximum_adjacent_raw_delta_db": 2.9137727245829126,
+      "pass_id": "pass-5",
+      "query_counts": {
+        "below_horizon": 351,
+        "eligible_within_tested_discretization": 2219,
+        "unverified": 967
+      },
+      "site": "Q_E300"
+    },
+    {
+      "capped_reference_level_queries": 3043,
+      "denominator": "unique direct query times; not duration weighted; below-horizon separate",
+      "maximum_adjacent_raw_delta_db": 42.2304038056574,
+      "pass_id": "pass-7",
+      "query_counts": {
+        "below_horizon": 353,
+        "eligible_within_tested_discretization": 4426,
+        "unverified": 456
+      },
+      "site": "Q0"
+    },
+    {
+      "capped_reference_level_queries": 7911,
+      "denominator": "unique direct query times; not duration weighted; below-horizon separate",
+      "maximum_adjacent_raw_delta_db": 6.032935066946777,
+      "pass_id": "pass-7",
+      "query_counts": {
+        "below_horizon": 351,
+        "eligible_within_tested_discretization": 4444,
+        "unverified": 446
+      },
+      "site": "Q_E300"
+    }
+  ],
+  "status": "passed"
+}

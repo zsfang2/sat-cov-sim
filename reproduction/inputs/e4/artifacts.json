@@ -1,0 +1,15 @@
+{
+  "files": {
+    "input.tle": "sha256:e661f17444e4fdc4eed85ccfef437d87f33796193bf8ca000bdb3058715b9b7f",
+    "Q0-read.json": "sha256:987f86c094b65c5a85e7d11740083159993f0854ff23f7324ca2fe3487ce5272",
+    "Q_E300-read.json": "sha256:5f7fb137a0048d5c4f312fc0251c11f6a931ae1296c24b09df009cd58f34d2ab",
+    "Q_E300-terrain.json": "sha256:cf3778149f7e51662db71b6db61f7f976acaed3a90109f9c01cfd359cb00216f",
+    "Q0-grid.npy": "sha256:2eeed0cd491b5fecb80abadba31348c66d57bdb400dc396ea12d6400feba5827",
+    "Q_E300-grid.npy": "sha256:51775cb887155e0a9bd7e32b629bd078dfd230a04ab4a1c0ea75bd1ffd5afa2d",
+    "candidates.json": "sha256:45a820ae68d375f75e64bb86b1abe0c175369300b90db23ed9c9ad413b6a513f",
+    "registry.json": "sha256:5227278f8d4260ac7e49a09dc405d6fffb614949d9a76e1c3ede2a41f1fe41df",
+    "freeze.json": "sha256:d739cd8550939ca407adee29da508f64f7596d359a44d51156c1b722c3313ecd",
+    "Q0-terrain.json": "sha256:b8b9761e86171f2c22c89fdbae38844d7b6f68bcfca37c514f82648a99e94738",
+    "resources.json": "sha256:f2da4edad91ae48d645c1feb423a99925de8c6033826a07db398c80d810a0fc8"
+  }
+}

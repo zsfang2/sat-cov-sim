@@ -1,0 +1,18 @@
+{
+  "recorded_date": "2026-09-30",
+  "local_path": "Satellite-Ground-Radiomap/data/l2_topo/china_dem_30.tif",
+  "local_sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+  "local_size_bytes": 9140292637,
+  "local_shape": [151200, 237600],
+  "local_horizontal_crs": "EPSG:4326",
+  "local_area_or_point": "Area",
+  "user_source_statement": "欧洲空间局 ESA 的 Copernicus DEM GLO30-CHINA",
+  "product_height_unit": "m",
+  "product_vertical_datum": "EGM2008 (EPSG:3855)",
+  "product_surface_type": "DSM; includes buildings, infrastructure and vegetation",
+  "official_product_reference": "https://dataspace.copernicus.eu/explore-data/data-collections/copernicus-contributing-missions/collections-description/COP-DEM",
+  "source_assessment": "Product identified by user, specifications checked against official source. The local mosaic release, original tiles and processing/vertical-conversion history are not independently reconstructed.",
+  "execution_condition": "Treat the mosaic as retaining original metre EGM2008 heights, explicitly conditional on user-declared product lineage; do not call it verified bare-earth terrain or reference truth.",
+  "height_conversion": "Requires a hashed local EGM2008 geoid grid; h=H+N. Never replace N by zero or use EGM96.",
+  "receiver_height_condition": "M1 receiver height remains explicit ellipsoid height. Height above DSM is not necessarily AGL above bare earth."
+}

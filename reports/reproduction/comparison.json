@@ -1,0 +1,11 @@
+{
+  "expected_sha256": "sha256:81f04766c7ff2336a5510d6c0d52d9aa1468aa5464fd81d3017afe469b7a4d50",
+  "scope": "explicit scientific projections, not timing equality",
+  "status": "passed",
+  "tolerance": {
+    "absolute_float_tolerance": 1e-06,
+    "excluded": "wall time, RSS, source commit, environment-dependent cache/record checksums; numerical/state projections explicitly selected by runner",
+    "relative_float_tolerance": 0,
+    "status_and_discrete_fields": "exact"
+  }
+}

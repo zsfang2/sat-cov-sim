@@ -85,6 +85,8 @@ def test_real_catalog_if_available():
     from pathlib import Path
     path = Path(__file__).resolve().parents[2] / "Satellite-Ground-Radiomap/data/starlink-2025-tle/2025-01-01.tle"
     if not path.exists():
+        path = Path(__file__).resolve().parents[1] / "reproduction/inputs/input.tle"
+    if not path.exists():
         pytest.skip("external Starlink archive not installed")
     catalog = parse_catalog(path.read_bytes())
     assert len(catalog.records) > 1000

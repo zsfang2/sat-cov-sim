@@ -1,0 +1,18 @@
+{
+  "passes": [
+    {
+      "basis": "chronological geometric overlap; union across candidates plus padding; no quality inspected",
+      "end_utc": "2025-01-01T14:37:16.666835+00:00",
+      "pass_id": "pass-5",
+      "split": "development",
+      "start_utc": "2025-01-01T14:28:21.192689+00:00"
+    },
+    {
+      "basis": "chronological geometric overlap; union across candidates plus padding; no quality inspected",
+      "end_utc": "2025-01-01T18:00:27.976650+00:00",
+      "pass_id": "pass-7",
+      "split": "holdout",
+      "start_utc": "2025-01-01T17:46:52.373184+00:00"
+    }
+  ]
+}

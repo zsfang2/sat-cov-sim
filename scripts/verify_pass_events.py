@@ -65,11 +65,13 @@ def metric_passes(comparison,cfg):
                and max(map(abs,r['longest_delta'].values()))<=cfg['duration_change_tolerance_s'] for r in comparison['channels'])
 
 
-def run(output):
+def run(output, config_path=None, freeze_path=None):
     root=Path(__file__).resolve().parents[1]
-    cfg=yaml.safe_load((root/'configs/m5_e3.yaml').read_text())
-    freeze=json.loads((root/'reports/m5/e3-design-sources.json').read_text())
-    if digest(root/'configs/m5_e3.yaml')!=freeze['config_sha256']:
+    config_path=Path(config_path) if config_path is not None else root/'configs/m5_e3.yaml'
+    freeze_path=Path(freeze_path) if freeze_path is not None else root/'reports/m5/e3-design-sources.json'
+    cfg=yaml.safe_load(config_path.read_text())
+    freeze=json.loads(freeze_path.read_text())
+    if digest(config_path)!=freeze['config_sha256']:
         raise ValueError('frozen configuration changed')
     split_hash=validate_split(freeze['passes'])
     archive=RunRecord(output)
@@ -237,7 +239,7 @@ def run(output):
         axes[1].bar([r['pass_id'] for r in costs[::len(cfg['thresholds_dbm'])]],
                     [r['guarded_hot']['median_s']/r['direct_hot']['median_s'] for r in costs[::len(cfg['thresholds_dbm'])]])
         axes[1].axhline(1,color='black',linewidth=1)
-        axes[1].set(ylabel='Guarded / direct median time',title='Five repeats; no analysis memoization')
+        axes[1].set(ylabel='Guarded / direct median time',title=f"{cfg['hot_repeats']} repeats; no analysis memoization")
         fig.tight_layout(); fig.savefig(archive.path/'event-error-cost.png',dpi=140); plt.close(fig)
         summary=dict(pass_count=len(freeze['passes']),threshold_count=len(cfg['thresholds_dbm']),reference_verified=sum(r['verified'] for r in convergence),
                      reference_cases=len(convergence),selected_development_level=selected,
@@ -255,4 +257,7 @@ def run(output):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(); parser.add_argument('--output',required=True)
-    run(parser.parse_args().output)
+    parser.add_argument('--config',type=Path)
+    parser.add_argument('--freeze',type=Path)
+    args=parser.parse_args()
+    run(args.output,args.config,args.freeze)

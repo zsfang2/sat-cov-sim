@@ -32,6 +32,8 @@ def source_files(project_root):
                             ("data_manifest", "*.yaml")):
         files.extend((root / folder).rglob(pattern))
     files.extend(root.glob("requirements-week1.*"))
+    files.extend(root.glob("requirements-reproduce.lock"))
+    files.extend(p for p in (root / "reproduction").rglob("*") if p.is_file())
     return sorted(set(p for p in files if p.is_file()))
 
 

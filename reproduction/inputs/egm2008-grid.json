@@ -1,0 +1,14 @@
+{
+  "url": "https://cdn.proj.org/us_nga_egm08_25.tif",
+  "downloaded_date": "2026-09-30",
+  "size_bytes": 80585622,
+  "sha256": "sha256:4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a",
+  "local_path": "output/geoid/egm2008-complete.tif",
+  "shape": [4321, 8640],
+  "band_description": "geoid_undulation",
+  "unit": "metre",
+  "target_crs_epsg_code": "3855",
+  "type": "VERTICAL_OFFSET_GEOGRAPHIC_TO_VERTICAL",
+  "copyright_from_grid": "Derived from work by NGA. Public Domain",
+  "conversion_used": "H_EGM2008 + N_grid = h_WGS84; PROJ multiplier +1"
+}

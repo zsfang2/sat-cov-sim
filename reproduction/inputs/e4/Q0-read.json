@@ -1,0 +1,28 @@
+{
+  "budget": {
+    "gdal_cache_bytes": 33554432,
+    "memory_bytes": 536870912,
+    "source_window_cells": 262144,
+    "target_cells": 4000000,
+    "tile_size": 128
+  },
+  "dem_hash_seconds": 6.45433264086023,
+  "estimated_memory_bytes": 269935256,
+  "execution_transform_seconds": 0.004048716742545366,
+  "freeze_seconds": 0.00011986400932073593,
+  "max_read_cells": 47760,
+  "planning_transform_seconds": 0.005226691719144583,
+  "read_cells": 47760,
+  "read_seconds": 0.00661113578826189,
+  "read_windows": 1,
+  "source_block_shapes": [
+    [
+      256,
+      256
+    ]
+  ],
+  "strategy": "two_pass_target_tiles",
+  "subdivisions": 0,
+  "validation_geoid_seconds": 0.0615629400126636,
+  "vertical_seconds": 0.002962106838822365
+}

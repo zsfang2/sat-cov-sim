@@ -1,0 +1,3 @@
+# Preserve the exact archived TLE bytes (including CRLF) used by input identities.
+reproduction/inputs/input.tle binary
+reproduction/inputs/e4/input.tle binary

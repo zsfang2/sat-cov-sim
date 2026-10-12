@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "scope": "Bundled exact derived terrain and fixed archived TLE; no online input at runtime. Source mosaic lineage remains unverified.",
+  "files": {
+    "reproduction/inputs/input.tle": "sha256:e661f17444e4fdc4eed85ccfef437d87f33796193bf8ca000bdb3058715b9b7f",
+    "reproduction/inputs/artifacts.json": "sha256:36cce00b98f22a9af50a9c7fef280b0cb035f55e553f4eb9ef4c9c6f669f212c",
+    "reproduction/inputs/e3-freeze.json": "sha256:fc5c99ca8a7b1d645cd182d40a41d58a41e88ae69e1e76af059caffe20c4dbbc",
+    "reproduction/inputs/egm2008-grid.json": "sha256:894c96ace4c2bc7cbdb2496a30d4fa681a8705c43ff1cecfe2ceb4c20058e1a1",
+    "reproduction/inputs/qinling_mountain-60-grid.npy": "sha256:ea5fd32a04d677a457fb4cca702c4d6b5cef967a7517f2c8518b8d7f97485f0c",
+    "reproduction/inputs/qinling_mountain-60-terrain.json": "sha256:1a734c326b5deb505258bba102124869b837d73e9d78cb7bd036d608ea7f284b",
+    "reproduction/inputs/copernicus-source.json": "sha256:453d31c2e989d2eb9a00f9a722b53b17968f34fe9f78f6bd6cdf912ae4afb17d",
+    "reproduction/inputs/e4/input.tle": "sha256:e661f17444e4fdc4eed85ccfef437d87f33796193bf8ca000bdb3058715b9b7f",
+    "reproduction/inputs/e4/artifacts.json": "sha256:31ac128463fa9a45c40e51263e9e4df4aef8fe33af770831b133d7f317d9107b",
+    "reproduction/inputs/e4/Q0-read.json": "sha256:987f86c094b65c5a85e7d11740083159993f0854ff23f7324ca2fe3487ce5272",
+    "reproduction/inputs/e4/Q_E300-read.json": "sha256:5f7fb137a0048d5c4f312fc0251c11f6a931ae1296c24b09df009cd58f34d2ab",
+    "reproduction/inputs/e4/Q_E300-terrain.json": "sha256:cf3778149f7e51662db71b6db61f7f976acaed3a90109f9c01cfd359cb00216f",
+    "reproduction/inputs/e4/Q0-grid.npy": "sha256:2eeed0cd491b5fecb80abadba31348c66d57bdb400dc396ea12d6400feba5827",
+    "reproduction/inputs/e4/Q_E300-grid.npy": "sha256:51775cb887155e0a9bd7e32b629bd078dfd230a04ab4a1c0ea75bd1ffd5afa2d",
+    "reproduction/inputs/e4/candidates.json": "sha256:45a820ae68d375f75e64bb86b1abe0c175369300b90db23ed9c9ad413b6a513f",
+    "reproduction/inputs/e4/registry.json": "sha256:5227278f8d4260ac7e49a09dc405d6fffb614949d9a76e1c3ede2a41f1fe41df",
+    "reproduction/inputs/e4/freeze.json": "sha256:d739cd8550939ca407adee29da508f64f7596d359a44d51156c1b722c3313ecd",
+    "reproduction/inputs/e4/Q0-terrain.json": "sha256:b8b9761e86171f2c22c89fdbae38844d7b6f68bcfca37c514f82648a99e94738",
+    "reproduction/inputs/e4/resources.json": "sha256:f2da4edad91ae48d645c1feb423a99925de8c6033826a07db398c80d810a0fc8",
+    "reproduction/inputs/e1-freeze.json": "sha256:1985009c362a65520c1634f75fbe17b91460440ced9e9f184a72a8eb6818872a"
+  },
+  "configs": {
+    "configs/reproduce_e3.yaml": "sha256:6bc869fa73e2fd2f589f7be437bcf55c9044f5ef12d29a45cb0fa6b9c7e0bd9b",
+    "configs/reproduce_e1.yaml": "sha256:01f37ba2dcb8b578fca7e03b1004abc5d94de4f4aa01c5510749ca3289f87c53",
+    "configs/reproduce_e2.yaml": "sha256:0592a2c1adf64bb64adaff4e2e49382c284c38fe340257261851778cc034e728",
+    "configs/reproduce_e4.yaml": "sha256:f3287ad8d7ed1a30a64820bafba2b74dae37b5c3b62b4219937a9f2d0f62334d"
+  },
+  "comparison": {
+    "absolute_float_tolerance": 1e-06,
+    "relative_float_tolerance": 0,
+    "status_and_discrete_fields": "exact",
+    "excluded": "wall time, RSS, source commit, environment-dependent cache/record checksums; numerical/state projections explicitly selected by runner"
+  }
+}

@@ -88,10 +88,11 @@ def plots(path, errors, costs):
     plt.close(fig)
 
 
-def run(config_path, output):
+def run(config_path, output, freeze_path=None):
     cfg = yaml.safe_load(config_path.read_text())
     root = Path(__file__).resolve().parents[1]
-    frozen = json.loads((root/'reports/m2/e1-design-sources.json').read_text())
+    freeze_path = Path(freeze_path) if freeze_path is not None else root/'reports/m2/e1-design-sources.json'
+    frozen = json.loads(freeze_path.read_text())
     if checksum_sha256(config_path) != frozen['config_sha256']:
         raise ValueError('experiment config differs from pre-results freeze')
     record = RunRecord(output)
@@ -243,5 +244,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', type=Path, default=Path('configs/m2_e1.yaml'))
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--freeze', type=Path)
     args = parser.parse_args()
-    run(args.config, args.output)
+    run(args.config, args.output, args.freeze)

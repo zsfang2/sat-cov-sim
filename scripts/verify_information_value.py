@@ -48,12 +48,13 @@ def plot_results(path, reports, scenarios, observed_seconds):
     axes[0].legend(fontsize=7); fig.tight_layout(); fig.savefig(path,dpi=140); plt.close(fig)
 
 
-def run(inputs, output):
+def run(inputs, output, config_path=None):
     root=Path(__file__).resolve().parents[1]
     inputs=Path(inputs)
-    cfg=yaml.safe_load((root/'configs/m6_e4.yaml').read_text())
+    config_path=Path(config_path) if config_path is not None else root/'configs/m6_e4.yaml'
+    cfg=yaml.safe_load(config_path.read_text())
     freeze=json.loads((inputs/'freeze.json').read_text())
-    if freeze['config_sha256']!=checksum_sha256(root/'configs/m6_e4.yaml') or freeze['config_checksum']!=identity(cfg):
+    if freeze['config_sha256']!=checksum_sha256(config_path) or freeze['config_checksum']!=identity(cfg):
         raise ValueError('pre-quality frozen configuration changed')
     for name,digest in json.loads((inputs/'artifacts.json').read_text())['files'].items():
         if checksum_sha256(inputs/name)!=digest:
@@ -226,5 +227,6 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--inputs',required=True)
     parser.add_argument('--output',required=True)
+    parser.add_argument('--config',type=Path)
     args=parser.parse_args()
-    run(args.inputs,args.output)
+    run(args.inputs,args.output,args.config)

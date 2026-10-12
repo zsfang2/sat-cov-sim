@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "bundle": "/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/reproduction-bundle-20261012",
+  "source": "/home/Users_Work_Space/zsfang/satellite-coverage-reproduction/20261012-b/source",
+  "python": "/home/Users_Work_Space/zsfang/satellite-coverage-reproduction/20261012-b/venv/bin/python",
+  "system_site_packages": false,
+  "network_required": false
+}

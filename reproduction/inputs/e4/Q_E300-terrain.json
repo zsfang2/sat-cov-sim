@@ -1,0 +1,51 @@
+{
+  "declaration": {
+    "evidence": "User identified Copernicus GLO30-CHINA; original metre EGM2008 assumed; local mosaic lineage unverified; reports/m3/copernicus-source.json",
+    "height_unit": "m",
+    "sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+    "surface_type": "DSM",
+    "vertical_datum": "EGM2008"
+  },
+  "estimated_native_spacing_max_m": 30.811411516101767,
+  "file_sha256": "sha256:d796a25eae49bb4390f4905a2a887fe8e550d1bfcc27b74f359e5684285eee5b",
+  "lat_deg": 33.899999957302235,
+  "local_crs": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"World Geodetic System 1984\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1]],ID[\"EPSG\",6326]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Azimuthal Equidistant\",ID[\"EPSG\",1125]],PARAMETER[\"Latitude of natural origin\",33.8999999573022,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8801]],PARAMETER[\"Longitude of natural origin\",108.903243492109,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8802]],PARAMETER[\"False easting\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8806]],PARAMETER[\"False northing\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8807]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+  "lon_deg": 108.9032434921086,
+  "native_window": [
+    129132,
+    83061,
+    239,
+    199
+  ],
+  "offset": 0.0,
+  "path": "/home/Users_Work_Space/zsfang/Satellite-Ground-Radiomap/data/l2_topo/china_dem_30.tif",
+  "radius_m": 3000,
+  "resampling": "nearest native cell; no display decimation",
+  "resolution_m": 60,
+  "scale": 1.0,
+  "scope": "local AEQD distances; ellipsoid heights after declared conversion; DSM is not bare earth",
+  "shape": [
+    103,
+    103
+  ],
+  "source_crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Latitude\",NORTH],AXIS[\"Longitude\",EAST],AUTHORITY[\"EPSG\",\"4326\"]]",
+  "vertical_conversion": {
+    "grid": {
+      "evidence": "https://cdn.proj.org/us_nga_egm08_25.tif",
+      "model": "EGM2008",
+      "path": "/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif",
+      "sha256": "sha256:4191d471eefebf24091b56dbc604353cb3b8cf8cc70e448bb9ae56a272bef17a"
+    },
+    "grid_tags": {
+      "AREA_OR_POINT": "Point",
+      "TIFFTAG_COPYRIGHT": "Derived from work by NGA. Public Domain",
+      "TIFFTAG_DATETIME": "2019:12:27 00:00:00",
+      "TIFFTAG_IMAGEDESCRIPTION": "WGS 84 (EPSG:4979) to EGM2008 height (EPSG:3855). Converted from egm08_25.gtx (last modified at 2018/10/08)",
+      "TYPE": "VERTICAL_OFFSET_GEOGRAPHIC_TO_VERTICAL",
+      "area_of_use": "World",
+      "target_crs_epsg_code": "3855"
+    },
+    "method": "h=H+N; PROJ local grid, multiplier=+1, no optional grid or ballpark",
+    "pipeline": "+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=vgridshift +grids=\"/home/Users_Work_Space/zsfang/satellite-coverage-sim/output/geoid/egm2008-complete.tif\" +multiplier=1 +step +proj=unitconvert +xy_in=rad +xy_out=deg"
+  }
+}

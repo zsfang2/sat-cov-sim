@@ -1,0 +1,23 @@
+{
+  "coordinate_basis": "WGS84 AEQD at declared origin; metre ENU offsets",
+  "items": [
+    {
+      "candidate_id": "Q0",
+      "cost": 1,
+      "east_m": 0,
+      "feasible": true,
+      "height_agl_m": 2,
+      "north_m": 0,
+      "reason": "hypothetical equal installation cost; no land-use constraint"
+    },
+    {
+      "candidate_id": "Q_E300",
+      "cost": 1,
+      "east_m": 300,
+      "feasible": true,
+      "height_agl_m": 2,
+      "north_m": 0,
+      "reason": "hypothetical equal installation cost; no land-use constraint"
+    }
+  ]
+}

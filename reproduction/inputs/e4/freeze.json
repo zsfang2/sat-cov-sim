@@ -1,0 +1,40 @@
+{
+  "candidate_set_checksum": "sha256:5847a9d04fcc7b5a55125c49292efebf8d88f122d2df5db34bb782b5492e1568",
+  "config_checksum": "sha256:db27f1019c26f5cbeca8def1c1b262b4945ccd1662cb188ed63adf96f4c32423",
+  "config_sha256": "sha256:f3287ad8d7ed1a30a64820bafba2b74dae37b5c3b62b4219937a9f2d0f62334d",
+  "pass_registry_checksum": "sha256:0ad361e4544d54de2f701a5d2712d4a9a39574ecc2de1c50be09733b3d10ab7d",
+  "quality_evaluated": true,
+  "selected_tle_record_sha256": "d86e70429a5027bfd4abd871327005fd9baca5d1c7762be06db7359033e76098",
+  "selection_basis": "Retrospective reproducibility subset: first two sites, first development and first holdout; preserves original whole-pass intervals; not a new blind experiment",
+  "sites": [
+    {
+      "candidate_id": "Q0",
+      "grid": "Q0-grid.npy",
+      "grid_sha256": "sha256:2eeed0cd491b5fecb80abadba31348c66d57bdb400dc396ea12d6400feba5827",
+      "metadata": "Q0-terrain.json",
+      "metadata_sha256": "sha256:b8b9761e86171f2c22c89fdbae38844d7b6f68bcfca37c514f82648a99e94738",
+      "receiver": {
+        "antenna_ellipsoid_height_m": 1935.3074593633019,
+        "basis": "declared Copernicus DSM + EGM2008 undulation + fixed above-surface height",
+        "height_basis": "ellipsoid",
+        "lat_deg": 33.9,
+        "lon_deg": 108.9
+      }
+    },
+    {
+      "candidate_id": "Q_E300",
+      "grid": "Q_E300-grid.npy",
+      "grid_sha256": "sha256:51775cb887155e0a9bd7e32b629bd078dfd230a04ab4a1c0ea75bd1ffd5afa2d",
+      "metadata": "Q_E300-terrain.json",
+      "metadata_sha256": "sha256:cf3778149f7e51662db71b6db61f7f976acaed3a90109f9c01cfd359cb00216f",
+      "receiver": {
+        "antenna_ellipsoid_height_m": 1789.315818743388,
+        "basis": "declared Copernicus DSM + EGM2008 undulation + fixed above-surface height",
+        "height_basis": "ellipsoid",
+        "lat_deg": 33.899999957302235,
+        "lon_deg": 108.9032434921086
+      }
+    }
+  ],
+  "tle_sha256": "sha256:e661f17444e4fdc4eed85ccfef437d87f33796193bf8ca000bdb3058715b9b7f"
+}
