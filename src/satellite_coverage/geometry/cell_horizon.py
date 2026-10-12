@@ -21,14 +21,15 @@ def cell_horizon(grid, *, receiver_east_m, receiver_north_m, antenna_agl_m,
                 "incomplete_reasons":["receiver_height_missing"],"cells_visited":0}
     direction = (math.sin(math.radians(azimuth_deg)),math.cos(math.radians(azimuth_deg)))
     cuts = {0.0,float(radius_m)}
-    for origin, speed, boundary, spacing in (
-        (receiver_east_m,direction[0],grid.west_m,grid.resolution_m),
-        (receiver_north_m,direction[1],grid.north_m,grid.resolution_m)):
+    for origin, speed, boundary, spacing, size in (
+        (receiver_east_m,direction[0],grid.west_m,grid.resolution_m,grid.elevations_m.shape[1]),
+        (receiver_north_m,direction[1],grid.north_m,-grid.resolution_m,grid.elevations_m.shape[0])):
         if abs(speed) < 1e-14:
             continue
         finish = origin+radius_m*speed
-        first = math.floor((min(origin,finish)-boundary)/spacing)
-        last = math.ceil((max(origin,finish)-boundary)/spacing)
+        indices = sorted(((origin-boundary)/spacing, (finish-boundary)/spacing))
+        first = max(0, math.ceil(indices[0]))
+        last = min(size, math.floor(indices[1]))
         for index in range(first,last+1):
             d = (boundary+index*spacing-origin)/speed
             if 0 < d < radius_m:

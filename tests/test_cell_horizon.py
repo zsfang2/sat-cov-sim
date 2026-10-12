@@ -44,3 +44,26 @@ def test_missing_cells_prevent_complete_horizon():
     heights[10,20] = np.nan
     assert not evaluate(heights)["coverage_complete"]
     assert not evaluate(np.zeros((41,41)),radius_m=300)["coverage_complete"]
+
+
+@pytest.mark.parametrize("az", [0, 45, 90, 135, 180, 225, 270, 315])
+def test_outside_raster_traversal_is_bounded_by_real_cells(az):
+    grid = TerrainGrid(np.zeros((3, 3)), -.15, .15, .1, "synthetic", "tiny")
+    result = cell_horizon(grid, receiver_east_m=0, receiver_north_m=0,
+                          antenna_agl_m=.02, azimuth_deg=az, radius_m=100)
+    # A centre-to-edge ray visits two real cells and at most a few split
+    # outside intervals, regardless of the 1000 nominal grid spacings.
+    assert result["cells_visited"] <= 5
+    assert result["incomplete_reasons"] == ["outside_dem"]
+    assert not result["coverage_complete"]
+    direction = (math.sin(math.radians(az)), math.cos(math.radians(az)))
+    exit_distance = .15 / max(map(abs, direction))
+    assert result["limiting_distance_m"] == pytest.approx(exit_distance)
+    assert result["horizon_deg"] == pytest.approx(math.degrees(math.atan2(-.02, exit_distance)))
+
+
+def test_fine_grid_still_respects_existing_profile_budget():
+    grid = TerrainGrid(np.zeros((3, 3)), -.15, .15, .1, "synthetic", "tiny")
+    with pytest.raises(ValueError, match="100000 profile samples"):
+        cell_horizon(grid, receiver_east_m=0, receiver_north_m=0,
+                     antenna_agl_m=.02, azimuth_deg=0, radius_m=100000)

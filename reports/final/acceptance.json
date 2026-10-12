@@ -36,7 +36,7 @@
         },
         {
           "path": "reports/final/code-review-fixes.md",
-          "sha256": "sha256:811e48241dccdae45e51834c77dac10ae1bb4f33c20223251a80e670dc0c2506"
+          "sha256": "sha256:d72785892a88e5c8f1d95cbf50f8870e445e5ee5cbfb8327a90834762dad8044"
         }
       ],
       "limits": "实现阶段已由 Round 19 审查通过；代码复审与最终收尾仍待完成"
@@ -280,7 +280,7 @@
         },
         {
           "path": "reports/final/code-review-fixes.md",
-          "sha256": "sha256:811e48241dccdae45e51834c77dac10ae1bb4f33c20223251a80e670dc0c2506"
+          "sha256": "sha256:d72785892a88e5c8f1d95cbf50f8870e445e5ee5cbfb8327a90834762dad8044"
         }
       ],
       "limits": "当前为进入最终门禁的准备记录；不能替代尚未执行的原生代码审查/Finalize"
@@ -306,7 +306,7 @@
     "frontend_modified": false
   },
   "pending_native_evidence": [
-    "native code re-review after cache identity rejection fix",
+    "native code re-review after raster-bounded horizon traversal fix",
     "Finalize completion"
   ]
 }
