@@ -1,0 +1,51 @@
+{
+  "scope": "isolated native handler control-flow checks with mocked review results, not a real project code review",
+  "protected_runtime_sha256": {
+    "hooks/loop-codex-stop-hook.sh": "cde899c19e1566e6257386788c04678f4d34feb52457600c55f9303a8ce4ea6b",
+    "scripts/rlcr-stop-gate.sh": "f538d136cbc3e9253616ba65b509b384e9afbb283d8f718b8c4abeb1c9c0f8d3",
+    "scripts/ask-codex.sh": "6cbfcce7383fb95b7061114407dfb9cf08e7aa21934cccac87160b7dc3b72067"
+  },
+  "template_changes": [
+    {
+      "relative_path": "prompt-template/codex/regular-review.md",
+      "before_sha256": "c09f5fc523bae83d46d4ff77fd54e6c95bd3e9568c041ff41e6ae7d17519c213",
+      "after_sha256": "a140c89aebe68e13e483bd928b7f1c28e8db89f7fc0a2bbe3d9c1e3a021aaa85"
+    },
+    {
+      "relative_path": "prompt-template/codex/full-alignment-review.md",
+      "before_sha256": "8a3410e459a1e1c6c378ecd4375ef379e2f6d7a9dd410cce99c2bcf008da7fec",
+      "after_sha256": "48becd90eab5c08be992e9557bb8f35cc6c13c9c4b183a5e84d6bb06c88f30af"
+    }
+  ],
+  "handler_checks": [
+    {
+      "case": "review_failure",
+      "exit_code": 21,
+      "expected_exit_code": 21,
+      "passed": true,
+      "stdout": "BLOCK_REVIEW_FAILURE"
+    },
+    {
+      "case": "empty_output",
+      "exit_code": 21,
+      "expected_exit_code": 21,
+      "passed": true,
+      "stdout": "BLOCK_REVIEW_FAILURE"
+    },
+    {
+      "case": "finding",
+      "exit_code": 22,
+      "expected_exit_code": 22,
+      "passed": true,
+      "stdout": "CONTINUE_FIXES"
+    },
+    {
+      "case": "clean",
+      "exit_code": 23,
+      "expected_exit_code": 23,
+      "passed": true,
+      "stdout": "ENTER_FINALIZE"
+    }
+  ],
+  "pending": "actual native reviewer decision and phase transition"
+}

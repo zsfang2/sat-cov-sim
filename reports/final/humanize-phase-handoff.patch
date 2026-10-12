@@ -1,0 +1,37 @@
+--- a/prompt-template/codex/regular-review.md
++++ b/prompt-template/codex/regular-review.md
+@@ -69,8 +69,8 @@
+ - In short, your review comments can include: problems/findings/blockers; claims that don't match reality; implementation plans for deferred work (to be implemented now); implementation plans for unfinished work; goal alignment issues.
+ - Your output should be structured so Claude can tell which items are mainline gaps, blocking side issues, and queued side issues.
+ - If after your investigation the actual situation does not match what Claude claims to have completed, or there is pending work to be done, output your review comments to @{{REVIEW_RESULT_FILE}}.
+-- **CRITICAL**: Only output "COMPLETE" as the last line if ALL tasks from the original plan are FULLY completed with no deferrals
+-  - DEFERRED items are considered INCOMPLETE - do NOT output COMPLETE if any task is deferred
+-  - UNFINISHED items are considered INCOMPLETE - do NOT output COMPLETE if any task is pending
+-  - The ONLY condition for COMPLETE is: all original plan tasks are done, all ACs are met, no deferrals or pending work allowed
+-- The word COMPLETE on the last line will stop Claude.
++- **Phase semantics:** This is implementation review. A final-line `COMPLETE` approves only the implementation phase and instructs the native hook to start Code Review. It does not declare the RLCR loop or project complete.
++- **CRITICAL**: Emit `COMPLETE` only after independently verifying that ALL original implementation tasks and implementation-review obligations are satisfied, with no unfinished or deferred implementation work, unresolved implementation defects, missing required evidence, or inflated claims.
++- The only work that may remain after implementation approval is the native code-review/fix/Finalize sequence that the hook starts after this signal. Those downstream native phases are not implementation deferrals; do not require their future evidence before allowing the transition that starts them.
++- Keep any acceptance criterion requiring native code review or Finalize explicitly pending until those phases actually finish. All other original requirements, tests, evidence standards, limitations, and the no-deferral policy remain in force.
++- If an implementation gap remains, report it and do NOT emit `COMPLETE`. Never edit loop state or phase markers, cancel/restart the loop, or replace native review with an ad hoc review to force progression.
+--- a/prompt-template/codex/full-alignment-review.md
++++ b/prompt-template/codex/full-alignment-review.md
+@@ -103,12 +103,14 @@
+ 
+ ## Part 6: Output Requirements
+ 
+-- If issues found OR any AC is NOT MET (including deferred ACs), write your findings to @{{REVIEW_RESULT_FILE}}
++- Always report issues and the status of every AC to @{{REVIEW_RESULT_FILE}}. Apply the implementation-phase completion rules below; downstream native review/Finalize criteria stay pending until executed.
+ - Include specific action items for Claude to address, classified into:
+   - Mainline Gaps
+   - Blocking Side Issues
+   - Queued Side Issues
+ - **If development is stagnating** (see Part 4), write "STOP" as the last line
+-- **CRITICAL**: Only write "COMPLETE" as the last line if ALL ACs from the original plan are FULLY MET with no deferrals
+-  - DEFERRED items are considered INCOMPLETE - do NOT output COMPLETE if any AC is deferred
+-  - The ONLY condition for COMPLETE is: all original plan tasks are done, all ACs are met, no deferrals allowed
++- **Phase semantics:** This is implementation review. A final-line `COMPLETE` approves only the implementation phase and instructs the native hook to start Code Review. It does not declare the RLCR loop or project complete.
++- **CRITICAL**: Emit `COMPLETE` only after independently verifying that ALL original implementation tasks and implementation-review obligations are satisfied, with no unfinished or deferred implementation work, unresolved implementation defects, missing required evidence, or inflated claims.
++- The only work that may remain after implementation approval is the native code-review/fix/Finalize sequence that the hook starts after this signal. Those downstream native phases are not implementation deferrals; do not require their future evidence before allowing the transition that starts them.
++- Keep any acceptance criterion requiring native code review or Finalize explicitly pending until those phases actually finish. All other original requirements, tests, evidence standards, limitations, and the no-deferral policy remain in force.
++- If an implementation gap remains, report it and do NOT emit `COMPLETE`. Never edit loop state or phase markers, cancel/restart the loop, or replace native review with an ad hoc review to force progression.
